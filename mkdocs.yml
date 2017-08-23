@@ -1,0 +1,47 @@
+site_name: HIST3814o Crafting Digital History
+theme: readthedocs
+theme_dir: "theme"
+site_url: http://craftingdigitalhistory.ca
+site_description: All course materials crafted ex novo by Shawn Graham are provided with an open source license as Markdown files. I welcome contributions in the form of pull requests.
+site_author: Shawn Graham
+repo_url: https://github.com/shawngraham/dhworkbook/tree/gh-pages
+extra_javascript:
+  - 'javascripts/tota11y.min.js'
+pages:
+- Home: 'index.md'
+- Getting Started: 'introduction/crafting-digital-history.md'
+- 1. Open Access Research:
+    - 'Why you should be open': 'module-1/Open-Access-Research.md'
+    - 'Exercises': 'module-1/Exercises.md'
+- 2. Finding Data:
+    - 'How do we find data?': 'module-2/Finding Data.md'
+    - 'Exercises': 'module-2/Exercises.md'
+- 3. Fixing Data:
+    - 'Data is messy': 'module-3/Wrangling Data.md'
+    - 'Exercises': 'module-3/Exercises.md'
+- 4. Analysis:
+    - 'Seeing Patterns': 'module-4/Seeing Patterns.md'
+    - 'Exercises': 'module-4/Exercises.md'
+- 5. Visualization:
+    - 'Communicating your Findings': 'module-5/Humanities Visualization.md'
+    - 'Exercises': 'module-5/Exercises.md'
+- 6. Final Thoughts: 'conclusion/conclusion.md'
+- Appendices:
+    - 'Text Encoding': 'supporting materials/tei.md'
+    - 'NER': 'supporting materials/ner.md'
+    - 'Open Refine': 'supporting materials/open-refine.md'
+    - 'Regular Expressions (regex)': 'supporting materials/regex.md'
+    - 'Going further with regex': 'supporting materials/regex-ner.md'
+    - 'Regex & the Republic of Texas': 'supporting materials/regexex.md'
+    - 'CYOA': 'supporting materials/cyoa.txt.md'
+    - 'Geoparsing with Python': 'supporting materials/geoparsing-w-python.txt.md'
+    - 'SNA with Gephi': 'supporting materials/gephi.txt.md'
+    - 'Graphing the Net': 'supporting materials/graphing-the-net.txt.md'
+    - 'Multimode Networks': 'supporting materials/multimode-networks.txt.md'
+    - 'Leaflet': 'supporting materials/leaflet.txt.md'
+    - 'Glitch': 'supporting materials/glitch.md'
+    - 'Quick Intro to R': 'supporting materials/quick-intro-r.md'
+    - 'Git': 'supporting materials/git-rstudio.md'
+    - 'TM, DHBox': 'supporting materials/topicmodel-r-dhbox.md'
+    - 'TM, Local': 'supporting materials/topicmodel-r-yourmachine.md'
+    - 'igraph': 'supporting materials/netviz.md'
