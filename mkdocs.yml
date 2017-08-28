@@ -6,7 +6,9 @@ site_description: All course materials crafted ex novo by Shawn Graham are provi
 site_author: Shawn Graham
 repo_url: https://github.com/shawngraham/dhworkbook/tree/gh-pages
 extra_javascript:
-  - 'javascripts/tota11y.min.js'
+  - 'js/tota11y.min.js'
+extra_css:
+  - 'css/extra.css'
 pages:
 - Home: 'index.md'
 - Getting Started: 'introduction/crafting-digital-history.md'
