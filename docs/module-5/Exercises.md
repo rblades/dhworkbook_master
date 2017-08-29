@@ -6,7 +6,7 @@ Finally: while we haven't explored the possibilities here, I do not want to leav
 
 [Sprucing up a PDF in Inkscape](#sprucing-up-a-pdf-in-inkscape) | [Typography](#typography) | [Colour](#colour) | [Layout](#layout) | [More](#more)
 
-![ukraine](http://uploads.neatorama.com/images/posts/587/74/74587/1407463055-0.jpg)
+![Image showing Ukrainian Parliament fist fight three times: (1) the original; (2) the photo with the Fibonnaci Golden spiral overlayed; (3) the photo as a Renaissance painting](http://uploads.neatorama.com/images/posts/587/74/74587/1407463055-0.jpg)
 
 [Ukraine fist fight](http://www.theguardian.com/artanddesign/2014/aug/06/accidental-renaissance-photojournalism-italian-painting-ukraine-frank-lampard)
 
@@ -25,7 +25,7 @@ Some of the tools that we used in Module 4 give visual output as raster images, 
 
 In this first exercise, we will take the plot we generated in Module 4's exercise on topic modeling in R where we made a bar chart showing the number of articles by year. In R we exported that plot as a PDF. In Inkscape, we can import that pdf and 'explode' it so that we can manipulate its parts individually. We are going to take the simple bar chart and make it more legible, more visually appealing, for incorporation on a webpage.
 
-1. Download and install [Inkscape](https://inkscape.org/en/) *nb Mac* the installation instructions are a bit more complicated for Mac. Pay attention and follow closely!
+1. Download and install [Image showing scaling in Inkscape](https://inkscape.org/en/) *nb Mac* the installation instructions are a bit more complicated for Mac. Pay attention and follow closely!
 2. Download the pdf we generated in R [publication-year.pdf](https://github.com/hist3907b-winter2015/module5-humanitiesvisualization/raw/master/publication-year.pdf)
 3. Open that pdf. It's a pretty plain graphic. Right away there are at least two things we could do to make it more visually appealling. We could change the orientation of the characters in the y-axis to make them more legible. We can highlight bars of interest. And we could apply a colour scheme more generally that would make our graphic legible to folks with colour-blindness (see the 'going further' section at bottom).
 4. Start Inkscape. Click File >> Import >> and then navigate to where you save the 'publication-year.pdf'. Click Ok when you've got it selected. In the next pop-up, just accept the default settings and click 'ok'. Your Inkscape window should now look like this:<br>![inkscape1](https://raw.githubusercontent.com/hist3907b-winter2015/module5-humanitiesvisualization/master/inkscape1.png)
@@ -85,7 +85,7 @@ There's a lot of bumpf out there on the 'pyschology of colour'. Google it to see
 
 Here's a graphic & a movie to help with the theoretical side of things:
 
-![color theory](http://paper-leaf.com/wp-content/uploads/2010/01/ct_1920.jpg)
+![Image showing color theory graphic](http://paper-leaf.com/wp-content/uploads/2010/01/ct_1920.jpg)
 
 [Understanding the rules of color, Lynda.com](http://www.lynda.com/Illustrator-tutorials/Understanding-rules-color/161817/177336-4.html)
 
@@ -93,7 +93,7 @@ To learn how to style your webpage appropriately, you can [follow this tutorial 
 
 Colours in Cultures:
 
-![cinc](http://infobeautiful3.s3.amazonaws.com/2013/01/1276_colours_in_culture.png)
+![Image showing colours in other cultures](http://infobeautiful3.s3.amazonaws.com/2013/01/1276_colours_in_culture.png)
 
 -----
 

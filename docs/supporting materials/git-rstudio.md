@@ -10,7 +10,7 @@ You now have a new option in the pane at top right, beside 'environment' and 'hi
 
 The panel now displays all of the files created in this project folder. Tick off the ones you want to commit. Then click on the 'Commit' button.
 
-![screenshot of the Git panel in RStudio](https://i.imgur.com/6CiY06Q.png)
+![Image of the Git panel in RStudio](https://i.imgur.com/6CiY06Q.png)
 
 A new window opens called 'RStudio: Review Changes'. This window shows you a preview of the text of each file, in green where material has been added, red where material has been deleted (these are the 'difs'). Add a commit message int the top right 'commit message' box.
 

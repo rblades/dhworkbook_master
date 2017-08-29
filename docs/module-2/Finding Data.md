@@ -2,7 +2,7 @@
 
 ## Concepts
 
-![datum](http://i.imgur.com/xvNbwKt.png)
+![Image of datum definition tracing its Latin roots and popularity increase over time](http://i.imgur.com/xvNbwKt.png)
 
 'Something given'. That's a nice way of thinking about it. Of course, much of the data that we are 'given' wasn't really given _willingly_. When we [topic model Martha Ballard's diary](http://www.cameronblevins.org/posts/topic-modeling-martha-ballards-diary/), did she _give_ this to us? Of course, she couldn't have imagined what we might try to do to it. Other kinds of data - census data, for instance - were compelled: folks had to answer the questions, on pain of punishment. This is all to suggest that there is a moral dimension to what we do with big data in history. Stop for a moment and read ['the joys of big data'](http://www.themacroscope.org/?page_id=17) (if you haven't already) and then ['the third wave of computational history'](http://www.themacroscope.org/?page_id=90).
 

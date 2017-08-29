@@ -6,7 +6,7 @@ Networks can be composed of all sorts of things. Trains, busses, Uber, metro - a
 
 If you are doing this in Gephi, and you run some of Gephi's metrics (statistics) on a bipartite network, your results may not mean what you think they mean. The metrics, the algorithms assume 1-mode networks. Thus, running them on 2-mode (or more!) networks will result in ....issues.
 
-![inigo](http://i.imgur.com/OlcOnrp.jpg)
+![Image of Princess Bride meme on Betweeness Centrality](http://i.imgur.com/OlcOnrp.jpg)
 
 Now in truth, it's not quite so clear-cut to simply say, 'convert every bimodal network to unimodal before running any stats' (see [Scott's discussion here](http://www.scottbot.net/HIAL/?p=41158)), but as a rule of thumb for when you're getting started, you'll be on much firmer methodological grounds if you transform your mutlimodal networks into a series of 1-mode networks. So convert every bimodal network to unimodal before running any statistics on your network(s).
 
@@ -34,7 +34,7 @@ To get and install the plugin, select *Tools >> Plugins* (The top level menu ite
 
 In the popup, under ‘available plugins’ look for ‘MultimodeNetworksTransformation’. Tick this box, then click on Install. Follow the instructions, ignore any warnings, click on ‘finish’. You may or may not need to restart Gephi to get the plugin running. If you suddenly see on the far right of ht Gephi window a new tab besid ‘statistics’, ‘filters’, called ‘Multimode Network’, then you’re ok.
 
-![image](http://electricarchaeologist.files.wordpress.com/2013/10/slide1.jpg)
+![Image of Gephi plugin interface](http://electricarchaeologist.files.wordpress.com/2013/10/slide1.jpg)
 
 ## Importing the data
 
@@ -43,11 +43,11 @@ In the popup, under ‘available plugins’ look for ‘MultimodeNetworksTransfo
 
 On the data table, have ‘edges’ selected. This is showing you the source and the target for each link (aka ‘edge’). This implies a directionality to the relationship that we just don’t know – so down below, when we get to statistics, we will always have to make sure to tell Gephi that we want the network treated as ‘undirected’. More on that below.
 
-![image](http://electricarchaeologist.files.wordpress.com/2013/10/slide2.jpg)
+![Image of Gephi data import interface](http://electricarchaeologist.files.wordpress.com/2013/10/slide2.jpg)
 
 Loading your csv file, step 1.
 
-![image](http://electricarchaeologist.files.wordpress.com/2013/10/slide3.jpg)
+![Image of CSV import interface](http://electricarchaeologist.files.wordpress.com/2013/10/slide3.jpg)
 
 Loading your CSV file, step 2
 
@@ -65,12 +65,12 @@ We're now going to manipulate the data a bit in order to get it ready for the tr
 
 + On your NODES page in the data laboratory, add new column, make it boolean. Call it ‘organization’
 
-![boolean](http://electricarchaeologist.files.wordpress.com/2013/10/slide4.jpg)
+![Image of CSV modification interface](http://electricarchaeologist.files.wordpress.com/2013/10/slide4.jpg)
 
 + In the Filter box, type [a-z], and select Id – this filters out all the women. (What would you have to do to filter out the organizations? Remember, this is a regex search!)
 + Tick off the check boxes in the ‘organization’ columns.
 
-![filter](http://electricarchaeologist.files.wordpress.com/2013/10/slide5.jpg)
+![Image of filter interface](http://electricarchaeologist.files.wordpress.com/2013/10/slide5.jpg)
 
 (I note a typo in the image above, 'a-b'. that should be, 'a-z').
 
@@ -82,7 +82,7 @@ Save this as ```women-organizations-2-mode.gephi```.
 
 At this point, you have a two mode network in gephi. You could click on the 'overview' panel and play with some of the layouts and begin to form impressions about the nature of your data. Remember though any metrics calculated at this point would be largely spurious. Let's transform this two-mode network so that we can explore how women are connected to other women via shared membership.
 
-![image](http://electricarchaeologist.files.wordpress.com/2013/10/slide6.jpg)
+![Image showing how to save and run Gephi](http://electricarchaeologist.files.wordpress.com/2013/10/slide6.jpg)
 
 On the multimode networks projection tab,
 + click load attributes.
