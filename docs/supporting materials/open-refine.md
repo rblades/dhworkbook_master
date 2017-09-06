@@ -9,7 +9,7 @@ _This text was adopted from the first drafts of The Macroscope_
 
 This exercise does not use DHBox.
 
-In this exercise, we are going to use a tool that originated with Google. Since 2012, it has been open-sourced and freely available on the net. Using it takes a bit of getting used to, however. Visit the [Open Refine](http://openrefine.org) home page and watch the three videos. Then, [download it to your machine](http://openrefine.org/download.html)
+In this exercise, we are going to use a tool that originated with Google. Since 2012, it has been open-sourced and freely available on the net. Using it takes a bit of getting used to, however. Visit the [Open Refine home page](http://openrefine.org) and watch the three videos. Then, [download it to your machine](http://openrefine.org/download.html)
 
 Follow the installation instructions. Start Open Refine by double clicking on its icon. This will open a new browser window, pointing to `http://127.0.0.1:3333`. This location is your own computer, so even though it looks like it’s running on the internet, it isn’t. The ‘3333’ is a ‘port’, meaning that Open Refine is running much like a server, serving up a webpage via that port to the browser. (If the browser window doesn't open automatically, open one and put `http://127.0.0.1:3333` in the address bar).
 
@@ -42,9 +42,9 @@ Say we wanted, instead of the correspondence network, a visualization of all the
 + Visualize the results in a spreadsheet
 + Write up a 'how to' in your notebook explaining these steps in detail.
 
-_An interesting use case is discussed [here](http://blog.spaziodati.eu/en/2014/07/24/using-openrefine-to-perform-text-mining-on-your-data-food-for-thoughts/) and [here](http://freeyourmetadata.org/publications/named-entity-recognition.pdf)_
+_[An interesting use case is discussed online](http://blog.spaziodati.eu/en/2014/07/24/using-openrefine-to-perform-text-mining-on-your-data-food-for-thoughts/) and [on the Free your metadata website](http://freeyourmetadata.org/publications/named-entity-recognition.pdf)_
 
-* Further Help * [see this page by Kalani Craig](http://www.kalanicraig.com/2014/12/aha-2015-managing-and-maintaining-digital-data-getting-started-in-digital-history-intermediate-workshop/)
+* Further Help * [visit this page by Kalani Craig](http://www.kalanicraig.com/2014/12/aha-2015-managing-and-maintaining-digital-data-getting-started-in-digital-history-intermediate-workshop/)
 
 ### Optional: Exploring Other Named Entity Extraction tools
 

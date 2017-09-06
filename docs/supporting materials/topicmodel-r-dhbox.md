@@ -2,7 +2,7 @@
 
 In this exercise, we're going to grab the Colonial Newspaper Database from my github page, do some exploratory visualizations, and then create a topic model whose output can then be visualized further in other platforms (including as a network in Gephi or other such packaged). At the appropriate point, I show you how to import a directory of texts rather than a single file of data, and to feed that into the script.
 
-Go to your DHBox, and click on RStudio. At the right hand side where it says 'project (none)', click and create a new project in a new empty directory. (If you want to put this directory under version control with git, so that you can push your work to your github account, please read [these instructions](git-rstudio.md).)
+Go to your DHBox, and click on RStudio. At the right hand side where it says 'project (none)', click and create a new project in a new empty directory. (If you want to put this directory under version control with git, so that you can push your work to your github account, please read [the RStudio instructions](git-rstudio.md).)
 
 In the script panel (top left; click on the green plus side and select new R script if this pane isn't open) paste the following code and then run each line by putting the cursor in the line and hitting code > run lines.
 

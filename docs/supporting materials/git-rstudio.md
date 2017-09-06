@@ -27,4 +27,4 @@ $ git config remote.origin.url https://github.com/YOUR-ACCOUNT/YOUR-REPO.git
 $ git pull -u origin master
 $ git pull -u origin master
 ```
-And you now can push your changes to your remote repository whenever you make a new commit. There is a variation of markdown called RMarkdown that enables you to embed working R code into a document, and then 'knit' it into HTML or slide shows or pdfs. When you push those to a Github repo, you are now making data publications! The official [R Markdown information is here](https://shiny.rstudio.com/articles/rmarkdown.html).
+And you now can push your changes to your remote repository whenever you make a new commit. There is a variation of markdown called RMarkdown that enables you to embed working R code into a document, and then 'knit' it into HTML or slide shows or pdfs. When you push those to a Github repo, you are now making data publications! The official [R Markdown information can be found on the R studio website](https://shiny.rstudio.com/articles/rmarkdown.html).

@@ -49,7 +49,7 @@ Bootleaf is a template that uses a common html template package, '[Bootstrap](ht
 + Go to the [github repo for bootleaf](https://github.com/bmcbride/bootleaf).
 + Fork a copy to a new repo (you have to be logged into github.com) by hitting the 'fork' button.
 + In your copy of bootleaf, you now have a gh-pages version of the site. If you go to ```<yourusername>.github.io/bootleaf``` you should see an active version of the map.
-+ Now, the map is grabbing its data from a series of geojson files. You can use [this service](http://togeojson.com/) to convert your csv to geojson. There are other services.
++ Now, the map is grabbing its data from a series of geojson files. You can use [the 'to geo json' service](http://togeojson.com/) to convert your csv to geojson. There are other services.
 + Clone your repository in your desktop (by pressing the clone your repo in desktop).
 + Open your desktop client, and make sure you're in the gh-pages branch
 + Using your windows explorer or mac finder, put your newly created geojson file in the data folder.

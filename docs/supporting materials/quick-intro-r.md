@@ -1,7 +1,7 @@
 
 # A quick introduction to R and R studio
 
-R is a powerful language for statistical exploring, visualizing, and manipulating all kinds of data, including textual. It is however not the most intutive of environments to work in. In which case, [RStudio](http://www.rstudio.com/products/RStudio/) is what we need. Fortunately, you already have this installed for you in your DHBox; however, if you want to have it on your own computer, go get R [from here](http://cran.rstudio.com/) and then the [RStudio](http://www.rstudio.com/products/RStudio/). In DHBox, you sign into RStudio with your DHBox credentials.
+R is a powerful language for statistical exploring, visualizing, and manipulating all kinds of data, including textual. It is however not the most intutive of environments to work in. In which case, [RStudio](http://www.rstudio.com/products/RStudio/) is what we need. Fortunately, you already have this installed for you in your DHBox; however, if you want to have it on your own computer, go get R [from R Studio](http://cran.rstudio.com/) and then the [RStudio](http://www.rstudio.com/products/RStudio/). In DHBox, you sign into RStudio with your DHBox credentials.
 
 Why do we bother with this? Why not just use Excel? One word: reproducibility. In Excel, the sequence of clicking that one does to do anything is next to [impossible to effectively communicate](https://www.practicereproducibleresearch.org/case-studies/benmarwick.html) to someone else. Excel also was built for business applications, and those biases are built into its dna ([which can have some nasty effects](http://www.bionews.org.uk/page_695210.asp).)
 

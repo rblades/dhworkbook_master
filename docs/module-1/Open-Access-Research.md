@@ -17,7 +17,7 @@ But most importantly, *change is coming whether historians like it or not*. Here
 
 > All research data collected with the use of SSHRC funds must be preserved and made available for use by others within a reasonable period of time. SSHRC considers “a reasonable period” to be within two years of the completion of the research project for which the data was collected.
 
-Note the [conversation that ensued on Twitter after Milligan mentioned all this](https://twitter.com/ianmilligan1/status/524932470001897472) and also [here](https://twitter.com/ianmilligan1/status/524932589875101697)
+Note the [conversation that ensued on Twitter after Milligan mentioned all this](https://twitter.com/ianmilligan1/status/524932470001897472) and also [Ian's tweet on documenting research](https://twitter.com/ianmilligan1/status/524932589875101697)
 
 ### We will explore
 + why and how to make our research notes open,
@@ -37,7 +37,7 @@ Remember: I do expect you to click through every link I provide, and to read the
 
 1. Respond to the readings and the reading questions through annotation (taking care to respond to others' annotations as well) - see the instructions below. Remember to tag your annotations with 'hist3814o' so we can find them [here](http://jonudell.net/h/facet.html?facet=tag&mode=documents&search=hist3814o)
 2. Do the exercises for this module, pushing yourself as far as you can. Annotate the instructions where they might be unclear or confusing; see if others have annotated them as well, and respond to them with help if you can. Keep an eye on our Slack channel - you can always offer help or seek out help there. Write a blog post describing what happened as you went through the exercises (your successes, your failures, the help you may have found/received), and link to your 'faillog' (ie, the notes you upload to your github account - for more on that, see the exercises!).
-3. Submit your work [here](http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#submitting-evidence)
+3. [Submit your work to the course submission form](http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#submitting-evidence)
 
 # Readings
 

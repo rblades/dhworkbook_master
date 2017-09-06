@@ -29,7 +29,7 @@ library('igraph')
 
 ## getting the data into your project
 
-For future reference, we're adapting our script from a more in-depth [tutorial](http://kateto.net/networks-r-igraph).
+For future reference, we're adapting our script from a more in-depth [tutorial of R igraph](http://kateto.net/networks-r-igraph).
 
 Bringing data into R is straightforward. We create a variable 'nodes' and a variable for 'links' and load the data from our csv files into them:
 ```R
@@ -117,7 +117,7 @@ plot(net, edge.arrow.size=.4,vertex.label=NA)
 
 Before we jump down the rabbit hole of visualization, let's recognize right now that _visualizing_ a network is only rarely of analytical value. The value of network analysis comes from the various questions we can now start posing of our data when it is represented as a network. In this correspondence network, who is in the centre of the web? To whom would information flow? To whom would information leak? Are there cliques or ingroups? When we identify such individuals, how does that confirm or confound our expectations of the period and place?
 
-Many different kinds of metrics can be calculated (and [this tutorial will show you how](http://kateto.net/networks-r-igraph)) but it's always worth remembering that a metric is only meaningful for a given network when we're dealing with like things - a network of people who write letters to one another; a network of banks that swap mortgages with one another. These are called 'one mode networks'. A network of people connected to the banks they use - a two mode network, because it connects two different kinds of things - might be useful to _visualize_ but the metrics calculated might not be _valid_ if the metric was designed to work on a one-mode network (for more on this and allied issues, see [Scott Weingart](http://www.scottbot.net/HIAL/index.html@p=6279.html)).
+Many different kinds of metrics can be calculated (and [the Kateto R igraph tutorial will show you how](http://kateto.net/networks-r-igraph)) but it's always worth remembering that a metric is only meaningful for a given network when we're dealing with like things - a network of people who write letters to one another; a network of banks that swap mortgages with one another. These are called 'one mode networks'. A network of people connected to the banks they use - a two mode network, because it connects two different kinds of things - might be useful to _visualize_ but the metrics calculated might not be _valid_ if the metric was designed to work on a one-mode network (for more on this and allied issues, visit [Scott Weingart's website](http://www.scottbot.net/HIAL/index.html@p=6279.html)).
 
 Given our correspondence network, let's imagine that 'closeness' (eg a measure of how central a person is) and 'betweenness' (a measure of how many different strands of the network pass through this person) are the most historically interesting. Further, we're going to try to determine if there are subgroups in our network, cliques.
 

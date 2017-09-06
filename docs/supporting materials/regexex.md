@@ -1,6 +1,6 @@
 # REGEX and the Republic of Texas
 
-Regex comes in several different flavours. A good text editor on your own computer like Sublime Text or Atom can do Regex searches and replaces from the find-and-replace box; Word cannot do that. Remember, Regex searches for _patterns_ in the text. The correspondence of the Republic of Texas was collated into a single volume and published with a helpful index in 1911. It was scanned and OCR'd by Google, and is now available as a text file from the Internet Archive. You can see the OCR'd text at [this page](http://archive.org/stream/diplomaticcorre33statgoog/diplomaticcorre33statgoog_djvu.txt). We are going to grab the index from that file, and transform it using regex.
+Regex comes in several different flavours. A good text editor on your own computer like Sublime Text or Atom can do Regex searches and replaces from the find-and-replace box; Word cannot do that. Remember, Regex searches for _patterns_ in the text. The correspondence of the Republic of Texas was collated into a single volume and published with a helpful index in 1911. It was scanned and OCR'd by Google, and is now available as a text file from the Internet Archive. You can see the OCR'd text at [archive.org](http://archive.org/stream/diplomaticcorre33statgoog/diplomaticcorre33statgoog_djvu.txt). We are going to grab the index from that file, and transform it using regex.
 
 There are several hundred entries in that index. You could clean them up by hand, deleting and cutting and pasting, but with the power of regex, we'll go from this:
 

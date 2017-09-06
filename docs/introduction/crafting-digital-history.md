@@ -1,9 +1,9 @@
 #Getting yourself ready July 4th - 9th
-![LOC](https://c1.staticflickr.com/3/2197/2163099221_eb9ab72268.jpg)
+![Black and white image of men standing around man in old fire fighter suit and air being pumped to him through a hose](https://c1.staticflickr.com/3/2197/2163099221_eb9ab72268.jpg)
 
 "'Getting Ready for the Kaiser' Bain Collection, Library of Congress hdl.loc.gov/loc.pnp/ggbain.10412 Call Number: LC-B2- 2400-7"
 
-Welcome! This workbook is made by converting several plain-text files into a fully-operational website using the 'mkdocs' [static website generator](http://www.mkdocs.org/). That means, if you want to keep a copy of all these files for your own records, you may. Simply click on the 'edit on github' link at the top right. This will bring you to the repository that houses this workbook. Then, when you're signed into 'github', you can 'fork' (that is, make a copy) the repo into your own account. Why 'forking'? It seems an odd phrase. Think of it like this:
+Welcome! This workbook is made by converting several plain-text files into a fully-operational website using the ['mkdocs' static website generator](http://www.mkdocs.org/). That means, if you want to keep a copy of all these files for your own records, you may. Simply click on the 'edit on github' link at the top right. This will bring you to the repository that houses this workbook. Then, when you're signed into 'github', you can 'fork' (that is, make a copy) the repo into your own account. Why 'forking'? It seems an odd phrase. Think of it like this:
 
 Writing, crafting, coding: these are like a small river, flowing in one direction into the future. You get new ideas, new hunches: the river branches. There's a fork in its path. Sometimes new ideas, new hunches fold back into that original stream: they merge.
 
@@ -11,7 +11,7 @@ Github is a way of mapping that stream, and a guide to revisiting the interestin
 
 It's not the best metaphor, but it'll do. No doubt you've had that experience where, after working on an essay for days, you make a change that you regret. You wish you could go back to fix it, but ctrl+z only goes so far. You realize that everything you've done for the last week needs to be thrown out, and you start over.
 
-Well, with 'versioning control', you can travel back upriver, back to where things were good. There are two tools that we will use to make this happen: [git](https://git-scm.com/) and [github](http://github.com). You'll learn more about making those things work in Module 1. You'll see why you'd want to do that, and how to future-proof your work, writing things in a plain-text format called ['markdown'](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+Well, with 'versioning control', you can travel back upriver, back to where things were good. There are two tools that we will use to make this happen: [git](https://git-scm.com/) and [github](http://github.com). You'll learn more about making those things work in Module 1. You'll see why you'd want to do that, and how to future-proof your work, writing things [in a plain-text format called 'markdown'](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 In module 2, we'll start exploring the wide variety of historical data out there. We'll talk about some of the ethical dilemmas posed by having so much data out there. 'Data' are not neutral 'things given'; rather, they are 'capta': things _taken_.
 
@@ -30,7 +30,7 @@ Finally, while there is no formal requirement for you to do this, it would be a 
 1. Follow the instructions below to set up your digital history workspace
 2. Annotate the course manual for any parts of it that are unclear (or alternatively, that have you excited)
 3. Respond to the readings and the reading questions by annotating the readings themselves - see the instructions below.
-4. Submit your work [here](http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#submitting-evidence)
+4. [Submit your work to the course submission form](http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#submitting-evidence)
 
 # Setting up a your workspace
 
@@ -83,7 +83,7 @@ You can close the cPanel webpage now (log out first).
 
 If you look at the dashboard for your blog, you'll see a lot of options down the left hand side of your screen. If you want to change the look of your blog, click on 'appearance' then click on 'themes'. A number of themes are pre-installed. You can click on the different themes and select 'preview' to see how your blog might look. When you find one you like, select 'activate'. Go to the other browser window where you have your-domain.ca open. Reload the page to see the changes take effect!
 
-> If you're the sort of person who likes to sketch ideas out on paper, Lauren Heywood of the [Disruptive Media Learning Lab](http://dmll.org.uk/) has designed a paper-based exercise to prototype ideas. Why not give it a try? [Print this file out](http://dmll.org.uk/wp-content/uploads/2017/06/plan-your-wordpress-site-with-paper-dmll.pdf) and follow the instructions.
+> If you're the sort of person who likes to sketch ideas out on paper, Lauren Heywood of the [Disruptive Media Learning Lab](http://dmll.org.uk/) has designed a paper-based exercise to prototype ideas. Why not give it a try? [Print this PDF of Wordpress design](http://dmll.org.uk/wp-content/uploads/2017/06/plan-your-wordpress-site-with-paper-dmll.pdf) and follow the instructions.
 
 To write new content, know that there is a difference between a 'post' and a 'page'. A page is a new link on your site, while posts appear in chronological order on a page, with the most recent on top. Most themes show the most recent post by default, and pages appear in any menus on the site. **When you are logged into your blog** any post or page will have an 'edit' button at the bottom that you can click. You'll then be presented with an editing box with the standard toolbar across the top (allowing you to change the font, insert images, change the alignment of the text and so on). At the top right will be a button to save or publish/update the post/page.
 
@@ -99,7 +99,7 @@ Explore the options for your blog; customize and make the space your own.
 
 ![Visibility Options in Wordpress](https://codex.wordpress.org/images/7/70/visibility.jpg)
 
-For more information about controlling visibility of your posts and so on, [see this help page](https://codex.wordpress.org/Content_Visibility).
+For more information about controlling visibility of your posts and so on, [visit the Wordpress content visibility help page](https://codex.wordpress.org/Content_Visibility).
 
 ## Hypothesis
 
@@ -110,7 +110,7 @@ Hypothesis is an overlay on the web that allows you to highlight or annotate any
 
 Once you're logged into Hypothes.is, and you have the plugin installed, highlight THIS TEXT and leave an annotation! Who will be first? There are a few different kinds of annotations you can make; [here is a list with videos showing them](https://web.hypothes.is/blog/varieties-of-hypothesis-annotations-and-their-uses/).
 
-If you need step-by-step instructions for installing and using Hypothes.is, please [see this help page](https://web.hypothes.is/quick-start-guide-for-students/) and/or watch this video:
+If you need step-by-step instructions for installing and using Hypothes.is, please [visit the Hypothesis help page](https://web.hypothes.is/quick-start-guide-for-students/) and/or watch this video:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MjSpol-oPm4" frameborder="0" allowfullscreen></iframe>
 
@@ -146,7 +146,7 @@ You now have a digital history lab equipped with all of the necessary ingredient
 
 ## VPN & DHBox
 
-To access our virtual computer, the DHBox, you will need to use Carleton's VPN service. Please go to [this page](https://carleton.ca/its/help-centre/page-type/vpn/) and follow the instructions for your particular computer. Once you've got it installed, you will need to connect to Carleton through the VPN with your mycarletone credentials. Indeed, you should always connect via a VPN whenever you're using a public wifi point (like in coffee shops). The VPN acts like a private tunnel from your computer to Carleton's servers. To the rest of the internet, it will now look as if you actually are on campus. Once you're connected via the VPN, you can access the DHBox [here](http://134.117.26.132:5000/). Bookmark the site; you'll use it in the exercises in module 1.
+To access our virtual computer, the DHBox, you will need to use Carleton's VPN service. Please visit [Carleton's VPN help page](https://carleton.ca/its/help-centre/page-type/vpn/) and follow the instructions for your particular computer. Once you've got it installed, you will need to connect to Carleton through the VPN with your mycarletone credentials. Indeed, you should always connect via a VPN whenever you're using a public wifi point (like in coffee shops). The VPN acts like a private tunnel from your computer to Carleton's servers. To the rest of the internet, it will now look as if you actually are on campus. Once you're connected via the VPN, you can [access the DHBox through your browser](http://134.117.26.132:5000/). Bookmark the site; you'll use it in the exercises in module 1.
 
 ### Using the DHBox
 
@@ -167,15 +167,15 @@ What is digital history anyway? How is it connected to so-called 'big data'? Rea
 
 Once you have read and annotated the works, **write a post on your blog that poses the question 'what is digital history for me anyway?'** . Explain why you're in this class, your level of comfort with digital tech, the kinds of history you're interested in, and what you hope to get out of this course. Your post should link to relevant annotations made by you or by your peers. (Every hypothesis annotation has a direct link visible when you click on the 'share' icon for an existing annotation).
 
-> Excerpts from Chapter 1, the Historian's Macroscope [original draft](http://www.themacroscope.org/?page_id=595); read from 'Joys of Big Data' to 'Chapter One Conclusion'. Use Hypothesis to annotate rather than the 'commenting' function on the site.
+> Excerpts from [Chapter 1, the Historian's Macroscope original draft](http://www.themacroscope.org/?page_id=595); read from 'Joys of Big Data' to 'Chapter One Conclusion'. Use Hypothesis to annotate rather than the 'commenting' function on the site.
 
-> James Baker 'The soft digital history that underpins my book' [https://cradledincaricature.com/2017/05/24/the-soft-digital-history-that-underpins-my-book/](https://cradledincaricature.com/2017/05/24/the-soft-digital-history-that-underpins-my-book/)
+> James Baker ['The soft digital history that underpins my book' https://cradledincaricature.com/2017/05/24/the-soft-digital-history-that-underpins-my-book/](https://cradledincaricature.com/2017/05/24/the-soft-digital-history-that-underpins-my-book/)
 
-> James Baker 'The hard digital history that underpins my book' [https://cradledincaricature.com/2017/06/06/the-hard-digital-history-that-underpins-my-book/](https://cradledincaricature.com/2017/06/06/the-hard-digital-history-that-underpins-my-book/)
+> James Baker ['The hard digital history that underpins my book' https://cradledincaricature.com/2017/06/06/the-hard-digital-history-that-underpins-my-book/](https://cradledincaricature.com/2017/06/06/the-hard-digital-history-that-underpins-my-book/)
 
-> Jo Guldi and David Armitage, 'The History Manifesto: [Chapter 4](https://www.cambridge.org/core/books/history-manifesto/big-questions-big-data/F60D7E21EFBD018F5410FB315FBA4590/core-reader)'
+> Jo Guldi and David Armitage, ['The History Manifesto: Chapter 4](https://www.cambridge.org/core/books/history-manifesto/big-questions-big-data/F60D7E21EFBD018F5410FB315FBA4590/core-reader)'
 
-> Tim Hitchcock 'Big Data for Dead People' [https://historyonics.blogspot.ca/2013/12/big-data-for-dead-people-digital.html](https://historyonics.blogspot.ca/2013/12/big-data-for-dead-people-digital.html)
+> Tim Hitchcock ['Big Data for Dead People' https://historyonics.blogspot.ca/2013/12/big-data-for-dead-people-digital.html](https://historyonics.blogspot.ca/2013/12/big-data-for-dead-people-digital.html)
 >
 > On Diversity in Digital History [The Macroscope](http://www.themacroscope.org/2.0/diversity-in-digital-history/) Read and follow through the footnotes to at least two more articles
 

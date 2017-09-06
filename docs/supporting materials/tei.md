@@ -4,7 +4,7 @@ This worksheet, and all related files, are released CC-BY.
 
 [By M. H. Beals](https://github.com/mhbeals/TEI-Close-Reading); Adapted for HIST3814o by S Graham
 
-You will need the files in [this subfolder](https://github.com/craftingdigitalhistory/module3-wranglingdata/tree/master/tei-hist3907) so download that repository as a zip file and unzip it somewhere handy on your machine.
+You will need the files in [the Crafting Digital History Github subfolder](https://github.com/craftingdigitalhistory/module3-wranglingdata/tree/master/tei-hist3907) so download that repository as a zip file and unzip it somewhere handy on your machine.
 
 This exercise will explore a historical text and help you create a digital record of your analysis
 
@@ -129,4 +129,4 @@ If your text still does not appear formatted, you may need to remove the text on
 
 I made a file I've called [SG_transformer.xsl](https://github.com/hist3907b-winter2015/module3-wranglingdata/blob/master/tei-hist3907/SG_transformer.xsl). Open that file in your text editor. What tags would it be looking for in the xml file? What might it do to your markup? What line would you change in your XML file to get it to point to this stylesheet? Write all this down in your open notebook. It is a good habit to get into to keep track of your thoughts when looking at ancillary files like this.
 
-If the nature of your project will involve a lot of transcription, you would be well advised to use an XML editor like [OxygenXML](http://www.oxygenxml.com/), which has a free 1 month trial. The editor makes it easy to maintain _consistency_ in your markup, and also, to quickly create stylesheets for whatever purpose you need. There are also a number of utility programs freely available that will convert XML to CSV or other formats. One such may be [found here](https://code.google.com/p/xml2csv-conv/). But the best way to transform these XML files is with XSL.
+If the nature of your project will involve a lot of transcription, you would be well advised to use an XML editor like [OxygenXML](http://www.oxygenxml.com/), which has a free 1 month trial. The editor makes it easy to maintain _consistency_ in your markup, and also, to quickly create stylesheets for whatever purpose you need. There are also a number of utility programs freely available that will convert XML to CSV or other formats. One such may be [found online Google code](https://code.google.com/p/xml2csv-conv/). But the best way to transform these XML files is with XSL.

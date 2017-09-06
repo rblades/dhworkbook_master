@@ -5,7 +5,7 @@ It may be that you are interested in the structure of links on the internet. Per
 ## You will need:
 
 + The Chrome browser with [Site Spider Mk II](https://chrome.google.com/webstore/detail/site-spider-mark-ii/gedjofgioahckekhpgknhchelbpdogok) installed
-+ [Gephi ](http://gephi.org)
++ [Gephi](http://gephi.org)
 + [HTTP Graph Generator Plugin for Gephi installed](https://marketplace.gephi.org/plugin/http-graph/)
 
 *NB* You can install the graph generator plugin from _within_ Gephi by selecting 'Tools' on the main menu ribbon at the top of the screen (and *not* the 'plugins' item). Then, within 'Tools', select 'plugins' and then 'available plugins'. Search for 'HTTPGraph'. Tick off the box and install it. When finished, close and restart Gephi with a new project.

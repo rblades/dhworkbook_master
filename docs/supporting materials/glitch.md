@@ -1,7 +1,7 @@
 
-Glitching files messses with our expectations of what digital data should be. There is actually quite a large body of literature on the why and how of glitching ([try this for a place to start](https://github.com/GlitchTools/Glitch-Arts-Resources#writings)). For us as digital historians, glitching digital images or other documents reminds of us the ephemerality of digital data. It might also raise other questions about the composition of historical photography, and the ways that no image is an objective record of the past. In the exercise below, you build on what you learned about APIs and Regex to download images from the Open Context repository of archaeological data. Then, you use a script that will perform the same manipulations on every image in your folder. Finally, you will use another script to create a static website with all of your images, a gallery of glitch.
+Glitching files messses with our expectations of what digital data should be. There is actually quite a large body of literature on the why and how of glitching ([try Glitch's Github for a place to start](https://github.com/GlitchTools/Glitch-Arts-Resources#writings)). For us as digital historians, glitching digital images or other documents reminds of us the ephemerality of digital data. It might also raise other questions about the composition of historical photography, and the ways that no image is an objective record of the past. In the exercise below, you build on what you learned about APIs and Regex to download images from the Open Context repository of archaeological data. Then, you use a script that will perform the same manipulations on every image in your folder. Finally, you will use another script to create a static website with all of your images, a gallery of glitch.
 
-Spend some time on the articles and resources curated [here](https://github.com/GlitchTools/Glitch-Arts-Resources) to begin to explore the philosophy and aesthetic of Glitch.
+Spend some time on the articles and resources curated on [Glitch's Github](https://github.com/GlitchTools/Glitch-Arts-Resources) to begin to explore the philosophy and aesthetic of Glitch.
 
 ## Workflow we're going for:
 
@@ -12,7 +12,7 @@ Spend some time on the articles and resources curated [here](https://github.com/
 
 ## Open Context
 
-Open Context publishes archaeological data on the web. Archaeology generates vast amounts of information, both through excavation and through analysis. Open Context exists to publish curated versions of this data with unique digital object identifiers so that the source data of archaeology can be re-examined and re-studied in the future. Archaeology, uniquely amongst the historical disciplines, tends to destroy its subject matter, so reproducibility and open access data are extremely important issues. At their [API](https://opencontext.org/about/services) page, they explain how to programmatically obtain information from their site. Here's an example [search](https://opencontext.org/media-search/.json?prop=rel--oc-gen-cat-object||rel--oc-gen-cat-animal-bone&response=uri-meta&rows=10). Open that up, give it a play right now, and see what kinds of information exist. Try to craft a search that retrieves some interesting information.
+Open Context publishes archaeological data on the web. Archaeology generates vast amounts of information, both through excavation and through analysis. Open Context exists to publish curated versions of this data with unique digital object identifiers so that the source data of archaeology can be re-examined and re-studied in the future. Archaeology, uniquely amongst the historical disciplines, tends to destroy its subject matter, so reproducibility and open access data are extremely important issues. At their [API](https://opencontext.org/about/services) page, they explain how to programmatically obtain information from their site. Here's an example [search on Open Context](https://opencontext.org/media-search/.json?prop=rel--oc-gen-cat-object||rel--oc-gen-cat-animal-bone&response=uri-meta&rows=10). Open that up, give it a play right now, and see what kinds of information exist. Try to craft a search that retrieves some interesting information.
 
 Once you've crafted a search that retrieves something of interest, it's time to build a script that will retrieve that information for you. Remember the exercise that queried the Canadiana api? Below I have modified that script to grab 10 records from the 'animal bone' category on Open Context. You could use that as a basis for your own search.
 
@@ -45,7 +45,7 @@ wget -i thumbnailstograb.txt -P path/to/images --limit-rate=20k -w 2
 
 ## An image glitch script in Python
 
-The next step is to glitch the image. Go to [https://github.com/Xpktro/bndr](https://github.com/Xpktro/bndr). This is a python package for mucking about the bits inside a jpg. Install it at the command line with `$ pip install bndr`.
+The next step is to glitch the image. Go to [the bndr Github repository](https://github.com/Xpktro/bndr). This is a python package for mucking about the bits inside a jpg. Install it at the command line with `$ pip install bndr`.
 
 Also, make a new folder for the output of this process: `mkdir out`.
 
@@ -65,7 +65,7 @@ Then change the permissions so we can run it: `$ chmod 755 do-glitch.sh`. This s
 
 ## A static website generator for photography
 
-Finally, let's turn that folder of pictures into a website. We're going to use the Exposé site generator, which you can get at [https://github.com/Jack000/expose](https://github.com/Jack000/expose). Take a moment to read through the details of that package.
+Finally, let's turn that folder of pictures into a website. We're going to use the Exposé site generator, which you can get at [the expose Github repository](https://github.com/Jack000/expose). Take a moment to read through the details of that package.
 
 Use the `cd` command to get back up to your main directory (ie, don't do this when you're in your images folder). Grab the code:
 `$ git clone https://github.com/Jack000/Expose.git`
@@ -104,7 +104,7 @@ You can push the code for your site to github, and then use github's gh-pages fe
 7. Push your materials to Github: `$ git push -u origin master` (Git might ask for your account username and password)
 8. Once that finishes, go back to Github. Reload the page at https://github.com/YOUR-ACCOUNT/YOUR-NEW-REPO-YOU-JUST-MADE. You should see your changes
 9. On the button where it says 'Branch: Master', click on the down arrow. In the box where it says faintly 'Find or create a branch', type `gh-pages` . This is a special branch which tells Github, 'serve this up as actual code when the user goes to the special github.io version of github'.
-10. Click on the gearwheel icon, to go to the settings page (You can also find it at https://github.com/YOUR-ACCOUNT/YOUR-NEW-REPO-YOU-JUST-MADE/settings). Scroll down to the box that says 'Github Pages'. In the green box, it says 'you're site is published at https://YOUR-ACCOUNT.github.io/YOUR-NEW-REPO-YOU-JUST-MADE'. Click on that link and you'll see your site! Here's [mine](https://shawngraham.github.io/exposetest/site/).
+10. Click on the gearwheel icon, to go to the settings page (You can also find it at https://github.com/YOUR-ACCOUNT/YOUR-NEW-REPO-YOU-JUST-MADE/settings). Scroll down to the box that says 'Github Pages'. In the green box, it says 'you're site is published at https://YOUR-ACCOUNT.github.io/YOUR-NEW-REPO-YOU-JUST-MADE'. Click on that link and you'll see your site! Here's [my site on gh pages](https://shawngraham.github.io/exposetest/site/).
 
 ## Conclusion
 

@@ -20,10 +20,10 @@ Popular general purpose plain text editors include TextWrangler and Sublime for 
 
 In this exercise, I want you to become familiar with Markdown syntax ([here is a quick primer on markdown by Sarah Simpkin](http://programminghistorian.org/lessons/getting-started-with-markdown)). There are a number of 'flavours' for Markdown, but in essence, they all mimic the kinds of conventions you would see in an email, using asterisks to indicate emphasis and so on.
 
-1. You will need this [cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+1. You will need [the markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 2. Go to [dillinger.io](http://dillinger.io) in a new browser window. This looks like a wordprocessor. The left hand side of the screen is where you write, the right hand side shows you what your text will look like *if you converted the text to html*. Dillinger 'saves' your work in your browser's memory. You can also point it to save to your dropbox, google drive, or github account (under the cogwheel icon).
 3. Write a short 200-500 word piece on the most interesting annotation you've seen one of your classmates make. Why is it interesting? Why has it struck you?
-4. Have at least two images (creative commons licensed for re-use - do you know how to [find these](https://search.creativecommons.org/)?) and link outwards to four websites that are relevant to your piece.
+4. Have at least two images (creative commons licensed for re-use - do you know how to [find creative commons images](https://search.creativecommons.org/)?) and link outwards to four websites that are relevant to your piece.
 5. Make sure you link to the annotation in question.
 6. In the 'document name' slot, make sure to add the file type .md at the end
 7. 'Export to' markdown to save a copy of the file in your downloads folder.
@@ -98,7 +98,7 @@ This opens the text editor, and you can see that the history command has copied 
 
 The computer makes things a little more difficult sometimes when you're asking it to do something that changes or adds capabilities, so simply typing `apt-get` wouldn't work. `sudo` tells the computer, I really do want to this (it stands for 'super-user do'). Any 'sudo' command will make the computer ask for your password to confirm that you really do want to run that command.
 
-[Here is a guide to using the Nano text editor](https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/) which you should check out now.
+[Visit this guide to using the Nano text editor](https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/) which you should check out now.
 
 In Nano, with your file open, make a header (use `#` to indicate a header, remember) at the start of the file which has today's date in it, and add some text explaining what you're trying to do. Then, hit ctrl+x to edit Nano. Nano will ask you if you want to 'Save modified buffer?'. Hit `y`, then when it asks you for the file name, hit enter.
 
@@ -114,7 +114,7 @@ As you do more work in this workbook, I want you to get in the habit of keeping 
 
 In the next exercise, we learn to use another piece of software called 'git' which will enable you to set up a remote location for pushing copies of your work to, for safe keeping and for collaboration. For more on why we go to all this trouble, see ['Preserving Your Research Data'](http://programminghistorian.org/lessons/preserving-your-research-data).
 
-[Here's a handy cheat-sheet of keyboard shortcuts and other useful commands for your DHBox command-line work](https://help.ubuntu.com/community/AdvancedCommandlineHowto#Keyboard_shortcuts).
+[Visit this handy cheat-sheet of keyboard shortcuts and other useful commands for your DHBox command-line work](https://help.ubuntu.com/community/AdvancedCommandlineHowto#Keyboard_shortcuts).
 
 ## EXERCISE 3: setting up your github space
 
@@ -153,7 +153,7 @@ At this point, you now have a folder - a repository - on the Github website into
 
 Instead of creating multiple versions of a file, you have a single file that has a version history. Neat, eh?
 
-This is perhaps the simplest use case for Github. You can create files directly in the repository as well, by hitting the 'create new file' button, and following the prompts. Github has a brief tutorial on using the website to collaborate with other people on a repository that [you can explore here](https://guides.github.com/activities/hello-world/).
+This is perhaps the simplest use case for Github. You can create files directly in the repository as well, by hitting the 'create new file' button, and following the prompts. Github has a brief tutorial on using the website to collaborate with other people on a repository that [you can explore on Github](https://guides.github.com/activities/hello-world/).
 
 **for the remainder of the course, use your hist3814o repository as your scratch pad, your fail log, your open notebook, for showing your work across these modules**
 
@@ -180,7 +180,7 @@ Many websites - including this workbook - use a Github repository as a way of ho
 
 ## EXERCISE 4: a detailed look at using git on the command line
 
-At its heart, Git is a way of taking 'snapshots' of the current state of a folder, and saving those snapshots in sequence. (For an excellent brief presentation on Git, see Alice Bartlett's [presentation here](https://speakerdeck.com/alicebartlett/git-for-humans); Bartlett is a senior developer for the Financial Times). In Git's lingo, as stated earlier, a folder on your computer is known as a `repository`. This sequence of snapshots in total lets you see how your project unfolded over time. Each time you wish to take a snapshot, you make a `commit`. A commit is a Git command to take a snapshot of the entire repository. Thus, your folder we discussed above, with its proliferation of documents becomes:
+At its heart, Git is a way of taking 'snapshots' of the current state of a folder, and saving those snapshots in sequence. (For an excellent brief presentation on Git, visit [Alice Bartlett's presentation on git](https://speakerdeck.com/alicebartlett/git-for-humans); Bartlett is a senior developer for the Financial Times). In Git's lingo, as stated earlier, a folder on your computer is known as a `repository`. This sequence of snapshots in total lets you see how your project unfolded over time. Each time you wish to take a snapshot, you make a `commit`. A commit is a Git command to take a snapshot of the entire repository. Thus, your folder we discussed above, with its proliferation of documents becomes:
 
 ```
 |-project
@@ -260,7 +260,7 @@ Fixed the headings that were broken in the about section of readme.md
 - Now, we merge with `$ git merge experiment`. Remember, a merge is a special kind of commit that rolls all previous commits from both branches into one - Git will open your text editor and prompt you to add a message (it will have a default message already there if you want it). Save and exit and ta da! Your changes have been merged together.
 
 ### git push
-4.5. One of the most powerful aspects of using Git is the possibility of using it to manage collaborations. To do this, we have to make a copy of your repository available to others as a `remote`. There are a variety of places on the web where this can be done; one of the most popular at the moment is [Github](http://github.com). Github allows a user to have an unlimited number of `public` repositories. Public repositories can be viewed and copied by anyone. `Private` repositories require a paid account, and access is controlled. If you are working on sensitive materials that can only be shared amongst the collaborators on a project, you should invest in an upgraded account (note that you can also control which files get included in commit; see [this help file](https://help.github.com/articles/ignoring-files/). In essence, you simply list the file names you do not want committed; here's an [example](https://gist.github.com/octocat/9257657)). Let's assume that your materials are not sensitive.
+4.5. One of the most powerful aspects of using Git is the possibility of using it to manage collaborations. To do this, we have to make a copy of your repository available to others as a `remote`. There are a variety of places on the web where this can be done; one of the most popular at the moment is [Github](http://github.com). Github allows a user to have an unlimited number of `public` repositories. Public repositories can be viewed and copied by anyone. `Private` repositories require a paid account, and access is controlled. If you are working on sensitive materials that can only be shared amongst the collaborators on a project, you should invest in an upgraded account (note that you can also control which files get included in commit; [visit Github for help on ignoring files](https://help.github.com/articles/ignoring-files/). In essence, you simply list the file names you do not want committed; [visit Github for an example on listing ignored files](https://gist.github.com/octocat/9257657)). Let's assume that your materials are not sensitive.
 
 - login to Github
 - On the upper right part of the screen there is a large + sign. Click on that, and select `new public repository`
@@ -316,7 +316,7 @@ $ git remote add upstream THE-FULL-URL-TO-THEIR-REPO-ENDING-WITH-.git
 $ git fetch upstream
 ```
 
-- Now let's make a `pull` request (you might want to bookmark this [help document](https://help.github.com/articles/creating-a-pull-request/)). Go to your copy of your classmate's repository at your Github account. Make sure you've selected the correct branch you pushed your changes to, by selecting it from the Branches menu drop down list.
+- Now let's make a `pull` request (you might want to [bookmark Github's help document for pull requests](https://help.github.com/articles/creating-a-pull-request/)). Go to your copy of your classmate's repository at your Github account. Make sure you've selected the correct branch you pushed your changes to, by selecting it from the Branches menu drop down list.
 - Click the 'new pull request' button.
 - The new page that appears can be confusing, but it is trying to double check with you which changes you want to make, and where. *'Base Branch'* is the branch where you want your changes to go, ie, your classmate's repository. *'head branch'* is the branch where you made *your* changes. Make sure these are set properly. Remember: the first one is the TO, the second one is the FROM: the place where you want your changes to go TO, FROM the place where you made the changes.
 - A pull request has to have a message attached to it, so that your classmate knows what kind of change you're proposing. Fill in the message fields appropriately, then hit the 'create pull request' button.

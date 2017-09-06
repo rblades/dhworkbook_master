@@ -21,7 +21,7 @@ What if you had *lots* of documents that you needed to clean up? One way of doin
 
 Open Refine does not run in DHBox, so use the filemanager in DHBox to move your `cleaned-correspondence` file to somewhere safe on your computer.
 
-[Here are the instructions](../supporting materials/open-refine.md).
+[Visit the instructions in our supporting materials](../supporting materials/open-refine.md).
 
 For more advanced usage of Open Refine, as an optional exercise you can also try [The Programming Historian's Tutorial on Open Refine](http://programminghistorian.org/lessons/cleaning-data-with-openrefine).
 
@@ -37,7 +37,7 @@ This command finds all files in a folder and creates a backup for each one in tu
 
 This command: `grep "[b-df-hj-np-tv-xz]\{5\}" filename` will find all instances of strings of five consonants or more, which can be useful to give you and idea of what kinds of sed patterns to write.
 
-Maybe, if you inspect the pdfs and the txt together, you can figure out patterns that set off interesting things in say the classified ads or the editorials - and then write some grep and sed to create new files with just that information. Then you could use Open Refine to further clean things up. Maybe the messiness of the data is [exactly the point](https://smgprojects.github.io/experiment-bad-equity/) (and [here, too](https://smgprojects.github.io/experiment-determining-bad-ocr-via-automated-spellcheck/)) you want to explore. Nevertheless:
+Maybe, if you inspect the pdfs and the txt together, you can figure out patterns that set off interesting things in say the classified ads or the editorials - and then write some grep and sed to create new files with just that information. Then you could use Open Refine to further clean things up. Maybe the messiness of the data is [exactly the point](https://smgprojects.github.io/experiment-bad-equity/) ([and my workup on bad OCR](https://smgprojects.github.io/experiment-determining-bad-ocr-via-automated-spellcheck/)) you want to explore. Nevertheless:
 
 **cleaning data is 80% of the work in digital history**.
 

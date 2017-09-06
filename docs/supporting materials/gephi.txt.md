@@ -39,7 +39,7 @@ James Webb,Alc6e La Branche
 David G. Burnet,Richard G. Dunlap
 _..._
 
-This file is called 'an edge list' - it's a list of connections, or edges, between the individuals. If you no longer have the file, you can find it online [here](http://themacroscope.org/2.0/datafiles/texas-correspondence-OpenRefine.csv). 
+This file is called 'an edge list' - it's a list of connections, or edges, between the individuals. If you no longer have the file, you can find it on [The Macroscope website](http://themacroscope.org/2.0/datafiles/texas-correspondence-OpenRefine.csv). 
 
 ### Installing Gephi on OS 10 Mavericks
 
@@ -52,7 +52,7 @@ and paste the following underneath:
 ``` jdkhome="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home 
 ```
 
-Save that file. Then, go to [http://support.apple.com/kb/DL1572](http://support.apple.com/kb/DL1572) and install the older version of Java (Java 6). Once that is installed, Gephi should run normally.
+Save that file. Then, go to [Apple support](http://support.apple.com/kb/DL1572) and install the older version of Java (Java 6). Once that is installed, Gephi should run normally.
 
 Run Gephi once it is installed. You will be presented with a welcome prompting you to open a recent file, create a new project, or load a sample file. Click “New Project” and then click the “Data Laboratory” tab on the horizontal bar at the top of the Gephi window (Fig. 7.3).
 
