@@ -1,4 +1,4 @@
-# Module 2: Exercises
+# Module 2 Exercises
 
 _All five exercises are on this page. Don't forget to scroll. If you have difficulties, or if the instructions need clarification, please click the 'issues' button and leave a note. Feel free to fork and improve these instructions, if you are so inclined. Remember, these exercises get progressively more difficult, and will require you to either download materials or read materials on other websites. Give yourself plenty of time. Try them all, and remember you can turn to your classmates for help. Work together!_
 

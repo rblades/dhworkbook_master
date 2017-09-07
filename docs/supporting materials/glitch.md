@@ -1,3 +1,4 @@
+# Glitching Files
 
 Glitching files messses with our expectations of what digital data should be. There is actually quite a large body of literature on the why and how of glitching ([try Glitch's Github for a place to start](https://github.com/GlitchTools/Glitch-Arts-Resources#writings)). For us as digital historians, glitching digital images or other documents reminds of us the ephemerality of digital data. It might also raise other questions about the composition of historical photography, and the ways that no image is an objective record of the past. In the exercise below, you build on what you learned about APIs and Regex to download images from the Open Context repository of archaeological data. Then, you use a script that will perform the same manipulations on every image in your folder. Finally, you will use another script to create a static website with all of your images, a gallery of glitch.
 

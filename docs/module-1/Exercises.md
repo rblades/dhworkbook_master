@@ -1,4 +1,4 @@
-# Module 1: Exercises
+# Module 1 Exercises
 
 The exercises are designed to give you the necessary skills to engage with the doing of digital history. To ensure success in the course, please do make it through exercises 1 - 3. Exercise 4 is a bit more complex and not mission-critical. Push yourself if you can.
 

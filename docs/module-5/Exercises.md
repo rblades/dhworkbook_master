@@ -1,4 +1,4 @@
-# Exercises
+# Module 5 Exercises
 
 The exercises in this module are about colour, layout, and manipulating graphics - but not necessarily in that order. You might find 'Sprucing up a PDF in Inkscape' exercise useful, as well as the 'Typography', 'Colour', and 'Layout' exercises.
 

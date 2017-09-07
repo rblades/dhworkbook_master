@@ -1,5 +1,4 @@
-
-#Module 3: Exercises
+#Module 3 Exercises
 
 ## Exercise 1
 
