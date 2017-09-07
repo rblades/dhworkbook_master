@@ -1,4 +1,6 @@
-![Black and white historical image showing women studying in library](https://www.penflip.com/shawngraham/crafting-digital-history-workbook/blob/master/images/cover.png?raw=true)
+#Crafting Digital History, A Workbook by Shawn Graham
+
+![Black and white historical image showing women studying in library. Title overlays on image saying "Crafting Digital History, A Workbook by Shawn Graham"](https://www.penflip.com/shawngraham/crafting-digital-history-workbook/blob/master/images/cover.png?raw=true)
 
 This workbook supports [#HIST3814o](http://craftingdigitalhistory.ca) in the Late Summer term at [Carleton University](http://carleton.ca). This is the third major reworking of the workbook.
 
