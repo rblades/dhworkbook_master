@@ -96,7 +96,7 @@ In module 2 if you recall, we worked through how to transform XML using styleshe
 
 Go to [http://voyant-tools.org](http://voyant-tools.org). Paste the URL to the csv of the CND database: [https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv]([https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv]) .
 
-Now, open a new browser window, and go here [http://voyant-tools.org/?corpus=colonial-newspapers&stopList=stop.en.taporware.txt](http://voyant-tools.org/?corpus=colonial-newspapers&stopList=stop.en.taporware.txt)
+Now, open a new browser window, and go to this [colonial newspaper file on Voyant tools](http://voyant-tools.org/?corpus=colonial-newspapers&stopList=stop.en.taporware.txt)
 
 Do you see the difference? In the latter window, the individual articles have been uploaded individually, and thus are treated as individual documents in chronological order.
 
@@ -177,7 +177,7 @@ Here is a video walk through; places where you might have got into trouble inclu
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/KgLrvcA8v_M" frameborder="0" allowfullscreen></iframe>
 
-Congratulations! You've georectified a map, and used it as a base layer for a visualization of some point data. Here are some [notes on using a georectified map with the CartoDB service](https://gist.github.com/shawngraham/a49a9834984ae0792345).
+Congratulations! You've georectified a map, and used it as a base layer for a visualization of some point data. References these [notes on using a georectified map with the CartoDB service](https://gist.github.com/shawngraham/a49a9834984ae0792345).
 
 ![Image showing historical map overlayed on modern map](http://i.imgur.com/0gCjh5X.jpg)
 

@@ -1,6 +1,6 @@
 # Graphing the Net
 
-It may be that you are interested in the structure of links on the internet. Perhaps you'd like to see how a particular topic plays out across Wikiepedia. What you'd have to do is a _web-crawl_. Here are quick instructions for setting up a webcrawl, which will follow every link on a page to a particular depth, and echo the results through your browser into Gephi for visualization and analysis.
+It may be that you are interested in the structure of links on the internet. Perhaps you'd like to see how a particular topic plays out across Wikiepedia. What you'd have to do is a _web-crawl_. Below are quick instructions for setting up a webcrawl, which will follow every link on a page to a particular depth, and echo the results through your browser into Gephi for visualization and analysis.
 
 ## You will need:
 

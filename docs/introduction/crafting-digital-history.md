@@ -106,7 +106,7 @@ For more information about controlling visibility of your posts and so on, [visi
 Hypothesis is an overlay on the web that allows you to highlight or annotate any text you come across (including *inside pdfs*). All of your annotations can then be collected together. It is a very effective research tool.
 
 1. Create an account with [hypothes.is](https://web.hypothes.is/start/).
-2. Get the plugin for [chrome](https://chrome.google.com/webstore/detail/hypothesis-web-pdf-annota/bjfhmglciegochdpefhhlphglcehbmek). If you don't have/use chrome, go to [this page](https://web.hypothes.is/start/#) and click on the 'other browsers' link.
+2. Get the [hypothes.is plugin for chrome](https://chrome.google.com/webstore/detail/hypothesis-web-pdf-annota/bjfhmglciegochdpefhhlphglcehbmek). If you don't have/use chrome, go to [the hypothes.is start page](https://web.hypothes.is/start/#) and click on the 'other browsers' link.
 
 Once you're logged into Hypothes.is, and you have the plugin installed, highlight THIS TEXT and leave an annotation! Who will be first? There are a few different kinds of annotations you can make; [here is a list with videos showing them](https://web.hypothes.is/blog/varieties-of-hypothesis-annotations-and-their-uses/).
 

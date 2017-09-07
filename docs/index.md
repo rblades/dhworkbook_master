@@ -4,7 +4,7 @@
 
 This workbook supports [#HIST3814o](http://craftingdigitalhistory.ca) in the Late Summer term at [Carleton University](http://carleton.ca). This is the third major reworking of the workbook.
 
-The original [Winter 2015 version is here.](https://github.com/hist3907b-winter2015)
+The original [Winter 2015 version is available on Github.](https://github.com/hist3907b-winter2015)
 
 For more advanced tutorials and help, please see
 

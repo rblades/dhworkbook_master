@@ -124,6 +124,6 @@ var mapquestHYB = L.layerGroup([L.tileLayer("http://{s}.mqcdn.com/tiles/1.0.0/sa
 ```
 ...and then you'd have to go through the rest of that file and change up the .geojson pointers to point to your own data.
 
- Here is a [template for mapping with leaflet](https://github.com/shawngraham/daea), drawing all of your point data and ancillary information from a csv file. Study the index.html file carefully to identify which lines you'd modify to change the base map, and to identify how elements in the csv are being rendered on the screen. [Here's an example that a former student made](https://xtina-r.github.io/daea/).
+ Visit Github for a [template for mapping with leaflet](https://github.com/shawngraham/daea), drawing all of your point data and ancillary information from a csv file. Study the index.html file carefully to identify which lines you'd modify to change the base map, and to identify how elements in the csv are being rendered on the screen. [Here's an example that a former student made](https://xtina-r.github.io/daea/).
 
 (*further reading* Here's a nice piece on using [Tilemill](https://medium.com/@ArianKatsimbras/tilemill-c886a3ccba6a) by Arian Katsimbras to make beautiful maps.)
