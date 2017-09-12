@@ -4,7 +4,7 @@ This worksheet, and all related files, are released CC-BY.
 
 [By M. H. Beals](https://github.com/mhbeals/TEI-Close-Reading); Adapted for HIST3814o by S Graham
 
-You will need the files in [the Crafting Digital History Github subfolder](https://github.com/craftingdigitalhistory/module3-wranglingdata/tree/master/tei-hist3907) so download that repository as a zip file and unzip it somewhere handy on your machine.
+You will need the files in [the Crafting Digital History Github module 3 folder](https://github.com/craftingdigitalhistory/module3-wranglingdata). Select the Clone or Download button and choose download zip to download that repository as a zip file. Unzip it somewhere handy on your machine. Inside will be the subfolder named tei-hist3907.
 
 This exercise will explore a historical text and help you create a digital record of your analysis
 
@@ -53,6 +53,7 @@ Re-read your page and highlight / colour the following things:
 + Any persons mentioned (including any he/she if they refer to a specific person)
 + Any places mentioned
 + Any claims, assertions or arguments made
+
 Now that you have highlighted these, you are going to put proper code around them.
 
 For persons, surround your text with these

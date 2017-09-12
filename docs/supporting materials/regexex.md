@@ -31,7 +31,7 @@ In the previous module, we learned how to automatically grab text from sites lik
 
 The `curl` command downloads the txt file and the the `>` pushes the result of the curl command to a file called texas.txt.
 
-+ Open `texas.txt` with Nano and delete everything for the index of the list of letters. To select a lot of text in Nano, you set a starting point (a mark) with ctrl+shift+6 (the 'carat' symbol: ^). Then hit the down arrow on your keyboard, and you will highlight the text. When you've selected everything you want, hit ctrl + k to cut the text.
++ Open `texas.txt` with Nano and delete everything for the index of the list of letters (we just want the index). To select a lot of text in Nano, you set a starting point (a mark) with ctrl+shift+6 (the 'carat' symbol: ^). Then hit the down arrow on your keyboard, and you will highlight the text. When you've selected everything you want, hit ctrl + k to cut the text.
 
 That is, you’re looking for the table of letters, starting with ‘Sam Houston to J. Pinckney Henderson, December 31, 1836 51’ and ending with ‘Wm. Henry Daingerfield to Ebenezer Allen, February 2, 1846 1582’. Your file will now have approximately 2000 lines in it.
 
@@ -245,5 +245,9 @@ The pattern for step five is:
 The pattern for step six is:
 
 `grep -E ".+,.+,.+," index.txt`
+
+In dhbox, the command will use `-r`
+
+`grep -r ".+,.+,.+," index.txt`
 
 The `-E` tells grep to treat the pattern as an extended regex (regex with a few more bells and whistles). On DHBox, the flag would be `-r`, nb.

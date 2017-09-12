@@ -36,7 +36,7 @@ Once you've completed Milligan's tutorial, remember to put your history into a n
 
 Now that you're _au fait_ with wget, I want you to use wget to download the Shawville Equity from the Quebec provincial archives in a responsible and respectful manner. Otherwise, you will look like a bot attacking their site. The data is in this location: `http://collections.banq.qc.ca:8008/jrn03/equity/src/`. Make a new directory: `$ mkdir equity` and then cd into it: `$ cd equity`. Make sure you're in the directory by typing `$ pwd`. Work out the command to download say ten years' worth only of the Equity OCR'd transcriptions (the .txt files); configure your command to retrieve only the txt files, as the pdfs are large and will take much time and bandwidth to acquire. (Ok, I'm not heartless - scroll to the bottom of this page to see what the command should be).
 
-Add your command to your history file, and lodge it in your repository.
+Add your command to your history file, and lodge it in your repository. For reference, visit [module 1, exercises 2](http://workbook.craftingdigitalhistory.ca/module-1/Exercises/#exercise-2-getting-familiar-with-dhbox).
 
 Open some of the text files in Nano. How good, how careful was the 'object character recognition'? Part of the point of working with the Equity files is to show that even with horrible 'digitization', we can still extract useful insights. Digitization is more than simply throwing automatically generated files online. Good digitization requires scholarly work and effort! We will learn how to do this properly in the next exercise.
 
@@ -125,11 +125,13 @@ Before we can run this program, we have to tell DHBox that it is alright to run 
 
 `$ chmod 755 canadiana.sh`
 
-And now we can run the program:
+The `$ chmod` command means change mode. Each number represents a user permission for reading, writing, and executing files on your computer.  
+
+And now we can run the program (the ./ is important!):
 
 `$ ./canadiana.sh`
 
-Ta da! You now have a pretty powerful tool now for grabbing data from one of the largest portals for Canadian history! Download your output.txt file to your computer via the file manager and have a look at it. Make sure to make a file noting what you've done, commands you've made, etc, and lodge it in your repository.
+Ta da! You now have a pretty powerful tool now for grabbing data from one of the largest portals for Canadian history! Download your output.txt file to your computer via the file manager and have a look at it. Make sure to make a file noting what you've done, commands you've made, etc, and upload it in your Github repository.
 
 # EXERCISE 5: Mining Twitter
 
@@ -160,7 +162,7 @@ In this exercise, you'll:
 
 1. install the Tesseract OCR engine into your DHBox
 2. download an edition of the Equity
-3. install and use pdftk to burst the pdf into individual one-page files
+3. install and use pdftk to 'burst' (burst is a command that turns a single file into individual pages) the pdf into individual one-page files
 4. install and use imagemagick to convert the pdf into tiff image format
 5. use Tesseract to OCR the resulting pages.
 
@@ -174,7 +176,7 @@ Begin by making a new director for this exercise: `mkdir ocr-test`. Change direc
 6. Let's convert the first file to tiff with imagemagick's convert command: `$ convert -density 300 pg_0001.pdf -depth 8 -strip -background white -alpha off file.tiff` You want a high density image, which is what the -density and the -depth flags do; the rest of the command formats the image in a way that Tesseract expects to encounter text. This command might take a while. Just wait, be patient.
 7. Extract text! `$ tesseract file.tiff output.txt` This might also take some time.
 
-Download the output.txt file with the DHBox filemanager. Open the file with a text editor (there might be a lot of white space at the start of the file, fyi). Grab the txt file created by the Provincial Archives. Is yours better or worse than theirs? Look up the [Tesseract wiki](https://github.com/tesseract-ocr/tesseract/wiki/Command-Line-Usage). What other options could you use with the tesseract command to improve the results? For future reference, here are two guides to automating bulk OCR (multiple files) with tesseract: [Peirson's](https://diging.atlassian.net/wiki/display/DCH/Tutorial%3A+Text+Extraction+and+OCR+with+Tesseract+and+ImageMagick), [Schmidt's](http://benschmidt.org/dighist13/?page_id=129).
+Download the output.txt file to your own machine via DHBox's filemanager. Open the file with a text editor (there might be a lot of white space at the start of the file, fyi). Grab the txt file created by the Provincial Archives. Is yours better or worse than theirs? Look up the [Tesseract wiki](https://github.com/tesseract-ocr/tesseract/wiki/Command-Line-Usage). What other options could you use with the tesseract command to improve the results? When you decide to download Tesseract to you own computer, use the following two guides to automating bulk OCR (multiple files) with tesseract: [Peirson's](https://diging.atlassian.net/wiki/display/DCH/Tutorial%3A+Text+Extraction+and+OCR+with+Tesseract+and+ImageMagick), [Schmidt's](http://benschmidt.org/dighist13/?page_id=129).
 
 
 

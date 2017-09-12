@@ -1,7 +1,7 @@
 # Using Git with rstudio-pubs-static
 
 Before you can use Git to keep track of your changes to your R project, you need to tell the Git program (which keeps snapshots of your changes) who you are. Do this with these two commands via the command line:
-`$ git config --global user.email "you@example.com"``
+`$ git config --global user.email "you@example.com"`
 `$ git config --global user.name "Your Name"`
 
 Go back to R Studio. Under 'Tools' select 'Version Control' then 'project setup'. Under 'Version control system' select 'Git'.
@@ -24,7 +24,6 @@ open shell
 ```shell
 $ git remote add origin https://github.com/YOUR-ACCOUNT/YOUR-REPO.git
 $ git config remote.origin.url https://github.com/YOUR-ACCOUNT/YOUR-REPO.git
-$ git pull -u origin master
 $ git pull -u origin master
 ```
 And you now can push your changes to your remote repository whenever you make a new commit. There is a variation of markdown called RMarkdown that enables you to embed working R code into a document, and then 'knit' it into HTML or slide shows or pdfs. When you push those to a Github repo, you are now making data publications! The official [R Markdown information can be found on the R studio website](https://shiny.rstudio.com/articles/rmarkdown.html).

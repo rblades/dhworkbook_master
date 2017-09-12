@@ -39,7 +39,7 @@ See how easy that was? Don't worry about submitting this.... yet.
 
 Many of the exercises in this workbook work without issue on a Mac or Linux computer, at the terminal. (On a Mac, you can find the terminal under applications > utilities). If you're on a Windows machine, it can be more difficult to get all of the various bits and pieces properly configured. If you're on a tablet, most digital history things you might like to do are not really feasible. One solution is for all of us to use the _same_ computer. The CUNY Graduate Centre has created a digital-humanities focused virtual computer for just such an occasion.
 
-In this exercise, you are going to set up an instance of a DHBox for your own use.
+In this exercise, you are going to set up an instance of a DHBox for your own use. We will be using the command line interface which is an essential way to interact with your computer. Normally, when you're on your mac or your pc, you're clicking on icons or menus or windows of various sorts to get things done. You're clicking and dragging text. All of these graphical elements sit on top of sequences of commands that you don't have to type out, that only the computer sees. The command line (aka terminal, aka prompt) lets you dispense with the graphical elements, and type the commands you want the way you want them. 
 
 **NB this workbook assumes that you are using a DHBox**
 
@@ -100,7 +100,7 @@ The computer makes things a little more difficult sometimes when you're asking i
 
 [Visit this guide to using the Nano text editor](https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/) which you should check out now.
 
-In Nano, with your file open, make a header (use `#` to indicate a header, remember) at the start of the file which has today's date in it, and add some text explaining what you're trying to do. Then, hit ctrl+x to edit Nano. Nano will ask you if you want to 'Save modified buffer?'. Hit `y`, then when it asks you for the file name, hit enter.
+In Nano, with your file open, make a header (use `#` to indicate a header, remember) at the start of the file which has today's date in it, and add some text explaining what you're trying to do with this exercise. Then, hit ctrl+x to edit Nano. Nano will ask you if you want to 'Save modified buffer?'. Hit `y`, then when it asks you for the file name, hit enter.
 
 Use the file manager to save a copy of `dhbox-work-today.md` onto your own computer. One last thing: let's convert the markdown file into both Word and HTML. Pandoc is capable of quite sophisticated transformations, but these are two of the easiest. Try this:
 

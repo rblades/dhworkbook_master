@@ -8,7 +8,7 @@ In this module, let us begin by looking at a couple of pieces that explore this 
 
 In essence: what would your last essay last term have looked like, if you'd been thinking along these lines?
 
-Begin by taking visiting the [Mapping Texts](http://mappingtexts.stanford.edu/whitepaper/MappingTexts_WhitePaper.pdf) project. Look at the work of Michelle Moravec who is using [corpus linguistics tools to understand the history of women's suffrage](http://historyinthecity.blogspot.ca/2013/12/corpus-linguistics-for-historians.html) (and also [here](http://historyinthecity.blogspot.ca/2013/12/visualizing-gender-in-history-of-woman.html)). Listen to Micki Kaufmann on [Quantifying Kissinger](http://scholarslab.org/announcements/podcast-micki-kaufman-on-quantifying-kissinger/). (Her [methods are detailed on her blog](http://blog.quantifyingkissinger.com/category/methods/).) Talk about [network analysis](http://www.scottbot.net/HIAL/?tag=network-analysis). Keep an [eye on Paul Revere](https://kieranhealy.org/blog/archives/2013/06/09/using-metadata-to-find-paul-revere/). Talk about [topic modeling](http://humanities.uva.nl/~mkoolen1/materials/KB_Mallet_2015/KB_Mallet.html) (and also [here](http://sappingattention.blogspot.ca/2012/11/when-you-have-mallet-everything-looks.html)). Talk about [principles of visualization](http://www.themacroscope.org/?page_id=469). You should probably talk about [Edward Tufte](http://en.wikipedia.org/wiki/Edward_Tufte), too.
+Begin by taking visiting the [Mapping Texts](http://mappingtexts.stanford.edu/whitepaper/MappingTexts_WhitePaper.pdf) project. Look at the work of Michelle Moravec who is using [corpus linguistics tools to understand the history of women's suffrage](http://historyinthecity.blogspot.ca/2013/12/corpus-linguistics-for-historians.html) (and also [here](http://historyinthecity.blogspot.ca/2013/12/visualizing-gender-in-history-of-woman.html)). Listen to Micki Kaufmann on [Quantifying Kissinger](http://scholarslab.org/announcements/podcast-micki-kaufman-on-quantifying-kissinger/). (Her [methods are detailed on her blog](http://blog.quantifyingkissinger.com/category/methods/).) Talk about [network analysis](http://www.scottbot.net/HIAL/?tag=network-analysis). Keep an [eye on Paul Revere](https://kieranhealy.org/blog/archives/2013/06/09/using-metadata-to-find-paul-revere/). Talk about [topic modeling](https://web.archive.org/web/20161025200154/http://humanities.uva.nl:80/~mkoolen1/materials/KB_Mallet_2015/KB_Mallet.html#5) (and also [this blog post on Mallet](http://sappingattention.blogspot.ca/2012/11/when-you-have-mallet-everything-looks.html)). Talk about [principles of visualization](http://www.themacroscope.org/?page_id=469). You should probably talk about [Edward Tufte](http://en.wikipedia.org/wiki/Edward_Tufte), too.
 
 Talk. What could history be like if more of our materials went through these mills?
 
@@ -19,7 +19,7 @@ Talk. What could history be like if more of our materials went through these mil
 + simple maps with CartoDB (which may include georectifying and displaying historical maps as base layers)
 + corpus linguistics with AntConc
 + TF-IDF with Overview
-+ quick visualizations using [RAW](http://raw.densitydesign.org/)
++ quick visualizations using [RAW, an open source data visualization framework](http://raw.densitydesign.org/)
 
 We will be busy in this module. *Do not be afraid* to ask myself, your peers, or the wider DH community for help and advice! It's the only way we grow.
 
