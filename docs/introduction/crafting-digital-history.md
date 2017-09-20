@@ -1,4 +1,4 @@
-#Getting yourself ready July 4th - 9th
+# Getting yourself ready July 4th - 9th
 ![Black and white image of men standing around man in old fire fighter suit and air being pumped to him through a hose](https://c1.staticflickr.com/3/2197/2163099221_eb9ab72268.jpg)
 
 "'Getting Ready for the Kaiser' Bain Collection, Library of Congress hdl.loc.gov/loc.pnp/ggbain.10412 Call Number: LC-B2- 2400-7"
@@ -11,28 +11,28 @@ Github is a way of mapping that stream, and a guide to revisiting the interestin
 
 It's not the best metaphor, but it'll do. No doubt you've had that experience where, after working on an essay for days, you make a change that you regret. You wish you could go back to fix it, but ctrl+z only goes so far. You realize that everything you've done for the last week needs to be thrown out, and you start over.
 
-Well, with 'versioning control', you can travel back upriver, back to where things were good. There are two tools that we will use to make this happen: [git](https://git-scm.com/) and [github](http://github.com). You'll learn more about making those things work in Module 1. You'll see why you'd want to do that, and how to future-proof your work, writing things [in a plain-text format called 'markdown'](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+Well, with 'versioning control', you can travel back upriver, back to where things were good. There are two tools that we will use to make this happen: [git](https://git-scm.com/) and [github](http://github.com). You'll learn more about making those things work in **module 1**. You'll see why you'd want to do that, and how to future-proof your work, writing things [in a plain-text format called 'markdown'](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
-In module 2, we'll start exploring the wide variety of historical data out there. We'll talk about some of the ethical dilemmas posed by having so much data out there. 'Data' are not neutral 'things given'; rather, they are 'capta': things _taken_.
+In **module 2**, we'll start exploring the wide variety of historical data out there. We'll talk about some of the ethical dilemmas posed by having so much data out there. 'Data' are not neutral 'things given'; rather, they are 'capta': things _taken_.
 
 (Caveat: I am assuming, in this course, that the digital materials we want have already been digitized. Digitizing, adding meta-data (information that describes the data), and structuring it _properly_ are very complex topics on their own that could be the subject of a complete course! If you are interested in those problems, a good place to start is this open course from SOAS on [database design for historians](http://port.sas.ac.uk/mod/book/view.php?id=75&chapterid=125).)
 
-In module 3, we'll see that data/capta are _messy_, and that they make a kind of illusory order that as historians, we are not normally in the habit of thinking about. The big secret of digital history is that the majority of your time on _any_ digital history project won't be finding the capta, won't be analyzing the capta, won't be thinking about the historical meaning of the capta. We'll be _cleaning it up_. The exercises in this module will help you do that more efficiently (and be aware that 'efficiency' in computing terms is not a theoretically neutral idea!)
+In **module 3**, we'll see that data/capta are _messy_, and that they make a kind of illusory order that as historians, we are not normally in the habit of thinking about. The big secret of digital history is that the majority of your time on _any_ digital history project won't be finding the capta, won't be analyzing the capta, won't be thinking about the historical meaning of the capta. We'll be _cleaning it up_. The exercises in this module will help you do that more efficiently (and be aware that 'efficiency' in computing terms is not a theoretically neutral idea!)
 
-With module 4, we talk about doing the analysis. I present finding, cleaning, and analyzing as if they were sequential steps, but in reality they are circular. Movement in one aspect often requires revisiting another one! This module explores how we do this, and what it means for us as historians.
+In **module 4**, we talk about doing the analysis. I present finding, cleaning, and analyzing as if they were sequential steps, but in reality they are circular. Movement in one aspect often requires revisiting another one! This module explores how we do this, and what it means for us as historians.
 
-In module 5, we begin at last to think about how we communicate all of this to our audiences. Look at how [one university lays out the expectations for digital history work](http://historyarthistory.gmu.edu/graduate/phd-history/digital-dissertation-guidelines) (and, do you see how this ties back to ideas about [paradata](http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#final-project)?). We will think about things like typography and layout. We'll look at ways of making our visualizations more compelling, more effective.
+In **module 5**, we begin at last to think about how we communicate all of this to our audiences. Look at how [one university lays out the expectations for digital history work](http://historyarthistory.gmu.edu/graduate/phd-history/digital-dissertation-guidelines) (and, do you see how this ties back to ideas about [paradata](http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#final-project)?). We will think about things like typography and layout. We'll look at ways of making our visualizations more compelling, more effective.
 
 Finally, while there is no formal requirement for you to do this, it would be a great way of launching yourself as a digital historian to think about how you would formally reveal your project work in this class to the wider world: and then do it. There's a lot of noise on the internet, especially when it comes to history. How do you, as a digital historian, make the strongest possible signal?
 
-# What you need to do this week
+## What you need to do this week
 
 1. Follow the instructions below to set up your digital history workspace
 2. Annotate the course manual for any parts of it that are unclear (or alternatively, that have you excited)
 3. Respond to the readings and the reading questions by annotating the readings themselves - see the instructions below.
 4. [Submit your work to the course submission form](http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#submitting-evidence)
 
-# Setting up a your workspace
+## Setting up a your workspace
 
 A digital historian needs to have a digital workshop/lab/studio/performance space. Such a space serves a number of functions:
 
@@ -53,7 +53,7 @@ Because you have complete access and control over your domain, you can install o
 
 So let's get started.
 
-## Reclaim Hosting
+### Reclaim Hosting
 
 In the course space for cuLearn, I gave you a code to use to pay for a domain of your own. I have already purchased domain space for you from an academic web hosting service, [Reclaim Hosting](https://reclaimhosting.com/shared-hosting/). This space will last for one year, at which point you have the option of paying to renew it or letting it die. Previous students in this course have used their domain to help with their applications for jobs and graduate school. One such is [Melissa](http://theproudhistorynerd.com).
 
@@ -65,7 +65,7 @@ Congratulations! You now own your very own domain. **It might take a bit of time
 
 Giving you a space of your own is my political act of protest against the centralization of learning inside learning management systems. Learning isn't 'managed', it's cultivated. Unlike cuLearn, I cannot monitor your activity inside your own domain. I can only see what you choose to make public. Unlike Facebook or Snapchat or Instagram, I am not trying to monitize your personality on the web.
 
-## Wordpress for your blog
+### Wordpress for your blog
 
 Wordpress is probably the best option for a platform for writing the narrative bits of your digital history work.
 
@@ -79,7 +79,7 @@ Wordpress is probably the best option for a platform for writing the narrative b
 
 You can close the cPanel webpage now (log out first).
 
-### Customising your blog
+#### Customising your blog
 
 If you look at the dashboard for your blog, you'll see a lot of options down the left hand side of your screen. If you want to change the look of your blog, click on 'appearance' then click on 'themes'. A number of themes are pre-installed. You can click on the different themes and select 'preview' to see how your blog might look. When you find one you like, select 'activate'. Go to the other browser window where you have your-domain.ca open. Reload the page to see the changes take effect!
 
@@ -101,7 +101,7 @@ Explore the options for your blog; customize and make the space your own.
 
 For more information about controlling visibility of your posts and so on, [visit the Wordpress content visibility help page](https://codex.wordpress.org/Content_Visibility).
 
-## Hypothesis
+### Hypothesis
 
 Hypothesis is an overlay on the web that allows you to highlight or annotate any text you come across (including *inside pdfs*). All of your annotations can then be collected together. It is a very effective research tool.
 
@@ -118,9 +118,9 @@ Annotations are public by default. When you are making a new annotation you can 
 
 You can also 'tag' any annotation you make. If many people use the same set of tags, you can collect annotations by tag. This can make it easier to do group research projects, for instance.
 
-**Please always tag your annotations with 'hist3814o'. That way, everyone's tags will show up on this page: [http://jonudell.net/h/facet.html?facet=tag&mode=documents&search=hist3814o](http://jonudell.net/h/facet.html?facet=tag&mode=documents&search=hist3814o)**
+**Please always tag your annotations with 'hist3814o'. That way, everyone's tags will show up on [the course Hypothesis page](http://jonudell.net/h/facet.html?facet=tag&mode=documents&search=hist3814o)**
 
-### Collecting your own annotations on your blog
+#### Collecting your own annotations on your blog
 
 Hypothesis has an *api* that allows you to do some neat things. 'API' stands for 'application programming interface', which is just a fancy way of saying, 'you can write a program that interacts with this web service'. [Kris Shaffer](http://pushpullfork.com/), a professor at the University of Mary Washington, has written a **plugin** for Wordpress that allows you to automatically collect annotations you make across the web and to display them all on a single page on your blog. So, we'll go get that plugin and install it on your blog:
 
@@ -136,19 +136,19 @@ Open [https://github.com/kshaffer/hypothesis_aggregator](https://github.com/ksha
 8. Shaffer has created a 'shortcode' that tells Wordpress to go over to Hypothes.is and grab the latest information. So, in the text of your new page (in the editor window, make sure to click the 'text' button or else this won't work), enter the shortcode that will grab all of your public annotations: `[hypothesis user = 'kris.shaffer']` where you remove the `kris.shaffer` and put in your own Hypothes.is username.
 9. Hit the 'publish' button. Wordpress will report that the page has been published and give you a link to it; click on this link to see your new always-updating list of annotations! Of course, if you haven't made any public annotations yet, nothing will display. Go annotate something, then come back and reload the page.
 
-## Github
+### Github
 
 Finally, you need a github account. We will go into more detail about how to use Github in the next module. For now, go to [Github.com](http://github.com) and sign up for a new account. Follow all the prompts, and make a note of the direct URL to your account (mine for instance is [http://github.com/shawngraham](http://github.com/shawngraham)). Put this link in your 'about' page on your blog. You'll learn how to use this space in exercise 3 in module 1.
 
-## Your digital history lab/studio/workshop
+### Your digital history lab/studio/workshop
 
 You now have a digital history lab equipped with all of the necessary ingredients for doing digital history. You have an open notebook for recording what you are up to (both your narrative and your annotations). In Github, you have a scratch pad for keeping track of the actual nuts-and-bolts of any digital work you do (and note that it is entirely possible to do digital history successfully without having to do anything that a computer scientist for instance would call coding). You have a domain that you control completely, and where you can install other platforms and services as seems necessary.
 
-## VPN & DHBox
+### VPN & DHBox
 
 To access our virtual computer, the DHBox, you will need to use Carleton's VPN service. Please visit [Carleton's VPN help page](https://carleton.ca/its/help-centre/page-type/vpn/) and follow the instructions for your particular computer. Once you've got it installed, you will need to connect to Carleton through the VPN with your mycarletone credentials. Indeed, you should always connect via a VPN whenever you're using a public wifi point (like in coffee shops). The VPN acts like a private tunnel from your computer to Carleton's servers. To the rest of the internet, it will now look as if you actually are on campus. Once you're connected via the VPN, you can [access the DHBox through your browser](http://134.117.26.132:5000/). Bookmark the site; you'll use it in the exercises in module 1.
 
-### Using the DHBox
+#### Using the DHBox
 
 - click the 'sign up' button
 - fill in the form. Choose a username and password that you'll remember. You don't have to use a real email by the way, just something that looks email-like (this is handy if, like me, you end up creating multiple DHBoxes - it's a bad idea to have more than one DHBox with the *same* email address)
@@ -159,7 +159,7 @@ To access our virtual computer, the DHBox, you will need to use Carleton's VPN s
 
 **A note on using the university computer labs** if you are using an official University computer lab computer to access DHBox, aspects of the University's security system might block the RStudio aspect. I am working on a solution to this problem. If you know that you are going to have to use Carleton computers, get in touch right away.
 
-# Some Readings To Kick Things Off
+## Some Readings To Kick Things Off
 
 What is digital history anyway? How is it connected to so-called 'big data'? Read the following pieces. Annotate with Hypothes.is anything that strikes you as interesting; annotate anything that puzzles you - feel free to just say, 'I'm not sure what this means; does it mean.... does anybody have any ideas?' **and** if you see someone is asking questions, you can reply to that annotation with thoughts of your own!
 
@@ -181,6 +181,6 @@ Once you have read and annotated the works, **write a post on your blog that pos
 
 # Acknowledgements
 
-The writing of this workbook took place alongside the writing of my more formal book on [digital methods](http://themacroscope.org) co-authored with the exceptional [Ian Milligan](http://ianmilligan.ca/) and [Scott Weingart](http://www.scottbot.net/HIAL/). I learned far more about doing digital history from them than they ever from me, and someday, I hope to repay the debt. Other folks who've been instrumental in getting this workbook and course off the ground include Melodee Beals, John Bonnett, Chad Gaffield, Tamara Vaughan, the staff of the EDC at Carleton University, [eCampusOntario](http://ecampusontario.org) and of course, the digital history community on Twitter. My thanks to you all.
+The writing of this workbook took place alongside the writing of my more formal book on [digital methods](http://themacroscope.org) co-authored with the exceptional [Ian Milligan](http://ianmilligan.ca/) and [Scott Weingart](http://scottbot.net/i-am/). I learned far more about doing digital history from them than they ever from me, and someday, I hope to repay the debt. Other folks who've been instrumental in getting this workbook and course off the ground include Melodee Beals, John Bonnett, Chad Gaffield, Tamara Vaughan, the staff of the EDC at Carleton University, [eCampusOntario](http://ecampusontario.org) and of course, the digital history community on Twitter. My thanks to you all.
 
 *This class was first offered in the Winter 2015 semester at Carleton University in Ottawa Canada as HIST3907b. I am grateful to the participants in that class for the feedback and frank discussions of what worked and what didn't. To see the earlier version of the course, please feel free to browse its [github repository](https://github.com/hist3907b-winter2015/)*

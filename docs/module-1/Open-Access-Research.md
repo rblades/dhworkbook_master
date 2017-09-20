@@ -13,7 +13,7 @@ There are a number of reasons why you should want to do this. This week we will 
 + [Kathleen Fitzgerald](http://www.plannedobsolescence.net/generous-thinking-introduction/#more-2828)
 + [Sheila Brennan](http://www.lotfortynine.org/2017/06/my-digital-publishing-update-nothing/)
 
-But most importantly, *change is coming whether historians like it or not*. Here in Canada, SSHRC has a [research data archiving policy](http://www.sshrc-crsh.gc.ca/about-au_sujet/policies-politiques/statements-enonces/edata-donnees_electroniques-eng.aspx)
+But most importantly, **change is coming whether historians like it or not**. Here in Canada, SSHRC has a [research data archiving policy](http://www.sshrc-crsh.gc.ca/about-au_sujet/policies-politiques/statements-enonces/edata-donnees_electroniques-eng.aspx)
 
 > All research data collected with the use of SSHRC funds must be preserved and made available for use by others within a reasonable period of time. SSHRC considers “a reasonable period” to be within two years of the completion of the research project for which the data was collected.
 
