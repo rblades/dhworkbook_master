@@ -10,7 +10,7 @@ You are welcome to work through more of them, of course, but I want the exercise
 
 Many of these involve having to install more software on your own machine. In those exercises that involve using R and RStudio, you are welcome to install RStudio on your own machine OR to use it in DHBox. Please read [this quick introduction to R and Rstudio carefully](../supporting materials/quick-intro-r.md).
 
-**If you decide to install R and RStudio on your own machine,** I would suggest you read the introductory bits from Lincoln Mullen's book-in-progress, [Computational Historical Thinking](http://dh-r.lincolnmullen.com/getting-started.html), especially the 'setup' part under 'getting started' (pay attention to the bit on installing packages and dependencies). If you spot any exercises in Mullen's book that seem relevant to your project, you may do those as an alternative to the ones here. *Alternatively*, go to [Swirl](http://swirlstats.com/) and [learn the basics of R within R](http://swirlstats.com/students.html). [DHNow](http://digitalhumanitiesnow.org/2016/01/resource-basic-text-mining-in-r/) links to a new [Basic Text Mining in R](https://web.archive.org/web/20160309170928/https://rstudio-pubs-static.s3.amazonaws.com/31867_8236987cf0a8444e962ccd2aec46d9c3.html) tutorial which is worth checking out as well.
+**If you decide to install R and RStudio on your own machine,** I would suggest you read the introductory bits from Lincoln Mullen's book-in-progress, [Computational Historical Thinking](http://dh-r.lincolnmullen.com/getting-started.html), especially the 'setup' part under 'getting started' (pay attention to the bit on installing packages and dependencies). If you spot any exercises in Mullen's book that seem relevant to your project, you may do those as an alternative to the ones here. **Alternatively**, go to [Swirl](http://swirlstats.com/) and [learn the basics of R within R](http://swirlstats.com/students.html). [DHNow](http://digitalhumanitiesnow.org/2016/01/resource-basic-text-mining-in-r/) links to a new [Basic Text Mining in R](https://web.archive.org/web/20160309170928/https://rstudio-pubs-static.s3.amazonaws.com/31867_8236987cf0a8444e962ccd2aec46d9c3.html) tutorial which is worth checking out as well.
 
 **NB It is always very important to record in your own notebooks what version of R you used for your analysis, what version of any R packages you installed and used, and so on because packages can go out of date.**
 
@@ -51,7 +51,8 @@ In exercise 2, you will use the **Topic Modeling Tool** to create a simple topic
 9. Set the output to be somewhere neat and tidy on your computer.
 10. Set the number of topics you'd like to model.
 11. Click 'train topics' to run the algorithm.
-12. When it finishes, go to the folder you selected for output, and find the file 'all_topics.html' in the 'output_html' folder. Click on that, and you now have a browser-based way of navigating your topics and documents. In the output_csv folder created, you will find the same information as csv, which you could then input into a spreadsheet for other kinds of visualizations (which we'll talk about in class.)
+12. When it finishes, go to the folder you selected for output, and find the file 'all_topics.html' in the 'output_html' folder. 
+13. Click on 'all_topics.html'. You now have a browser-based way of navigating your topics and documents. In the output_csv folder created, you will find the same information as csv, which you could then input into a spreadsheet for other kinds of visualizations (which we'll talk about in class.)
 
 Make a note in your open notebook about your process and your observations. How does reading this material in this way change/challenge/or focus your understanding of the material?
 
@@ -87,7 +88,7 @@ Heather Froelich has put together an excellent step-by-step with using AntConc f
 
 Can you get our example materials (from the Colonial Newspaper Database) into AntConc? [This might help you](http://www.themacroscope.org/?page_id=418) to split the csv into individual txt files. Alternatively, do you have any materials of your own, already collected? Feed them into AntConc. What patterns do you see? What if you compare your materials against other corpora of texts?
 
-FYI, [here is a collection of corpora that you can explore](http://www.helsinki.fi/varieng/CoRD/corpora/index.html)
+FYI, [CoRD has a collection of corpora that you can explore](http://www.helsinki.fi/varieng/CoRD/corpora/index.html).
 
 -----
 
@@ -110,7 +111,7 @@ Do you see the difference? In the latter window, the individual articles have be
 ## Exercise 7: RAW
 ### Quick Charts Using RAW
 
-A quick chart can be a handy thing to have. Google spreadsheets, Microsoft Excel, and a host of other programs can make excellent charts quickly with their wizard functions. Never hesitate to turn to these. However, they are not always good with non-numeric data. In module 3, you used the NER to extract place names from a text. After some further munging with regex, you might have ended up with a CSV that looks like [this file](https://raw.githubusercontent.com/hist3907b-winter2015/module4-holes/master/texas.csv). Can we do a quick visualization of this information? One useful tool is [RAW](http://raw.densitydesign.org/). 
+A quick chart can be a handy thing to have. Google spreadsheets, Microsoft Excel, and a host of other programs can make excellent charts quickly with their wizard functions. Never hesitate to turn to these. However, they are not always good with non-numeric data. In module 3, you used the NER to extract place names from a text. After some further munging with regex, you might have ended up with a CSV that looks like [this similar CSV](https://raw.githubusercontent.com/hist3907b-winter2015/module4-holes/master/texas.csv). Can we do a quick visualization of this information? One useful tool is [RAW](http://raw.densitydesign.org/). 
 
 1. Open RAW in a new window
 2. Copy the table of data of places mentioned in the Texan correspondence, and paste it into the data input box at the top of the RAW screen.
@@ -156,8 +157,11 @@ You can now copy and paste your table of data into the data input box in RAW, an
 RAW takes your data, and depending on your choices, passes it into chart templates built on the d3.js code library. D3.js is a powerful library for making all sorts of charts (including interactive ones). If this sort of thing interests you, you can follow the tutorials in [Elijah Meeks' excellent new book](http://manning.com/meeks/).
 
 1\. With your data pasted in, you can now experiment with a number of different visualizations that are all built on the d3.js code library.  
+
 2\. Try the ‘alluvial’ diagram.  Pick place1 and place2 as your dimensions - you click and drag the green boxes under 'map your data' into the 'steps' box. 
+
 3\. Leave the 'size' box empty. 
+
 4\. Under 'customize your visualization' you can click inside the 'width' box to make the diagram wider and more legible.
 
 Does anything jump out? 
@@ -176,15 +180,23 @@ In this exercise, you will find a historical map online, upload a copy to a mapw
 ### Georectifying
 Georectifying is the process of taking an image (whether it is of a historical map, chart, airphoto, or whatever) and manipulating its geometry so that it matches a geographic projection. Think of it like this: you take your handdrawn map, and use pushpins to pin down known locations on your map to a globe. As you pin, your image stretches and warps. Traditionally, this has not been an easy thing to do, if you are new to GIS. In recent years, the curve has flattened significantly. In this exercise, we'll grab an image, upload it to the Harvard Library MapWarper service, and then export it as a tileset which can be used in other mapping programs.
 
-1. Get a historical map. I like the Fire Insurance plans from the [Gatineau Valley Historical Society](http://www.gvhs.ca/research/maps-fire-insurance.html); I'm sure you can find others to suit your interests.
-2. Right-click, save as.... grab a copy. Save it somewhere handy.
-3. Go to [Harvard World MapWarp](http://warp.worldmap.harvard.edu/) and sign up for an account. Then login.
-4. Go to the upload screen: <br> ![Image showing upload screen for Harvard World Maps](http://i.imgur.com/bmNCzg6.png)
-5. Fill in as much of the metadata as you can. Then select your map from your computer, and upload it.
-6. On the next page, click 'rectify'. <br> ![Image showing user ability to rectify the historical map on the left with the modern map on the right to ensure locations match coordinates](http://i.imgur.com/yULDRQR.jpg)
-7. Pan and zoom both maps until you're sure you're looking at the same area in both. Double click in a map, select the pencil icon, and click on a point (location) you are sure you can match in the other window. Then click on the other map window, select the pencil, and then click on the same point. The 'add control point' button below and between both maps will light up. Click on this to confirm that this is a control point you want. Do this at least three times; the more times you can do it, the better the map warp.
-8. Having selected your control points, click on 'warp image'.
-9. You can now click on the 'export' panel, and get the URL for your georectified image in a few different formats. If you clicked on the KML option, a google map window will open [like so](https://maps.google.com/maps?q=http://warp.worldmap.harvard.edu/maps/4152.kml&output=classic&dg=feature). For many webmapping applications, the Tiles (Google/OSM scheme): Tiles Based URL is what you want. You'll get a URL like this: ```http://warp.worldmap.harvard.edu/maps/tile/4152/z/x/y.png```   Save that info. You'll need it later.
+1\. Get a historical map. I like the Fire Insurance plans from the [Gatineau Valley Historical Society](http://www.gvhs.ca/research/maps-fire-insurance.html); I'm sure you can find others to suit your interests.
+
+2\. Right-click, save as.... grab a copy. Save it somewhere handy.
+
+3\. Go to [Harvard World MapWarp](http://warp.worldmap.harvard.edu/) and sign up for an account. Then login.
+
+4\. Go to the upload screen: <br> ![Image showing upload screen for Harvard World Maps](http://i.imgur.com/bmNCzg6.png)
+
+5\. Fill in as much of the metadata as you can. Then select your map from your computer, and upload it.
+
+6\. On the next page, click 'rectify'. <br> ![Image showing user ability to rectify the historical map on the left with the modern map on the right to ensure locations match coordinates](http://i.imgur.com/yULDRQR.jpg)
+
+7\. Pan and zoom both maps until you're sure you're looking at the same area in both. Double click in a map, select the pencil icon, and click on a point (location) you are sure you can match in the other window. Then click on the other map window, select the pencil, and then click on the same point. The 'add control point' button below and between both maps will light up. Click on this to confirm that this is a control point you want. Do this at least three times; the more times you can do it, the better the map warp.
+
+8\. Having selected your control points, click on 'warp image'.
+
+9\. You can now click on the 'export' panel, and get the URL for your georectified image in a few different formats. If you clicked on the KML option, a google map window will open [like so](https://maps.google.com/maps?q=http://warp.worldmap.harvard.edu/maps/4152.kml&output=classic&dg=feature). For many webmapping applications, the Tiles (Google/OSM scheme): Tiles Based URL is what you want. You'll get a URL like this: ```http://warp.worldmap.harvard.edu/maps/tile/4152/z/x/y.png```   Save that info. You'll need it later.
 
 You have now georectified a map. Let's use that map as a base layer in [Palladio](http://palladio.designhumanities.org/#/)
 
@@ -199,11 +211,17 @@ We need some place data for Palladio. Here's what I'm using <br> ![Image for Pal
 etc: that is, a tab between 'place' and 'coordinates' in the first line, a tab between 'mexico' and the latitude, and a comma between latitude and logitude.
 
 10\. Go to [Palladio](http://palladio.designhumanities.org/). Hit 'start' then 'upload spreadsheet or csv'. In the box, paste in your data. **You can progress to the next step without having any real data: just paste or type something in - see the video below.** Obviously, you won't have any points on your map, but if you were having trouble with that step, this allows you to bypass it to continue on with this tutorial.
+
 11\. Click on 'map'
+
 12\. Under 'places', select 'coordinates'
+
 13\. Click 'add new layer'
+
 14\. In the popup, beside 'Choose one of Palladio default layers or create a new one.', select 'custom'. This is where you're going to paste it that tiles based URL from the map warper
+
 15\. Paste in the URL, but **replace** the ```/z/x/y``` part with ```{z}/{x}/{y}```
+
 16\. Click add
 
 Here is a video walk through; places where you might have got into trouble include getting past the initial data entry box on Palladio, and finding where exactly to past in your georectified map url.

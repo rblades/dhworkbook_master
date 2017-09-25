@@ -1,16 +1,16 @@
 # Using igraph to visualize network data
 
-In this exercise, we are doing a quick first pass on the network data generated from the Republic of Texas correspondence. I am providing you with the _edge list_, the links of to - from that we generated earlier. I am also providing you the _node list_, the list of individuals extracted from that edge list. If we keep our nodes and edges separated in csv tables, we can add other _attributes_ later (things like date, or number of times a pair of individuals corresponded ie weight, or gender, or location, or what have you) to create different views or analyses. I used open refine (see the [lesson on open refine](../supporting materials/open-refine.md)) to clean this data up for you. Remember, 80 percent of all digital history work involves cleaning data!
+In this exercise, we are doing a quick first pass on the network data generated from the Republic of Texas correspondence. I am providing you with the **edge list**, the links of to - from that we generated earlier. I am also providing you the **node list**, the list of individuals extracted from that edge list. If we keep our nodes and edges separated in csv tables, we can add other **attributes** later (things like date, or number of times a pair of individuals corresponded ie weight, or gender, or location, or what have you) to create different views or analyses. I used open refine (see the [lesson on open refine](../supporting materials/open-refine.md)) to clean this data up for you. Remember, 80 percent of all digital history work involves cleaning data!
 
 Here is the data that you need; download these, and use the filemanager to load them into your dhbox into your new R project for this tutorial.
 
-+ [list of links](../supporting materials/texaslinks.csv)
-+ [list of nodes](../supporting materials/texasnodes.csv)
++ [List of links](../supporting materials/texaslinks.csv)
++ [List of nodes](../supporting materials/texasnodes.csv)
 
 
 This tutorial will illustrate to you some of the ways the `igraph` package can be used to create quick visualizations or to generate network statistics. These of course on their own mean very little: this is where your historical sensibility comes into play, triangulating this generated data with other things you know about the historical context of the time, place and players!
 
-Remember to make a new project in RStudio by clicking the down arrow on the R button at the right hand side of the R Studio interface; start the project in a new folder. Then using the DHBox filemanager, upload the nodes and links data from your computer to that folder you just created.
+Remember to make a new project in R Studio by clicking the down arrow on the R button at the right hand side of the R Studio interface; start the project in a new folder. Then using the DHBox filemanager, upload the nodes and links data from your computer to that folder you just created.
 
 ## Installing igraph
 
@@ -27,18 +27,18 @@ install.packages('igraph')
 library('igraph')
 ```
 
-## getting the data into your project
+## Getting the data into your project
 
 For future reference, we're adapting our script from a more in-depth [tutorial of R igraph](http://kateto.net/networks-r-igraph).
 
-Bringing data into R is straightforward. We create a variable 'nodes' and a variable for 'links' and load the data from our csv files into them:
+1\. Bringing data into R is straightforward. We create a variable 'nodes' and a variable for 'links' and load the data from our csv files into them:
 ```R
 # now let's load up the data by putting the csv files into nodes and links.
 nodes <- read.csv("texasnodes.csv", header=T, as.is=T)
 links <- read.csv("texaslinks.csv", header=T, as.is=T)
 ```
 
-We can examine the start or end of a variable with the head or tail command; these look at the first few lines at the start ('head') or end ('tail') of the variable, eg:
+2\. We can examine the start or end of a variable with the head or tail command; these look at the first few lines at the start ('head') or end ('tail') of the variable, eg:
 
 ```R
 #examine data
@@ -54,7 +54,7 @@ nrow(links); nrow(unique(links[,c("source", "target")]))
 # which means some people sent more than one letter, and some people received more than one letter
 ```
 
-Let's rearrange things so that instead of this:
+3\. Let's rearrange things so that instead of this:
 
 ```
 Alice -> Bob, 1 letter
@@ -68,7 +68,9 @@ we have this:
 Alice -> Bob, 3 letters
 ```
 
-That is, we're going to count up the number of times a particular relationship exists, and assign that count to the weight column. Much tidier all around! We do that like this:
+That is, we're going to count up the number of times a particular relationship exists, and assign that count to the weight column. Much tidier all around! 
+
+4\. We do that like this:
 
 ```R
 links <- aggregate(links[,3], links[,-3], sum)
@@ -97,7 +99,7 @@ You should see this:
 ```
 
 
-Now, let's tell R to stitch our links together into a network object (a data frame) that it can visualize and analyze:
+5\. Now, let's tell R to stitch our links together into a network object (a data frame) that it can visualize and analyze:
 
 ```R
 # let's make a net
@@ -115,11 +117,11 @@ plot(net, edge.arrow.size=.4,vertex.label=NA)
 
 ```
 
-Before we jump down the rabbit hole of visualization, let's recognize right now that _visualizing_ a network is only rarely of analytical value. The value of network analysis comes from the various questions we can now start posing of our data when it is represented as a network. In this correspondence network, who is in the centre of the web? To whom would information flow? To whom would information leak? Are there cliques or ingroups? When we identify such individuals, how does that confirm or confound our expectations of the period and place?
+Before we jump down the rabbit hole of visualization, let's recognize right now that **visualizing** a network is only rarely of analytical value. The value of network analysis comes from the various questions we can now start posing of our data when it is represented as a network. In this correspondence network, who is in the centre of the web? To whom would information flow? To whom would information leak? Are there cliques or ingroups? When we identify such individuals, how does that confirm or confound our expectations of the period and place?
 
-Many different kinds of metrics can be calculated (and [the Kateto R igraph tutorial will show you how](http://kateto.net/networks-r-igraph)) but it's always worth remembering that a metric is only meaningful for a given network when we're dealing with like things - a network of people who write letters to one another; a network of banks that swap mortgages with one another. These are called 'one mode networks'. A network of people connected to the banks they use - a two mode network, because it connects two different kinds of things - might be useful to _visualize_ but the metrics calculated might not be _valid_ if the metric was designed to work on a one-mode network (for more on this and allied issues, visit [Scott Weingart's website](http://www.scottbot.net/HIAL/index.html@p=6279.html)).
+Many different kinds of metrics can be calculated (and [the Kateto R igraph tutorial will show you how](http://kateto.net/networks-r-igraph)) but it's always worth remembering that a metric is only meaningful for a given network when we're dealing with like things - a network of people who write letters to one another; a network of banks that swap mortgages with one another. These are called 'one mode networks'. A network of people connected to the banks they use - a two mode network, because it connects two different kinds of things - might be useful to **visualize** but the metrics calculated might not be **valid** if the metric was designed to work on a one-mode network (for more on this and allied issues, visit [Scott Weingart's website](http://www.scottbot.net/HIAL/index.html@p=6279.html)).
 
-Given our correspondence network, let's imagine that 'closeness' (eg a measure of how central a person is) and 'betweenness' (a measure of how many different strands of the network pass through this person) are the most historically interesting. Further, we're going to try to determine if there are subgroups in our network, cliques.
+6\. Given our correspondence network, let's imagine that 'closeness' (a measure of how central a person is) and 'betweenness' (a measure of how many different strands of the network pass through this person) are the most historically interesting. Further, we're going to try to determine if there are subgroups in our network, cliques.
 
 ```R
 ## the 'degree' of a node is the count of its connections. In this code chunk, we calculate degree, then make both a histogram of the counts and a plot of the network where we size the nodes proportionately to their degree. What do we learn from these two visualizations?
@@ -129,7 +131,8 @@ plot(net, vertex.size=deg*2, vertex.label = NA)
 ## write this info to file for safekeeping
 write.csv(deg, 'degree.csv')
 ```
-Now we'll look at closeness. If you know the width or _diameter_ of your network (the maximum number of steps to get across it), then the node that is on average the shortest number of steps from all the others is the one that is most close. We calculate it like this:
+
+7\. Now we'll look at closeness. If you know the width or **diameter** of your network (the maximum number of steps to get across it), then the node that is on average the shortest number of steps from all the others is the one that is most close. We calculate it like this:
 
 ```R
 closepeople <- closeness(net, mode="all", weights=NA)
@@ -138,7 +141,7 @@ write.csv(closepeople, 'closeness.csv') # so we have it on file.
 
 ```
 
-We can ask which individuals are hubs, and which are authorities. In the lingo, 'hubs' are individuals with many outgoing links (they _sent_ lots of letters) while 'authorities' are individuals who _received_ lots of letters. In the code below,
+8\. We can ask which individuals are hubs, and which are authorities. In the lingo, 'hubs' are individuals with many outgoing links (they **sent** lots of letters) while 'authorities' are individuals who **received** lots of letters. In the code below,
 
 ```
 hs <- hub_score(net, weights=NA)$vector
@@ -150,33 +153,37 @@ par(mfrow=c(1,2))
 plot(net, vertex.size=hs*40, vertex.label.cex =.2, edge.arrow.size=.1, main="Hubs")
 plot(net, vertex.size=as*20, vertex.label = NA, edge.arrow.size=.1, main="Authorities")
 ```
+
 Can you work out what command to give to write the hub score or the authority scores to a file?
 
-Let's look for 'modules' within this network. Broadly speaking, these are clumps of nodes that have more or less the same pattern of ties between them, _within_ the group, than without.
+9\. Let's look for 'modules' within this network. Broadly speaking, these are clumps of nodes that have more or less the same pattern of ties between them, **within** the group, than without.
 
 ```R
 cfg <- cluster_fast_greedy(as.undirected(net))
 
 lapply(cfg, function(x) write.table( data.frame(x), 'cfg.csv'  , append= T, sep=',' ))
 ```
+
 We create a new variable called 'cfg' and get the 'cluster_fast_greedy' algorithm to perform its calculations. The next line writes the groups to a file, separating each group with an x. (If you tried 'write.csv' as before, you'll get an error message because the output of the algorithm gives a different kind of data type. R is fussy like this.) Examine that file - what groups do you spot? What might these mean, if you went back to the content of the original letters?
 
 ## Visualization
 
-The line below will plot out our network, colouring it by the communities discerned above:
+1\. The line below will plot out our network, colouring it by the communities discerned above:
 
 ```
 plot(cfg, net, vertex.size = 1, vertex.label.cex =.2, edge.arrow.size=.1, main="Communities")
 ```
-You can export the plot by clicking on the 'export' button in the plot panel, to pdf or to png. But this is a pretty ugly network. We need to apply a _layout_ to try to make it more visually understandable. There are many different layout options in igraph. We'll assign the layout we want to a variable, and then we'll give that variable to the plot command:
+
+2\. You can export the plot by clicking on the 'export' button in the plot panel, to pdf or to png. But this is a pretty ugly network. We need to apply a **layout** to try to make it more visually understandable. There are many different layout options in igraph. We'll assign the layout we want to a variable, and then we'll give that variable to the plot command:
 
 ```
 l1 <- layout_with_fr(net)
 plot(cfg, net, layout=l1, vertex.size = 1, vertex.label.cex =.2, edge.arrow.size=.1, main="Communities")
 ```
+
 The 'layout_with_fr' is calling the 'Fruchterman-Reingold' algorithm, a kind of layout that imagines each node as a repulsive power, pushing against all the other nodes (it's part of a family of layouts called 'Forced Atlast'). That also means that if you ran the plot command a couple of times, the nodes might end up in different places each time - they are jostling for relative position, and this positioning itself carries no meaning in and of itself (so if a node is at the top of the screen, or the centre of the screen, don't read that to mean anything about importance).
 
-We'll finish with a piece of code that will draw thumbnails of your network using every possible layout in the package. This will give you a sense of which layouts might best suit the historical story you wish to tell. Good luck! Remember to save your script, and upload the entire project folder to your github repository.
+3\. We'll finish with a piece of code that will draw thumbnails of your network using every possible layout in the package. This will give you a sense of which layouts might best suit the historical story you wish to tell.
 
 ```
 layouts <- grep("^layout_", ls("package:igraph"), value=TRUE)[-1]
@@ -195,3 +202,5 @@ for (layout in layouts) {
 
   plot(net, edge.arrow.mode=0, layout=l, main=layout) }
 ```
+
+4\. Good luck! Remember to save your script, and upload the entire project folder to your github repository.

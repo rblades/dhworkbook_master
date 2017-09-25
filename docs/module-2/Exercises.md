@@ -14,7 +14,7 @@ The exercises in this module cover:
 + Writing a program to extract data from a webpage
 + Collecting data from Twitter
 
-There is so much data available; with these methods, we can gather enormous amounts that will let us see large-scale macroscopic patterns. At the same time, it allows us to dive into the details with comparative ease. The thing is, not all digital data are created equally. Google has spent millions digitizing **everything**; newspapers have digitized their own collections. Genealogists and local historical societies upload yoinks of digitized photographs, wills, local tax records, [you-name-it](http://www.bytown.net/), *every day*. But, consider what Milligan has to say about ['illusionary order'](http://ianmilligan.ca/2012/03/26/illusionary-order-cautionary-notes-for-online-newspapers/):
+There is so much data available; with these methods, we can gather enormous amounts that will let us see large-scale macroscopic patterns. At the same time, it allows us to dive into the details with comparative ease. The thing is, not all digital data are created equally. Google has spent millions digitizing **everything**; newspapers have digitized their own collections. Genealogists and local historical societies upload yoinks of digitized photographs, wills, local tax records, [you-name-it](http://www.bytown.net/), **every day**. But, consider what Milligan has to say about ['illusionary order'](http://ianmilligan.ca/2012/03/26/illusionary-order-cautionary-notes-for-online-newspapers/):
 
 > [...] poor and misunderstood use of online newspapers can skew historical research. In a conference presentation or a lecture, it’s not uknown to see the familiar yellow highlighting of found searchwords on projected images: indicative of how the original primary material was obtained. But this historical approach generally usually remains unspoken, without a critical methodological reflection. As I hope I’ll show here, using Pages of the Past uncritically for historical research is akin to using a volume of the Canadian Historical Review with 10% or so of the pages ripped out. Historians, journalists, policy researchers, genealogists, and amateur researchers need to at least have a basic understanding of what goes on behind the black box.
 
@@ -56,7 +56,7 @@ Now that you're **au fait** with wget, I want you to use wget to download the Sh
 
 Digitization requires human intervention. This can be as straightforward as correcting errors or adjusting the scanner settings when we do OCR, or it can be the rather more involved work of adding a layer of semantic information to the text. When we mark up a text with the semantic hooks and signs that explain we are talking about **London, Ontario** rather than **London, UK**, we've made the text a whole lot more useful for other scholars or tools. In this exercise, you will do some basic marking up of a text using standards from the [Text Encoding Initiative](http://www.tei-c.org/index.xml). (Some of the earliest digital history work was along these lines). The TEI exercise requires carefully attention to detail. Read through it before you try it. In this exercise, you'll transcribe a page from an abolitionist's pamphlet. You'll also think about ways of transforming the resulting XML into other formats. Make notes in a file to upload to your repository, and upload your XML and your XSL file to your own repository as well. (As an added optional challenge, create a gh-pages branch and figure out the direct URL to your XML file, and email that URL to me).
 
-The exercise may be found [in our supporting materials](../supporting materials/tei.md).
+The TEI exercise may be found [in our supporting materials](../supporting materials/tei.md).
 
 I will note that a perfectly fine final project for HIST3814 might be to use this exercise as a model to markup a single issue of the Equity and suggest ways this material might be explored. Remember to make (and lodge in your repository) a file detailing the work you've done and any issues you've run into.
 
@@ -69,13 +69,15 @@ That is, instead of **you** punching in the search terms, and copying and pastin
 
 The [**Canadiana Discovery Portal**](http://search.canadiana.ca/) has tonnes of materials related to Canada's history, from a wide variety of sources.
 
-1\. Go to the [**Canadiana Discovery Portal**](http://search.canadiana.ca/), and search "ottawa" and set the date range to 1800 to 1900. Hit enter. You are presented with a page of results -56 249 results! That's a lot of data. But do you notice the address bar of your browser? It'll say something like this:
+1\. Go to the [**Canadiana Discovery Portal**](http://search.canadiana.ca/), and search "ottawa".
+
+2\. Set the date range to 1800 to 1900 and hit enter. You are presented with a page of results -56 249 results! That's a lot of data. But do you notice the address bar of your browser? It'll say something like this:
 
 `http://search.canadiana.ca/search?q=ottawa&field=&df=1900&dt=1900`
 
 Your search query has been put into the URL. You're looking at the API! Everything after /search is a command that you are sending to the Canadiana server.
 
-2\. Scroll through the results, and you'll see a number just before the question mark (?)
+3\. Scroll through the results, and you'll see a number just before the question mark (?)
 
 `http://search.canadiana.ca/search/2?df=1800&dt=1900&q=ottawa&field=`
 
@@ -89,21 +91,21 @@ If you go to the [Canadiana API support page](http://search.canadiana.ca/support
 
 `&fmt=json`
 
-3\. Add that to your query URL. How different the results now look! What's nice here is that the data is formatted in a way that makes sense to a machine - which we'll learn more about in due course.
+4\. Add that to your query URL. How different the results now look! What's nice here is that the data is formatted in a way that makes sense to a machine - which we'll learn more about in due course.
 
 If you look back at the full list of API options, you'll see at the bottom that one of the options is 'retrieving individual item records'; the key for that is a field called **oocihm**. If you look at your page of json results, and scroll through them, you'll see that each individual record has its own oocihm number. If we could get a list of those, we'd be able to programmatically slot them into the commands for retrieving individual item records:
 
 `http://search.canadiana.ca/view/oocihm.16278/?r=0&s=1&fmt=json&api_text=1`
 
-The problem is: how to retrieve those oocihm numbers. The answer is, 'we write a program'. And the program that you want can be [found on Ian Milligan's website](http://ianmilligan.ca/api-example-sh/). Study that program carefully. There are a number of useful things happening in there, notably 'curl', 'jq', 'sed', 'awk'. curl  is a program for downloading webpages, jq for dealing with json, and sed and awk for searching within and cleaning up text. If this all sounds greek to you, there is an excellent gentle introduction over at [William Turkel's blog](http://williamjturkel.net/2013/06/15/basic-text-analysis-with-command-line-tools-in-linux/).
+The problem is: how to retrieve those oocihm numbers. The answer is, 'we write a program'. And the program that you want can be [found on Ian Milligan's website](http://ianmilligan.ca/api-example-sh/). Study that program carefully. There are a number of useful things happening in there, notably **curl**, **jq**, **sed**, and **awk**. **curl**  is a program for downloading webpages, jq for dealing with json, and sed and awk for searching within and cleaning up text. If this all sounds greek to you, there is an excellent gentle introduction over at [William Turkel's blog](http://williamjturkel.net/2013/06/15/basic-text-analysis-with-command-line-tools-in-linux/).
 
 So here's what we're going to do.
 
-1\. We need the command line program jq. We install it into our DHBox with `$ sudo apt-get install jq -y`
+5\. We need the command line program jq. We install it into our DHBox with `$ sudo apt-get install jq -y`
 
-2\. We need to create a program. Make a new directory for this exercise like so: `$ mkdir m2e4`. Then, change into that directory by typing `$ cd m2e4`. Make sure that's where you are by typing `$ pwd`. Now, make an empty file for our program with `$ touch canadiana.sh`. Touch makes an empty file; the .sh in the filename indicates that this is a shell script.
+6\. We need to create a program. Make a new directory for this exercise like so: `$ mkdir m2e4`. Then, change into that directory by typing `$ cd m2e4`. Make sure that's where you are by typing `$ pwd`. Now, make an empty file for our program with `$ touch canadiana.sh`. Touch makes an empty file; the .sh in the filename indicates that this is a shell script.
 
-3\. Open the empty file with `$ nano canadiana.sh`. Now, the program that Ian Milligan wrote makes calls to the API that *used to live* at eco.canadiana.ca. But note the [error message on Canadiana's website](http://eco.canadiana.ca/view/oocihm.16278/?r=0&s=1&fmt=json&api_text=1). So we have to change Milligan's script so that it points to the API at search.canadiana.ca. Copy the script below into your empty canadiana.sh. If you want, adjust the search parameters (in the line starting with `pages`) for material you're more interested in.
+7\. Open the empty file with `$ nano canadiana.sh`. Now, the program that Ian Milligan wrote makes calls to the API that **used to live** at eco.canadiana.ca. But note the [error message on Canadiana's website](http://eco.canadiana.ca/view/oocihm.16278/?r=0&s=1&fmt=json&api_text=1). So we have to change Milligan's script so that it points to the API at search.canadiana.ca. Copy the script below into your empty canadiana.sh. If you want, adjust the search parameters (in the line starting with `pages`) for material you're more interested in.
 
 ```
 bash
@@ -135,15 +137,15 @@ awk '$0="search.canadiana.ca/view/"$0' cleanlist.txt| awk '{print $0 "/1?r=0&s=1
 wget -i urlstograb.txt -O output.txt
 ```
 
-4\. Hit ctrl+x to exit Nano, and save the changes.
+8\. Hit ctrl+x to exit Nano, and save the changes.
 
-5\. Before we can run this program, we have to tell DHBox that it is alright to run it. We do that by changing the 'permissions' on the file, like so:
+9\. Before we can run this program, we have to tell DHBox that it is alright to run it. We do that by changing the 'permissions' on the file, like so:
 
 `$ chmod 755 canadiana.sh`
 
 The `$ chmod` command means change mode. Each number represents a user permission for reading, writing, and executing files on your computer.  
 
-6\. And now we can run the program (the ./ is important!):
+10\. And now we can run the program (the ./ is important!):
 
 `$ ./canadiana.sh`
 
@@ -185,11 +187,13 @@ The data being collected is in json format. That is, a list of 'keys' and 'value
 
 14\. Examine your data either in a text editor or in a spreadsheet. Use twarc to create a file with a list of ids. Lodge this list and your history and notes in your repository.
 
-**NB. Twitter forbids the sharing of the full metadata of a collection of tweets. You may however share a list of tweet IDs. See the Twarc documentation for the instructions on how to do that.**
+**NB Twitter forbids the sharing of the full metadata of a collection of tweets. You may however share a list of tweet IDs. See the Twarc documentation for the instructions on how to do that.**
 
 ### What can you do with this data?
 
-Examine the Twarc repository, especially its utilities. You could extract the geolocated ones and map them. You could examine the difference between 'male' and 'female' tweeters (and how problematic might that be?). In your csv, save the text of the posts to a new file and upload it to something like [Voyant](http://voyant-tools.org) to visualize trends over time. Google for analyzes of twitter data to get some ideas.
+1\. Examine the Twarc repository, especially its utilities. You could extract the geolocated ones and map them. You could examine the difference between 'male' and 'female' tweeters (and how problematic might that be?). 
+
+2\. In your csv, save the text of the posts to a new file and upload it to something like [Voyant](http://voyant-tools.org) to visualize trends over time. Google for analyzes of twitter data to get some ideas.
 
 
 ## Exercise 6: Using Tesseract to turn a pdf into text
@@ -230,10 +234,10 @@ Now, the reason I ask you to not run it just yet is because of memory. This is g
 
 Alternatively, given that the folder structure is done by year and month a quicker route might be to just run the original wget command ten times, changing the folder each time:
 
-'`wget http://collections.banq.qc.ca:8008/jrn03/equity/src/1883/ -A .txt -r --no-parent -nd –w 2 --limit-rate=20k`'
+`wget http://collections.banq.qc.ca:8008/jrn03/equity/src/1883/ -A .txt -r --no-parent -nd –w 2 --limit-rate=20k`
 
 then
 
 `wget http://collections.banq.qc.ca:8008/jrn03/equity/src/1884/ -A .txt -r --no-parent -nd –w 2 --limit-rate=20k`
 
-etc., changing the year. There's no one right way to do things, digitally. There are many paths. The crucial thing is that you find a way that makes sense for your own workflow, and that doesn't make you a drain on someone else's resources.
+etc. changing the year. There's no one right way to do things, digitally. There are many paths. The crucial thing is that you find a way that makes sense for your own workflow, and that doesn't make you a drain on someone else's resources.

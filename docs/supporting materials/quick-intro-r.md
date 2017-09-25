@@ -13,10 +13,33 @@ For now, we'll do a quick whistle-stop tour of using R Studio to do some analysi
 
 ![Screenshot of R Studio in DHBox. Click the green plus sign to start a new script](https://i.imgur.com/4Egckof.png)
 
-You should always keep your research materials (scripts and associated data) organized in separate project folders. R Studio makes this easy for you. When you open R Studio to start a new project, click where it says 'project (none)' at the right hand side of the interface. Click on the down arrow, and select new R project. Follow the prompts, and create it in a new directory. R keeps track of what you're up to in a project file, so that you can pick up where you left off. [You should also keep your code under version control as well](../supporting materials/git-rstudio.md) so that you can recover from disaster and/or share your code/data with collaborators; click on that link to get version control set up. (Sometimes, it might happen that RStudio crashes (this can be, in DHBox, related to memory issues). If that happens - if it just seems to 'hang' (and you've waited several minutes), you can refresh your browser, and go back to DHBox. You'll probably have to re-open your project file. Use the file panel at bottom right to find your \*.rproj file (your R project file) and click on it to re-open. Save your work often, from the File > Save menu.)
+You should always keep your research materials (scripts and associated data) organized in separate project folders. R Studio makes this easy for you. 
 
-R Studio divides the screen up into four neat panes. The top left is for writing your analytical script (or code; I will use the two words interchangeably), the bottom left is the console where the analysis actually happens; top right is an environment pane which will show you the variables you've created, your history (commands you've run), and (once it's configured) git; indeed, other tools and plugins will appear as tabs here. The bottom right gives you a preview of any plots or charts you create; once you create one if you click 'zoom' the chart will open in its own pop up so that you can see it better. The file explorer and the help text also appear under tabs in this box.
+1\. When you open R Studio to start a new project, click where it says 'project (none)' at the right hand side of the interface.
 
-You write your script in the script box, and then you can get R Studio to run the code one line at a time by clicking on code >> run line (it runs the line of code where you left the cursor). If you select a number of lines of code and hit run line, all of that code will run. R scripts are text files that use .r as their file extension.
+2\. Click on the down arrow, and select new R project. 
 
-The console is where the action happens. Click down in the console. Type `3 + 5` and hit enter. R Studio will run the calculation: `[1] 8`! The [1] indicates that this is the first result. Now type `a = 3` and hit enter. Over in the top right, the 'environment' pane updates to tell us that yes, a has a value of 3. Now type `b = 5`. The environment updates accordingly. Now type `a + b`. Hey, we can do algebra! Anything you can do in excel, we can do in code here in R Studio. A very good introduction to how R (the language) works is at [Try R](http://tryr.codeschool.com/), an interactive tutorial in your browser. Go give some of that a shot.
+3\. Follow the prompts, and create it in a new directory. R keeps track of what you're up to in a project file, so that you can pick up where you left off. [You should also keep your code under version control as well](../supporting materials/git-rstudio.md) so that you can recover from disaster and/or share your code/data with collaborators; click on that link to get version control set up.
+
+4\. Sometimes, it might happen that RStudio crashes (this can be, in DHBox, related to memory issues). If that happens - if it just seems to 'hang' (and you've waited several minutes), you can refresh your browser, and go back to DHBox. You'll probably have to re-open your project file. Use the file panel at bottom right to find your \*.rproj file (your R project file) and click on it to re-open. Save your work often, from the File > Save menu.
+
+R Studio divides the screen up into four neat panes. 
+
++ The top left is for writing your analytical script (or code; I will use the two words interchangeably)
++ The bottom left is the console where the analysis actually happens
++ The top right is an environment pane which will show you the variables you've created, your history (commands you've run), and (once it's configured) git; indeed, other tools and plugins will appear as tabs here.
++ The bottom right gives you a preview of any plots or charts you create; once you create one if you click 'zoom' the chart will open in its own pop up so that you can see it better. The file explorer and the help text also appear under tabs in this box.
+
+5\. You write your script in the script box, and then you can get R Studio to run the code one line at a time by clicking on code >> run line (it runs the line of code where you left the cursor). If you select a number of lines of code and hit run line, all of that code will run. R scripts are text files that use .r as their file extension.
+
+5\. The console is where the action happens. Click down in the console. 
+
+6\. Type `3 + 5` and hit enter. R Studio will run the calculation: `[1] 8`! The [1] indicates that this is the first result. 
+
+7\. Now type `a = 3` and hit enter. Over in the top right, the 'environment' pane updates to tell us that yes, a has a value of 3. 
+
+8\. Now type `b = 5`. The environment updates accordingly. 
+
+9\. Now type `a + b`. Hey, we can do algebra! Anything you can do in excel, we can do in code here in R Studio. 
+
+A very good introduction to how R (the language) works is at [Try R on codeschool](http://tryr.codeschool.com/), an interactive tutorial in your browser. Go give some of that a shot.

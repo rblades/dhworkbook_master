@@ -1,6 +1,6 @@
 # A gentle introduction to Regular Expressions
 
-_this text is adopted from the first drafts of_ The Macroscope _which is was published by Imperial College Press._
+**This text is adopted from the first drafts of** The Macroscope **which is was published by Imperial College Press.**
 
 ## Introduction
 
@@ -8,7 +8,7 @@ A regular expression (also called regex) is a powerful tool for finding and mani
 
 Regular expressions can look pretty complex, but once you know the basic syntax and vocabulary, simple ‘regexes’ will be easy. Regular expressions can often be used right inside the 'Find and Replace' box in many text and document editors, such as Sublime Text, Atom, or Notepad++. You cannot use Microsoft Word, however! Tr/).
 
-+ NB in text editors, you have to indicate that you wish to do a regex search. For instance, in Notepad++ when you do a search, to use regular expressions you must tick off the checkbox enabling them. Otherwise, Notepad++ will treat your search literally, looking for that exact _text_ rather than the _pattern_. Similarly in Textwrangler, you need to tick off the box marked 'grep' when you bring up the search dialogue panel. In Sublime Text, you need to tick the box that has `.*` in the search panel to enable regular expression searches.
+**NB In text editors, you have to indicate that you wish to do a regex search. For instance, in Notepad++ when you do a search, to use regular expressions you must tick off the checkbox enabling them. Otherwise, Notepad++ will treat your search literally, looking for that exact** text **rather than the** pattern. **Similarly in Textwrangler, you need to tick off the box marked 'grep' when you bring up the search dialogue panel. In Sublime Text, you need to tick the box that has `.*` in the search panel to enable regular expression searches.**
 
 Please also note that while this information on regex basics was initially written with the text editors Notepad++ and Textwrangler in mind, all that follows applies equally to other text editors that can work with regular expressions.
 
@@ -16,7 +16,7 @@ For now, just read along. In the actual exercise, we will not be using a text ed
 
 ## Some basic principles
 
-> protip: there are libraries of regular expressions, online. For example, if you want to find all postal codes, you can search “regular expression Canadian postal code” and learn what ‘formula’ to search for to find them
+> Protip: there are libraries of regular expressions, online. For example, if you want to find all postal codes, you can search “regular expression Canadian postal code” and learn what ‘formula’ to search for to find them
 
 Let's say you're looking for all the instances of "cat" or "dog" in your document. When you type the vertical bar on your keyboard (it looks like ```|```, shift+backslash on windows keyboards), that means 'or' in regular expressions. So, if your query is dog|cat and you press 'find', it will show you the first time either dog or cat appears in your text.
 
@@ -30,83 +30,83 @@ With the spaces, "animal" replace "dog" or "cat" only in those instances where t
 
 The even more astute reader will notice that this still does not solve our problem of replacing every instance of "dog" or "cat". What if the word comes at the beginning of a line, so it is not in front of a space? What if the word is at the end of a sentence or a clause, and thus followed by a punctuation? Luckily, in the language of regex, you can represent the beginning or end of a word using special characters.
 
-``` \< ```
+```\<```
 
 means the beginning of a word. In some programs, like TextWrangler, this is used instead:
 
-``` \b ```
+```\b```
 
 so if you search for ```\<cat``` , (or, in TextWrangler, ```\bcat``` )it will find "cat", "catch", and "catsup", but not "copycat", because your query searched for words beginning with "cat". For patterns at the end of the line, you would use:
 
-``` \> ```
+```\>```
 
 or in TextWrangler,
 
-``` \b ```
+```\b```
 
 again.  The remainder of this walk-through imagines that you are using Notepad++, but if you’re using Textwrangler, keep this quirk in mind. If you search for
 
-``` cat\> ```
+```cat\>```
 
 it will find "cat" and "copycat", but not "catch," because your query searched for words ending with -"cat".
 
 Regular expressions can be mixed, so if you wanted to find words only matching "cat", no matter where in the sentence, you'd search for
 
-``` \<cat\> ```
+```\<cat\>```
 
 which would find every instance. And, because all regular expressions can be mixed, if you searched for (in Notepad++; what would you change, if you were using TextWrangler?)
 
-``` \<cat|dog\> ```
+```\<cat|dog\>```
 
 and replaced all with "animal", you would have a document that replaced all instances of "dog" or "cat" with "animal", no matter where in the sentence they appear. You can also search for variations within a single word using parentheses. For example if you were looking for instances of "gray" or "grey", instead of the search query
 
-``` gray|grey ```
+```gray|grey```
 
 you could type
 
-``` gr(a|e)y ```
+```gr(a|e)y```
 
 instead. The parentheses signify a group, and like the order of operations in arithmetic, regular expressions read the parentheses before anything else. Similarly, if you wanted to find instances of either "that dog" or "that cat", you would search for:
 
-``` (that dog)|(that cat) ```
+```(that dog)|(that cat)```
 
  Notice that the vertical bar | can appear either inside or outside the parentheses, depending on what you want to search for.
 
 The period character . in regular expressions directs the search to just find any character at all. For example, if we searched for:
 
-``` d.g ```
+```d.g```
 
 the search would return "dig", "dog", "dug", and so forth.
 
 Another special character from our cheat sheet, the plus + instructs the program to find any number of the previous character. If we search for
 
-``` do+g ```
+```do+g```
 
 it would return any words that looked like "dog", "doog", "dooog", and so forth. Adding parentheses before the plus would make a search for repetitions of whatever is in the parentheses, for example querying
 
-``` (do)+g ```
+```(do)+g```
 
 would return "dog", "dodog", "dododog", and so forth.
 
 Combining the plus '+' and period '.' characters can be particularly powerful in regular expressions, instructing the program to find any amount of any characters within your search. A search for
 
-``` d.+g ```
+```d.+g```
 
 for example, might return "dried fruits are g", because the string begins with "d" and ends with "g", and has various characters in the middle. Searching for simply ".+" will yield query results that are entire lines of text, because you are searching for any character, and any amount of them.
 
 Parentheses in regular expressions are also very useful when replacing text. The text within a regular expression forms what's called a group, and the software you use to search remembers which groups you queried in order of their appearance. For example, if you search for
 
-``` (dogs)( and )(cats) ```
+```(dogs)( and )(cats)```
 
 which would find all instances of "dogs and cats" in your document, your program would remember "dogs" is group 1, " and " is group 2, and "cats" is group 3. Notepad++ remembers them as `"\1"`, `"\2"`, and `"\3"` for each group respectively.
 
 If you wanted to switch the order of "dogs" and "cats" every time the phrase "dogs and cats" appeared in your document, you would type
 
-``` (dogs)( and )(cats) ```
+```(dogs)( and )(cats)```
 
 in the 'find' box, and
 
-``` \3\2\1 ```
+```\3\2\1```
 
 in the 'replace' box. That would replace the entire string with group 3 ("cats") in the first spot, group 2 (" and ") in the second spot, and group 1 ("dogs") in the last spot, thus changing the result to "cats and dogs".
 

@@ -38,12 +38,16 @@ We'll conclude by using 'Open Refine' to tidy up the information we extracted fr
 
 Select one of the articles behind the links above OR select one of the articles below to annotate.
 
-Blevins, [Mining and Mapping the Production of Space A View of the World from Houston](https://web.stanford.edu/group/spatialhistory/cgi-bin/site/pub.php?id=93)
+Blevins, [**Mining and Mapping the Production of Space A View of the World from Houston**](https://web.stanford.edu/group/spatialhistory/cgi-bin/site/pub.php?id=93)
 
-Blevins, [Space, Nation, and the Triumph of Region: A View of the World from Houston](http://jah.oxfordjournals.org/content/101/1/122.full?keytype=ref&ijkey=unucsImiwNrelaF)
+Blevins, [**Space, Nation, and the Triumph of Region: A View of the World from Houston**](http://jah.oxfordjournals.org/content/101/1/122.full?keytype=ref&ijkey=unucsImiwNrelaF)
 
-[Ian Milligan on Imageplot](http://ianmilligan.ca/2014/08/27/using-imageplot-to-explore-web-archived-images/) and [here](http://ianmilligan.ca/2014/08/11/using-images-to-gain-insight-into-web-archives/)
+[Ian Milligan on Imageplot](http://ianmilligan.ca/2014/08/27/using-imageplot-to-explore-web-archived-images/) and [images in web archives](http://ianmilligan.ca/2014/08/11/using-images-to-gain-insight-into-web-archives/)
 
-[Ryan Cordell, Qitjb-the-raven](http://ryancordell.org/research/qijtb-the-raven/)
+[Ryan Cordell, **Qitjb-the-raven**](http://ryancordell.org/research/qijtb-the-raven/)
 
-**Reading questions**: On your blog, reflect on any data cleaning you've had to do in other classes. Why don't historians discuss this kind of work? What gets hidden, what gets lost, how is the ultimate argument _weaker_ as a result? Or does it matter? Make reference (or link to) key annotations, whether by your or one of your peers, to support your points.
+**Reading questions**: On your blog, reflect on any data cleaning you've had to do in other classes. 
+
++ Why don't historians discuss this kind of work? 
++ What gets hidden, what gets lost, how is the ultimate argument **weaker** as a result? 
++ Or does it matter? Make reference (or link to) key annotations, whether by your or one of your peers, to support your points.

@@ -1,6 +1,6 @@
 # Topic Modeling in R, DHBox version
 
-In this exercise, we're going to grab the Colonial Newspaper Database from my github page, do some exploratory visualizations, and then create a topic model whose output can then be visualized further in other platforms (including as a network in Gephi or other such packaged). At the appropriate point, I show you how to import a directory of texts rather than a single file of data, and to feed that into the script.
+In this exercise, we're going to grab the Colonial Newspaper Database from my Github page, do some exploratory visualizations, and then create a topic model whose output can then be visualized further in other platforms (including as a network in Gephi or other such packaged). At the appropriate point, I show you how to import a directory of texts rather than a single file of data, and to feed that into the script.
 
 Go to your DHBox, and click on RStudio. At the right hand side where it says 'project (none)', click and create a new project in a new empty directory. (If you want to put this directory under version control with git, so that you can push your work to your github account, please read [the RStudio instructions](git-rstudio.md).)
 
@@ -12,7 +12,7 @@ library("mallet")
 install.packages('RCurl')
 library(RCurl)
 ```
-In the future, now that you've installed these packages you won't have to again, so you can comment them out by placing a \# in front.
+In the future, now that you've installed these packages you won't have to again, so you can comment them out by placing a ```\#```in front.
 
 ## Importing data directly from the web
 
@@ -67,7 +67,7 @@ documents <- mallet.read.dir("/home/shawngraham/equity")
 
 mallet.instances <- mallet.import(documents$id, documents$text, "en.txt", token.regexp = "\\p{L}[\\p{L}\\p{P}]+\\p{L}")
 ```
-**nb do either one or the other, but not both: read from a file, where each row contains the complete text of the document, or read from a folder where each file contains the complete text of the document.**
+**NB Do either one or the other, but not both: read from a file, where each row contains the complete text of the document, or read from a folder where each file contains the complete text of the document.**
 
 ## Building the topic model
 

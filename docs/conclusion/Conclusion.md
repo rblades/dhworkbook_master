@@ -10,7 +10,7 @@ You will too.
 
 If, in your other courses, you decide to use some of the methods here, I will be most gratified. However - in course work as in life, **know** your audience. Will your prof appreciate this work? Is your prof familiar with the underlying issues - will she know what to look for, the hidden gotchas, the places where things might get, erm, fudged? It is **your** responsibility to make the argument, in your work, why a particular methodological choice is appropriate. It is **your** responsibility to show how these choices are theoretically informed and meaningful. As in all history, you have to make the argument. Never fall into the trap of thinking the method speaks for itself. This is why I compelled you to create the paradata document for your project. As that master historian Yoda once said,
 
->_Do or do not. There is no try._
+>**Do or do not. There is no try.**
 
 Alright, not exactly appropriate. But you get the gist: digital history requires explicit paradata. Do. There is no try.
 
