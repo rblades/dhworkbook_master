@@ -1,7 +1,7 @@
 # Open Access Research - July 10 - 16
 
 ## Concepts
-As historians, we aren't all that accustomed to sharing our research notes. We go to the archives, we take our photographs, we spend *hours* pouring over documents, photographs, diaries, newspapers... why should someone else benefit from *our* work?
+As historians, we aren't all that accustomed to sharing our research notes. We go to the archives, we take our photographs, we spend **hours** pouring over documents, photographs, diaries, newspapers... why should someone else benefit from **our** work?
 
 There are a number of reasons why you should want to do this. This week we will read and discuss the arguments advanced by various historians, including
 
@@ -41,6 +41,12 @@ Remember: I do expect you to click through every link I provide, and to read the
 
 # Readings
 
-As you read the posts linked to above (Brennan, Fitzgerald, Guldi and Armitage, McDaniel, Milligan, Moravec, Owens) click through to their 'about' or 'portfolio' pages. How are these scholars portraying themselves? How do they approach the idea of 'openness'? How is your own work 'generous'? Please annotate their work with your observations and questions; please also respond to someone else's annotation with a substantive observation of your own.
+As you read the posts linked to above (Brennan, Fitzgerald, Guldi and Armitage, McDaniel, Milligan, Moravec, Owens) click through to their 'about' or 'portfolio' pages. 
+
++ How are these scholars portraying themselves? 
++ How do they approach the idea of 'openness'?
++ How is your own work 'generous'? 
+
+Please annotate their work with your observations and questions; please also respond to someone else's annotation with a substantive observation of your own.
 
 Then, make an entry on your blog that contrasts this picture of 'open access research' with what you may have learned about doing history in your other courses. Where are the dangers and where are the opportunities? What does 'open access' mean for you as a student?

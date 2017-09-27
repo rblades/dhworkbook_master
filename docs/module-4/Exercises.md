@@ -8,7 +8,7 @@ You are welcome to work through more of them, of course, but I want the exercise
 
 ## Things to install?
 
-Many of these involve having to install more software on your own machine. In those exercises that involve using R and RStudio, you are welcome to install RStudio on your own machine OR to use it in DHBox. Please read [this quick introduction to R and Rstudio carefully](../supporting materials/quick-intro-r.md).
+Many of these involve having to install more software on your own machine. In those exercises that involve using R and RStudio, you are welcome to install RStudio on your own machine OR to use it in DH Box. Please read [this quick introduction to R and Rstudio carefully](../supporting materials/quick-intro-r.md).
 
 **If you decide to install R and RStudio on your own machine,** I would suggest you read the introductory bits from Lincoln Mullen's book-in-progress, [Computational Historical Thinking](http://dh-r.lincolnmullen.com/getting-started.html), especially the 'setup' part under 'getting started' (pay attention to the bit on installing packages and dependencies). If you spot any exercises in Mullen's book that seem relevant to your project, you may do those as an alternative to the ones here. **Alternatively**, go to [Swirl](http://swirlstats.com/) and [learn the basics of R within R](http://swirlstats.com/students.html). [DHNow](http://digitalhumanitiesnow.org/2016/01/resource-basic-text-mining-in-r/) links to a new [Basic Text Mining in R](https://web.archive.org/web/20160309170928/https://rstudio-pubs-static.s3.amazonaws.com/31867_8236987cf0a8444e962ccd2aec46d9c3.html) tutorial which is worth checking out as well.
 
@@ -41,8 +41,8 @@ In this exercise, you will transform your Texan Correspondence data into a netwo
 In exercise 2, you will use the **Topic Modeling Tool** to create a simple topic model and a webpage that allows you to browse the results.
 
 1. Download the [topic modeling tool from Github](https://github.com/senderle/topic-modeling-tool).
-2. Make sure you have some content on your own machine; the Colonial Newspaper Database is a handy corpus. (Created by Melodee Beals, it's a series of late 18th, early 19th century cleanly transcribed newspaper articles from Scotland and Northern England; You can grab [my copy from Github](https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv)). Or perhaps you might move your copy of the Shawville equity out of DHBox onto your computer. 
-3. At the command prompt in DHBox, type `$ ls` to make sure you can see your Equity folder (ie. you can't zip a folder from the command line if you are **in** that folder, so `cd` out of it if necessary). 
+2. Make sure you have some content on your own machine; the Colonial Newspaper Database is a handy corpus. (Created by Melodee Beals, it's a series of late 18th, early 19th century cleanly transcribed newspaper articles from Scotland and Northern England; You can grab [my copy from Github](https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv)). Or perhaps you might move your copy of the Shawville equity out of DH Box onto your computer. 
+3. At the command prompt in DH Box, type `$ ls` to make sure you can see your Equity folder (ie. you can't zip a folder from the command line if you are **in** that folder, so `cd` out of it if necessary). 
 4. Assuming your files are in `equityfolder`, zip the folder up with this command, `$ zip -r equityfiles.zip equityfolder`. 
 5. Use the filemanager to download the zip file. 
 6. Unzip the folder on your machine.
@@ -62,7 +62,7 @@ Make a note in your open notebook about your process and your observations. How 
 
 Exercise 2 was quite a simple way to do topic modeling. In this exercise, we are going to use a package for the R statistical language called 'Mallet' to do our topic modeling. One way isn't necessarily better than the other, although doing our analysis within R allows the potential for extending the analysis or combining it with other data. First, read [this introduction to R](../supporting materials/quick-intro-r.md) so what follows isn't a complete shock!
 
- - Guidance for doing this in RStudio [in the DHBox](../supporting materials/topicmodel-r-dhbox.md)
+ - Guidance for doing this in RStudio [in the DH Box](../supporting materials/topicmodel-r-dhbox.md)
  - Guidance for doing this in RStudio [**installed on your own computer**](../supporting materials/topicmodel-r-yourmachine.md)
 
 ----
@@ -179,14 +179,14 @@ When we look at the original letters, we see that the writer often identified th
 -----
 ## Exercise 8: Simple Mapping and Georectifying
 
-In this exercise, you will find a historical map online, upload a copy to a mapwarper service, georectify it, and then display the map online, via a hosted service like CartoDB, and also through a map you will build yourself using leaflet.js. Finally, we will also convert csv to geojson using http://togeojson.com/, and we'll map that as a github gist. We'll also grab a geojson file hosted on github gist and import it into cartodb.
+In this exercise, you will find a historical map online, upload a copy to a mapwarper service, georectify it, and then display the map online, via a hosted service like CartoDB, and also through a map you will build yourself using leaflet.js. Finally, we will also convert csv to geojson using the website [To geojson](http://togeojson.com/), and we'll map that as a github gist. We'll also grab a geojson file hosted on github gist and import it into cartodb.
 
 ### Georectifying
 Georectifying is the process of taking an image (whether it is of a historical map, chart, airphoto, or whatever) and manipulating its geometry so that it matches a geographic projection. Think of it like this: you take your handdrawn map, and use pushpins to pin down known locations on your map to a globe. As you pin, your image stretches and warps. Traditionally, this has not been an easy thing to do, if you are new to GIS. In recent years, the curve has flattened significantly. In this exercise, we'll grab an image, upload it to the Harvard Library MapWarper service, and then export it as a tileset which can be used in other mapping programs.
 
 1\. Get a historical map. I like the Fire Insurance plans from the [Gatineau Valley Historical Society](http://www.gvhs.ca/research/maps-fire-insurance.html); I'm sure you can find others to suit your interests.
 
-2\. Right-click, save as.... grab a copy. Save it somewhere handy.
+2\. Right-click and save as to grab a copy. Save it somewhere handy.
 
 3\. Go to [Harvard World MapWarp](http://warp.worldmap.harvard.edu/) and sign up for an account. Then login.
 
@@ -196,11 +196,15 @@ Georectifying is the process of taking an image (whether it is of a historical m
 
 6\. On the next page, click 'rectify'. <br> ![Image showing user ability to rectify the historical map on the left with the modern map on the right to ensure locations match coordinates](http://i.imgur.com/yULDRQR.jpg)
 
-7\. Pan and zoom both maps until you're sure you're looking at the same area in both. Double click in a map, select the pencil icon, and click on a point (location) you are sure you can match in the other window. Then click on the other map window, select the pencil, and then click on the same point. The 'add control point' button below and between both maps will light up. Click on this to confirm that this is a control point you want. Do this at least three times; the more times you can do it, the better the map warp.
+7\. Pan and zoom both maps until you're sure you're looking at the same area in both. Double click in a map, select the pencil icon, and click on a point (location) you are sure you can match in the other window.
 
-8\. Having selected your control points, click on 'warp image'.
+8\. Click on the other map window, select the pencil, and then click on the same point. 
 
-9\. You can now click on the 'export' panel, and get the URL for your georectified image in a few different formats. If you clicked on the KML option, a google map window will open [like so](https://maps.google.com/maps?q=http://warp.worldmap.harvard.edu/maps/4152.kml&output=classic&dg=feature). For many webmapping applications, the Tiles (Google/OSM scheme): Tiles Based URL is what you want. You'll get a URL like this: ```http://warp.worldmap.harvard.edu/maps/tile/4152/z/x/y.png```   Save that info. You'll need it later.
+9\. The 'add control point' button below and between both maps will light up. Click on this to confirm that this is a control point you want. Do this at least three times; the more times you can do it, the better the map warp.
+
+10\. Having selected your control points, click on 'warp image'.
+
+11\. You can now click on the 'export' panel, and get the URL for your georectified image in a few different formats. If you clicked on the KML option, a google map window will open [like so](https://maps.google.com/maps?q=http://warp.worldmap.harvard.edu/maps/4152.kml&output=classic&dg=feature). For many webmapping applications, the Tiles (Google/OSM scheme): Tiles Based URL is what you want. You'll get a URL like this: ```http://warp.worldmap.harvard.edu/maps/tile/4152/z/x/y.png``` Save that info. You'll need it later.
 
 You have now georectified a map. Let's use that map as a base layer in [Palladio](http://palladio.designhumanities.org/#/)
 
@@ -214,21 +218,21 @@ We need some place data for Palladio. Here's what I'm using <br> ![Image for Pal
 
 etc: that is, a tab between 'place' and 'coordinates' in the first line, a tab between 'mexico' and the latitude, and a comma between latitude and logitude.
 
-10\. Go to [Palladio](http://palladio.designhumanities.org/). Hit 'start' then 'upload spreadsheet or csv'. In the box, paste in your data. **You can progress to the next step without having any real data: just paste or type something in - see the video below.** Obviously, you won't have any points on your map, but if you were having trouble with that step, this allows you to bypass it to continue on with this tutorial.
+12\. Go to [Palladio](http://palladio.designhumanities.org/). Hit 'start' then 'upload spreadsheet or csv'. In the box, paste in your data. **You can progress to the next step without having any real data: just paste or type something in - see the video below.** Obviously, you won't have any points on your map, but if you were having trouble with that step, this allows you to bypass it to continue on with this tutorial.
 
-11\. Click on 'map'
+13\. Click on 'map'
 
-12\. Under 'places', select 'coordinates'
+14\. Under 'places', select 'coordinates'
 
-13\. Click 'add new layer'
+15\. Click 'add new layer'
 
-14\. In the popup, beside 'Choose one of Palladio default layers or create a new one.', select 'custom'. This is where you're going to paste it that tiles based URL from the map warper
+16\. In the popup, beside 'Choose one of Palladio default layers or create a new one.', select 'custom'. This is where you're going to paste it that tiles based URL from the map warper
 
-15\. Paste in the URL, but **replace** the ```/z/x/y``` part with ```{z}/{x}/{y}```
+17\. Paste in the URL, but **replace** the ```/z/x/y``` part with ```{z}/{x}/{y}```
 
-16\. Click add
+18\. Click add
 
-Here is a video walk through; places where you might have got into trouble include getting past the initial data entry box on Palladio, and finding where exactly to past in your georectified map url.
+Below is a video walk through; places where you might have got into trouble include getting past the initial data entry box on Palladio, and finding where exactly to past in your georectified map url.
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/KgLrvcA8v_M" frameborder="0" allowfullscreen></iframe>
 
@@ -240,14 +244,14 @@ Congratulations! You've georectified a map, and used it as a base layer for a vi
 
 ## Exercise 9: Network Analysis in R
 
-Earlier, we took the index from the Texan Correspondence, a list of letters from so-and-so to so-and-so. When we stitch that together into a network of people connected because they exchanged letters, we end up with a shard of their social network. Networks can be queried for things like power, position, and role, and so used judiciously, we can begin to suss something of the social structures in which their history took place.Before you go any further, make sure you also take a long look at Scott Weingart's series, [Networks Demystified](http://scottbot.net/HIAL/?s=%20networks%20demystified). Finally, [heed our warning](http://www.themacroscope.org/?page_id=449).
+Earlier, we took the index from the Texan Correspondence, a list of letters from so-and-so to so-and-so. When we stitch that together into a network of people connected because they exchanged letters, we end up with a shard of their social network. Networks can be queried for things like power, position, and role, and so used judiciously, we can begin to suss something of the social structures in which their history took place. Before you go any further, make sure you also take a long look at Scott Weingart's series, [Networks Demystified](http://scottbot.net/HIAL/?s=%20networks%20demystified). Finally, [heed our warning](http://www.themacroscope.org/?page_id=449).
 
-This exercise uses the R language to do our analysis, which in DHBox we access via R Studio, a programming environment. Please read [the introduction to R in our supporting materials](../supporting materials/quick-intro-r.md) and then progress to the [exercise](../supporting materials/netviz.md).
+This exercise uses the R language to do our analysis, which in DH Box we access via R Studio, a programming environment. Please read [the introduction to R in our supporting materials](../supporting materials/quick-intro-r.md) and then progress to the [exercise](../supporting materials/netviz.md).
 
 ## Exercise 10: QGIS
 ### QGIS
 
-There are many excellent tutorials around concerning how to get started with GIS. Our own library, in the [MADGIC centre](https://www.library.carleton.ca/contact/service-points/maps-data-and-government-information-centre) has tremendous resources and I would encourage you to speak with the map librarians before embarking on any *serious* mapping projects. In the short term, the historian [Fred Gibbs](http://fredgibbs.net/) has an excellent series on using the open source GIS platform *QGIS* to make and map historical data.
+There are many excellent tutorials around concerning how to get started with GIS. Our own library, in the [MADGIC centre](https://www.library.carleton.ca/contact/service-points/maps-data-and-government-information-centre) has tremendous resources and I would encourage you to speak with the map librarians before embarking on any **serious** mapping projects. In the short term, the historian [Fred Gibbs](http://fredgibbs.net/) has an excellent series on using the open source GIS platform **QGIS** to make and map historical data.
 
 For this exercise, I would recommend you try Gibbs' first tutorial,
 

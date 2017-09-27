@@ -18,7 +18,7 @@ What if you had **a lot** of documents that you needed to clean up? One way of d
 
 **Open Refine** is the final tool we'll explore in this module. This engine allows us to clean up our messy data. We will feed it the results from Exercise 2 in order to consolidate individuals (ie. 'Shawn' and 'S4awn' are probably the same person, so Open Refine will consolidate that information for us). This exercise also follows a tutorial originally written for [The Macroscope](http://themacroscope.org).
 
-Open Refine does not run in DHBox, so use the filemanager in DHBox to move your `cleaned-correspondence` file to somewhere safe on your computer.
+Open Refine does not run in DH Box, so use the filemanager in DH Box to move your `cleaned-correspondence` file to somewhere safe on your computer.
 
 [Visit the instructions in our supporting materials](../supporting materials/open-refine.md).
 
@@ -34,7 +34,7 @@ You can use what you've been learning here to do some clean-up on the Shawville 
 
 This command finds all files in a folder and creates a backup for each one in turn before searching for **foo** and replacing it with **bar**.
 
-This command: `grep "[b-df-hj-np-tv-xz]\{5\}" filename` will find all instances of strings of five consonants or more, which can be useful to give you and idea of what kinds of sed patterns to write.
+The command `grep "[b-df-hj-np-tv-xz]\{5\}" filename` will find all instances of strings of five consonants or more, which can be useful to give you and idea of what kinds of sed patterns to write.
 
 Maybe, if you inspect the pdfs and the txt together, you can figure out patterns that set off interesting things in say the classified ads or the editorials - and then write some grep and sed to create new files with just that information. Then you could use Open Refine to further clean things up. Maybe the messiness of the data is [exactly the point](https://smgprojects.github.io/experiment-bad-equity/) ([and my workup on bad OCR](https://smgprojects.github.io/experiment-determining-bad-ocr-via-automated-spellcheck/)) you want to explore. Nevertheless:
 
@@ -48,4 +48,4 @@ Maybe, if you inspect the pdfs and the txt together, you can figure out patterns
 
 + [Counting and Mining Data with Unix](http://programminghistorian.org/lessons/research-data-with-unix)
 
-+ The **Stanford Named Entity Recognizer** is a program that enables you to automatically tag words in your corpus according to whether or not they are place names, individuals, and so on. The output can then be subsequently extracted and visualized, which you'll learn in Module 4. [Working with the Stanford NER](../supporting materials/ner.md).
++ The **Stanford Named Entity Recognizer** is a program that enables you to automatically tag words in your corpus according to whether or not they are place names, individuals, and so on. The output can then be subsequently extracted and visualized, which you'll learn in Module 4, [Working with the Stanford NER](../supporting materials/ner.md).

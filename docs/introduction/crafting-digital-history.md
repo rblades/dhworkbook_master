@@ -144,18 +144,18 @@ Finally, you need a github account. We will go into more detail about how to use
 
 You now have a digital history lab equipped with all of the necessary ingredients for doing digital history. You have an open notebook for recording what you are up to (both your narrative and your annotations). In Github, you have a scratch pad for keeping track of the actual nuts-and-bolts of any digital work you do (and note that it is entirely possible to do digital history successfully without having to do anything that a computer scientist for instance would call coding). You have a domain that you control completely, and where you can install other platforms and services as seems necessary.
 
-### VPN & DHBox
+### VPN & DH Box
 
-To access our virtual computer, the DHBox, you will need to use Carleton's VPN service. Please visit [Carleton's VPN help page](https://carleton.ca/its/help-centre/page-type/vpn/) and follow the instructions for your particular computer. Once you've got it installed, you will need to connect to Carleton through the VPN with your mycarletone credentials. Indeed, you should always connect via a VPN whenever you're using a public wifi point (like in coffee shops). The VPN acts like a private tunnel from your computer to Carleton's servers. To the rest of the internet, it will now look as if you actually are on campus. Once you're connected via the VPN, you can [access the DHBox through your browser](http://134.117.26.132:5000/). Bookmark the site; you'll use it in the exercises in module 1.
+To access our virtual computer, the DH Box, you will need to use Carleton's VPN service. Please visit [Carleton's VPN help page](https://carleton.ca/its/help-centre/page-type/vpn/) and follow the instructions for your particular computer. Once you've got it installed, you will need to connect to Carleton through the VPN with your mycarletone credentials. Indeed, you should always connect via a VPN whenever you're using a public wifi point (like in coffee shops). The VPN acts like a private tunnel from your computer to Carleton's servers. To the rest of the internet, it will now look as if you actually are on campus. Once you're connected via the VPN, you can [access the DH Box through your browser](http://134.117.26.132:5000/). Bookmark the site; you'll use it in the exercises in module 1.
 
-#### Using the DHBox
+#### Using the DH Box
 
 1. Click the 'sign up' button
-2. Fill in the form. Choose a username and password that you'll remember. You don't have to use a real email by the way, just something that looks email-like (this is handy if, like me, you end up creating multiple DHBoxes - it's a bad idea to have more than one DHBox with the **same** email address)
+2. Fill in the form. Choose a username and password that you'll remember. You don't have to use a real email by the way, just something that looks email-like (this is handy if, like me, you end up creating multiple DH Boxes - it's a bad idea to have more than one DH Box with the **same** email address)
 3. Select the most time available (which will either be 1 or 2 months).
-4. Your personal DHBox will be created. Your username will now appear in the top right hand side of the purple bar. To enter the DHBox, click the username, select 'apps'.
+4. Your personal DH Box will be created. Your username will now appear in the top right hand side of the purple bar. To enter the DH Box, click the username, select 'apps'.
 5. A new tool ribbon appears below the purple bar. Most of what you will do in this course involves the 'command line', 'R studio', and 'File Manager'.
-6. Anytime the command line or R Studio should ask for your username or password, you use the DHBox username and password you just created.
+6. Anytime the command line or R Studio should ask for your username or password, you use the DH Box username and password you just created.
 
 **A note on using the university computer labs** if you are using an official University computer lab computer to access DHBox, aspects of the University's security system might block the RStudio aspect. I am working on a solution to this problem. If you know that you are going to have to use Carleton computers, get in touch right away.
 

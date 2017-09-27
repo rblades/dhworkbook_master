@@ -1,8 +1,8 @@
 # Module 1 Exercises
 
-The exercises are designed to give you the necessary skills to engage with the doing of digital history. To ensure success in the course, please do make it through exercises 1 - 3. Exercise 4 is a bit more complex and not mission-critical. Push yourself if you can.
+The exercises in this module are designed to give you the necessary skills to engage with the **doing** of digital history. To ensure success in the course, please do make it through exercises 1 - 3. Exercise 4 is a bit more complex and not mission-critical. Push yourself if you can.
 
-These exercises walk you through the process of using our DHBox, and of keeping notes about what you're doing, and making those notes open on the web. If you run into trouble, **ask for help** in our Slack space. Annotate this page with where things are going wrong for you. Contact Dr. Graham. **You do not have to suffer in silence!** To ask for help when doing this work is not a sign of weakness, but of maturity.
+These exercises walk you through the process of using our DH Box, and of keeping notes about what you're doing, and making those notes open on the web. If you run into trouble, **ask for help** in our Slack space. Annotate this page with where things are going wrong for you. Contact Dr. Graham. **You do not have to suffer in silence!** To ask for help when doing this work is not a sign of weakness, but of maturity.
 
 **All 4 exercises are on this page. Remember to scroll!**
 
@@ -16,12 +16,14 @@ This is where the [Markdown syntax](https://daringfireball.net/projects/markdown
 
 Writing in this way liberates the author from the tool. Markdown can be written in any plain text editor and offers a rich ecosystem of software that can render that text into beautiful looking documents (incidentally, Hypothes.is annotations can be written in Markdown). For this reason, Markdown is currently enjoying a period of growth, not just as as means for writing scholarly papers but as a convention for online editing in general.
 
-Popular general purpose plain text editors include TextWrangler and Sublime for Mac, Notepad++ for Windows, as well as Gedit and Kate for Linux. However, there are also editors that specialize in displaying and editing Markdown. **NB a text editor is different from the default notepad app that comes with Windows or Mac.** A text editor shows you **exactly** what is in a file.
+Popular general purpose plain text editors include [TextWrangler](https://www.barebones.com/products/textwrangler/) and [Sublime](https://www.sublimetext.com/) for Mac, [Notepad++](https://notepad-plus-plus.org/) for Windows, as well as [Gedit](https://wiki.gnome.org/Apps/Gedit) and [Kate](https://kate-editor.org/) for Linux. However, there are also editors that specialize in displaying and editing Markdown. 
+
+**NB a text editor is different from the default notepad app that comes with Windows or Mac.** A text editor shows you **exactly** what is in a file.
 
 In this exercise, I want you to become familiar with Markdown syntax. Check out [Sarah Simpkin's quick primer on markdown](http://programminghistorian.org/lessons/getting-started-with-markdown). There are a number of 'flavours' for Markdown, but in essence, they all mimic the kinds of conventions you would see in an email, using asterisks to indicate emphasis and so on.
 
 1. Check out [the markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
-2. Visit [dillinger.io](http://dillinger.io) in a new browser window. This looks like a wordprocessor. The left hand side of the screen is where you write, the right hand side shows you what your text will look like if you converted the text to html. Dillinger 'saves' your work in your browser's memory. You can also point it to save to your dropbox, google drive, or github account (under the cogwheel icon).
+2. Visit [dillinger.io](http://dillinger.io) in a new browser window. This looks like a wordprocessor. The left hand side of the screen is where you write, the right hand side shows you what your text will look like if you converted the text to html. Dillinger 'saves' your work in your browser's memory. You can also point it to save to your Dropbox, Google Drive, or Github account (under the cogwheel icon).
 3. Write a short 200-500 word piece on the most interesting annotation you've seen one of your classmates make. Why is it interesting? Why has it struck you?
 4. Grab at least two Creative Commons images and link outwards to four websites that are relevant to your piece. The Creative Commons license allows re-use. Do you know how to [find Creative Commons images](https://search.creativecommons.org/)?
 5. Make sure you link to the annotation in question.
@@ -31,7 +33,7 @@ In this exercise, I want you to become familiar with Markdown syntax. Check out 
 
 See how easy that was? Don't worry about submitting this.... yet.
 
-**NB** The next time you go to dillinger.io the last document you were working on will load up. That's because dillinger stashes your work in the browser cache. If you clear your cache (from your browser's tools or settings) you'll lose it, which is why in step 7 I suggested exporting..
+**NB** The next time you go to dillinger.io the last document you were working on will load up. That's because dillinger stashes your work in the browser cache. If you clear your cache (from your browser's tools or settings) you'll lose it, which is why in step 7 I suggested exporting.
 
 (For a richer discussion of some more ways markdown and pandoc can make your research sustainable, see Tenen and Wythoff, [Sustainable Authorship in Plain Text Using Pandoc and Markdown](http://programminghistorian.org/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown))
 
@@ -41,11 +43,11 @@ See how easy that was? Don't worry about submitting this.... yet.
 
 Many of the exercises in this workbook work without issue on a Mac or Linux computer, at the terminal. (On a Mac, you can find the terminal under applications > utilities). If you're on a Windows machine, it can be more difficult to get all of the various bits and pieces properly configured. If you're on a tablet, most digital history things you might like to do are not really feasible. One solution is for all of us to use the **same** computer. The CUNY Graduate Centre has created a digital-humanities focused virtual computer for just such an occasion.
 
-In this exercise, you are going to set up an instance of a DHBox for your own use. We will be using the command line interface which is an essential way to interact with your computer. Normally, when you're on your mac or your pc, you're clicking on icons or menus or windows of various sorts to get things done. You're clicking and dragging text. All of these graphical elements sit on top of sequences of commands that you don't have to type out, that only the computer sees. The command line (aka terminal, aka prompt) lets you dispense with the graphical elements, and type the commands you want the way you want them. 
+In this exercise, you are going to set up an instance of a DH Box for your own use. We will be using the command line interface which is an essential way to interact with your computer. Normally, when you're on your Mac or your PC, you're clicking on icons or menus or windows of various sorts to get things done. You're clicking and dragging text. All of these graphical elements sit on top of sequences of commands that you don't have to type out, that only the computer sees. The command line (aka terminal, aka prompt) lets you dispense with the graphical elements, and type the commands you want the way you want them. 
 
 **NB this workbook assumes that you are using a DH Box**
 
-1\. Carleton students: If you are on campus or are logged into Carleton's systems via a VPN, go to [the sign up page at http://134.117.26.132:5000/signup](http://134.117.26.132:5000/signup). Other folks: Go to [the DH Box sign up page at http://dhbox.org/signup](http://dhbox.org/signup). These are two separate installations of DHBox; whichever one you start with, continue to use.
+1\. Carleton students: If you are on campus or are logged into Carleton's systems via a VPN, go to [the sign up page at http://134.117.26.132:5000/signup](http://134.117.26.132:5000/signup). Other folks: Go to [the DH Box sign up page at http://dhbox.org/signup](http://dhbox.org/signup). These are two separate installations of DH Box; whichever one you start with, continue to use.
 
 2\. Select a username, password, and your email address. Your username must be four characters or longer. 
 
@@ -53,14 +55,14 @@ In this exercise, you are going to set up an instance of a DHBox for your own us
 
 You now have a virtual computer that you can use for the next month.
 
-Whenever you come back to the DH Box, you can now click 'login' on your personal dh computer and your work will be there waiting for you. Once you've logged in, the site will reload to the DH Box welcome screen, but your user name will show at the top right.
+Whenever you come back to the DH Box, you can now click 'login' on your personal DH computer and your work will be there waiting for you. Once you've logged in, the site will reload to the DH Box welcome screen, but your user name will show at the top right.
 
-4\. Click on your username, and there will be a new option, **Apps.** Click here to go into your dhbox.
+4\. Click on your username, and there will be a new option, **Apps.** Click here to go into your DH Box.
 
 Inside the DH Box, you can click on:
 
 + **Home:** tells you how many days until your DH Box expires. Keep an eye on this, as you'll want to get your materials out of DH Box before that happens.
-+ **File Manager:** allows you to view all of your files, as well as uploading/downloading materials from dhbox to your local computer.
++ **File Manager:** allows you to view all of your files, as well as uploading/downloading materials from DH Box to your local computer.
 + **Command Line:** allows you to interact with the computer at the terminal prompt or command line - this is where you type in commands to your machine.
 + **R Studio:** is an environment for doing statistical computing.
 + **Brackets:** is a text editor for web development.
@@ -144,11 +146,13 @@ As you do more work in this workbook, I want you to get in the habit of keeping 
 
 In the next exercise, we learn to use another piece of software called 'git' which will enable you to set up a remote location for pushing copies of your work to, for safe keeping and for collaboration. For more on why we go to all this trouble, visit the Programming Historian on ['Preserving Your Research Data'](http://programminghistorian.org/lessons/preserving-your-research-data).
 
-Visit [Ubuntu's handy cheat-sheet of keyboard shortcuts and other useful commands](https://help.ubuntu.com/community/AdvancedCommandlineHowto#Keyboard_shortcuts) for your DHBox command-line work.
+Visit [Ubuntu's handy cheat-sheet of keyboard shortcuts and other useful commands](https://help.ubuntu.com/community/AdvancedCommandlineHowto#Keyboard_shortcuts) for your DH Box command-line work.
 
-## Exercise 3: setting up your Github space
+## Exercise 3: Setting up your Github space
 
-It's a familiar situation - you've been working on a paper. It's where you want it to be, and you're certain you're done. You save it as 'final.doc'. Then, you ask your friend to take a look at it. She spots several typos and that you flubbed an entire paragraph. You open it up, make the changes, and save as 'final-w-changes.doc'. Later that day it occurs to you that you don't like those changes, and you go back to the original 'final.doc', make some changes, and just overwrite the previous version. Soon, you have a folder like:
+It's a familiar situation - you've been working on a paper. It's where you want it to be, and you're certain you're done. You save it as 'final.doc'. Then, you ask your friend to take a look at it. She spots several typos and that you flubbed an entire paragraph. You open it up, make the changes, and save as 'final-w-changes.doc'. Later that day it occurs to you that you don't like those changes, and you go back to the original 'final.doc', make some changes, and just overwrite the previous version. 
+
+Soon, you have a folder like:
 
 ```
 |-project
@@ -159,7 +163,7 @@ It's a familiar situation - you've been working on a paper. It's where you want 
     |-'this.doc'
 ```
 
-Things can get messy quite quickly. Imagine that you also have several spreadsheets in there as well, images, snippets of code... we don't want this. What we want is a way of managing the evolution of your files. We do this with a program called [Git](https://git-scm.com/). Git is not a user-friendly piece of software, and it takes some work to get your head around. Git is also very powerful, but fortunately, the basic uses to which most of us put it to are more or less straightforward. There are many other programs that make use of Git for version control; these programs weld a graphical user interface on top of the main Git program. For now, we'll content ourselves with the Github website, which does the same thing more or less, but from a browser.
+Things can get messy quite quickly. Imagine that you also have several spreadsheets in there as well, images, snippets of code... we don't want this. What we want is a way of managing the evolution of your files. We do this with a program called [Git](https://git-scm.com/). Git is not a user-friendly piece of software, and it takes some work to get your head around. Git is also very powerful, but fortunately, the basic uses to which most of us put it to are more or less straightforward. There are many other programs that make use of Git for version control; these programs weld a graphical user interface on top of the main Git program. For now, we'll content ourselves with the [Github website](http://github.com), which does the same thing more or less, but from a browser.
 
 Firstly, let's define some terms.
 
@@ -189,9 +193,9 @@ This is perhaps the simplest use case for Github. You can create files directly 
 
 **For the remainder of the course, use your hist3814o repository as your scratch pad, your fail log, and your open notebook for showing your work across these modules**
 
-Here is an example 'fail log' as a model - [https://github.com/shawngraham/example-faillog-hist3814](https://github.com/shawngraham/example-faillog-hist3814). 'Fail' is a pretty harsh word: I use it to point out that for everything that works perfectly, there's an awful lot of trial-and-error that happened first **upon which** our successes are built. We need to keep track of this! James Baker calls this, **[de-wizardification](https://cradledincaricature.com/2017/06/29/dewizardification/).**
+Check out [my example 'fail log' as a model](https://github.com/shawngraham/example-faillog-hist3814). 'Fail' is a pretty harsh word - I use it to point out that for everything that works perfectly, there's an awful lot of trial-and-error that happened first **upon which** our successes are built. We need to keep track of this! James Baker calls this, **[de-wizardification](https://cradledincaricature.com/2017/06/29/dewizardification/).**
 
-Some useful vocabulary when discussing git, github, and version control:
+Some useful vocabulary when discussing git, Github, and version control:
 
 + `repository` a single folder that holds all of the files and subfolders of your project
 + `commit` this means, 'take a snapshot of the current state of my repository'
@@ -213,14 +217,14 @@ Many websites - including this workbook - use a Github repository as a way of ho
 
 ## Exercise 4: A detailed look at using Git on the command line
 
-At its heart, Git is a way of taking 'snapshots' of the current state of a folder, and saving those snapshots in sequence. (For an excellent brief presentation on Git, visit [Alice Bartlett's presentation on git](https://speakerdeck.com/alicebartlett/git-for-humans); Bartlett is a senior developer for the Financial Times). In Git's lingo, as stated earlier, a folder on your computer is known as a `repository`. This sequence of snapshots in total lets you see how your project unfolded over time. Each time you wish to take a snapshot, you make a `commit`. A commit is a Git command to take a snapshot of the entire repository. Thus, your folder we discussed above, with its proliferation of documents becomes:
+At its heart, git is a way of taking 'snapshots' of the current state of a folder, and saving those snapshots in sequence. (For an excellent brief presentation on Git, visit [Alice Bartlett's presentation on git](https://speakerdeck.com/alicebartlett/git-for-humans); Bartlett is a senior developer for the Financial Times). In git's lingo, as stated earlier, a folder on your computer is known as a `repository`. This sequence of snapshots in total lets you see how your project unfolded over time. Each time you wish to take a snapshot, you make a `commit`. A commit is a git command to take a snapshot of the entire repository. Thus, your folder we discussed above, with its proliferation of documents becomes:
 
 ```
 |-project
     |-'final.doc'
 ```    
 
-**But** its commit history could be visualized like a string of pearls, where each pearl is a unique commit. Each one of those pearls represents a point in time when you the writer made a commit; Git compared the state of the file to the earlier state, and saved a snapshot of the `differences`. What is particularly useful about making a commit is that Git requires two more pieces of information about the git: who is making it, and when. The final useful bit about a commit is that you can save a detailed message about **why** the commit is being made. In our hypothetical situation, your first commit message might look like this:
+**But** its commit history could be visualized like a string of pearls, where each pearl is a unique commit. Each one of those pearls represents a point in time when you the writer made a commit; git compared the state of the file to the earlier state, and saved a snapshot of the `differences`. What is particularly useful about making a commit is that Git requires two more pieces of information about the git: who is making it, and when. The final useful bit about a commit is that you can save a detailed message about **why** the commit is being made. In our hypothetical situation, your first commit message might look like this:
 
 ```
 Fixed conclusion
@@ -235,11 +239,11 @@ This information is stored in the history of the commits. In this way, you can s
 
 What would happen if you wanted to experiment or take your project in a new direction from that point forward? Git lets you do this. What you will do is create a new `branch` of your project from that point. You can think of a branch as like the branch of a tree, or perhaps better, a branch of a river that eventually merges back to the source. (Another way of thinking about branches is that it is a label that sticks with these particular commits.) It is generally considered **best practice** to leave your `master` branch alone, in the sense that it represents the best version of your project. When you want to experiment or do something new, you create a `branch` and work there. If the work on the branch ultimately proves fruitless, you can discard it. **But**, if you decide that you like how it's going, you can `merge` that branch back into your master. A merge is a commit that folds all of the commits from the branch with the commits from the master.
 
-Git is also a powerful tool for backing up your work. You can work quite happily with Git on your own machine, but when you store those files and the history of commits somewhere remote, you open up the possibility of collaboration **and** a safe place where your materials can be recalled if - perish the thought - something happened to your computer. In Git-speak, the remote location is, well, the `remote`. There are many different places on the web that can function as a remote for Git repositories. You can even set one up on your own server, if you want. To get material **out** of Github and onto your own computer, you `clone` it. If that hypothetical paper you were writing was part of a group project, your partners could clone it from your Github space, and work on it as well!
+Git is also a powerful tool for backing up your work. You can work quite happily with git on your own machine, but when you store those files and the history of commits somewhere remote, you open up the possibility of collaboration **and** a safe place where your materials can be recalled if - perish the thought - something happened to your computer. In git-speak, the remote location is, well, the `remote`. There are many different places on the web that can function as a remote for git repositories. You can even set one up on your own server, if you want. To get material **out** of Github and onto your own computer, you `clone` it. If that hypothetical paper you were writing was part of a group project, your partners could clone it from your Github space, and work on it as well!
 
 Let us imagine a scenario.... You and Anna are working together on the project. You have made a new project repository in your Github space, and you have cloned it to your computer. Anna has cloned it to hers. Let's assume that you have a very productive weekend and you make some real headway on the project. You `commit` your changes, and then `push` them from your computer to the Github version of your repository. That repository is now one commit **ahead** of Anna's version. Anna `pulls` those changes from Github to her own version of the repository, which now looks **exactly** like your version. What happens if you make changes to the exact same part of the exact same file? This is called a `conflict`. Git will make a version of the file that contains text clearly marking off the part of the file where the conflict occurs, with the conflicting information marked out as well. The way to `resolve` the conflict is to open the file (typically with a text editor) and to delete the added Git text, making a decision on which information is the correct information.
 
-**Caution** what follows might take a bit of time. It walks you through setting up a Git repository in your DHBox; making changes to it; making different branches; and publishing the repository to your space on Github.com.
+**Caution** what follows might take a bit of time. It walks you through setting up a Git repository in your DH Box; making changes to it; making different branches; and publishing the repository to your space on Github.com.
 
 ### 4.1. git init 
 
@@ -249,12 +253,12 @@ How do you turn a folder into a repository? With the `git init` command. At the 
 2. Type `$ ls` (list) to see that the director exists. Then change directory into it: `cd first-repo`. (remember: if you're ever not sure what directory you're in, type `$ pwd`, or print working directory).
 3. Make a new file called `readme.md`. You do this by calling the text editor: `nano readme.md`. 
 4. Type an explanation of what this exercise is about. 
-5. Hit ctrl+x to exit, then type y to save, leave the file name as it is. Hit enter. **If you get an error to the effect that nano is not found** you just need to install it with `sudo apt-get install nano`. DHBox will ask you for your password again. Once the dust settles, you can make the new file with `nano readme.md`.
+5. Hit ctrl+x to exit, then type y to save, leave the file name as it is. Hit enter. **If you get an error to the effect that nano is not found** you just need to install it with `sudo apt-get install nano`. DH Box will ask you for your password again. Once the dust settles, you can make the new file with `nano readme.md`.
 6. Type `$ ls` again to check that the file is there.
-7. Type `$ git init` to tell the Git program that this folder is to be tracked as a repository. If all goes correctly, you should see a variation on this message: `Initialized empty Git repository in /home/demonstration/first-repo/.git/`.
+7. Type `$ git init` to tell the git program that this folder is to be tracked as a repository. If all goes correctly, you should see a variation on this message: `Initialized empty Git repository in /home/demonstration/first-repo/.git/`.
 8. Type `$ ls` again. What do you (not) see?
 
-The changes in your repo will now be stored in that **hidden** directory, `.git`. Most of the time, you will never have reason to search that folder out. But know that the config file that describes your repo is in that folder. There might come a time in the future where you want to alter some of the default behaviour of the Git program. You do that by opening the config file (which you can read with a text editor). Google 'show hidden files and folders' for your operating system when that time comes.
+The changes in your repo will now be stored in that **hidden** directory, `.git`. Most of the time, you will never have reason to search that folder out. But know that the config file that describes your repo is in that folder. There might come a time in the future where you want to alter some of the default behaviour of the git program. You do that by opening the config file (which you can read with a text editor). Google 'show hidden files and folders' for your operating system when that time comes.
 
 ### 4.2. git status
 Open your readme.md file again with the nano text editor, from the command line. Add some more information to it, then save and exit the text editor.
@@ -265,7 +269,7 @@ Git will respond with a couple of pieces of information. It will tell you which 
 
 2\. We now will `stage` those changes to be added to our commit history by typing `$ git add -A`. (the bit that says `-A` adds any new, modified, or deleted files to your commit when you make it. There are [other options or flags](https://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add#572660) where you add **only** the new and modified files, **or** only the modified and deleted files.)
 
-3\. Let's check our Git status again: type `$ git status`
+3\. Let's check our git status again: type `$ git status`
 
 4\. You should see something like this:
 
@@ -279,7 +283,7 @@ Changes to be committed:
 
 5\. Let's take a snapshot: type `$ git commit -m "My first commit"`. This command represents a bit of a shortcut for making commit messages by using the `-m` flag to associate the text in the quotation marks with the commit. 
 
-What happened? Remember, Git keeps track not only of the changes, but **who** is making them. If this is your first time working with Git in the DHBox, Git will ask you for your name and email. 
+What happened? Remember, git keeps track not only of the changes, but **who** is making them. If this is your first time working with git in the DH Box, git will ask you for your name and email. 
 
 6\. Helpfully, the Git error message tells you exactly what to do: type `$ git config --global user.email "you\@example.com"` and then type `$ git config --global user.name "Your Name"`. Now try making your first commit.
 
@@ -324,7 +328,7 @@ Now let's assume that your `experiment` branch was successful - everything you d
 
 ### 4.5 git push
 
-One of the most powerful aspects of using Git is the possibility of using it to manage collaborations. To do this, we have to make a copy of your repository available to others as a `remote`. There are a variety of places on the web where this can be done; one of the most popular at the moment is [Github](http://github.com). Github allows a user to have an unlimited number of `public` repositories. Public repositories can be viewed and copied by anyone. `Private` repositories require a paid account, and access is controlled. If you are working on sensitive materials that can only be shared amongst the collaborators on a project, you should invest in an upgraded account (note that you can also control which files get included in commit; [visit Github for help on ignoring files](https://help.github.com/articles/ignoring-files/). In essence, you simply list the file names you do not want committed; [visit Github for an example on listing ignored files](https://gist.github.com/octocat/9257657)). Let's assume that your materials are not sensitive.
+One of the most powerful aspects of using git is the possibility of using it to manage collaborations. To do this, we have to make a copy of your repository available to others as a `remote`. There are a variety of places on the web where this can be done; one of the most popular at the moment is [Github](http://github.com). Github allows a user to have an unlimited number of `public` repositories. Public repositories can be viewed and copied by anyone. `Private` repositories require a paid account, and access is controlled. If you are working on sensitive materials that can only be shared amongst the collaborators on a project, you should invest in an upgraded account (note that you can also control which files get included in commit; [visit Github for help on ignoring files](https://help.github.com/articles/ignoring-files/). In essence, you simply list the file names you do not want committed; [visit Github for an example on listing ignored files](https://gist.github.com/octocat/9257657)). Let's assume that your materials are not sensitive.
 
 1\. Login to Github
 
@@ -338,7 +342,7 @@ One of the most powerful aspects of using Git is the possibility of using it to 
 
 6\. Click the green 'Create Repository' button. You now have a space into which you will publish the repository on your machine. 
 
-7\. At the command line, we now need to tell Git the location of this space. We do that with the following command, where you will change `your-username` and `your-new-repo` appropriately:
+7\. At the command line, we now need to tell git the location of this space. We do that with the following command, where you will change `your-username` and `your-new-repo` appropriately:
 
 ```
 $ git remote add origin https://github.com/YOUR-USERNAME/YOUR-NEW-REPO.git
@@ -364,16 +368,18 @@ The changes can sometimes take a few minutes to show up on the website. Now, the
 
 Imagine you are collaborating with one of your classmates. Your classmate is in charge of the project, and is keeping track of the 'official' folder of materials (eg, the repo). You wish to make some changes to the files in that repository. You can manage that collaboration via Github by making a copy, what Github calls a `fork`.
 
-1\. Make sure you're logged into your Github account on the Github website. We're going to fork an example repository right now by going to [https://github.com/octocat/Spoon-Knife](https://github.com/octocat/Spoon-Knife). Click the 'fork' button at top-right. Github now makes a copy of the repository in your own Github account!
+1\. Make sure you're logged into your Github account on the Github website. We're going to fork an example repository right now by going to [https://github.com/octocat/Spoon-Knife](https://github.com/octocat/Spoon-Knife). 
 
-2\. To make a copy of that repository on your own machine, you will now clone it with the `git clone` command. (Remember: a 'fork' copies someone's Github repo into a repo in your OWN Github account; a 'clone' makes a copy on your own MACHINE). Type:
+2\. Click the 'fork' button at top-right. Github now makes a copy of the repository in your own Github account!
+
+3\. To make a copy of that repository on your own machine, you will now clone it with the `git clone` command. (Remember: a 'fork' copies someone's Github repo into a repo in your OWN Github account; a 'clone' makes a copy on your own MACHINE). Type:
 
 ```
 $ cd..
 $ pwd
 ```
 
-3\. We do that to make sure you're not **inside** any other repo you've made! Make sure you're not inside the repository we used in exercises 1 to 5, then proceed:
+4\. We do that to make sure you're not **inside** any other repo you've made! Make sure you're not inside the repository we used in exercises 1 to 5, then proceed:
 
 ```
 $ git clone https://github.com/YOUR-USERNAME/Spoon-Knife
@@ -382,7 +388,7 @@ $ ls
 
 You now have a folder called 'Spoon-Knife' on your machine! Any changes you make inside that folder can be tracked with commits. You can also `git push -u origin master` when you're inside it, and the changes will show up on your OWN copy (your fork) on Github.com.
 
-4\. Make a fork of, and then clone, one of your classmates' repositories. Create a new branch. Add a new file to the repository on your machine, and then push it to your fork on Github. Remember, your new file will appear on the new branch you created, NOT the master branch.
+5\. Make a fork of, and then clone, one of your classmates' repositories. Create a new branch. Add a new file to the repository on your machine, and then push it to your fork on Github. Remember, your new file will appear on the new branch you created, NOT the master branch.
 
 ### 4.7. pull request
 
@@ -425,4 +431,4 @@ Phew. You might want to do `$ history > recentcommands.md` just to remember what
 
 ## Conclusion
 
-In the modules to come, we will be using DHBox as we find data, fetch data, wrangle data, analyze data, and visualize data. It becomes very important that you note the kinds of commands you use or try, the thinking that you were doing at that point, and so on. You want to leave yourself (and anybody who comes after) breadcrumbs so that you understand what you were doing. Quick notes written in markdown, piping the history of what you've done to a file, and keeping those files in a repository alongside any other code or files that you may make will set you on the path to open access research and computational reproducibility. As Martha might say, 'and that's a good thing'.
+In the modules to come, we will be using DH Box as we find data, fetch data, wrangle data, analyze data, and visualize data. It becomes very important that you note the kinds of commands you use or try, the thinking that you were doing at that point, and so on. You want to leave yourself (and anybody who comes after) breadcrumbs so that you understand what you were doing. Quick notes written in markdown, piping the history of what you've done to a file, and keeping those files in a repository alongside any other code or files that you may make will set you on the path to open access research and computational reproducibility. As Martha might say, 'and that's a good thing'.

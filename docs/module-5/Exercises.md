@@ -10,10 +10,10 @@ Finally: while we haven't explored the possibilities here, I do not want to leav
 
 [Ukraine fist fight](http://www.theguardian.com/artanddesign/2014/aug/06/accidental-renaissance-photojournalism-italian-painting-ukraine-frank-lampard)
 
-### By the way: Raster v Vector
+## By the way: Raster versus Vector
 The first thing to know is that graphic images come in two distinct flavours - raster, and vector.
 
-Raster images are composed of pixels, such that if you zoom into them, they become a pointilist blur (if you remember **Ferris Beuller's Day Off**, there's a scene where Cameron stares and stares at a painting, falling into its individual points of colour...). Vector images on the other hand are described by mathematical functions, of lines and arcs and areas. No matter how deep you delve into these kinds of images, the image is always sharp - because the zoom is just another function of the mathematics describing the image.
+Raster images are composed of pixels, such that if you zoom into them, they become a pointilist blur (if you remember **Ferris Beuller's Day Off**, there's a scene where Cameron stares and stares at a painting, falling into its individual points of colour). Vector images on the other hand are described by mathematical functions, of lines and arcs and areas. No matter how deep you delve into these kinds of images, the image is always sharp - because the zoom is just another function of the mathematics describing the image.
 
 **Rasters:** blocks of colours
 
@@ -30,22 +30,23 @@ In this first exercise, we will take the plot we generated in Module 4's exercis
 3. Open that pdf. It's a pretty plain graphic. Right away there are at least two things we could do to make it more visually appealling. We could change the orientation of the characters in the y-axis to make them more legible. We can highlight bars of interest. And we could apply a colour scheme more generally that would make our graphic legible to folks with colour-blindness (see the 'going further' section at bottom).
 4. Start Inkscape. 
 5. Click File >> Import >> and then navigate to where you save the 'publication-year.pdf'. 
-6. Click Ok when you've got it selected. In the next pop-up, just accept the default settings and click 'ok'. Your Inkscape window should now look like this:<br>![Image showing graph scaling in Inkscape](https://raw.githubusercontent.com/hist3907b-winter2015/module5-humanitiesvisualization/master/inkscape1.png)
-7. The pdf is now a layer in the new image you are creating in Inkscape. You can save this drawing, **with its information about the layers and what is in each one** by clicking File >> Save As. ([visit Github for my version](https://raw.githubusercontent.com/hist3907b-winter2015/module5-humanitiesvisualization/master/exercise1drawing-final.svg)). 'SVG' stands for 'scalable vector graphic'. (SVG is a kind of text file that describes the complete geometry of your illustration).
-8. Do you see the bounding box around the plot? If you grab any of those handles (the double-arrow things), you can make it bigger or smaller on your sheet. We can't edit any of the other elements yet - we can't change the colour of the bars, or the fonts of the text. We have to tell Inkscape to 'explode' these elements into their own 'objects'. In the menu bar at top, got to Object >> Ungroup. There are now a series of overlapping bounding boxes around each object.
-9. Zoom in (by pressing the + sign on your keyboard) so that you're looking at the numbers of the y-axis. We're going to rotate these by 90 degrees to make them more legible. Select the arrow icon from the toolbar on the left side of the screen.
-10. Click on the '50'. You'll get a bounding box around it. 
-11. Click Object >> Rotate 90 CW. The 50 is now rotated! Do the same for the other numbers. 
-12. Save. (If you double-click on the number, you might trigger the 'text edit' function. If you do that, no problem - you can change the font, change the number... although if you did that, it'd be a bit dishonest, right? Click on the arrow pointer icon in the toolbar again to get out of the text-editing function).
-13. Let's imagine, for whatever reason, that you wanted to change one of the bars to a different colour, to highlight its importance to your argument. With the arrow icon, click on one of the bars so that you get the bounding box around it. Then, click on one of the colours from the palette at the bottom. Boom! You've got a newly colourized bar. 
-14. Save
-15. Add a legend. Write it so that the important message you want your viewer to get is immediately clear. Choose a font from Inkscape's included fonts that **supports** your message.
-16. To export your image so that you can use it in a website or paper, click Edit >> Select All in All Layers. Every element of your image will now have a bounding box around it.
+6. Click Ok when you've got it selected. 
+7. In the next pop-up, just accept the default settings and click 'ok'. Your Inkscape window should now look like this:<br>![Image showing graph scaling in Inkscape](https://raw.githubusercontent.com/hist3907b-winter2015/module5-humanitiesvisualization/master/inkscape1.png)
+8. The pdf is now a layer in the new image you are creating in Inkscape. You can save this drawing, **with its information about the layers and what is in each one** by clicking File >> Save As. ([visit Github for my version](https://raw.githubusercontent.com/hist3907b-winter2015/module5-humanitiesvisualization/master/exercise1drawing-final.svg)). 'SVG' stands for 'scalable vector graphic'. (SVG is a kind of text file that describes the complete geometry of your illustration).
+9. Do you see the bounding box around the plot? If you grab any of those handles (the double-arrow things), you can make it bigger or smaller on your sheet. We can't edit any of the other elements yet - we can't change the colour of the bars, or the fonts of the text. We have to tell Inkscape to 'explode' these elements into their own 'objects'. In the menu bar at top, got to Object >> Ungroup. There are now a series of overlapping bounding boxes around each object.
+10. Zoom in (by pressing the + sign on your keyboard) so that you're looking at the numbers of the y-axis. We're going to rotate these by 90 degrees to make them more legible. Select the arrow icon from the toolbar on the left side of the screen.
+11. Click on the '50'. You'll get a bounding box around it. 
+12. Click Object >> Rotate 90 CW. The 50 is now rotated! Do the same for the other numbers. 
+13. Save. (If you double-click on the number, you might trigger the 'text edit' function. If you do that, no problem - you can change the font, change the number... although if you did that, it'd be a bit dishonest, right? Click on the arrow pointer icon in the toolbar again to get out of the text-editing function).
+14. Let's imagine, for whatever reason, that you wanted to change one of the bars to a different colour, to highlight its importance to your argument. With the arrow icon, click on one of the bars so that you get the bounding box around it. Then, click on one of the colours from the palette at the bottom. Boom! You've got a newly colourized bar. 
+15. Save
+16. Add a legend. Write it so that the important message you want your viewer to get is immediately clear. Choose a font from Inkscape's included fonts that **supports** your message.
+17. To export your image so that you can use it in a website or paper, click Edit >> Select All in All Layers. Every element of your image will now have a bounding box around it.
 17. Go to File >> Export Bitmap. Never mind the options in the popup; just hit 'Export'. Inkscape will automatically assign your drawing a name with .png; here's [my version on Github](https://raw.githubusercontent.com/hist3907b-winter2015/module5-humanitiesvisualization/master/g3161.png). Remember, if you want to edit this image again later, hit the 'save' button to save it as an svg. The svg will preserve all your layer information, while the png file is the visual representation (the png is in fact a raster graphic). Most browsers can handle svg files, so you could use that in your website; programs like Word seem to be able to handle raster graphics better than they do svg. You might want to experiment. In any event, every journal has different requirements for image formats. You would export your image to whatever those specifications are.
 
 ### Going further
 
-In the [infoheap tutorial on inkscape](http://infoheap.com/create-and-use-color-palettes-in-inkscape/), you will learn how to load a custom colour palette. Why might you want to do that? You should be designing your work so that it is as universally accessible as possible. Many folks are colour-blind. Use [Color-brewer](http://colorbrewer2.org/) to generate a colour-blind safe palette. Then look for the 'GIMP and Inkscape - GIMP color palette for this scheme.' Click on that link, and you'll get a text file with the scheme you generated. Use that scheme to alter the colours on your plot.
+In [infoheap's tutorial on inkscape](http://infoheap.com/create-and-use-color-palettes-in-inkscape/), you will learn how to load a custom colour palette. Why might you want to do that? You should be designing your work so that it is as universally accessible as possible. Many folks are colour-blind. Use [Color-brewer](http://colorbrewer2.org/) to generate a colour-blind safe palette. Then look for the 'GIMP and Inkscape - GIMP color palette for this scheme.' Click on that link, and you'll get a text file with the scheme you generated. Use that scheme to alter the colours on your plot.
 
 -----
 
@@ -56,11 +57,8 @@ Typographic plays an important role in visual communication. It can do everythin
 In this exercise,
 
 + I want you to read and understand the section on [font choices from the Owl at Purdue](https://owl.english.purdue.edu/owl/resource/705/01/).
-
 + Then, play some rounds of [Typeconnection](http://www.typeconnection.com/index.php). Pay attention to why - or why not - various pairings work.
-
 + Then, I want to consider the document you will be preparing for me that accounts for your learning in this course - the document where you choose your best exercises from the modules and explain how your approach to history, data, the digital, etc, has changed over this course. What typographic pair would work best for you?
-
 + Finally, you'll make a webpage that uses those fonts and explains why they work.
 
 The first part of this exercise then is to find a pair of fonts and to understand why they work best for you. 
@@ -91,7 +89,7 @@ The first part of this exercise then is to find a pair of fonts and to understan
 
 There's a lot of bumpf out there on the 'pyschology of colour'. Google it to see what I mean ([Youth Designer has a good example](http://www.youthedesigner.com/graphic-design-resources/infographic-graphic-design-resources/infographic-a-color-guide-for-designers/)). A lot of what you see here isn't so much psychology as it is associations (and indeed, western associations, at that). Associations are important of course; you don't want to undermine your message by making some unfortunate connections.
 
-+ In this exercise, I want you to take the webpage you developed in the previous exercise, and make two versions of it: one, where the colours support the broader message of the page (a prototype for your exercises assessment piece, remember?), and the other where the colours _undermine_ that broader message. Explain, in both cases, how your colour choices enhance/detract.
++ In this exercise, I want you to take the webpage you developed in the previous exercise, and make two versions of it: one, where the colours support the broader message of the page (a prototype for your exercises assessment piece, remember?), and the other where the colours **undermine** that broader message. Explain, in both cases, how your colour choices enhance and/or detract.
 
 > Alternatively, you can make a one page slide in powerpoint doing the same thing.
 
@@ -117,13 +115,26 @@ Colours in Cultures:
 
 For academic posters in particular, consider [these suggestions from the APA](http://www.apa.org/gradpsych/2011/01/poster.aspx).
 
-In essence, good layout makes your argument legible, intuitive, and reinforces the rhetorical points you are trying to make. You should take into account 'principles of universal design' - consider these issues with [powerpoint](http://accessproject.colostate.edu/udl/modules/powerpoint/mod_ppt.php) and with [websites](http://accessproject.colostate.edu/udl/modules/html/mod_html.php) (although some of the technical solutions proposed in those two documents are a bit out of date, the general principles hold!)
+In essence, good layout makes your argument legible, intuitive, and reinforces the rhetorical points you are trying to make. You should take into account 'principles of universal design' - consider some issues with [powerpoint](http://accessproject.colostate.edu/udl/modules/powerpoint/mod_ppt.php) and with [websites](http://accessproject.colostate.edu/udl/modules/html/mod_html.php) (although some of the technical solutions proposed in those two documents are a bit out of date, the general principles hold!)
 
 In this exercise, you will design a new poster OR modify an existing poster. You can use either Inkscape or Powerpoint.
 
-+ Inkscape: download one of the scientific poster templates from [Ugo Sangiorgi](https://github.com/ugosan/svg-conference-poster) (These are developed from [Felix Breuer's blog post](http://blog.felixbreuer.net/2010/10/24/poster.html); note his discussion on design). Open it in Inkscape. Make notes in your open notebook: *from the point of view of layout*, what elements of the design work? What aren't working? How would you repurpose this poster to fit the requirements of the assessment exercise ([remember, details here](https://github.com/hist3907b-winter2015/syllabus/blob/master/exercise_assessment_guideline.md))?  <br> Here's [help with the basics of Inkscape](https://inkscape.org/en/doc/tutorials/basic/tutorial-basic.en.html). Modify the poster, and upload the svg or pdf or png version to your repository.
+Inkscape:
 
-+ PPT: there's a lot of information out there on making posters with powerpoint. [Read parts 1,2, and 3 here](http://www.makesigns.com/tutorials/scientific-poster-parts.aspx) and then consider [Colin Purrington's advice](http://colinpurrington.com/tips/poster-design). Once you've read and digested, pick a poster from [Pimp my poster](https://www.flickr.com/groups/pimpmyposter/pool/) that strikes use. Make notes in your open notebook: *from the point of view of layout* what elements of the design work? What aren't working? How would you repurpose this posert to fit the requirements ot he assessment exercises ([remember, visit Github for the details](https://github.com/hist3907b-winter2015/syllabus/blob/master/exercise_assessment_guideline.md))? <br> Grab a template from [from Colin Purrington's](http://colinpurrington.com/tips/poster-design#templates), and use it to prototype a poster that works. Upload the poster as a pdf to your repository.
+1. Download one of the scientific poster templates from [Ugo Sangiorgi](https://github.com/ugosan/svg-conference-poster) (These are developed from [Felix Breuer's blog post](http://blog.felixbreuer.net/2010/10/24/poster.html); note his discussion on design). 
+2. Open it in Inkscape. 
+3. Make notes in your open notebook **from the point of view of layout:** what elements of the design work? What aren't working? How would you repurpose this poster to fit the requirements of the assessment exercise ([remember, details here](https://github.com/hist3907b-winter2015/syllabus/blob/master/exercise_assessment_guideline.md))?
+4. [Visit Inkscape's website for help with the basics of Inkscape](https://inkscape.org/en/doc/tutorials/basic/tutorial-basic.en.html). 
+5. Modify the poster, and upload the svg or pdf or png version to your repository.
+
+PPT: 
+
+There's a lot of information out there on making posters with powerpoint. 
+
+1. Read [parts 1,2, and 3](http://www.makesigns.com/tutorials/scientific-poster-parts.aspx) and then consider [Colin Purrington's advice](http://colinpurrington.com/tips/poster-design). Once you've read and digested, pick a poster from [Pimp my poster](https://www.flickr.com/groups/pimpmyposter/pool/) that strikes use. 
+2. Make notes in your open notebook: **from the point of view of layout** what elements of the design work? What aren't working? How would you repurpose this posert to fit the requirements ot he assessment exercises ([remember, visit Github for the details](https://github.com/hist3907b-winter2015/syllabus/blob/master/exercise_assessment_guideline.md))? 
+3. Grab a template from [from Colin Purrington's](http://colinpurrington.com/tips/poster-design#templates), and use it to prototype a poster that works. 
+4. Upload the poster as a pdf to your repository.
 
 If you want to explore layout in the context of webpage creation, I would point you to the the roster of lessons at [Codeacademy](http://www.codecademy.com/en/tracks/web). Same instructions: find an existing site that you will consider from the point of view of what works, what doesn't, and use that reflection to guide the construction of your own.
 _____

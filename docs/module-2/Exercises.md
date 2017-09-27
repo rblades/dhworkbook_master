@@ -36,7 +36,7 @@ In the dream case, your data are not just images, but are actually sorted and st
 
 ## Exercise 2: Wget
 
-You've already encountered wget in the introduction to this workbook, when you were setting up your DHBox to use Pandoc. In this exercise, I want you to do [Ian Milligan's wget tutorial at the Programming Historian](http://programminghistorian.org/lessons/automated-downloading-with-wget) to learn more about the power of this command, and how to wield that power properly. Skip ahead to step 2, since your DHBox already has wget installed. (If you want to continue to use wget after this course is over, you will have to install it on your own machine, obviously).
+You've already encountered wget in the introduction to this workbook, when you were setting up your DH Box to use Pandoc. In this exercise, I want you to do [Ian Milligan's wget tutorial at the Programming Historian](http://programminghistorian.org/lessons/automated-downloading-with-wget) to learn more about the power of this command, and how to wield that power properly. Skip ahead to step 2, since your DH Box already has wget installed. (If you want to continue to use wget after this course is over, you will have to install it on your own machine, obviously).
 
 Once you've completed Milligan's tutorial, remember to put your history into a new markdown file, and to lodge a copy of it in your repository.
 
@@ -46,7 +46,7 @@ Now that you're **au fait** with wget, I want you to use wget to download the Sh
 
 2\. Make a new directory: `$ mkdir equity` and then cd into it: `$ cd equity`. Make sure you're in the directory by typing `$ pwd`. 
 
-**NB Make sure you are in your parent directory `~`. To get there quickly, type `$ cd ~`. If you want to check your file structure quickly, go to the File Manager.**
+**NB Make sure you are in your parent directory `~`. To get there directly from any subdirectory, type `$ cd ~`. If you want to check your file structure quickly, go to the File Manager.**
 
 3\. Work out the command to download say ten years' worth only of the Equity OCR'd transcriptions (the .txt files). Configure your command to retrieve only the txt files, as the pdfs are large and will take much time and bandwidth to acquire. (Ok, I'm not heartless - scroll to the bottom of this page to see what the command should be).
 
@@ -91,9 +91,7 @@ Your search query has been put into the URL. You're looking at the API! Everythi
 
 ....all the way up to 5625 (ie. 10 results per page, so 56249 / 10).
 
-If you go to the [Canadiana API support page](http://search.canadiana.ca/support/api) you can see the full list of options. What we are particularly interested in now is the bit that looks like this:
-
-`&fmt=json`
+If you go to the [Canadiana API support page](http://search.canadiana.ca/support/api) you can see the full list of options. What we are particularly interested in now is the bit that says `&fmt=json`
 
 4\. Add that to your query URL. How different the results now look! What's nice here is that the data is formatted in a way that makes sense to a machine - which we'll learn more about in due course.
 
@@ -101,11 +99,11 @@ If you look back at the full list of API options, you'll see at the bottom that 
 
 `http://search.canadiana.ca/view/oocihm.16278/?r=0&s=1&fmt=json&api_text=1`
 
-The problem is: how to retrieve those oocihm numbers. The answer is, 'we write a program'. And the program that you want can be [found on Ian Milligan's website](http://ianmilligan.ca/api-example-sh/). Study that program carefully. There are a number of useful things happening in there, notably **curl**, **jq**, **sed**, and **awk**. **curl**  is a program for downloading webpages, jq for dealing with json, and sed and awk for searching within and cleaning up text. If this all sounds greek to you, there is an excellent gentle introduction over at [William Turkel's blog](http://williamjturkel.net/2013/06/15/basic-text-analysis-with-command-line-tools-in-linux/).
+The problem is: how to retrieve those oocihm numbers. The answer is, 'we write a program'. And the program that you want can be [found on Ian Milligan's website](http://ianmilligan.ca/api-example-sh/). Study that program carefully. There are a number of useful things happening in there, notably **curl**, **jq**, **sed**, and **awk**. **curl**  is a program for downloading webpages, **jq** for dealing with json, and **sed** and **awk** for searching within and cleaning up text. If this all sounds Greek to you, there is an excellent gentle introduction over at [William Turkel's blog](http://williamjturkel.net/2013/06/15/basic-text-analysis-with-command-line-tools-in-linux/).
 
 So here's what we're going to do.
 
-5\. We need the command line program jq. We install it into our DHBox with `$ sudo apt-get install jq -y`
+5\. We need the command line program jq. We install it into our DH Box with `$ sudo apt-get install jq -y`
 
 6\. We need to create a program. Make a new directory for this exercise like so: `$ mkdir m2e4`. Then, change into that directory by typing `$ cd m2e4`. Make sure that's where you are by typing `$ pwd`. Now, make an empty file for our program with `$ touch canadiana.sh`. Touch makes an empty file; the .sh in the filename indicates that this is a shell script.
 
@@ -143,15 +141,11 @@ wget -i urlstograb.txt -O output.txt
 
 8\. Hit ctrl+x to exit Nano, and save the changes.
 
-9\. Before we can run this program, we have to tell DHBox that it is alright to run it. We do that by changing the 'permissions' on the file, like so:
-
-`$ chmod 755 canadiana.sh`
+9\. Before we can run this program, we have to tell DH Box that it is alright to run it. To change the 'permissions' on the file, type `$ chmod 755 canadiana.sh`
 
 The `$ chmod` command means change mode. Each number represents a user permission for reading, writing, and executing files on your computer.  
 
-10\. And now we can run the program (the ./ is important!):
-
-`$ ./canadiana.sh`
+10\. And now we can run the program (the ./ is important!) by typing `$ ./canadiana.sh`
 
 Ta da! You now have a pretty powerful tool now for grabbing data from one of the largest portals for Canadian history! 
 
@@ -163,39 +157,53 @@ Make sure to make a file noting what you've done, commands you've made, etc, and
 
 Ed Summers is part of a project called '[Documenting the Now](http://www.docnow.io/)' which is developing tools to collect and understand the historical materials being shared (and lost) on social media. One component of Documenting the Now is the Twitter Archiving Tool, '[Twarc](https://github.com/DocNow/twarc)'. In this exercise, you are going to use Twarc to create an archive of Tweets relevant to a current trending news topic.
 
-**NB A quick note on the time frame of tweets by Twarc from their [Github repository](https://github.com/DocNow/twarc#retweets-and-replies):** "Unfortunately Twitter's API does not currently support getting replies to a tweet. So twarc approximates it by using the search API. Since the search API does not support getting tweets older than a week twarc can only get all the replies to a tweet that have been sent in the last week."
+1\. First of all, you need to set up a Twitter account, if you haven't already got one. Do so, but make sure to minimize any personal information that is exposed. For instance, don't make your handle the same as your real name. 
 
-1\. First of all, you need to set up a Twitter account, if you haven't already got one. Do so, but make sure to minimize any personal information that is exposed. For instance, don't make your handle the same as your real name. Turn off geolocation. Do not give your actual location in the profile. View the settings, and make sure all of the privacy settings are dialed down. For the time being, you **do** have to associate a cell phone number with your account. You can delete that once you've done the next step.
+2\. Turn off geolocation. Do not give your actual location in the profile. 
 
-2\. Go to the [Twitter apps page](https://apps.twitter.com/) and click on **new app**. 
+3\. View the settings, and make sure all of the privacy settings are dialed down. For the time being, you **do** have to associate a cell phone number with your account. You can delete that once you've done the next step.
 
-3\. On the **new application** page, just give your app a name like **my-twarc** or similar. For website, use the Crafting Digital History site url (although for our purposes any website will do). You don’t need to fill in any of the rest of the fields. 
+4\. Go to the [Twitter apps page](https://apps.twitter.com/) and click on **new app**. 
 
-4\. Continue on to the next page (tick off the box saying you’ve read the developer code of behaviour). This next page shows you all the details about your new application.
+5\. On the **new application** page, just give your app a name like **my-twarc** or similar. For website, use the Crafting Digital History site url (although for our purposes any website will do). You don’t need to fill in any of the rest of the fields. 
 
-5\. Click on the ‘keys and access tokens’ tab. 
+6\. Continue on to the next page (tick off the box saying you’ve read the developer code of behaviour). This next page shows you all the details about your new application.
 
-6\. Copy the consumer key, the consumer secret to a text file.
+7\. Click on the ‘keys and access tokens’ tab. 
 
-7\. Click on the ‘create access tokens’ at the bottom of the page. This generates an access token and an access secret. 
+8\. Copy the consumer key, the consumer secret to a text file.
 
-8\. Copy those to your text file, save it. **do not put this file in your repo or leave it online anywhere** ![Image showing Twitter access tokens](http://i.imgur.com/mM4hZNN.png)
+9\. Click on the ‘create access tokens’ at the bottom of the page. This generates an access token and an access secret. 
 
-9\. In your DHbox, at the command line, type `$ pip install twarc`. Twarc is written in python, which is already installed in DHbox. 'Pip' is a package manager for installing new python modules and packages. If you forget the `sudo`, you will get an error to the effect that you don't have permission. So sudo!
+10\. Copy those to your text file, save it. **Do not put this file in your repo or leave it online anywhere** ![Image showing Twitter access tokens](http://i.imgur.com/mM4hZNN.png)
 
-10\. Now type `$ twarc configure ` and give it the information it asks for (your consumer secret etc).
+11\. In your DH Box, at the command line, type `$ pip install twarc`. Twarc is written in python, which is already installed in DH Box. 'Pip' is a package manager for installing new python modules and packages. If you forget the `sudo`, you will get an error to the effect that you don't have permission. So sudo!
 
-11\. You're now ready to search. For instance, `$ twarc search canada150 > search.json` will search Twitter for posts using the canada150 hashtag. **Wait! Don't run that command! (Force-stop the search by hitting ctrl+c.)** If you search for that, there are, what, 36 million Canadians? How many tweets is that likely to be? Quite a lot - and the command will run quietly for days grabbing that information, writing it to file, and you'll be sitting looking at the screen wondering if anything is happening. Try something smaller, more contained for now, `$ twarc search hist3814o > search.json`.  Note that Twitter only gives access to the last two weeks or so via search. For grabbing the stream **as an event happens** you'd use the `twarc stream` command - see the Twarc documentation for more.
+12\. Now type `$ twarc configure ` and give it the information it asks for (your consumer secret etc).
+
+You're now ready to search. For instance, `$ twarc search canada150 > search.json` will search Twitter for posts using the canada150 hashtag. 
+
+**Wait! Don't run that command! (Force-stop the search by hitting ctrl+c.)** 
+
+If you search for `canada150` , there are, what, 36 million Canadians? How many tweets is that likely to be? Quite a lot - and the command will run quietly for days grabbing that information, writing it to file, and you'll be sitting looking at the screen wondering if anything is happening. 
+
+13\. Try something smaller and more contained for now: `$ twarc search hist3814o > search.json`. 
+
+**Note that Twitter only gives access to the last two weeks or so via search.** For grabbing the stream **as an event happens** you'd use the `twarc stream` command - see the Twarc documentation for more.
 
 It might take some time for the search to happen. **You can always force-stop the search by hitting ctrl+c.** If you do that though there could be an error in the formatting of the file which will throw an error when you get to step 10. You can still open the json in a text editor though, but you will have to go to the end of the file and fix the formatting.
 
 The data being collected is in json format. That is, a list of 'keys' and 'values'. This is a handy format for computers, and some data visualization platforms require data in this format. For our purposes we might want to transform the json into a csv (comma separated) table - a spreadsheet.
 
-12\. Type `$ sudo npm install json2csv --save -g`. This installs a command that can convert the json to csv format. Full details about the command can be found on [json2csv's Github repository](https://github.com/zemirco/json2csv#command-line-interface).
+14\. Type `$ sudo npm install json2csv --save -g`. This installs a command that can convert the json to csv format. Full details about the command can be found on [json2csv's Github repository](https://github.com/zemirco/json2csv#command-line-interface).
 
-13\. Convert your `search.json` to csv like so: `json2csv -i search.json -o out.csv`
+15\. Convert your `search.json` to csv by typing `json2csv -i search.json -o out.csv`
 
-14\. Examine your data either in a text editor or in a spreadsheet. Use twarc to create a file with a list of ids. Lodge this list and your history and notes in your repository.
+16\. Examine your data either in a text editor or in a spreadsheet.
+
+17\. Use twarc to create a file with a list of ids. 
+
+18\. Lodge this list and your history and notes in your repository.
 
 **NB Twitter forbids the sharing of the full metadata of a collection of tweets. You may however share a list of tweet IDs. See the Twarc documentation for the instructions on how to do that.**
 
@@ -203,35 +211,52 @@ The data being collected is in json format. That is, a list of 'keys' and 'value
 
 1\. Examine the Twarc repository, especially its utilities. You could extract the geolocated ones and map them. You could examine the difference between 'male' and 'female' tweeters (and how problematic might that be?). 
 
-2\. In your csv, save the text of the posts to a new file and upload it to something like [Voyant](http://voyant-tools.org) to visualize trends over time. Google for analyzes of twitter data to get some ideas.
+2\. In your csv, save the text of the posts to a new file and upload it to something like [Voyant Tools](http://voyant-tools.org) to visualize trends over time. 
+
+3\. Google for analysis of Twitter data to get some ideas.
 
 
 ## Exercise 6: Using Tesseract to turn a pdf into text
 
-We've all used pdfs - in academia, we often use a pdf to make sure that a page of text looks like an actual physical page of paper. PDFs always look the same on whatever machine they are displayed on, because they contain within themselves the complete description of what the 'page' should look like. If you've ever selected text within a pdf, you were only able to do this because there was within the pdf a text layer on top of the image layer. But when we digitize old newspapers, the pdf that results only contains the image layer, not the text. To turn that image into text, we have to do what's called 'object character recognition', or OCR. An OCR algorithm looks at the pattern of pixels in the image, and maps these against the shapes it 'knows' to be an A, or an a, or a B, or a &, and so on. Cleaner, sharper printing gives better results as do hi resolution images free from noise. People who have a lot of material to OCR use some very powerful tools to identify blocks of text within the newspaper page, and then train the machine to identify these, a process beyond us just now (but visit [this tesseract q & a on stackoverflow](https://stackoverflow.com/questions/28591117/how-do-i-segment-a-document-using-tesseract-then-output-the-resulting-bounding-b#28640570) if you're interested).
+We've all used pdfs - in academia, we often use a pdf to make sure that a page of text looks like an actual physical page of paper. PDFs always look the same on whatever machine they are displayed on, because they contain within themselves the complete description of what the 'page' should look like. If you've ever selected text within a pdf, you were only able to do this because there was within the pdf a text layer on top of the image layer. But when we digitize old newspapers, the pdf that results only contains the image layer, not the text. 
+
+To turn that image into text, we have to do what's called 'object character recognition', or OCR. An OCR algorithm looks at the pattern of pixels in the image, and maps these against the shapes it 'knows' to be an A, or an a, or a B, or a &, and so on. Cleaner, sharper printing gives better results as do high resolution images free from noise. People who have a lot of material to OCR use some very powerful tools to identify blocks of text within the newspaper page, and then train the machine to identify these, a process beyond us just now (but visit [this tesseract q & a on stackoverflow](https://stackoverflow.com/questions/28591117/how-do-i-segment-a-document-using-tesseract-then-output-the-resulting-bounding-b#28640570) if you're interested).
 
 In this exercise, you'll:
 
-1. Install the Tesseract OCR engine into your DHBox
-2. Download an edition of the Equity
-3. Install and use pdftk to 'burst' (burst is a command that turns a single file into individual pages) the pdf into individual one-page files
-4. Install and use imagemagick to convert the pdf into tiff image format
-5. Use Tesseract to OCR the resulting pages.
++ Install the Tesseract OCR engine into your DH Box
++ Download an edition of the Equity
++ Install and use pdftk to 'burst' (burst is a command that turns a single file into individual pages) the pdf into individual one-page files
++ Install and use imagemagick to convert the pdf into tiff image format
++ Use Tesseract to OCR the resulting pages.
 
-Begin by making a new director for this exercise: `mkdir ocr-test`. Change directories into it: `cd ocr-test`
+1\. Begin by making a new director for this exercise: `mkdir ocr-test`. 
 
-1. `$ sudo apt-get install tesseract-ocr` will grab the latest version of tesseract and install it into your dhbox. Enter your password when the computer asks for it.
-2. `$ sudo apt-get install imagemagick` to install imagemagick
-3. `$ sudo apt-get install pdftk` to install pdftk.
-4. Now let's grab an edition of the [Equity at http://collections.banq.qc.ca:8008/jrn03/equity/src/](http://collections.banq.qc.ca:8008/jrn03/equity/src/). Use wget to grab the pdf from July 4th 1957.
-5. Let's burst it into individual pages. The command is `pdtk <input file> burst`, so `$ pdftk 83471_1957-07-04.pdf burst`
-6. Let's convert the first file to tiff with imagemagick's convert command: `$ convert -density 300 pg_0001.pdf -depth 8 -strip -background white -alpha off file.tiff` You want a high density image, which is what the -density and the -depth flags do; the rest of the command formats the image in a way that Tesseract expects to encounter text. This command might take a while. Just wait, be patient.
-7. Extract text! `$ tesseract file.tiff output.txt` This might also take some time.
-8. Download the output.txt file to your own machine via DHBox's filemanager. 
-9. Open the file with a text editor (there might be a lot of white space at the start of the file, fyi). 
-10. Grab the txt file created by the Provincial Archives. Is yours better or worse than theirs? 
-11. Look up the [Tesseract wiki](https://github.com/tesseract-ocr/tesseract/wiki/Command-Line-Usage). What other options could you use with the tesseract command to improve the results? 
-12. When you decide to download Tesseract to you own computer, use the following two guides to automating bulk OCR (multiple files) with tesseract: [Peirson's](https://diging.atlassian.net/wiki/display/DCH/Tutorial%3A+Text+Extraction+and+OCR+with+Tesseract+and+ImageMagick), [Schmidt's](http://benschmidt.org/dighist13/?page_id=129).
+2\. Change directories into it: `cd ocr-test`
+
+3\. Type `$ sudo apt-get install tesseract-ocr` to grab the latest version of tesseract and install it into your DH Box. Enter your password when the computer asks for it.
+
+4\. Type `$ sudo apt-get install imagemagick` to install imagemagick
+
+5\. Type `$ sudo apt-get install pdftk` to install pdftk.
+
+6\. Now let's grab an edition of the [Equity at http://collections.banq.qc.ca:8008/jrn03/equity/src/](http://collections.banq.qc.ca:8008/jrn03/equity/src/). Use wget to grab the pdf from July 4th 1957.
+
+7\. Let's burst it into individual pages. The command is `pdtk <input file> burst`, so `$ pdftk 83471_1957-07-04.pdf burst`
+
+8\. Let's convert the first file to tiff with imagemagick's convert command: `$ convert -density 300 pg_0001.pdf -depth 8 -strip -background white -alpha off file.tiff` You want a high density image, which is what the -density and the -depth flags do; the rest of the command formats the image in a way that Tesseract expects to encounter text. This command might take a while. Just wait, be patient.
+
+9\. Extract text! `$ tesseract file.tiff output.txt` This might also take some time.
+
+10\. Download the output.txt file to your own machine via DH Box's filemanager. 
+
+11\. Open the file with a text editor (there might be a lot of white space at the start of the file, fyi). 
+
+12\. Grab the txt file created by the Provincial Archives. Is yours better or worse than theirs? 
+
+13\. Look up the [Tesseract wiki](https://github.com/tesseract-ocr/tesseract/wiki/Command-Line-Usage). What other options could you use with the tesseract command to improve the results? 
+
+14\. When you decide to download Tesseract to you own computer, use the following two guides to automating bulk OCR (multiple files) with tesseract: [Peirson's](https://diging.atlassian.net/wiki/display/DCH/Tutorial%3A+Text+Extraction+and+OCR+with+Tesseract+and+ImageMagick), [Schmidt's](http://benschmidt.org/dighist13/?page_id=129).
 
 ## wget command to grab The Equity
 
@@ -241,7 +266,9 @@ Hey - you've scrolled all the way down here. Here's the wget command to nicely d
 
 When you run this command, it will go through the entire file structure a couple of times, 'rejecting' index.html etc because we've asked it to just grab the .txt files. Be patient. How would you change it to grab just the pdfs?
 
-Now, the reason I ask you to not run it just yet is because of memory. This is going to take a lot of memory up when it's done. If you have wget installed on your own machine, then you'll likely have no problem. **However** our DHBox is being shared by many people, and the amount of memory available can become an issue. **So** what we're going to do is modify the command so that we only grab a subset of the files. Given that each filename contains within it the date of the issue, **download only the .txt files for a particular decade**. The command below is modified so that wget, as it searches through each subdirectory, only grabs the ones from the 1880s - do you see the crucial bit that does that?:  
+Now, the reason I ask you to not run it just yet is because of memory. This is going to take a lot of memory up when it's done. If you have wget installed on your own machine, then you'll likely have no problem. **However** our DH Box is being shared by many people, and the amount of memory available can become an issue. 
+
+**So** what we're going to do is modify the command so that we only grab a subset of the files. Given that each filename contains within it the date of the issue, **download only the .txt files for a particular decade**. The command below is modified so that wget, as it searches through each subdirectory, only grabs the ones from the 1880s - do you see the crucial bit that does that?:  
 
 `wget http://collections.banq.qc.ca:8008/jrn03/equity/src/ -A "*188*".txt -nc -r --no-parent -nd –w 2 --limit-rate=20k`
 
@@ -253,4 +280,6 @@ then
 
 `wget http://collections.banq.qc.ca:8008/jrn03/equity/src/1884/ -A .txt -r --no-parent -nd –w 2 --limit-rate=20k`
 
-etc. changing the year. There's no one right way to do things, digitally. There are many paths. The crucial thing is that you find a way that makes sense for your own workflow, and that doesn't make you a drain on someone else's resources.
+etc. changing the year each time.
+
+There's no one right way to do things, digitally. There are many paths. The crucial thing is that you find a way that makes sense for your own workflow, and that doesn't make you a drain on someone else's resources.
