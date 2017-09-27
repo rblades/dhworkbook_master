@@ -3,7 +3,9 @@
 **Before we go much further, I would recommend that you look at the work of Clement Levallois, who has a [suite of excellent tutorials on working with Gephi](https://seinecle.github.io/gephi-tutorials/). The tutorial below is adapted from our open draft of [The Macroscope](http://themacroscope.org).**
 
 ## Introduction
-Gephi is quickly becoming the tool of choice for network analysts who do not need the full suite of algorithms offered by [Pajek](http://vlado.fmf.uni-lj.si/pub/networks/pajek/) or [UCINET](https://sites.google.com/site/ucinetsoftware/home). It is relatively easy to use (eclipsed in this only by [NodeXL](http://nodexl.codeplex.com/)), it is usable on all platforms, it can analyze fairly large networks, and it creates beautiful visualizations. The development community is also extremely active, with improvements being added constantly. We recommend Gephi for the majority of historians undertaking serious network analysis research. Download and install [Gephi](http://gephi.github.io) onto your machine. 
+Gephi is quickly becoming the tool of choice for network analysts who do not need the full suite of algorithms offered by [Pajek](http://vlado.fmf.uni-lj.si/pub/networks/pajek/) or [UCINET](https://sites.google.com/site/ucinetsoftware/home). It is relatively easy to use (eclipsed in this only by [NodeXL](http://nodexl.codeplex.com/)), it is usable on all platforms, it can analyze fairly large networks, and it creates beautiful visualizations. The development community is also extremely active, with improvements being added constantly. We recommend Gephi for the majority of historians undertaking serious network analysis research. 
+
+Download and install [Gephi](http://gephi.github.io) onto your machine. 
 
 ## When Not To Use Networks 
 

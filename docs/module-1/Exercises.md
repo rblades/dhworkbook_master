@@ -31,7 +31,7 @@ In this exercise, I want you to become familiar with Markdown syntax. Check out 
 
 See how easy that was? Don't worry about submitting this.... yet.
 
-**NB** the next time you go to dillinger.io the last document you were working on will load up. That's because dillinger stashes your work in the browser cache. If you clear your cache (from your browser's tools or settings) you'll lose it, which is why in step 7 I suggested exporting..
+**NB** The next time you go to dillinger.io the last document you were working on will load up. That's because dillinger stashes your work in the browser cache. If you clear your cache (from your browser's tools or settings) you'll lose it, which is why in step 7 I suggested exporting..
 
 (For a richer discussion of some more ways markdown and pandoc can make your research sustainable, see Tenen and Wythoff, [Sustainable Authorship in Plain Text Using Pandoc and Markdown](http://programminghistorian.org/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown))
 
@@ -249,7 +249,7 @@ How do you turn a folder into a repository? With the `git init` command. At the 
 2. Type `$ ls` (list) to see that the director exists. Then change directory into it: `cd first-repo`. (remember: if you're ever not sure what directory you're in, type `$ pwd`, or print working directory).
 3. Make a new file called `readme.md`. You do this by calling the text editor: `nano readme.md`. 
 4. Type an explanation of what this exercise is about. 
-5. Hit ctrl+x to exit, then y to save, leave the file name as it is. **If you get an error to the effect that nano is not found** you just need to install it with `sudo apt-get install nano`. DHBox will ask you for your password again. Once the dust settles, you can make the new file with `nano readme.md`.
+5. Hit ctrl+x to exit, then type y to save, leave the file name as it is. Hit enter. **If you get an error to the effect that nano is not found** you just need to install it with `sudo apt-get install nano`. DHBox will ask you for your password again. Once the dust settles, you can make the new file with `nano readme.md`.
 6. Type `$ ls` again to check that the file is there.
 7. Type `$ git init` to tell the Git program that this folder is to be tracked as a repository. If all goes correctly, you should see a variation on this message: `Initialized empty Git repository in /home/demonstration/first-repo/.git/`.
 8. Type `$ ls` again. What do you (not) see?
@@ -261,7 +261,9 @@ Open your readme.md file again with the nano text editor, from the command line.
 
 1\. Type `$ git status`
 
-2\. Git will respond with a couple of pieces of information. It will tell you which `branch` you are on. It will list any untracked files present or new changes that are unstaged. We now will `stage` those changes to be added to our commit history by typing `$ git add -A`. (the bit that says `-A` adds any new, modified, or deleted files to your commit when you make it. There are [other options or flags](https://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add#572660) where you add **only** the new and modified files, **or** only the modified and deleted files.)
+Git will respond with a couple of pieces of information. It will tell you which `branch` you are on. It will list any untracked files present or new changes that are unstaged. 
+
+2\. We now will `stage` those changes to be added to our commit history by typing `$ git add -A`. (the bit that says `-A` adds any new, modified, or deleted files to your commit when you make it. There are [other options or flags](https://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add#572660) where you add **only** the new and modified files, **or** only the modified and deleted files.)
 
 3\. Let's check our Git status again: type `$ git status`
 
@@ -275,9 +277,23 @@ Changes to be committed:
         new file:   readme.md
 ```
 
-5\. Let's take a snapshot: type `$ git commit -m "My first commit"`. What happened? Remember, Git keeps track not only of the changes, but *who* is making them. If this is your first time working with Git in the DHBox, Git will ask you for your name and email. Helpfully, the Git error message tells you exactly what to do: type `$ git config --global user.email "you\@example.com"` and then type `$ git config --global user.name "Your Name"`. Now try making your first commit.
+5\. Let's take a snapshot: type `$ git commit -m "My first commit"`. This command represents a bit of a shortcut for making commit messages by using the `-m` flag to associate the text in the quotation marks with the commit. 
 
-6\. The command above represents a bit of a shortcut for making commit messages by using the `-m` flag to associate the text in the quotation marks with the commit. Open up your readme.md file again, and add some more text to it. Save and exit the text editor. Add the new changes to the snapshot that we will take. Then, type `$ git commit`. Git automatically opens up the text editor so you can type a longer, more substantive commit message. In this message (unlike in markdown) the `#` indicates a line to be ignored. You'll see that there is already some default text in there telling you what to do. Type a message indicating the nature of the changes you have made. Then save and exit the text editor. DO NOT change the filename!
+What happened? Remember, Git keeps track not only of the changes, but **who** is making them. If this is your first time working with Git in the DHBox, Git will ask you for your name and email. 
+
+6\. Helpfully, the Git error message tells you exactly what to do: type `$ git config --global user.email "you\@example.com"` and then type `$ git config --global user.name "Your Name"`. Now try making your first commit.
+
+7\. Open up your readme.md file again, and add some more text to it. 
+
+8\. Save readme.md and exit the text editor. 
+
+9\. Add the new changes to the snapshot that we will take.
+
+10\. Type `$ git commit`. Git automatically opens up the text editor so you can type a longer, more substantive commit message. In this message (unlike in markdown) the `#` indicates a line to be ignored. You'll see that there is already some default text in there telling you what to do. 
+
+11\. Type a message indicating the nature of the changes you have made. 
+
+12\. Save and exit the text editor. **DO NOT** change the filename!
 
 Congratulations, you are now able to track your changes, and keep your materials under version control!
 
@@ -294,15 +310,17 @@ Fixed the headings that were broken in the about section of readme.md
 ```
 
 1. We're going to go back in time and create a new branch. You can escape the `git log` by typing `q`. Here's how the command will look: `$ git checkout -b branchname <commit>` where `branch` is the name you want the branch to be called, and `<commit>` is that unique ID. Make a new branch from your second last commit (don't use < or >).
-2. We typed `git checkout -b experiment 253506bc23070753c123accbe7c495af0e8b5a43`. The response: `Switched to a new branch 'experiment'` Check git status and then list the contents of your repository. What do you see? You should notice that some of the files you had created before seem to have disappeared - congratulations, you've time travelled! Those files are not missing; but they **are** on a different branch (the master branch) and you can't harm them now. 
-3. Add a number of new files, making commits after each one. 
-4. Check your git status, and check your git log as you go to make sure you're getting everything. Make sure there are no unstaged changes - everything's been committed.
+2. We typed `git checkout -b experiment 253506bc23070753c123accbe7c495af0e8b5a43`. The response: `Switched to a new branch 'experiment'` 
+3. Check git status and then list the contents of your repository. What do you see? You should notice that some of the files you had created before seem to have disappeared - congratulations, you've time travelled! Those files are not missing; but they **are** on a different branch (the master branch) and you can't harm them now. 
+4. Add a number of new files, making commits after each one. 
+5. Check your git status, and check your git log as you go to make sure you're getting everything. Make sure there are no unstaged changes - everything's been committed.
 
 ### 4.4. git merge continued
 
 Now let's assume that your `experiment` branch was successful - everything you did there you were happy with and you want to integrate all of those changes back into your `master` branch. We're going to merge things. To merge, we have to go back to the master branch: `$ git checkout master`. (Good practice is to keep separate branches for all major experiments or directions you go. In case you lose track of the names of the branches you've created, this command: `git branch -va` will list them for you.)
 
-1. Now, we merge with `$ git merge experiment`. Remember, a merge is a special kind of commit that rolls all previous commits from both branches into one - Git will open your text editor and prompt you to add a message (it will have a default message already there if you want it). Save and exit and ta da! Your changes have been merged together.
+1. Now, we merge with `$ git merge experiment`. Remember, a merge is a special kind of commit that rolls all previous commits from both branches into one - Git will open your text editor and prompt you to add a message (it will have a default message already there if you want it). 
+2. Save and exit and ta da! Your changes have been merged together.
 
 ### 4.5 git push
 
@@ -316,11 +334,11 @@ One of the most powerful aspects of using Git is the possibility of using it to 
 
 4\. Leave the repository set to 'Public'
 
-5\. DO NOT 'initialize this repo with a readme.md'. Leave `add .gitignore` and `add license` set to NONE.
+5\. **DO NOT** 'initialize this repo with a readme.md'. Leave `add .gitignore` and `add license` set to NONE.
 
-6\. Click the green 'Create Repository' button.
+6\. Click the green 'Create Repository' button. You now have a space into which you will publish the repository on your machine. 
 
-7\. You now have a space into which you will publish the repository on your machine. At the command line, we now need to tell Git the location of this space. We do that with the following command, where you will change `your-username` and `your-new-repo` appropriately:
+7\. At the command line, we now need to tell Git the location of this space. We do that with the following command, where you will change `your-username` and `your-new-repo` appropriately:
 
 ```
 $ git remote add origin https://github.com/YOUR-USERNAME/YOUR-NEW-REPO.git
@@ -338,7 +356,9 @@ $ git push -u origin master
 $ git push origin experiment
 ```
 
-9\. The changes can sometimes take a few minutes to show up on the website. Now, the next time you make changes to this repository, you can push them to your Github account - which is the 'origin' in the command above.  Add a new text file. Commit the changes. Push the changes to your account.
+The changes can sometimes take a few minutes to show up on the website. Now, the next time you make changes to this repository, you can push them to your Github account - which is the 'origin' in the command above.  
+
+9\. Add a new text file. Commit the changes. Push the changes to your account.
 
 ### 4.6. git clone
 

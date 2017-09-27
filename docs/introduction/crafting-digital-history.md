@@ -1,7 +1,7 @@
 # Getting yourself ready July 4th - 9th
 ![Black and white image of men standing around man in old fire fighter suit and air being pumped to him through a hose](https://c1.staticflickr.com/3/2197/2163099221_eb9ab72268.jpg)
 
-"'Getting Ready for the Kaiser' Bain Collection, Library of Congress hdl.loc.gov/loc.pnp/ggbain.10412 Call Number: LC-B2- 2400-7"
+"'Getting Ready for the Fire, Kasier Wilhelm' Bain Collection, Library of Congress hdl.loc.gov/loc.pnp/ggbain.10412 Call Number: LC-B2- 2400-7"
 
 Welcome! This workbook is made by converting several plain-text files into a fully-operational website using the ['mkdocs' static website generator](http://www.mkdocs.org/). That means, if you want to keep a copy of all these files for your own records, you may. Simply click on the 'edit on github' link at the top right. This will bring you to the repository that houses this workbook. Then, when you're signed into 'github', you can 'fork' (that is, make a copy) the repo into your own account. Why 'forking'? It seems an odd phrase. Think of it like this:
 
@@ -13,11 +13,11 @@ It's not the best metaphor, but it'll do. No doubt you've had that experience wh
 
 Well, with 'versioning control', you can travel back upriver, back to where things were good. There are two tools that we will use to make this happen: [git](https://git-scm.com/) and [github](http://github.com). You'll learn more about making those things work in **module 1**. You'll see why you'd want to do that, and how to future-proof your work, writing things [in a plain-text format called 'markdown'](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
-In **module 2**, we'll start exploring the wide variety of historical data out there. We'll talk about some of the ethical dilemmas posed by having so much data out there. 'Data' are not neutral 'things given'; rather, they are 'capta': things _taken_.
+In **module 2**, we'll start exploring the wide variety of historical data out there. We'll talk about some of the ethical dilemmas posed by having so much data out there. 'Data' are not neutral 'things given'; rather, they are 'capta': things **taken**.
 
-(Caveat: I am assuming, in this course, that the digital materials we want have already been digitized. Digitizing, adding meta-data (information that describes the data), and structuring it _properly_ are very complex topics on their own that could be the subject of a complete course! If you are interested in those problems, a good place to start is this open course from SOAS on [database design for historians](http://port.sas.ac.uk/mod/book/view.php?id=75&chapterid=125).)
+(Caveat: I am assuming, in this course, that the digital materials we want have already been digitized. Digitizing, adding meta-data (information that describes the data), and structuring it **properly** are very complex topics on their own that could be the subject of a complete course! If you are interested in those problems, a good place to start is this open course from SOAS on [database design for historians](http://port.sas.ac.uk/mod/book/view.php?id=75&chapterid=125).)
 
-In **module 3**, we'll see that data/capta are _messy_, and that they make a kind of illusory order that as historians, we are not normally in the habit of thinking about. The big secret of digital history is that the majority of your time on _any_ digital history project won't be finding the capta, won't be analyzing the capta, won't be thinking about the historical meaning of the capta. We'll be _cleaning it up_. The exercises in this module will help you do that more efficiently (and be aware that 'efficiency' in computing terms is not a theoretically neutral idea!)
+In **module 3**, we'll see that data/capta are **messy**, and that they make a kind of illusory order that as historians, we are not normally in the habit of thinking about. The big secret of digital history is that the majority of your time on **any** digital history project won't be finding the capta, won't be analyzing the capta, won't be thinking about the historical meaning of the capta. We'll be **cleaning it up**. The exercises in this module will help you do that more efficiently (and be aware that 'efficiency' in computing terms is not a theoretically neutral idea!)
 
 In **module 4**, we talk about doing the analysis. I present finding, cleaning, and analyzing as if they were sequential steps, but in reality they are circular. Movement in one aspect often requires revisiting another one! This module explores how we do this, and what it means for us as historians.
 
@@ -36,8 +36,8 @@ Finally, while there is no formal requirement for you to do this, it would be a 
 
 A digital historian needs to have a digital workshop/lab/studio/performance space. Such a space serves a number of functions:
 
-- a scratch pad / fail log and code repository so that we remember what we were doing, or (more importantly) *what* we we did - that is to say, the actual commands we typed, the sequence of manipulations or [data moves](http://liu.english.ucsb.edu/data-moves/)
-- a narrative that connects the dots, that explains the *why* of that what and how. You can use this narrative to point to when sharing your work with others. Digital history is not done in isolation or in a vaccuum. Sometimes, you will need to share a link to your work (often on twitter) asking, 'does anybody know why this isn't working?' or, 'does anybody know a better way of accomplishing this?', or, 'hey, I'm the first to do this!'
+- a scratch pad / fail log and code repository so that we remember what we were doing, or (more importantly) **what** we we did - that is to say, the actual commands we typed, the sequence of manipulations or [data moves](http://liu.english.ucsb.edu/data-moves/)
+- a narrative that connects the dots, that explains the **why** of that what and how. You can use this narrative to point to when sharing your work with others. Digital history is not done in isolation or in a vaccuum. Sometimes, you will need to share a link to your work (often on twitter) asking, 'does anybody know why this isn't working?' or, 'does anybody know a better way of accomplishing this?', or, 'hey, I'm the first to do this!'
 - a way of keeping notes on things we've read/come across on the web. There are a number of ways of accomplishing this. In this course, I will mandate one particular solution: ([hypothesis](http://web.hypothes.is)).
 - when you're working with academic databases such as JSTOR, then you'll also need a bibliography manager. We don't go into this aspect very much in this course (if you take other courses with me, you will) but you might want to check out [Zotero](http://zotero.org).
 - it can sometimes be useful to make little videos of your work to explain when something isn't working - [Screen-cast-o-matic](http://screencast-o-matic.com/) is free and does a good job
@@ -69,13 +69,13 @@ Giving you a space of your own is my political act of protest against the centra
 
 Wordpress is probably the best option for a platform for writing the narrative bits of your digital history work.
 
-1. Click the 'client area. It will tell you that you have one active account (with Reclaim Hosting) and one active domain. When the time comes to renew your account or to close it down, this is where you do it. Note also that there is a link to 'Support', which will put you in touch with Reclaim Hosting's help desk. They are extremely fast and good at providing support; always treat any help request you make with them *as if* you were writing a formal email to me. Be polite and considerate, and thank them. The owners of the business often are the ones who provide the help! Without them, we couldn't do this class.
+1. Click the 'client area. It will tell you that you have one active account (with Reclaim Hosting) and one active domain. When the time comes to renew your account or to close it down, this is where you do it. Note also that there is a link to 'Support', which will put you in touch with Reclaim Hosting's help desk. They are extremely fast and good at providing support; always treat any help request you make with them **as if** you were writing a formal email to me. Be polite and considerate, and thank them. The owners of the business often are the ones who provide the help! Without them, we couldn't do this class.
 2. Go to 'cPanel' - this is where you can install all sorts of different kinds of software on your account. Search for and select 'web applications'
 3. Click on Wordpress. Then click on 'install this application'.
 4. The next screen presents you with a number of options. Leave these set to their defaults. For 'location', leave this blank (you want to leave the directory option blank). That tells the installtron to put Wordpress at your-domain.ca . (When/if you install other pieces of software, you'd change this variable so that the new software doesn't overwrite this software!)
-5. Further down the page, under 'settings', you need to change 'administrator username', 'administrator password', 'web site title', 'website tagline'. *this is the username and password to actually do things with your blog, and the name of your blog itself*. Leave everything else alone.
+5. Further down the page, under 'settings', you need to change 'administrator username', 'administrator password', 'web site title', 'website tagline'. **this is the username and password to actually do things with your blog, and the name of your blog itself**. Leave everything else alone.
 6. Click Install!
-7. Once it's done, the installer will remind you of the url to your site, and the url to the blog's dashboard (where you go to write posts, make changes to the look and feel of the site). Open these in a new browser window, and bookmark them. To login to your blog, remember to go to the dashboard URL (eg, http://your-domain.ca/wp-admin), enter your blog administrator username and password.
+7. Once it's done, the installer will remind you of the url to your site, and the url to the blog's dashboard (where you go to write posts, make changes to the look and feel of the site). Open these in a new browser window, and bookmark them. To login to your blog, remember to go to the dashboard URL (eg. http://your-domain.ca/wp-admin), enter your blog administrator username and password.
 
 You can close the cPanel webpage now (log out first).
 
@@ -103,7 +103,7 @@ For more information about controlling visibility of your posts and so on, [visi
 
 ### Hypothesis
 
-Hypothesis is an overlay on the web that allows you to highlight or annotate any text you come across (including *inside pdfs*). All of your annotations can then be collected together. It is a very effective research tool.
+Hypothesis is an overlay on the web that allows you to highlight or annotate any text you come across (including **inside pdfs**). All of your annotations can then be collected together. It is a very effective research tool.
 
 1. Create an account with [hypothes.is](https://web.hypothes.is/start/).
 2. Get the [hypothes.is plugin for chrome](https://chrome.google.com/webstore/detail/hypothesis-web-pdf-annota/bjfhmglciegochdpefhhlphglcehbmek). If you don't have/use chrome, go to [the hypothes.is start page](https://web.hypothes.is/start/#) and click on the 'other browsers' link.
@@ -122,7 +122,7 @@ You can also 'tag' any annotation you make. If many people use the same set of t
 
 #### Collecting your own annotations on your blog
 
-Hypothesis has an *api* that allows you to do some neat things. 'API' stands for 'application programming interface', which is just a fancy way of saying, 'you can write a program that interacts with this web service'. [Kris Shaffer](http://pushpullfork.com/), a professor at the University of Mary Washington, has written a **plugin** for Wordpress that allows you to automatically collect annotations you make across the web and to display them all on a single page on your blog. So, we'll go get that plugin and install it on your blog:
+Hypothesis has an **API** that allows you to do some neat things. 'API' stands for 'application programming interface', which is just a fancy way of saying, 'you can write a program that interacts with this web service'. [Kris Shaffer](http://pushpullfork.com/), a professor at the University of Mary Washington, has written a **plugin** for Wordpress that allows you to automatically collect annotations you make across the web and to display them all on a single page on your blog. So, we'll go get that plugin and install it on your blog:
 
 Open [https://github.com/kshaffer/hypothesis_aggregator](https://github.com/kshaffer/hypothesis_aggregator) in a new browser window.
 
@@ -150,12 +150,12 @@ To access our virtual computer, the DHBox, you will need to use Carleton's VPN s
 
 #### Using the DHBox
 
-- click the 'sign up' button
-- fill in the form. Choose a username and password that you'll remember. You don't have to use a real email by the way, just something that looks email-like (this is handy if, like me, you end up creating multiple DHBoxes - it's a bad idea to have more than one DHBox with the *same* email address)
-- select the most time available (which will either be 1 or 2 months).
-- your personal DHBox will be created. Your username will now appear in the top right hand side of the purple bar. To enter the DHBox, click the username, select 'apps'.
-- A new tool ribbon appears below the purple bar. Most of what you will do in this course involves the 'command line', 'R studio', and 'File Manager'.
-- anytime the command line or R Studio should ask for your username or password, you use the DHBox username and password you just created.
+1. Click the 'sign up' button
+2. Fill in the form. Choose a username and password that you'll remember. You don't have to use a real email by the way, just something that looks email-like (this is handy if, like me, you end up creating multiple DHBoxes - it's a bad idea to have more than one DHBox with the **same** email address)
+3. Select the most time available (which will either be 1 or 2 months).
+4. Your personal DHBox will be created. Your username will now appear in the top right hand side of the purple bar. To enter the DHBox, click the username, select 'apps'.
+5. A new tool ribbon appears below the purple bar. Most of what you will do in this course involves the 'command line', 'R studio', and 'File Manager'.
+6. Anytime the command line or R Studio should ask for your username or password, you use the DHBox username and password you just created.
 
 **A note on using the university computer labs** if you are using an official University computer lab computer to access DHBox, aspects of the University's security system might block the RStudio aspect. I am working on a solution to this problem. If you know that you are going to have to use Carleton computers, get in touch right away.
 
@@ -163,7 +163,7 @@ To access our virtual computer, the DHBox, you will need to use Carleton's VPN s
 
 What is digital history anyway? How is it connected to so-called 'big data'? Read the following pieces. Annotate with Hypothes.is anything that strikes you as interesting; annotate anything that puzzles you - feel free to just say, 'I'm not sure what this means; does it mean.... does anybody have any ideas?' **and** if you see someone is asking questions, you can reply to that annotation with thoughts of your own!
 
-**nb** each week, I expect you to respond to at least someone else's annotation in a **substantive** way. No "i agree!" or "right on!" or that sort of thing. Make a **meaningful** contribution.
+**NB** each week, I expect you to respond to at least someone else's annotation in a **substantive** way. No "I agree!" or "right on!" or that sort of thing. Make a **meaningful** contribution.
 
 Once you have read and annotated the works, **write a post on your blog that poses the question 'what is digital history for me anyway?'** . Explain why you're in this class, your level of comfort with digital tech, the kinds of history you're interested in, and what you hope to get out of this course. Your post should link to relevant annotations made by you or by your peers. (Every hypothesis annotation has a direct link visible when you click on the 'share' icon for an existing annotation).
 
@@ -183,4 +183,4 @@ Once you have read and annotated the works, **write a post on your blog that pos
 
 The writing of this workbook took place alongside the writing of my more formal book on [digital methods](http://themacroscope.org) co-authored with the exceptional [Ian Milligan](http://ianmilligan.ca/) and [Scott Weingart](http://scottbot.net/i-am/). I learned far more about doing digital history from them than they ever from me, and someday, I hope to repay the debt. Other folks who've been instrumental in getting this workbook and course off the ground include Melodee Beals, John Bonnett, Chad Gaffield, Tamara Vaughan, the staff of the EDC at Carleton University, [eCampusOntario](http://ecampusontario.org) and of course, the digital history community on Twitter. My thanks to you all.
 
-*This class was first offered in the Winter 2015 semester at Carleton University in Ottawa Canada as HIST3907b. I am grateful to the participants in that class for the feedback and frank discussions of what worked and what didn't. To see the earlier version of the course, please feel free to browse its [github repository](https://github.com/hist3907b-winter2015/)*
+**This class was first offered in the Winter 2015 semester at Carleton University in Ottawa Canada as HIST3907b. I am grateful to the participants in that class for the feedback and frank discussions of what worked and what didn't. To see the earlier version of the course, please feel free to browse its [github repository](https://github.com/hist3907b-winter2015/)**

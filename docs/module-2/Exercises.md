@@ -24,7 +24,7 @@ Ask yourself: what are some of the key dangers? Reflect: how have you used digit
 In the dream case, your data are not just images, but are actually sorted and structured into some kind of pre-existing database. There are choices made in the **creation** of the database, but a good database, a good project, will lay out for you their decision making, their corpora, and how they've dealt with ambiguity and so on. You search using a robust interface, and you get a well-formed spreadsheet of data in return. Two examples of 'dream case' data:
 
 + [Epigraphic Database Heidelberg](http://edh-www.adw.uni-heidelberg.de/inschrift/suche)
-+ [Commwealth War Graves Commission, Find War Dead](http://www.cwgc.org/find-war-dead.aspx)
++ [Commwealth War Graves Commission, Find War Dead](https://www.cwgc.org/find/find-war-dead)
 
 1\. Explore both databases. Perform a search of interest to you. In the case of the epigraphic database, if you've done any Latin, try searching for terms related to occupations; or you could search [Figlina](http://www.latin-dictionary.org/Latin-English-Dictionary/figlina). 
 
@@ -46,6 +46,8 @@ Now that you're **au fait** with wget, I want you to use wget to download the Sh
 
 2\. Make a new directory: `$ mkdir equity` and then cd into it: `$ cd equity`. Make sure you're in the directory by typing `$ pwd`. 
 
+**NB Make sure you are in your parent directory `~`. To get there quickly, type `$ cd ~`. If you want to check your file structure quickly, go to the File Manager.**
+
 3\. Work out the command to download say ten years' worth only of the Equity OCR'd transcriptions (the .txt files). Configure your command to retrieve only the txt files, as the pdfs are large and will take much time and bandwidth to acquire. (Ok, I'm not heartless - scroll to the bottom of this page to see what the command should be).
 
 4\. Add your command to your history file, and lodge it in your repository. For reference, visit [Module 1, Exercise 2](http://workbook.craftingdigitalhistory.ca/module-1/Exercises/#exercise-2-getting-familiar-with-dhbox).
@@ -54,7 +56,9 @@ Now that you're **au fait** with wget, I want you to use wget to download the Sh
 
 ## Exercise 3: TEI
 
-Digitization requires human intervention. This can be as straightforward as correcting errors or adjusting the scanner settings when we do OCR, or it can be the rather more involved work of adding a layer of semantic information to the text. When we mark up a text with the semantic hooks and signs that explain we are talking about **London, Ontario** rather than **London, UK**, we've made the text a whole lot more useful for other scholars or tools. In this exercise, you will do some basic marking up of a text using standards from the [Text Encoding Initiative](http://www.tei-c.org/index.xml). (Some of the earliest digital history work was along these lines). The TEI exercise requires carefully attention to detail. Read through it before you try it. In this exercise, you'll transcribe a page from an abolitionist's pamphlet. You'll also think about ways of transforming the resulting XML into other formats. Make notes in a file to upload to your repository, and upload your XML and your XSL file to your own repository as well. (As an added optional challenge, create a gh-pages branch and figure out the direct URL to your XML file, and email that URL to me).
+Digitization requires human intervention. This can be as straightforward as correcting errors or adjusting the scanner settings when we do OCR, or it can be the rather more involved work of adding a layer of semantic information to the text. When we mark up a text with the semantic hooks and signs that explain we are talking about **London, Ontario** rather than **London, UK**, we've made the text a whole lot more useful for other scholars or tools. In this exercise, you will do some basic marking up of a text using standards from the [Text Encoding Initiative](http://www.tei-c.org/index.xml). (Some of the earliest digital history work was along these lines). 
+
+The TEI exercise requires carefully attention to detail. Read through it before you try it. In this exercise, you'll transcribe a page from an abolitionist's pamphlet. You'll also think about ways of transforming the resulting XML into other formats. Make notes in a file to upload to your repository, and upload your XML and your XSL file to your own repository as well. (As an added optional challenge, create a gh-pages branch and figure out the direct URL to your XML file, and email that URL to me).
 
 The TEI exercise may be found [in our supporting materials](../supporting materials/tei.md).
 
@@ -149,11 +153,17 @@ The `$ chmod` command means change mode. Each number represents a user permissio
 
 `$ ./canadiana.sh`
 
-Ta da! You now have a pretty powerful tool now for grabbing data from one of the largest portals for Canadian history! Download your output.txt file to your computer via the file manager and have a look at it. Make sure to make a file noting what you've done, commands you've made, etc, and upload it in your Github repository.
+Ta da! You now have a pretty powerful tool now for grabbing data from one of the largest portals for Canadian history! 
+
+11\. Download your output.txt file to your computer via the file manager and have a look at it. 
+
+Make sure to make a file noting what you've done, commands you've made, etc, and upload it in your Github repository.
 
 ## Exercise 5: Mining Twitter
 
 Ed Summers is part of a project called '[Documenting the Now](http://www.docnow.io/)' which is developing tools to collect and understand the historical materials being shared (and lost) on social media. One component of Documenting the Now is the Twitter Archiving Tool, '[Twarc](https://github.com/DocNow/twarc)'. In this exercise, you are going to use Twarc to create an archive of Tweets relevant to a current trending news topic.
+
+**NB A quick note on the time frame of tweets by Twarc from their [Github repository](https://github.com/DocNow/twarc#retweets-and-replies):** "Unfortunately Twitter's API does not currently support getting replies to a tweet. So twarc approximates it by using the search API. Since the search API does not support getting tweets older than a week twarc can only get all the replies to a tweet that have been sent in the last week."
 
 1\. First of all, you need to set up a Twitter account, if you haven't already got one. Do so, but make sure to minimize any personal information that is exposed. For instance, don't make your handle the same as your real name. Turn off geolocation. Do not give your actual location in the profile. View the settings, and make sure all of the privacy settings are dialed down. For the time being, you **do** have to associate a cell phone number with your account. You can delete that once you've done the next step.
 
@@ -175,9 +185,9 @@ Ed Summers is part of a project called '[Documenting the Now](http://www.docnow.
 
 10\. Now type `$ twarc configure ` and give it the information it asks for (your consumer secret etc).
 
-11\. You're now ready to search. For instance, `$ twarc search canada150 > search.json` will search Twitter for posts using the canada150 hashtag. **Wait! Don't run that command!** If you search for that, there are, what, 36 million Canadians? How many tweets is that likely to be? Quite a lot - and the command will run quietly for days grabbing that information, writing it to file, and you'll be sitting looking at the screen wondering if anything is happening. Try something smaller, more contained for now, `$ twarc search hist3814o > search.json`.  Note that Twitter only gives access to the last two weeks or so via search. For grabbing the stream **as an event happens** you'd use the `twarc stream` command - see the Twarc documentation for more.
+11\. You're now ready to search. For instance, `$ twarc search canada150 > search.json` will search Twitter for posts using the canada150 hashtag. **Wait! Don't run that command! (Force-stop the search by hitting ctrl+c.)** If you search for that, there are, what, 36 million Canadians? How many tweets is that likely to be? Quite a lot - and the command will run quietly for days grabbing that information, writing it to file, and you'll be sitting looking at the screen wondering if anything is happening. Try something smaller, more contained for now, `$ twarc search hist3814o > search.json`.  Note that Twitter only gives access to the last two weeks or so via search. For grabbing the stream **as an event happens** you'd use the `twarc stream` command - see the Twarc documentation for more.
 
-It might take some time for the search to happen. You can always force-stop the search by hitting ctrl+c. If you do that though there could be an error in the formatting of the file which will throw an error when you get to step 10. You can still open the json in a text editor though, but you will have to go to the end of the file and fix the formatting.
+It might take some time for the search to happen. **You can always force-stop the search by hitting ctrl+c.** If you do that though there could be an error in the formatting of the file which will throw an error when you get to step 10. You can still open the json in a text editor though, but you will have to go to the end of the file and fix the formatting.
 
 The data being collected is in json format. That is, a list of 'keys' and 'values'. This is a handy format for computers, and some data visualization platforms require data in this format. For our purposes we might want to transform the json into a csv (comma separated) table - a spreadsheet.
 
@@ -213,12 +223,15 @@ Begin by making a new director for this exercise: `mkdir ocr-test`. Change direc
 1. `$ sudo apt-get install tesseract-ocr` will grab the latest version of tesseract and install it into your dhbox. Enter your password when the computer asks for it.
 2. `$ sudo apt-get install imagemagick` to install imagemagick
 3. `$ sudo apt-get install pdftk` to install pdftk.
-4. Now let's grab an edition of the Equity. Use wget to grab the pdf from July 4th 1957.
+4. Now let's grab an edition of the [Equity at http://collections.banq.qc.ca:8008/jrn03/equity/src/](http://collections.banq.qc.ca:8008/jrn03/equity/src/). Use wget to grab the pdf from July 4th 1957.
 5. Let's burst it into individual pages. The command is `pdtk <input file> burst`, so `$ pdftk 83471_1957-07-04.pdf burst`
 6. Let's convert the first file to tiff with imagemagick's convert command: `$ convert -density 300 pg_0001.pdf -depth 8 -strip -background white -alpha off file.tiff` You want a high density image, which is what the -density and the -depth flags do; the rest of the command formats the image in a way that Tesseract expects to encounter text. This command might take a while. Just wait, be patient.
 7. Extract text! `$ tesseract file.tiff output.txt` This might also take some time.
-
-Download the output.txt file to your own machine via DHBox's filemanager. Open the file with a text editor (there might be a lot of white space at the start of the file, fyi). Grab the txt file created by the Provincial Archives. Is yours better or worse than theirs? Look up the [Tesseract wiki](https://github.com/tesseract-ocr/tesseract/wiki/Command-Line-Usage). What other options could you use with the tesseract command to improve the results? When you decide to download Tesseract to you own computer, use the following two guides to automating bulk OCR (multiple files) with tesseract: [Peirson's](https://diging.atlassian.net/wiki/display/DCH/Tutorial%3A+Text+Extraction+and+OCR+with+Tesseract+and+ImageMagick), [Schmidt's](http://benschmidt.org/dighist13/?page_id=129).
+8. Download the output.txt file to your own machine via DHBox's filemanager. 
+9. Open the file with a text editor (there might be a lot of white space at the start of the file, fyi). 
+10. Grab the txt file created by the Provincial Archives. Is yours better or worse than theirs? 
+11. Look up the [Tesseract wiki](https://github.com/tesseract-ocr/tesseract/wiki/Command-Line-Usage). What other options could you use with the tesseract command to improve the results? 
+12. When you decide to download Tesseract to you own computer, use the following two guides to automating bulk OCR (multiple files) with tesseract: [Peirson's](https://diging.atlassian.net/wiki/display/DCH/Tutorial%3A+Text+Extraction+and+OCR+with+Tesseract+and+ImageMagick), [Schmidt's](http://benschmidt.org/dighist13/?page_id=129).
 
 ## wget command to grab The Equity
 

@@ -6,7 +6,7 @@
 
 A regular expression (also called regex) is a powerful tool for finding and manipulating text.  At its simplest, a regular expression is just a way of looking through texts to locate patterns. A regular expression can help you find every line that begins with a number, or every instance of an email address, or whenever a word is used even if there are slight variations in how it's spelled. As long as you can describe the pattern you're looking for, regular expressions can help you find it. Once you've found your patterns, they can then help you manipulate your text so that it fits just what you need.
 
-Regular expressions can look pretty complex, but once you know the basic syntax and vocabulary, simple ‘regexes’ will be easy. Regular expressions can often be used right inside the 'Find and Replace' box in many text and document editors, such as Sublime Text, Atom, or Notepad++. You cannot use Microsoft Word, however! Tr/).
+Regular expressions can look pretty complex, but once you know the basic syntax and vocabulary, simple ‘regexes’ will be easy. Regular expressions can often be used right inside the 'Find and Replace' box in many text and document editors, such as Sublime Text, Atom, or Notepad++. You cannot use Microsoft Word, however!
 
 **NB In text editors, you have to indicate that you wish to do a regex search. For instance, in Notepad++ when you do a search, to use regular expressions you must tick off the checkbox enabling them. Otherwise, Notepad++ will treat your search literally, looking for that exact** text **rather than the** pattern. **Similarly in Textwrangler, you need to tick off the box marked 'grep' when you bring up the search dialogue panel. In Sublime Text, you need to tick the box that has `.*` in the search panel to enable regular expression searches.**
 
@@ -16,7 +16,7 @@ For now, just read along. In the actual exercise, we will not be using a text ed
 
 ## Some basic principles
 
-> Protip: there are libraries of regular expressions, online. For example, if you want to find all postal codes, you can search “regular expression Canadian postal code” and learn what ‘formula’ to search for to find them
+**Protip:** there are libraries of regular expressions, online. For example, if you want to find all postal codes, you can search “regular expression Canadian postal code” and learn what ‘formula’ to search for to find them
 
 Let's say you're looking for all the instances of "cat" or "dog" in your document. When you type the vertical bar on your keyboard (it looks like ```|```, shift+backslash on windows keyboards), that means 'or' in regular expressions. So, if your query is dog|cat and you press 'find', it will show you the first time either dog or cat appears in your text.
 
@@ -110,7 +110,7 @@ in the 'find' box, and
 
 in the 'replace' box. That would replace the entire string with group 3 ("cats") in the first spot, group 2 (" and ") in the second spot, and group 1 ("dogs") in the last spot, thus changing the result to "cats and dogs".
 
-The vocabulary of regular expressions is pretty large, but there are many cheat sheets for regex online (one that I sometimes use is [http://regexlib.com/CheatSheet.aspx](http://regexlib.com/CheatSheet.aspx). Another good one is at [http://docs.activestate.com/komodo/4.4/regex-intro.html](http://docs.activestate.com/komodo/4.4/regex-intro.html))
+The vocabulary of regular expressions is pretty large, but there are many cheat sheets for regex online (one that I sometimes use is the [regex lib cheat sheet](http://regexlib.com/CheatSheet.aspx). Another good one is the [regex intro from Active State docs](http://docs.activestate.com/komodo/4.4/regex-intro.html))
 
 
 ## Now, continue on to the [main exercise](../supporting materials/regexex.md)

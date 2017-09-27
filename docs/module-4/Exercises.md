@@ -102,7 +102,11 @@ In module 2 if you recall, we worked through how to transform XML using styleshe
 
 Do you see the difference? In the latter window, the individual articles have been uploaded individually, and thus are treated as individual documents in chronological order.
 
-3\. Explore the corpus, comparing terms over time, looking at keywords in context, and using the RezoViz tool to create a graph where people, places, and organizations that appear in the same documents (and across documents) are connected (you can find 'rezoviz' under the cogwheel icon at the top right of the panel). Google these terms and tools for what they mean and how others have used them. You can embed any of the tools in your blogs by using the 'save' icon and getting the iframe or embed code. You can apply **stopwords** by clicking on the cogwheel in any of the different tools, and selecting stopwords. Apply the stopwords globally, and you'll only have to do this once! What patterns do you see? What do different tools highlight? Which ones are useful? What patterns do you see that strike you as interesting? Note this all down.
+3\. Explore the corpus, comparing terms over time, looking at keywords in context, and using the RezoViz tool to create a graph where people, places, and organizations that appear in the same documents (and across documents) are connected (you can find 'rezoviz' under the cogwheel icon at the top right of the panel). 
+
+4\. Google these terms and tools for what they mean and how others have used them. You can embed any of the tools in your blogs by using the 'save' icon and getting the iframe or embed code. You can apply **stopwords** by clicking on the cogwheel in any of the different tools, and selecting stopwords. 
+
+5\. Apply the stopwords globally, and you'll only have to do this once! What patterns do you see? What do different tools highlight? Which ones are useful? What patterns do you see that strike you as interesting? Note this all down.
 
 **Going further:** Upload materials you collected in module 2 and explore them.
 
@@ -154,9 +158,9 @@ The formula you put in cell A1 now says `#REF!`. You can delete this now. This m
 You can now copy and paste your table of data into the data input box in RAW, and you should get the green thumbs up saying x records have been successfully parsed!
 
 #### Playing with RAW
-RAW takes your data, and depending on your choices, passes it into chart templates built on the d3.js code library. D3.js is a powerful library for making all sorts of charts (including interactive ones). If this sort of thing interests you, you can follow the tutorials in [Elijah Meeks' excellent new book](http://manning.com/meeks/).
+RAW takes your data, and depending on your choices, passes it into chart templates built on the D3.js code library. D3.js is a powerful library for making all sorts of charts (including interactive ones). If this sort of thing interests you, you can follow the tutorials in [Elijah Meeks' excellent new book](http://manning.com/meeks/).
 
-1\. With your data pasted in, you can now experiment with a number of different visualizations that are all built on the d3.js code library.  
+1\. With your data pasted in, you can now experiment with a number of different visualizations that are all built on the D3.js code library.  
 
 2\. Try the ‘alluvial’ diagram.  Pick place1 and place2 as your dimensions - you click and drag the green boxes under 'map your data' into the 'steps' box. 
 

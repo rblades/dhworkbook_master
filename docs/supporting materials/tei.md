@@ -12,7 +12,7 @@ This exercise will explore a historical text and help you create a digital recor
 
 ### Vetting a Website ###
 
-Visit the Recovered Histories Website at [http://www.recoveredhistories.org](http://www.recoveredhistories.org)
+Visit the [Recovered Histories Website.](http://www.recoveredhistories.org)
 
 Examine the site's layout and read its introduction
 
@@ -35,19 +35,19 @@ You will use your own machine rather than DHBox for this work.
 2. Open the 'blanktemplate.txt' file in [Sublime Text](https://www.sublimetext.com/), [Atom](https://atom.io/), [Textwrangler](http://www.barebones.com/products/textwrangler/) or [Notepadd++](https://notepad-plus-plus.org/) (or any text editor that understands encoding) and have that on the other side of the screen.
 
 The last lines will be
-<code>&lt;/body&gt;&lt;/text&gt;&lt;/TEI&gt;&lt;/teiCorpus&gt;</code>. Everything you write today should be just above <code>&lt;/body&gt;</code>.
+```</body></text></TEI></teiCorpus>```. Everything you write today should be just above `</body>`.
 
 ### Transcribing Your Page ###
 
 1\. The first thing you will need is go to the tag
 
-<code>&lt;biblScope&gt;1&lt;/biblScope&gt;</code>
+`<biblScope>1</biblScope>`
 
 and replace the number one (1) with the page number you are transcribing. Which page should you transcribe? 
 
 2\. Select a page in the document that you find interesting.
 
-3\. Next, you will need to **very carefully** transcribe your page of text from the image into your document.  Make sure you do not make any changes to the text, even if you think they author has used poor grammar or misspelled a word.  You do not need to worry about line breaks but should start every new paragraph (or heading) with a <code>&lt;p&gt;</code> and end every paragraph (or heading) with a <code>&lt;/p&gt;</code>.
+3\. Next, you will need to **very carefully** transcribe your page of text from the image into your document.  Make sure you do not make any changes to the text, even if you think they author has used poor grammar or misspelled a word.  You do not need to worry about line breaks but should start every new paragraph (or heading) with a `</p>` and end every paragraph (or heading) with a `</p>`.
 
 4\. Once you have completed your transcription, look away from your computer for 30-45 seconds.  Staring into the distance every 10-20 minutes will keep your eyes from straining.  Also, shake out your hands at the wrists, to prevent repetitive stress injuries to your fingers.  
 
@@ -65,7 +65,7 @@ Now that you have highlighted these, you are going to put proper code around the
 
 2\. For persons, surround your text with these
 
-``` <persName key="Last, First" from="YYYY" to="YYYY" role="Occupation" ref="http://www.website.com/webpage.html"> </persName> ```
+```<persName key="Last, First" from="YYYY" to="YYYY" role="Occupation" ref="http://www.website.com/webpage.html"> </persName>```
 
 + Inside the speech marks for **key**, include the real full name of the person mentioned
 + In **from** and **to**, include their birth and death years, using ? for unknown years
@@ -82,16 +82,16 @@ Now that you have highlighted these, you are going to put proper code around the
 
 4\. For claims or arguments, surround your text with these
 
-<code>&lt;interp key="reason" n="citation" cert="high" ref="http://www.website.com/webpage.html"&gt; &lt;/interp&gt;</code>
+`<interp key="reason" n="citation" cert="high" ref="http://www.website.com/webpage.html"> </interp>`
 
 + In **key**, explain why you believe this claim is true or not
 + In **n**, put a full citation to the relevant source
 + In **cert** (short for certainty), put: high, medium, low or unknown
 + In **ref**, put the link to the website where you got the information to assess this claim.
 
-When you are happy with your work, hit save your work, give it a useful name, make sure it has .xml as the extension, and save it *and the .xsl file* to your repository.
+When you are happy with your work, hit save your work, give it a useful name, make sure it has .xml as the extension, and save it **and the .xsl file** to your repository.
 
-> Alex Gill has made [The Short and Sweet TEI Handout](https://docs.google.com/document/edit?id=12ErwXGHGaFL71M3cWHpI6gkfVzzsKHfk7U6N6vRmIS4&authkey=CKG3l6oG&hl=en#heading=h.uy40z0-ctpi0) which you might want to explore as well. When you embark on encoding documents for your own research, [here are some questions to think about](http://www.wwp.northeastern.edu/outreach/seminars/_current/handouts/document_analysis.xhtml) to help you decide what kinds of tagging you'll need; these [templates from HisTEI](https://github.com/odaata/HisTEI/tree/master/frameworks/HisTEI/templates) might be useful (open the whole project with OxygenXML for full functionality, but you can copy those templates in any editor).
+Alex Gill has made [The Short and Sweet TEI Handout](https://docs.google.com/document/edit?id=12ErwXGHGaFL71M3cWHpI6gkfVzzsKHfk7U6N6vRmIS4&authkey=CKG3l6oG&hl=en#heading=h.uy40z0-ctpi0) which you might want to explore as well. When you embark on encoding documents for your own research, [here are some questions to think about](http://www.wwp.northeastern.edu/outreach/seminars/_current/handouts/document_analysis.xhtml) to help you decide what kinds of tagging you'll need; these [templates from HisTEI](https://github.com/odaata/HisTEI/tree/master/frameworks/HisTEI/templates) might be useful (open the whole project with OxygenXML for full functionality, but you can copy those templates in any editor).
 
 ### Viewing Your Encoded Text ###
 
@@ -124,13 +124,13 @@ If your text still does not appear formatted, you may need to remove the text on
 **If you do not see the colour-coded version of your text, this might not necessarily mean that you've done something wrong**
 
 + Some browsers will not perform the transformation, for security reasons.
-+ In which case, here's what we can do. If you are on a Windows machine using Notepad++, go to 'Plugins' >> Plugin Tools. (If you are on Windows but aren't using Notepad++, Sublime and Atom probably have a similar functionality, but you will have to search to figure it out.) Select 'XML Tools' from the list, and install it. You'll probably have to restart the program to complete the plugin installation. Open up the [1.xml](https://github.com/craftingdigitalhistory/module3-wranglingdata/blob/master/tei-hist3907/1.xml) file in Notepad ++. Then, under 'plugins'>>'xml tools" select 'XSL Transformation settings'. In the popup, click on the elipses: ``` ... ``` to open up the file finder, and select the ``` 000style.xsl ``` stylesheet. Click 'transform'. A new tab will open in Notepad++ _with a fully-formed html file displaying your data according to the stylesheet._ Save this, and then open it in a browser!
++ In which case, here's what we can do. If you are on a Windows machine using Notepad++, go to 'Plugins' >> Plugin Tools. (If you are on Windows but aren't using Notepad++, Sublime and Atom probably have a similar functionality, but you will have to search to figure it out.) Select 'XML Tools' from the list, and install it. You'll probably have to restart the program to complete the plugin installation. Open up the [1.xml](https://github.com/craftingdigitalhistory/module3-wranglingdata/blob/master/tei-hist3907/1.xml) file in Notepad ++. Then, under 'plugins'>>'xml tools" select 'XSL Transformation settings'. In the popup, click on the elipses: ```...``` to open up the file finder, and select the ```000style.xsl``` stylesheet. Click 'transform'. A new tab will open in Notepad++ **with a fully-formed html file displaying your data according to the stylesheet.** Save this, and then open it in a browser!
 
 + You can also check 'validate' from the XML Tools menu in Notepad++, which will identify errors in your XML. If you're still having errors, a likely culprit might be the way your geographic URLs are encoded. Compare what you've got with what's in the [1.xml](https://github.com/craftingdigitalhistory/module3-wranglingdata/blob/master/tei-hist3907/1.xml) reference document.
 
-+ **Advanced:** If you install a [WAMP](http://www.wampserver.com/en/) or [MAMP](http://www.mamp.info/en/) server, and put your xml and xsl files in the WWW folder, you *should* be able to see the transformation no problem at ``` localhost\myxml.xml ``` (for example). (You can also use [Python's built in webserver if you have Python on your machine](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/) - all Mac users for instance do.)
++ **Advanced:** If you install a [WAMP](http://www.wampserver.com/en/) or [MAMP](http://www.mamp.info/en/) server, and put your xml and xsl files in the WWW folder, you *should* be able to see the transformation no problem at ```localhost\myxml.xml``` (for example). (You can also use [Python's built in webserver if you have Python on your machine](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/) - all Mac users for instance do.)
 
-> So here's the CND.xml, transformed into a csv: [http://shawngraham.github.io/exercise/cnd.xml](http://shawngraham.github.io/exercise/cnd.xml) . If you 'view page source', you'll see the original XML again! Save-as the page as whatever-you-want.csv and you can do some data mining on it.
+So here's the CND.xml, transformed into a csv: [http://shawngraham.github.io/exercise/cnd.xml](http://shawngraham.github.io/exercise/cnd.xml) . If you 'view page source', you'll see the original XML again! Save-as the page as whatever-you-want.csv and you can do some data mining on it.
 
 
 ### More on transformations

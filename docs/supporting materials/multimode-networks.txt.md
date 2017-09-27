@@ -22,7 +22,7 @@ In this exercise, you'll transform a network of women and social organizations i
 
 ## The data
 
-The data for this exercise comes from a former Carleton public history MA student, Peter Holdsworth. Peter lodged [a copy of his MA research on Figshare](http://figshare.com/authors/Peter_Holdsworth/402385). Peter was interested in the social networks surrounding ideas of commemoration of the centenerary of the War of 1812, in 1912. He studied the membership rolls for women’s service organization in Ontario both before and after that centenerary. By making his data public, Peter enables others to build upon his own research in a way not commonly done in history. (Peter can be followed on Twitter at [https://twitter.com/P_W_Holdsworth]([https://twitter.com/P_W_Holdsworth])).
+The data for this exercise comes from a former Carleton public history MA student, Peter Holdsworth. Peter lodged [a copy of his MA research on Figshare](http://figshare.com/authors/Peter_Holdsworth/402385). Peter was interested in the social networks surrounding ideas of commemoration of the centenerary of the War of 1812, in 1912. He studied the membership rolls for women’s service organization in Ontario both before and after that centenerary. By making his data public, Peter enables others to build upon his own research in a way not commonly done in history. (You can [follow Peter on Twitter](https://twitter.com/P_W_Holdsworth).)
 
 1. Right-click and 'save link' to get [the data files you'll need for this exercise](https://dl.dropboxusercontent.com/u/37716296/network-workshop.zip)
 
