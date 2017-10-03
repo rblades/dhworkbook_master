@@ -6,7 +6,7 @@ It may be that you are interested in the structure of links on the internet. Per
 
 + The Chrome browser with [Site Spider Mk II](https://chrome.google.com/webstore/detail/site-spider-mark-ii/gedjofgioahckekhpgknhchelbpdogok) installed
 + [Gephi](http://gephi.org)
-+ [HTTP Graph Generator Plugin for Gephi installed](https://marketplace.gephi.org/plugin/http-graph/)
++ [HTTP Graph Generator Plugin for Gephi installed](https://gephi.org/plugins/#/plugin/httpgraph)
 
 **NB** You can install the graph generator plugin from **within** Gephi:
 

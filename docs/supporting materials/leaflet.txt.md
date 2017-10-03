@@ -7,9 +7,9 @@ The [leaflet.js](http://leafletjs.com/) library allows you to create quite nice 
 
 2\. Create a new branch called ```gh-pages```. We will be putting our html on the gh-pages branch, so that ```<your username>/github.io/<repo>map.html``` can serve us up the webpage when we're done.
 
-3\. Leaflet comes with a number of [excellent tutorials](http://leafletjs.com/examples.html). We're going to look at the [first one](http://leafletjs.com/examples/quick-start.html). 
+3\. Leaflet comes with a number of [excellent tutorials](http://leafletjs.com/examples.html). We're going to look at the [first one](http://leafletjs.com/examples/quick-start/). 
 
-4\. Go to the [leaflet quick-start tutorial](http://leafletjs.com/examples/quick-start.html) and read through it carefully. In essence, you create a webpage that draws its instructions on how to handle geographic data and how to style that data from the leaflet.js source. That way, the browser knows how to render all the geographic information you're about to give it. 
+4\. Go to the [leaflet quick-start tutorial](http://leafletjs.com/examples/quick-start/) and read through it carefully. In essence, you create a webpage that draws its instructions on how to handle geographic data and how to style that data from the leaflet.js source. That way, the browser knows how to render all the geographic information you're about to give it. 
 
 Do you see where leaflet is calling on geographic information? This bit:
 
@@ -40,11 +40,13 @@ can be copied and repeated in the document, with new coordinates in decimal degr
 
 1\. Create a new html document in your gh-pages branch of your repo.
 
-2\. Copy the html from the quickstart map (right-click and select 'view source' on this page: [leafletjs.com/examples/quick-start/example.html](leafletjs.com/examples/quick-start/example.html)
+2\. Copy the html from the quickstart map (right-click and select 'view source' on [Leaflet's quick start example page](http://leafletjs.com/examples/quick-start/example.html).
 
 3\. Paste the code in your new html document in your gh-pages branch of your repo. Call it 'map.html' and commit your changes.
 
-4\. Change the source map to point to a georectified map you made in module 4. Using the Ottawa Fire Insurance map I used as an example in module 4, I created [this map](http://shawngraham.github.io/exercise/leaflet-ottawa.html). Right click and view my page source to see what I changed up.
+4\. Change the source map to point to a georectified map you made in Module 4. Using the Ottawa Fire Insurance map I used as an example in module 4, I created [this map](http://shawngraham.github.io/exercise/leaflet-ottawa.html). 
+
+5\. Right click and view my page source to see what I changed up.
 
 **NB You could keep the basic mapbox service base map, and render the Ottawa Fire Insurance map as an overlay [reference documentation]http://leafletjs.com/reference-1.0.3.html#imageoverlay). Or you could do a series of overlays, showing the change in the city over time. (My favourite example of a leaflet-powered historical map visualization is the [Slave Revolt in Jamaica project](http://revolt.axismaps.com/) by Vincent Brown). But you don't necessarily have to do this.**
 
@@ -68,7 +70,7 @@ Bootleaf is a template that uses a common html template package, '[Bootstrap](ht
 
 3\. In your copy of bootleaf, you now have a gh-pages version of the site. If you go to ```<yourusername>.github.io/bootleaf``` you should see an active version of the map.
 
-4\. Now, the map is grabbing its data from a series of geojson files. You can use [the 'to geo json' service](http://togeojson.com/) to convert your csv to geojson. There are other services.
+4\. Now, the map is grabbing its data from a series of geojson files. You can use [the 'to geo json' service](https://mapbox.github.io/togeojson/) to convert your csv to geojson. There are other services.
 
 5\. Clone your repository in your desktop (by pressing the clone your repo in desktop).
 

@@ -368,7 +368,7 @@ The changes can sometimes take a few minutes to show up on the website. Now, the
 
 Imagine you are collaborating with one of your classmates. Your classmate is in charge of the project, and is keeping track of the 'official' folder of materials (eg, the repo). You wish to make some changes to the files in that repository. You can manage that collaboration via Github by making a copy, what Github calls a `fork`.
 
-1\. Make sure you're logged into your Github account on the Github website. We're going to fork an example repository right now by going to [https://github.com/octocat/Spoon-Knife](https://github.com/octocat/Spoon-Knife). 
+1\. Make sure you're logged into your Github account on the Github website. We're going to fork an example repository right now by going to [Github's forking example page](https://github.com/octocat/Spoon-Knife). 
 
 2\. Click the 'fork' button at top-right. Github now makes a copy of the repository in your own Github account!
 

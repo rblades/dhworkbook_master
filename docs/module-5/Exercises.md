@@ -26,13 +26,13 @@ Some of the tools that we used in Module 4 give visual output as raster images, 
 In this first exercise, we will take the plot we generated in Module 4's exercise on topic modeling in R where we made a bar chart showing the number of articles by year. In R we exported that plot as a PDF. In Inkscape, we can import that pdf and 'explode' it so that we can manipulate its parts individually. We are going to take the simple bar chart and make it more legible, more visually appealing, for incorporation on a webpage.
 
 1. Download and install [Inkscape](https://inkscape.org/en/) **NB Mac the installation instructions are a bit more complicated for Mac. Pay attention and follow closely!**
-2. Download the [pdf we generated in R called publication-year.pdf](https://github.com/hist3907b-winter2015/module5-humanitiesvisualization/raw/master/publication-year.pdf)
+2. Download the [pdf we generated in R called publication-year.pdf (this downloads the pdf)](https://github.com/hist3907b-winter2015/module5-humanitiesvisualization/raw/master/publication-year.pdf)
 3. Open that pdf. It's a pretty plain graphic. Right away there are at least two things we could do to make it more visually appealling. We could change the orientation of the characters in the y-axis to make them more legible. We can highlight bars of interest. And we could apply a colour scheme more generally that would make our graphic legible to folks with colour-blindness (see the 'going further' section at bottom).
 4. Start Inkscape. 
 5. Click File >> Import >> and then navigate to where you save the 'publication-year.pdf'. 
 6. Click Ok when you've got it selected. 
 7. In the next pop-up, just accept the default settings and click 'ok'. Your Inkscape window should now look like this:<br>![Image showing graph scaling in Inkscape](https://raw.githubusercontent.com/hist3907b-winter2015/module5-humanitiesvisualization/master/inkscape1.png)
-8. The pdf is now a layer in the new image you are creating in Inkscape. You can save this drawing, **with its information about the layers and what is in each one** by clicking File >> Save As. ([visit Github for my version](https://raw.githubusercontent.com/hist3907b-winter2015/module5-humanitiesvisualization/master/exercise1drawing-final.svg)). 'SVG' stands for 'scalable vector graphic'. (SVG is a kind of text file that describes the complete geometry of your illustration).
+8. The pdf is now a layer in the new image you are creating in Inkscape. You can save this drawing, **with its information about the layers and what is in each one** by clicking File >> Save As. ([Visit Github for my version](https://raw.githubusercontent.com/hist3907b-winter2015/module5-humanitiesvisualization/master/exercise1drawing-final.svg)). 'SVG' stands for 'scalable vector graphic'. (SVG is a kind of text file that describes the complete geometry of your illustration).
 9. Do you see the bounding box around the plot? If you grab any of those handles (the double-arrow things), you can make it bigger or smaller on your sheet. We can't edit any of the other elements yet - we can't change the colour of the bars, or the fonts of the text. We have to tell Inkscape to 'explode' these elements into their own 'objects'. In the menu bar at top, got to Object >> Ungroup. There are now a series of overlapping bounding boxes around each object.
 10. Zoom in (by pressing the + sign on your keyboard) so that you're looking at the numbers of the y-axis. We're going to rotate these by 90 degrees to make them more legible. Select the arrow icon from the toolbar on the left side of the screen.
 11. Click on the '50'. You'll get a bounding box around it. 
@@ -99,7 +99,7 @@ Here's a graphic & a movie to help with the theoretical side of things:
 
 ![Image showing color theory graphic](http://paper-leaf.com/wp-content/uploads/2010/01/ct_1920.jpg)
 
-[Understanding the rules of color, Lynda.com](http://www.lynda.com/Illustrator-tutorials/Understanding-rules-color/161817/177336-4.html)
+[Understanding the rules of color, Lynda.com](https://www.lynda.com/Graphic-Design-tutorials/Understanding-rules-color/419419/534020-4.html)
 
 To learn how to style your webpage appropriately, you can [follow this tutorial on CSS from codeacademy.com](http://www.codecademy.com/courses/web-beginner-en-TlhFi/0/1?curriculum_id=50579fb998b470000202dc8b).
 
@@ -111,7 +111,7 @@ Colours in Cultures:
 
 ## Layout
 
-'Layout' can mean different things in different contexts. A general overview on issues in layout is covered by ['What makes design great, Lynda.com](http://www.lynda.com/Illustrator-tutorials/What-makes-design-great/161817/177322-4.html) and ['Exploring principles of layout and composition'](http://www.lynda.com/Illustrator-tutorials/Exploring-principles-layout-composition/161817/177323-4.html). This [slideshare](http://www.slideshare.net/kernlearningsolutions/what-is-an-effective-layout-3435438) gives you a sense of things to watch out for as well.
+'Layout' can mean different things in different contexts. A general overview on issues in layout is covered by ['What makes a design great, Lynda.com](https://www.lynda.com/Graphic-Design-tutorials/What-makes-design-great/419419/534011-4.html) and ['Exploring principles of layout and composition'](https://www.lynda.com/Graphic-Design-tutorials/Exploring-principles-layout-composition/419419/534012-4.html). The [Slideshare on effective layouts](http://www.slideshare.net/kernlearningsolutions/what-is-an-effective-layout-3435438) gives you a sense of things to watch out for as well.
 
 For academic posters in particular, consider [these suggestions from the APA](http://www.apa.org/gradpsych/2011/01/poster.aspx).
 
@@ -131,7 +131,7 @@ PPT:
 
 There's a lot of information out there on making posters with powerpoint. 
 
-1. Read [parts 1,2, and 3](http://www.makesigns.com/tutorials/scientific-poster-parts.aspx) and then consider [Colin Purrington's advice](http://colinpurrington.com/tips/poster-design). Once you've read and digested, pick a poster from [Pimp my poster](https://www.flickr.com/groups/pimpmyposter/pool/) that strikes use. 
+1. Read [parts 1, 2, and 3](http://www.makesigns.com/tutorials/scientific-poster-parts.aspx) and then consider [Colin Purrington's advice](http://colinpurrington.com/tips/poster-design). Once you've read and digested, pick a poster from [Pimp my poster](https://www.flickr.com/groups/pimpmyposter/pool/) that strikes use. 
 2. Make notes in your open notebook: **from the point of view of layout** what elements of the design work? What aren't working? How would you repurpose this posert to fit the requirements ot he assessment exercises ([remember, visit Github for the details](https://github.com/hist3907b-winter2015/syllabus/blob/master/exercise_assessment_guideline.md))? 
 3. Grab a template from [from Colin Purrington's](http://colinpurrington.com/tips/poster-design#templates), and use it to prototype a poster that works. 
 4. Upload the poster as a pdf to your repository.
@@ -169,9 +169,8 @@ While most of this applies to websites, think also about how the general princip
 + [Medium](https://medium.com/)
 + [Cowbird](http://cowbird.com/)
 + [Exposure](https://exposure.co/)
-+ [Timeline.js](timeline.knightlab.com)
-+ [Storymap](storymap.knightlab.com/)
-+
++ [Timeline.js](https://timeline.knightlab.com)
++ [Storymap](https://storymap.knightlab.com/)
 
 ## ManyLines
 
@@ -181,13 +180,13 @@ You can also embed nearly anything in the narrative panels - youtube videos, [ti
 
 To give this a try, why not use the Texan Correspondence network we generated in earlier modules? Export it in .gexf format from gephi, import to ManyLines, and go! The interface is fairly straightforward. Just follow the prompts.
 
-**Caveat Utilitor** I don't know how long anything made with ManyLines will live on their website. But, knowing what you know about wget and other tools, do you see how you could archive a copy on your own machine? ManyLines is available on [github](https://github.com/medialab/manylines) so you can certainly use it locally.
+**Caveat Utilitor** I don't know how long anything made with ManyLines will live on their website. But, knowing what you know about wget and other tools, do you see how you could archive a copy on your own machine? ManyLines is available on [Github](https://github.com/medialab/manylines) so you can certainly use it locally.
 
 ## Leaflet
 
 Maps can be created through a variety of services ([tilemill](https://www.mapbox.com/tilemill/), [cartodb](https://cartodb.com/), [mapbox](http://mapbox.com), for instance). These can then be embedded in your webpages or documents. Often, that's enough. But sometimes, you'd like to take control, and keep all the data, all the map, under your own name, in your own webspace. Visit the gentle introduction to using [leaflet.js in our supporting materials](../supporting materials/leaflet.txt.md) to make, style, and serve your maps. [Visit a template on my Github repository](https://github.com/shawngraham/daea) for mapping with leaflet, drawing all of your point data and ancillary information from a csv file.
 
-Oh, and here's a list of background maps you can use: [http://leaflet-extras.github.io/leaflet-providers/preview/index.html](http://leaflet-extras.github.io/leaflet-providers/preview/index.html).
+Oh, and Leaflet has [a list of background maps you can use](http://leaflet-extras.github.io/leaflet-providers/preview/index.html).
 
 ## Designing Maps with Processing and Illustrator
 

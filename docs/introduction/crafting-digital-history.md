@@ -83,7 +83,7 @@ You can close the cPanel webpage now (log out first).
 
 If you look at the dashboard for your blog, you'll see a lot of options down the left hand side of your screen. If you want to change the look of your blog, click on 'appearance' then click on 'themes'. A number of themes are pre-installed. You can click on the different themes and select 'preview' to see how your blog might look. When you find one you like, select 'activate'. Go to the other browser window where you have your-domain.ca open. Reload the page to see the changes take effect!
 
-> If you're the sort of person who likes to sketch ideas out on paper, Lauren Heywood of the [Disruptive Media Learning Lab](http://dmll.org.uk/) has designed a paper-based exercise to prototype ideas. Why not give it a try? [Print this PDF of Wordpress design](http://dmll.org.uk/wp-content/uploads/2017/06/plan-your-wordpress-site-with-paper-dmll.pdf) and follow the instructions.
+> If you're the sort of person who likes to sketch ideas out on paper, Lauren Heywood of the [Disruptive Media Learning Lab](http://dmll.org.uk/) has designed a paper-based exercise to prototype ideas. Why not give it a try? [Print this PDF of Wordpress design (opens in a new windows)](http://dmll.org.uk/wp-content/uploads/2017/06/plan-your-wordpress-site-with-paper-dmll.pdf) and follow the instructions.
 
 To write new content, know that there is a difference between a 'post' and a 'page'. A page is a new link on your site, while posts appear in chronological order on a page, with the most recent on top. Most themes show the most recent post by default, and pages appear in any menus on the site. **When you are logged into your blog** any post or page will have an 'edit' button at the bottom that you can click. You'll then be presented with an editing box with the standard toolbar across the top (allowing you to change the font, insert images, change the alignment of the text and so on). At the top right will be a button to save or publish/update the post/page.
 
@@ -124,7 +124,7 @@ You can also 'tag' any annotation you make. If many people use the same set of t
 
 Hypothesis has an **API** that allows you to do some neat things. 'API' stands for 'application programming interface', which is just a fancy way of saying, 'you can write a program that interacts with this web service'. [Kris Shaffer](http://pushpullfork.com/), a professor at the University of Mary Washington, has written a **plugin** for Wordpress that allows you to automatically collect annotations you make across the web and to display them all on a single page on your blog. So, we'll go get that plugin and install it on your blog:
 
-Open [https://github.com/kshaffer/hypothesis_aggregator](https://github.com/kshaffer/hypothesis_aggregator) in a new browser window.
+Open [Kris Shaffer's hypothes.is aggregator](https://github.com/kshaffer/hypothesis_aggregator) in a new browser window.
 
 1.  Click “Clone or Download” (the green button at the top right).
 2. In the pop-up, click 'Download ZIP'

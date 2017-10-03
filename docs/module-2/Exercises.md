@@ -36,13 +36,15 @@ In the dream case, your data are not just images, but are actually sorted and st
 
 ## Exercise 2: Wget
 
-You've already encountered wget in the introduction to this workbook, when you were setting up your DH Box to use Pandoc. In this exercise, I want you to do [Ian Milligan's wget tutorial at the Programming Historian](http://programminghistorian.org/lessons/automated-downloading-with-wget) to learn more about the power of this command, and how to wield that power properly. Skip ahead to step 2, since your DH Box already has wget installed. (If you want to continue to use wget after this course is over, you will have to install it on your own machine, obviously).
+You've already encountered wget in the introduction to this workbook, when you were setting up your DH Box to use Pandoc. 
+
+1\. In this exercise, I want you to do [Ian Milligan's wget tutorial at the Programming Historian](http://programminghistorian.org/lessons/automated-downloading-with-wget) to learn more about the power of this command, and how to wield that power properly. Skip ahead to step 2, since your DH Box already has wget installed. (If you want to continue to use wget after this course is over, you will have to install it on your own machine, obviously).
 
 Once you've completed Milligan's tutorial, remember to put your history into a new markdown file, and to lodge a copy of it in your repository.
 
-Now that you're **au fait** with wget, I want you to use wget to download the Shawville Equity from the Quebec provincial archives in a responsible and respectful manner. Otherwise, you will look like a bot attacking their site. 
+Now that you're **au fait** with wget, I want you to use wget to download the Shawville Equity from the Quebec provincial archives in a responsible and respectful manner. Otherwise, you will look like a bot attacking their site.
 
-1\. The data is in this location: `http://collections.banq.qc.ca:8008/jrn03/equity/src/`. 
+The data is in this location: `http://collections.banq.qc.ca:8008/jrn03/equity/src/`. 
 
 2\. Make a new directory: `$ mkdir equity` and then cd into it: `$ cd equity`. Make sure you're in the directory by typing `$ pwd`. 
 
@@ -100,8 +102,6 @@ If you look back at the full list of API options, you'll see at the bottom that 
 `http://search.canadiana.ca/view/oocihm.16278/?r=0&s=1&fmt=json&api_text=1`
 
 The problem is: how to retrieve those oocihm numbers. The answer is, 'we write a program'. And the program that you want can be [found on Ian Milligan's website](http://ianmilligan.ca/api-example-sh/). Study that program carefully. There are a number of useful things happening in there, notably **curl**, **jq**, **sed**, and **awk**. **curl**  is a program for downloading webpages, **jq** for dealing with json, and **sed** and **awk** for searching within and cleaning up text. If this all sounds Greek to you, there is an excellent gentle introduction over at [William Turkel's blog](http://williamjturkel.net/2013/06/15/basic-text-analysis-with-command-line-tools-in-linux/).
-
-So here's what we're going to do.
 
 5\. We need the command line program jq. We install it into our DH Box with `$ sudo apt-get install jq -y`
 

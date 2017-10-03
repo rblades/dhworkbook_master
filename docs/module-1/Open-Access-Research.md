@@ -10,7 +10,7 @@ There are a number of reasons why you should want to do this. This week we will 
 + [Ian Milligan](http://ianmilligan.ca/2014/10/23/sshrcs-research-data-archiving-policy-and-historians/)
 + [another post by Milligan](http://ianmilligan.ca/2014/01/27/why-canadas-open-data-initiative-matters-to-historians/)
 + [Michelle Moravec](http://michellemoravec.com/michelle-moravec/)
-+ [Kathleen Fitzgerald](http://www.plannedobsolescence.net/generous-thinking-introduction/#more-2828)
++ [Kathleen Fitzpatrick](http://www.plannedobsolescence.net/generous-thinking-introduction/#more-2828)
 + [Sheila Brennan](http://www.lotfortynine.org/2017/06/my-digital-publishing-update-nothing/)
 
 But most importantly, **change is coming whether historians like it or not**. Here in Canada, SSHRC has a [research data archiving policy](http://www.sshrc-crsh.gc.ca/about-au_sujet/policies-politiques/statements-enonces/edata-donnees_electroniques-eng.aspx)

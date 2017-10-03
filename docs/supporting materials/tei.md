@@ -29,10 +29,10 @@ This is an abolitionist pamphlet regarding the Atlantic slave trade, presenting 
 
 ### Setting Up Your Workspace ###
 
-You will use your own machine rather than DHBox for this work. 
+You will use your own machine rather than DH Box for this work. 
 
 1. Arrange your workspace so that you have the scanned text of the pamphlet easily visible on one side of your screen. 
-2. Open the 'blanktemplate.txt' file in [Sublime Text](https://www.sublimetext.com/), [Atom](https://atom.io/), [Textwrangler](http://www.barebones.com/products/textwrangler/) or [Notepadd++](https://notepad-plus-plus.org/) (or any text editor that understands encoding) and have that on the other side of the screen.
+2. Open the 'blanktemplate.txt' file in [Sublime Text](https://www.sublimetext.com/), [Atom](https://atom.io/), [Textwrangler](http://www.barebones.com/products/textwrangler/) or [Notepad++](https://notepad-plus-plus.org/) (or any text editor that understands encoding) and have that on the other side of the screen.
 
 The last lines will be
 ```</body></text></TEI></teiCorpus>```. Everything you write today should be just above `</body>`.
@@ -121,20 +121,28 @@ If your text still does not appear formatted, you may need to remove the text on
 
 ### If you still don't see your text
 
-**If you do not see the colour-coded version of your text, this might not necessarily mean that you've done something wrong**
+**If you do not see the colour-coded version of your text, this might not necessarily mean that you've done something wrong.** Some browsers will not perform the transformation, for security reasons.
 
-+ Some browsers will not perform the transformation, for security reasons.
-+ In which case, here's what we can do. If you are on a Windows machine using Notepad++, go to 'Plugins' >> Plugin Tools. (If you are on Windows but aren't using Notepad++, Sublime and Atom probably have a similar functionality, but you will have to search to figure it out.) Select 'XML Tools' from the list, and install it. You'll probably have to restart the program to complete the plugin installation. Open up the [1.xml](https://github.com/craftingdigitalhistory/module3-wranglingdata/blob/master/tei-hist3907/1.xml) file in Notepad ++. Then, under 'plugins'>>'xml tools" select 'XSL Transformation settings'. In the popup, click on the elipses: ```...``` to open up the file finder, and select the ```000style.xsl``` stylesheet. Click 'transform'. A new tab will open in Notepad++ **with a fully-formed html file displaying your data according to the stylesheet.** Save this, and then open it in a browser!
+In which case, we can do the following: 
 
-+ You can also check 'validate' from the XML Tools menu in Notepad++, which will identify errors in your XML. If you're still having errors, a likely culprit might be the way your geographic URLs are encoded. Compare what you've got with what's in the [1.xml](https://github.com/craftingdigitalhistory/module3-wranglingdata/blob/master/tei-hist3907/1.xml) reference document.
+1. If you are on a Windows machine using Notepad++, go to 'Plugins' >> Plugin Tools. (If you are on Windows but aren't using Notepad++, Sublime and Atom probably have a similar functionality, but you will have to search to figure it out.) 
+2. Select 'XML Tools' from the list, and install it. 
+3. You'll probably have to restart the program to complete the plugin installation. 
+4. Open up the [1.xml](https://github.com/craftingdigitalhistory/module3-wranglingdata/blob/master/tei-hist3907/1.xml) file in Notepad ++.
+5. Under 'plugins'>>'xml tools" select 'XSL Transformation settings'. 
+6. In the popup, click on the elipses: ```...``` to open up the file finder, and select the ```000style.xsl``` stylesheet. 
+7. Click 'transform'. A new tab will open in Notepad++ **with a fully-formed html file displaying your data according to the stylesheet.** 
+8. Save this new file and open it in a browser!
 
-+ **Advanced:** If you install a [WAMP](http://www.wampserver.com/en/) or [MAMP](http://www.mamp.info/en/) server, and put your xml and xsl files in the WWW folder, you *should* be able to see the transformation no problem at ```localhost\myxml.xml``` (for example). (You can also use [Python's built in webserver if you have Python on your machine](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/) - all Mac users for instance do.)
+You can also check 'validate' from the XML Tools menu in Notepad++, which will identify errors in your XML. If you're still having errors, a likely culprit might be the way your geographic URLs are encoded. Compare what you've got with what's in the [1.xml](https://github.com/craftingdigitalhistory/module3-wranglingdata/blob/master/tei-hist3907/1.xml) reference document.
 
-So here's the CND.xml, transformed into a csv: [http://shawngraham.github.io/exercise/cnd.xml](http://shawngraham.github.io/exercise/cnd.xml) . If you 'view page source', you'll see the original XML again! Save-as the page as whatever-you-want.csv and you can do some data mining on it.
+**Advanced:** If you install a [WAMP](http://www.wampserver.com/en/) or [MAMP](http://www.mamp.info/en/) server, and put your xml and xsl files in the WWW folder, you **should** be able to see the transformation no problem at ```localhost\myxml.xml``` (for example). (You can also use [Python's built in webserver if you have Python on your machine](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/) - all Mac users for instance do.)
+
+[You can access the CND.xml, transformed into a csv on my Github](http://shawngraham.github.io/exercise/cnd.xml). If you 'view page source', you'll see the original XML again! Save-as the page as whatever-you-want.csv and you can do some data mining on it.
 
 
 ### More on transformations
 
 I made a file I've called [SG_transformer.xsl](https://github.com/hist3907b-winter2015/module3-wranglingdata/blob/master/tei-hist3907/SG_transformer.xsl). Open that file in your text editor. What tags would it be looking for in the xml file? What might it do to your markup? What line would you change in your XML file to get it to point to this stylesheet? Write all this down in your open notebook. It is a good habit to get into to keep track of your thoughts when looking at ancillary files like this.
 
-If the nature of your project will involve a lot of transcription, you would be well advised to use an XML editor like [OxygenXML](http://www.oxygenxml.com/), which has a free 1 month trial. The editor makes it easy to maintain **consistency** in your markup, and also, to quickly create stylesheets for whatever purpose you need. There are also a number of utility programs freely available that will convert XML to CSV or other formats. One such may be [found online Google code](https://code.google.com/p/xml2csv-conv/). But the best way to transform these XML files is with XSL.
+If the nature of your project will involve a lot of transcription, you would be well advised to use an XML editor like [OxygenXML](http://www.oxygenxml.com/), which has a free 1 month trial. The editor makes it easy to maintain **consistency** in your markup, and also, to quickly create stylesheets for whatever purpose you need. There are also a number of utility programs freely available that will convert XML to CSV or other formats. One such may be [found online on Google code](https://code.google.com/p/xml2csv-conv/). But the best way to transform these XML files is with XSL.

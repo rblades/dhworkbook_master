@@ -19,7 +19,7 @@ Open Context publishes archaeological data on the web. Archaeology generates vas
 
 Once you've crafted a search that retrieves something of interest, it's time to build a script that will retrieve that information for you. Remember the exercise that queried the Canadiana api? Below I have modified that script to grab 10 records from the 'animal bone' category on Open Context. You could use that as a basis for your own search.
 
-2\. In DHBox, create a new folder with `mkdir` for this exercise, then `cd` into it. 
+2\. In DH Box, create a new folder with `mkdir` for this exercise, then `cd` into it. 
 
 3\. Open the nano editor and paste the script below in a new file. Make sure to read the comments, because there are a few lines you have to customize. (You'll get file not found errors if you don't pay attention!) 
 
@@ -129,7 +129,7 @@ You can push the code for your site to github, and then use github's gh-pages fe
 10. Click on the gearwheel icon, to go to the settings page (You can also find it at https://github.com/YOUR-ACCOUNT/YOUR-NEW-REPO-YOU-JUST-MADE/settings). 
 11. Scroll down to the box that says 'Github Pages'. 
 12. In the green box, it says 'you're site is published at https://YOUR-ACCOUNT.github.io/YOUR-NEW-REPO-YOU-JUST-MADE'. 
-13. Click on that link and you'll see your site! (Here's [my site on gh pages](https://shawngraham.github.io/exposetest/site/).)
+13. Click on that link and you'll see your site! (Visit [my site on gh pages](https://shawngraham.github.io/exposetest/site/).)
 
 ## Conclusion
 

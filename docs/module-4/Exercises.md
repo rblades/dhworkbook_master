@@ -18,11 +18,11 @@ In the table below I've gathered the exercises together under the headings of **
 
 | Texts        | Networks         | Maps  | Charts | Art |
 | ------------- |:-------------:|:-----:|:--------:|--------:|
-| [Topic Modeling Tool](#exercise-2)  |[Network analysis in Gephi](#exercise-1) |[Simple mapping & georectifying](#exercise-8) |[Quick charts using RAW](#exercise-7) |[Sonification](#exercise-10)|
-| [Topic Modeling in R](#exercise-3)  |[Converting 2-mode to 1-mode](../supporting materials/multimode-networks.txt.md) |[QGIS (tutorials by Fred Gibbs)](#exercise-10) | |[Twitterbots](#exercise-11)|
-| [Text Analysis with OverviewProject](#exercise-4)   |[Network Analysis in R](#exercise-9) |[Geoparsing with Python](../supporting materials/geoparsing-w-python.txt.md) | |[Glitching Photos](../supporting materials/glitch.md) |
-| [Corpus Linguistics with AntConc](#exercise-5)  |[Network Analysis in Cytoscape](https://github.com/miriamposner/cytoscape_tutorials)|[Palladio with Posner](http://miriamposner.com/blog/getting-started-with-palladio/) | | |
-| [Text Analysis with Voyant](#exercise-6)    |[Choose your own adventure](../supporting materials/cyoa.txt.md)|[Leaflet.js Maps](../supporting materials/leaflet.txt.md) | | |
+| [Topic Modeling Tool](#exercise-2-topic-modeling-tool)  |[Network analysis in Gephi](#exercise-1-network-visualization) |[Simple mapping & georectifying](#exercise-8-simple-mapping-and-georectifying) |[Quick charts using RAW](#exercise-7-raw) |[Sonification](https://programminghistorian.org/lessons/sonification)|
+| [Topic Modeling in R](#exercise-3-topic-modeling-in-r)  |[Converting 2-mode to 1-mode](../supporting materials/multimode-networks.txt.md) |[QGIS (tutorials by Fred Gibbs)](#exercise-10-qgis) | |[Twitterbots](https://programminghistorian.github.io/ph-submissions/lessons/intro-to-twitterbots)|
+| [Text Analysis with OverviewProject](#exercise-4-text-analysis-with-overview)   |[Network Analysis in R](#exercise-9-network-analysis-in-r) |[Geoparsing with Python](../supporting materials/geoparsing-w-python.txt.md) | |[Glitching Photos](../supporting materials/glitch.md) |
+| [Corpus Linguistics with AntConc](#exercise-5-corpus-linguistics-with-antconc)  |[Network Analysis in Cytoscape](https://github.com/miriamposner/cytoscape_tutorials)|[Palladio with Posner](http://miriamposner.com/blog/getting-started-with-palladio/) | | |
+| [Text Analysis with Voyant](#exercise-6-text-analysis-with-voyant)    |[Choose your own adventure](../supporting materials/cyoa.txt.md)|[Leaflet.js Maps](../supporting materials/leaflet.txt.md) | | |
 | | | | | |
 
 ----------------------
@@ -82,8 +82,7 @@ In exercise 4, we're going to look at the Colonial Newspaper Database again, but
 
 ----
 
-## Exercise 5
-### Corpus Linguistics with AntConc
+## Exercise 5: Corpus Linguistics with AntConc
 Heather Froelich has put together an excellent step-by-step with using AntConc for exploring textual patterns within, and across, corpora of texts. Work your way through her [tutorial](http://hfroehli.ch/workshops/getting-started-with-antconc/)
 
 Can you get our example materials (from the Colonial Newspaper Database) into AntConc? [This might help you](http://www.themacroscope.org/?page_id=418) to split the csv into individual txt files. Alternatively, do you have any materials of your own, already collected? Feed them into AntConc. What patterns do you see? What if you compare your materials against other corpora of texts?
@@ -96,7 +95,7 @@ FYI, [CoRD has a collection of corpora that you can explore](http://www.helsinki
 
 In module 2 if you recall, we worked through how to transform XML using stylesheets. Melodee Beals used a [stylesheet ](https://github.com/mhbeals/Colonial-Newspaper-Database/tree/master/Transformers) to transform her database into a series of individual txt files. In the exercises above, a transformer was used to make the database into a single CSV file. In this exercise, we are going to use [Voyant Tools](http://voyant-tools.org) to visualize patterns in word use in the database. Voyant can read either a CSV *or* text files. The advantage of uploading a folder of text files is that, if the files are in chronological order, Voyant's default visualizations will also be arranged in chronological order and thus we can see change over time.
 
-1\. Go to [Voyant Tools](http://voyant-tools.org). Paste the URL to the csv of the CND database: [https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv]([https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv]).
+1\. Go to [Voyant Tools](http://voyant-tools.org). Paste the URL to the csv of the CND database: [https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv](https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv).
 
 2\. Now, open a new browser window, and go to this [colonial newspaper file on Voyant tools](http://voyant-tools.org/?corpus=colonial-newspapers&stopList=stop.en.taporware.txt)
 
@@ -179,12 +178,12 @@ When we look at the original letters, we see that the writer often identified th
 -----
 ## Exercise 8: Simple Mapping and Georectifying
 
-In this exercise, you will find a historical map online, upload a copy to a mapwarper service, georectify it, and then display the map online, via a hosted service like CartoDB, and also through a map you will build yourself using leaflet.js. Finally, we will also convert csv to geojson using the website [To geojson](http://togeojson.com/), and we'll map that as a github gist. We'll also grab a geojson file hosted on github gist and import it into cartodb.
+In this exercise, you will find a historical map online, upload a copy to a mapwarper service, georectify it, and then display the map online, via a hosted service like CartoDB, and also through a map you will build yourself using leaflet.js. Finally, we will also convert csv to geojson using [Mapbox's geojson converter](https://mapbox.github.io/togeojson/), and we'll map that as a github gist. We'll also grab a geojson file hosted on github gist and import it into cartodb.
 
 ### Georectifying
 Georectifying is the process of taking an image (whether it is of a historical map, chart, airphoto, or whatever) and manipulating its geometry so that it matches a geographic projection. Think of it like this: you take your handdrawn map, and use pushpins to pin down known locations on your map to a globe. As you pin, your image stretches and warps. Traditionally, this has not been an easy thing to do, if you are new to GIS. In recent years, the curve has flattened significantly. In this exercise, we'll grab an image, upload it to the Harvard Library MapWarper service, and then export it as a tileset which can be used in other mapping programs.
 
-1\. Get a historical map. I like the Fire Insurance plans from the [Gatineau Valley Historical Society](http://www.gvhs.ca/research/maps-fire-insurance.html); I'm sure you can find others to suit your interests.
+1\. Get a historical map. I like the Fire Insurance plans from the [Gatineau Valley Historical Society](http://www.gvhs.ca/research/maps/maps-fire-insurance.html); I'm sure you can find others to suit your interests.
 
 2\. Right-click and save as to grab a copy. Save it somewhere handy.
 
@@ -204,11 +203,11 @@ Georectifying is the process of taking an image (whether it is of a historical m
 
 10\. Having selected your control points, click on 'warp image'.
 
-11\. You can now click on the 'export' panel, and get the URL for your georectified image in a few different formats. If you clicked on the KML option, a google map window will open [like so](https://maps.google.com/maps?q=http://warp.worldmap.harvard.edu/maps/4152.kml&output=classic&dg=feature). For many webmapping applications, the Tiles (Google/OSM scheme): Tiles Based URL is what you want. You'll get a URL like this: ```http://warp.worldmap.harvard.edu/maps/tile/4152/z/x/y.png``` Save that info. You'll need it later.
+11\. You can now click on the 'export' panel, and get the URL for your georectified image in a few different formats. If you clicked on the KML option, [a new google map window will open](https://maps.google.com/maps?q=http://warp.worldmap.harvard.edu/maps/4152.kml&output=classic&dg=feature). For many webmapping applications, the Tiles (Google/OSM scheme): Tiles Based URL is what you want. You'll get a URL like this: ```http://warp.worldmap.harvard.edu/maps/tile/4152/z/x/y.png``` Save that info. You'll need it later.
 
 You have now georectified a map. Let's use that map as a base layer in [Palladio](http://palladio.designhumanities.org/#/)
 
-We need some place data for Palladio. Here's what I'm using <br> ![Image for Palladio showing coordinates of landmarks in Ottawa](http://i.imgur.com/vTEiRxh.png) <br> Note how I've formatted this data. I'll be copying and pasting it into Palladio. (For more on how to input geographic data into Palladio, see [this tutorial](http://hdlab.stanford.edu/doc/scenario-point-to-point.pdf)). Basically, you want something like this:<br>
+We need some place data for Palladio. Here's what I'm using <br> ![Image for Palladio showing coordinates of landmarks in Ottawa](http://i.imgur.com/vTEiRxh.png) <br> Note how I've formatted this data. I'll be copying and pasting it into Palladio. (For more on how to input geographic data into Palladio, visit [the hdlab tutorial (pdf opens in new tab)](http://hdlab.stanford.edu/doc/scenario-point-to-point.pdf)). Basically, you want something like this:<br>
 
 |   | Place      | Coordinates            |
 |---|------------|------------------------|
@@ -244,9 +243,9 @@ Congratulations! You've georectified a map, and used it as a base layer for a vi
 
 ## Exercise 9: Network Analysis in R
 
-Earlier, we took the index from the Texan Correspondence, a list of letters from so-and-so to so-and-so. When we stitch that together into a network of people connected because they exchanged letters, we end up with a shard of their social network. Networks can be queried for things like power, position, and role, and so used judiciously, we can begin to suss something of the social structures in which their history took place. Before you go any further, make sure you also take a long look at Scott Weingart's series, [Networks Demystified](http://scottbot.net/HIAL/?s=%20networks%20demystified). Finally, [heed our warning](http://www.themacroscope.org/?page_id=449).
+Earlier, we took the index from the Texan Correspondence, a list of letters from so-and-so to so-and-so. When we stitch that together into a network of people connected because they exchanged letters, we end up with a shard of their social network. Networks can be queried for things like power, position, and role, and so used judiciously, we can begin to suss something of the social structures in which their history took place. Before you go any further, make sure you also take a long look at Scott Weingart's series, [Networks Demystified](http://scottbot.net/networks-demystified-9-modality/). Finally, [heed our warning](http://www.themacroscope.org/?page_id=449).
 
-This exercise uses the R language to do our analysis, which in DH Box we access via R Studio, a programming environment. Please read [the introduction to R in our supporting materials](../supporting materials/quick-intro-r.md) and then progress to the [exercise](../supporting materials/netviz.md).
+This exercise uses the R language to do our analysis, which in DH Box we access via R Studio, a programming environment. Please read [the introduction to R in our supporting materials](../supporting materials/quick-intro-r.md) and then progress to the [netviz exercise](../supporting materials/netviz.md).
 
 ## Exercise 10: QGIS
 ### QGIS

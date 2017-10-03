@@ -2,15 +2,15 @@
 
 In this exercise, we are doing a quick first pass on the network data generated from the Republic of Texas correspondence. I am providing you with the **edge list**, the links of to - from that we generated earlier. I am also providing you the **node list**, the list of individuals extracted from that edge list. If we keep our nodes and edges separated in csv tables, we can add other **attributes** later (things like date, or number of times a pair of individuals corresponded ie weight, or gender, or location, or what have you) to create different views or analyses. I used open refine (see the [lesson on open refine](../supporting materials/open-refine.md)) to clean this data up for you. Remember, 80 percent of all digital history work involves cleaning data!
 
-Here is the data that you need; download these, and use the filemanager to load them into your dhbox into your new R project for this tutorial.
+Here is the data that you need; download these, and use the filemanager to load them into your DH Box into your new R project for this tutorial.
 
-+ [List of links](../supporting materials/texaslinks.csv)
-+ [List of nodes](../supporting materials/texasnodes.csv)
++ [List of links (this downloads a CSV file)](../supporting materials/texaslinks.csv)
++ [List of nodes(this downloads a CSV file)](../supporting materials/texasnodes.csv)
 
 
 This tutorial will illustrate to you some of the ways the `igraph` package can be used to create quick visualizations or to generate network statistics. These of course on their own mean very little: this is where your historical sensibility comes into play, triangulating this generated data with other things you know about the historical context of the time, place and players!
 
-Remember to make a new project in R Studio by clicking the down arrow on the R button at the right hand side of the R Studio interface; start the project in a new folder. Then using the DHBox filemanager, upload the nodes and links data from your computer to that folder you just created.
+Remember to make a new project in R Studio by clicking the down arrow on the R button at the right hand side of the R Studio interface; start the project in a new folder. Then using the DH Box filemanager, upload the nodes and links data from your computer to that folder you just created.
 
 ## Installing igraph
 

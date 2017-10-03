@@ -45,7 +45,9 @@ These files correspond to these entities to extract:
 
 At this point, the program will appear to ‘hang’ – nothing much will seem to be happening. However, in the background, the program has started to process your text. Depending on the size of your text, this could take anywhere from a few minutes to a few hours. Be patient! Watch the terminal window – once the program has results for you, these will start to scroll by in the terminal window. 
 
-In the main program window, once the entire text has processed, the text will appear with colour-coded highlighting showing which words are location words, which ones are persons, which ones are organizations. You have now classified a text. Note: sometimes your computer may run out of memory – in that case, you’ll see an error referring to “Out of Heap Space” in your terminal window. That’s OK – just copy and paste a smaller bit of the document, say the first 10,000 lines or so. Then try again.
+In the main program window, once the entire text has processed, the text will appear with colour-coded highlighting showing which words are location words, which ones are persons, which ones are organizations. You have now classified a text. 
+
+**Note:** sometimes your computer may run out of memory – in that case, you’ll see an error referring to “Out of Heap Space” in your terminal window. That’s OK – just copy and paste a smaller bit of the document, say the first 10,000 lines or so. Then try again.
 
 ## Manipulating that data
 
@@ -72,15 +74,20 @@ On a PC, things are not so simple because the command window only shows a small 
 java -mx500m -cp stanford-ner.jar edu.stanford.nlp.ie.crf.CRFClassifier -loadClassifier classifiers/english.all.3class.distsim.crf.ser.gz -textFile texas-letters.txt -outputFormat inlineXML > “my-ner-output.txt”
 ```
 
-The first bit, ```java –mx500m``` says how much memory to use. If you have 1gb of memory available, you can type ```java –mx 1g``` (or 2g, or 3g, etc). The next part of the command calls the NER programme itself. You can set which classifier to use after the ```–loadClassifier classifiers/``` by typing in the exact file name for the classifier you wish to use (you are telling ‘loadClassifier’ the exact path to the classifier). At ```–textFile``` you give it the name of your input file (on our machine, called ```texas-letters.txt```, and then specify the outputFormat. The ```>``` character sends the output to a new text file, here called ```my-ner-output.txt```. Hit enter, and a few moments later the programme will tell you something along the lines of
++ The first bit, ```java –mx500m``` says how much memory to use. If you have 1gb of memory available, you can type ```java –mx 1g``` (or 2g, or 3g, etc). 
++ The next part of the command calls the NER programme itself. You can set which classifier to use after the ```–loadClassifier classifiers/``` by typing in the exact file name for the classifier you wish to use (you are telling ‘loadClassifier’ the exact path to the classifier). 
++ At ```–textFile``` you give it the name of your input file (on our machine, called ```texas-letters.txt```, and then specify the outputFormat. 
++ The ```>``` character sends the output to a new text file, here called ```my-ner-output.txt```. 
+
+3\. Hit enter, and a few moments later the programme will tell you something along the lines of
 
 ```CRFCLassifier tagged 375281 words in 13745 documents at 10833.43 words per second ```
 
-3\. Open the text file in Notepad++, and you’ll see output like this:
+4\. Open the text file in Notepad++, and you’ll see output like this:
 
 ```In the name of the <LOCATION>Republic of Texas</LOCATION>, Free, Sovereign and Independent. To all whom these Presents shall come or may in any wise concern. I <PERSON>Sam Houston</PERSON> President thereof send Greeting```
 
 Congratulations – you’ve successfully tagged a document using a named entity recognizer!
 
-Now you need to do a bit more data-munging before you can do anything useful. [Imagine you wanted to eventually visualize this as a network](regex-ner.md). You will need your regex skills again...
+Now you need to do a bit more data-munging before you can do anything useful. [Imagine you wanted to eventually visualize this as a network](regex-ner.md). You will need your regex skills again.
 

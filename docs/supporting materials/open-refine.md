@@ -7,7 +7,7 @@
 
 OpenRefine (formerly Google Refine) is a powerful tool for working with messy data: cleaning it; transforming it from one format into another; extending it with web services; and linking it to databases like Freebase.
 
-This exercise **does not use** DHBox.
+This exercise **does not use** DH Box.
 
 In this exercise, we are going to use a tool that originated with Google. Since 2012, it has been open-sourced and freely available on the net. Using it takes a bit of getting used to, however. 
 
@@ -16,9 +16,9 @@ In this exercise, we are going to use a tool that originated with Google. Since 
 3. Follow the installation instructions. 
 4. Start Open Refine by double clicking on its icon. This will open a new browser window, pointing to `http://127.0.0.1:3333`. This location is your own computer, so even though it looks like it’s running on the internet, it isn’t. The ‘3333’ is a ‘port’, meaning that Open Refine is running much like a server, serving up a webpage via that port to the browser. (If the browser window doesn't open automatically, open one and put `http://127.0.0.1:3333` in the address bar).
 
-## Start Cleaning our Texan Correspondence.
+## Start Cleaning our Texan Correspondence
 
-Make sure you have your data handy that you created in exercise 1, the Texan correspondence. You can get it out of your DHBox by using the DHBox filemanager. 
+Make sure you have your data handy that you created in exercise 1, the Texan correspondence. You can get it out of your DH Box by using the DH Box filemanager. 
 
 1. Navigate to where you were working on it, then click on the file name. This will download it to your downloads folder.
 2. Move your working file to somewhere safe on your computer.
@@ -45,11 +45,11 @@ In order to get this correspondence data into a network visualization tool, we w
 3. Notice that "source", "target", and "Date" are checked in the content tab; uncheck "Date", as it will not be used in Gephi (networks where the nodes have different dates, ie dynamic networks, are beyond us for the moment). 
 4. Go to the download tab and change the download option from 'Tab-separated values (TSV)' to 'Comma-separated values (CSV)' and press download. The file will likely download to your automatic download directory. We will revisit this file later. 
 5. Go ahead and drop this file into the Palladio interface. Do you see any interesting patterns? Make a note!
-6. Upload your cleaned file with a new name back **into** your DHBox; we will use this in the next module.
+6. Upload your cleaned file with a new name back **into** your DH Box; we will use this in the next module.
 
 **Remember to copy your notes and any other information/observations/thoughts to your Github repo**
 
-### OPTIONAL: Going further with Open Refine: Named Entity Extraction
+### Optional: Going further with Open Refine: Named Entity Extraction
 
 Say we wanted, instead of the correspondence network, a visualization of all the places named in this body of letters. It might be interesting to visualize on a map the changing focus of Texas' diplomatic attention over time. There is a plugin for Open Refine that does what is called [Named Entity Extraction](http://en.wikipedia.org/wiki/Named-entity_recognition). The plugin, and how to install & use it, is available on the [Free your metadata website](http://freeyourmetadata.org/named-entity-extraction/).
 
@@ -59,15 +59,15 @@ Say we wanted, instead of the correspondence network, a visualization of all the
 4. Visualize the results in a spreadsheet
 5. Write up a 'how to' in your notebook explaining these steps in detail.
 
-**[An interesting use case is discussed online](http://blog.spaziodati.eu/en/2014/07/24/using-openrefine-to-perform-text-mining-on-your-data-food-for-thoughts/)** and on the **[Free your metadata website](http://freeyourmetadata.org/publications/named-entity-recognition.pdf)**
+**[An interesting use case is discussed online](http://blog.spaziodati.eu/en/2014/07/24/using-openrefine-to-perform-text-mining-on-your-data-food-for-thoughts/)** and on the **[Free your metadata website (pdf opens in new tab)](http://freeyourmetadata.org/publications/named-entity-recognition.pdf).**
 
 **Further Help** Visit [Kalani Craig's page on ](http://www.kalanicraig.com/2014/12/aha-2015-managing-and-maintaining-digital-data-getting-started-in-digital-history-intermediate-workshop/)
 
-### Optional: Exploring Other Named Entity Extraction tools
+### Optional: Exploring other Named Entity Extraction tools
 
 #### Voyant Tools RezoViz
 
-[Voyant-Tools](http://voyant-tools) is a text analysis suite that we will explore in more depth in the next module. Feel free to load your material into it and begin exploring; there's nothing you can break. 
+[Voyant-Tools](https://voyant-tools.org/) is a text analysis suite that we will explore in more depth in the next module. Feel free to load your material into it and begin exploring; there's nothing you can break. 
 
 One interesting tool is called 'RezoViz', which will extract entities and tie them together into a network based on appearing in the same document. 
 
@@ -95,11 +95,16 @@ What kinds of questions could this answer?
 java -mx500m -cp stanford-ner.jar edu.stanford.nlp.ie.crf.CRFClassifier -loadClassifier classifiers/english.all.3class.distsim.crf.ser.gz -textFile texas-letters.txt -outputFormat inlineXML > “my-ner-output.txt”
 ```
 
-The first bit, java –mx500m says how much memory to use. If you have 1gb of memory available, you can type java –mx 1g (or 2g, or 3g, etc). The next part of the command calls the NER programme itself. You can set which classifier to use after the –loadClassifier classifiers/ by typing in the exact file name for the classifier you wish to use (you are telling ‘loadClassifier’ the exact path to the classifier). At –textFile you give it the name of your input file (on our machine, called ‘texas-letters.txt’, and then specify the outputFormat. The > character sends the output to a new text file, here called “my-ner-output.txt”. Hit enter, and a few moments later the programme will tell you something along the lines of
++ The first bit, `java –mx500m` says how much memory to use. If you have 1gb of memory available, you can type `java –mx 1g` (or 2g, or 3g, etc). 
++ The next part of the command calls the NER programme itself. You can set which classifier to use after the `–loadClassifier classifiers/` by typing in the exact file name for the classifier you wish to use (you are telling ‘loadClassifier’ the exact path to the classifier). 
++ At `–textFile` you give it the name of your input file (on our machine, called ‘texas-letters.txt’, and then specify the outputFormat. 
++ The `>` character sends the output to a new text file, here called “my-ner-output.txt”. 
 
-> CRFCLassifier tagged 375281 words in 13745 documents at 10833.43 words per second
+2\. Hit enter, and a few moments later the programme will tell you something along the lines of
 
-2\. Open the text file in your text editor, and you’ll see output like this:
+`CRFCLassifier tagged 375281 words in 13745 documents at 10833.43 words per second`
+
+3\. Open the text file in your text editor, and you’ll see output like this:
 
 > In the name of the ```<LOCATION>```Republic of Texas```</LOCATION>```, Free, Sovereign and Independent. To all whom these Presents shall come or may in any wise concern. I ```<PERSON>```Sam Houston```</PERSON>``` President thereof send Greeting
 

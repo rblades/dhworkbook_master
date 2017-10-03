@@ -1,8 +1,8 @@
-# Topic Modeling in R, DHBox version
+# Topic Modeling in R, DH Box version
 
 In this exercise, we're going to grab the Colonial Newspaper Database from my Github page, do some exploratory visualizations, and then create a topic model whose output can then be visualized further in other platforms (including as a network in Gephi or other such packaged). At the appropriate point, I show you how to import a directory of texts rather than a single file of data, and to feed that into the script.
 
-Go to your DHBox, and click on RStudio. At the right hand side where it says 'project (none)', click and create a new project in a new empty directory. (If you want to put this directory under version control with git, so that you can push your work to your github account, please read [the RStudio instructions](git-rstudio.md).)
+Go to your DH Box, and click on RStudio. At the right hand side where it says 'project (none)', click and create a new project in a new empty directory. (If you want to put this directory under version control with git, so that you can push your work to your github account, please read [the RStudio instructions](git-rstudio.md).)
 
 In the script panel (top left; click on the green plus side and select new R script if this pane isn't open) paste the following code and then run each line by putting the cursor in the line and hitting code > run lines.
 
@@ -165,7 +165,7 @@ topic_df_dist[ sweep(topic_df_dist, 1, (apply(topic_df_dist,1,min) + apply(topic
 ```r
 install.packages("igraph")
 # the line above would normally install igraph. However, the latest version is not compatible
-# with this version of R. Thus, go to command line in DHBox, cd to the R folder, cd x86_64-pc-linux-gnu-library, cd 3.0 folder.
+# with this version of R. Thus, go to command line in DH Box, cd to the R folder, cd x86_64-pc-linux-gnu-library, cd 3.0 folder.
 # wget the older version of igraph that'll work: https://cran.r-project.org/src/contrib/Archive/igraph/igraph_0.6-3.tar.gz
 # then, at command line, run the following R command: $ R CMD INSTALL igraph_0.6-3.tar.gz
 # this'll install igraph. Indeed, for any package you can look for older versions of it by slotting in

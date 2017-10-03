@@ -1,6 +1,6 @@
 # REGEX and the Republic of Texas
 
-Regex comes in several different flavours. A good text editor on your own computer like Sublime Text or Atom can do Regex searches and replaces from the find-and-replace box; Word cannot do that. Remember, Regex searches for _patterns_ in the text. The correspondence of the Republic of Texas was collated into a single volume and published with a helpful index in 1911. It was scanned and OCR'd by Google, and is now available as a text file from the Internet Archive. You can see the OCR'd text at [archive.org](http://archive.org/stream/diplomaticcorre33statgoog/diplomaticcorre33statgoog_djvu.txt). We are going to grab the index from that file, and transform it using regex.
+Regex comes in several different flavours. A good text editor on your own computer like Sublime Text or Atom can do Regex searches and replaces from the find-and-replace box; Word cannot do that. Remember, Regex searches for **patterns** in the text. The correspondence of the Republic of Texas was collated into a single volume and published with a helpful index in 1911. It was scanned and OCR'd by Google, and is now available as a text file from the Internet Archive. You can see the OCR'd text at [archive.org](http://archive.org/stream/diplomaticcorre33statgoog/diplomaticcorre33statgoog_djvu.txt). We are going to grab the index from that file, and transform it using regex.
 
 There are several hundred entries in that index. You could clean them up by hand, deleting and cutting and pasting, but with the power of regex, we'll go from this:
 
@@ -25,7 +25,7 @@ Data formatted like this could be fed into a network analysis program, for insta
 
 ## Getting started
 
-In the previous module, we learned how to automatically grab text from sites like Canadiana. In this particular exercise today, we'll quickly download the file using `curl` (it's like wget, though there are some [differences](https://daniel.haxx.se/docs/curl-vs-wget.html). It's good to know both).
+In the previous module, we learned how to automatically grab text from sites like Canadiana. In this particular exercise today, we'll quickly download the file using `curl` (it's like wget, though there are some [differences between the two commands](https://daniel.haxx.se/docs/curl-vs-wget.html). It's good to know both).
 
 1\. At the command line, type `$ curl http://archive.org/stream/diplomaticcorre33statgoog/diplomaticcorre33statgoog_djvu.txt > texas.txt`
 
@@ -47,14 +47,18 @@ Notice that there is a lot of text that we are not interested in at the moment: 
 Sender, Recipient, Date
 ```
 
-6\. Scroll down through the text; notice there are many lines which don't include a letter, because they're either header info, or blank, or some other extraneous text. We're going to get rid of all of those lines too. We want to keep every line that has this information in it: Sender to Recipient, Month, Date, Year, Page
+6\. Scroll down through the text; notice there are many lines which don't include a letter, because they're either header info, or blank, or some other extraneous text. We're going to get rid of all of those lines too.
 
-WARNING: Regex can be very tricky. When I'm working with Regex, I copy and paste some of the text I'm working on into the box at [regexr](http://www.regexr.com/) and fiddle with the pattern until it does what I want. In fact, spend some time looking at their examples before you go any further in this exercise.
+We want to keep every line that has this information in it:
+
++ Sender to Recipient, Month, Date, Year, Page
+
+WARNING: Regex can be very tricky. When I'm working with Regex, I copy and paste some of the text I'm working on into the box at [RegExr](http://www.regexr.com/) and fiddle with the pattern until it does what I want. In fact, spend some time looking at their examples before you go any further in this exercise.
 
 ## The workflow
 We start by finding every line that looks like a reference to a letter, and put a tilde (a `~` symbol) at the beginning of it so we know to save it for later. Next, we get rid of all the lines that don't start with tildes, so that we're left with only the relevant text. After this is done, we format the remaining text by putting commas in appropriate places, so we can import it into a spreadsheet and do further edits there.
 
-We're going to use the `sed` and `grep` commands at the command prompt in our DHBox. Sed works by first identifying text that matches a pattern, and then swapping in the text we want to have-
+We're going to use the `sed` and `grep` commands at the command prompt in our DH Box. Sed works by first identifying text that matches a pattern, and then swapping in the text we want to have-
 
 `$ sed 's/old text/new text/g' filename`
 
@@ -67,17 +71,16 @@ and grep works like this:
 
 **Identifying Lines that have Correspondence Senders and Receivers in them**
 
-**Discussion** Read in full before doing any manipulation of your text!
+**Discussion:** Read in full before doing any manipulation of your text!
 
-**If you were using a text editor on your own computer** like, for instance Notepad++, you would press ctrl-f or search->find to open the find dialogue box.  In that box, go to the 'Replace' tab, and check the radio box for 'Regular expression' at the bottom of the search box. In TextWrangler, hit command+f to open the find and replace dialogue box.  Tick off the ‘grep’ radio button (which tells TextWrangler that we want to do a regex search) and the ‘wraparound’ button (which tells TextWrangler to search everywhere). In Sublime text, command+f opens the 'find' box (and shift+command+f opens find _and_ replace). Tick the '.\*' button to tell Sublime we're working with regular expressions.
+**If you were using a text editor on your own computer** like, for instance Notepad++, you would press ctrl-f or search->find to open the find dialogue box.  In that box, go to the 'Replace' tab, and check the radio box for 'Regular expression' at the bottom of the search box. In TextWrangler, hit command+f to open the find and replace dialogue box.  Tick off the ‘grep’ radio button (which tells TextWrangler that we want to do a regex search) and the ‘wraparound’ button (which tells TextWrangler to search everywhere). In Sublime text, command+f opens the 'find' box (and shift+command+f opens find **and** replace). Tick the '.\*' button to tell Sublime we're working with regular expressions.
 
-**However, we're going to use the two commands sed and grep at the command prompt in DHBox**.
+**However, we're going to use the two commands sed and grep at the command prompt in DH Box**.
 
 Remember from our basic introduction that there's a way to see if the word "to" appears in full. Type
 
 ```
 $ grep '\bto\b' texas.txt
-
 ```
 
 The results print out to the screen. This command finds every instance of the word "to" (and not, for instance, also ‘potato’ or ‘tomorrow’ - try `grep 'to' texas.txt` instead to see the difference).
@@ -102,10 +105,10 @@ and the entire line is placed within a parenthetical group. Since this the first
 
 where:
 
-`-r` means extended regex. this saves us from having to 'escape' certain characters
-`-i.bak` means make a backup of the original input file, in case things go wrong.
-`-'s/old-pattern/newpattern/g'` is how we find and switch what we're looking for. the final g means 'globally', everywhere in the file
-`texas.txt` the filename that we're looking to change.
+`-r` means extended regex. this saves us from having to 'escape' certain characters <br />
+`-i.bak` means make a backup of the original input file, in case things go wrong <br />
+`-'s/old-pattern/newpattern/g'` is how we find and switch what we're looking for the final g means 'globally', everywhere in the file <br />
+`texas.txt` the filename that we're looking to change <br />
 
 When you hit enter, the computer seems to pause for a moment, and then gives you the command prompt again. 
 
@@ -137,7 +140,7 @@ Within a set of square brackets ```[]``` the carrot ```^``` means search for any
 
 By finding all ```\r\n[^~].+``` and replacing it with nothing, you effectively delete all the lines that don't look like the index entries. What you're left with is a series of entries, and a series of blank lines.
 
-**But DHBox makes this so much easier**
+**But DH Box makes this so much easier**
 
 We are simply going to get grep to find all the lines that have a tilde in them, and write them to a new file:
 
@@ -191,9 +194,9 @@ The next step is making the parenthetical groups which will be used to remove pa
 
 `(,)( [0-9]{4})(.+)`
 
-with the comma as the first group `"\1"`, the space and the year as the second `"\2"`, and the rest of the line as the third `"\3"`.  Given that all we care about retaining is the second group (we want to keep the year, but not the comma or the page number), what will the *replace* look like?
+with the comma as the first group `"\1"`, the space and the year as the second `"\2"`, and the rest of the line as the third `"\3"`.  Given that all we care about retaining is the second group (we want to keep the year, but not the comma or the page number), what will the **replace** look like?
 
-+ Find the dates using a regex, and replace so that only the *second* group in the expression is kept. You might want to consult the introduction to regex again before you execute this one.
+Find the dates using a regex, and replace so that only the **second** group in the expression is kept. You might want to consult the introduction to regex again before you execute this one.
 
 Remember, the first part of the sed command will be: `sed -r -i.bak` then the pattern to find, the pattern to replace with, and the file name. You want to use sed on the new index.txt file you made. Can you devise the right pattern?
 
@@ -248,7 +251,7 @@ The pattern for step six is:
 
 `grep -E ".+,.+,.+," index.txt`
 
-In dhbox, the command will use `-r`
+In DH Box, the command will use `-r`
 
 `grep -r ".+,.+,.+," index.txt`
 
