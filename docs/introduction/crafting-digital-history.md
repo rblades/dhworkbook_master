@@ -61,7 +61,7 @@ In the course space for cuLearn, I gave you a code to use to pay for a domain of
 2. If the pop-up says 'congratulations, domain available!' then click on the continue button. (You may be offered free id protection, where Reclaim Hosting will hide your details is someone does a 'who-is' search on the domain name. If it does, then tick off the check box to confirm that you want this, and hit continue).
 3. On the next screen, (the billing screen) fill in all of the information. The balance should be $0. At the bottom left, it will also say that you’ve used a one-time promotional code. Hit the green button at the bottom to complete the purchase (which is not costing you anything).
 
-Congratulations! You now own your very own domain. **It might take a bit of time for your domain to appear live on the web**. During this time, you can log into your cPanel and install wordpress and so on - see below.
+Congratulations! You now own your very own domain. **It might take a bit of time for your domain to appear live on the web**. During this time, you can log into your cPanel and install Wordpress and so on - see the next section below.
 
 Giving you a space of your own is my political act of protest against the centralization of learning inside learning management systems. Learning isn't 'managed', it's cultivated. Unlike cuLearn, I cannot monitor your activity inside your own domain. I can only see what you choose to make public. Unlike Facebook or Snapchat or Instagram, I am not trying to monitize your personality on the web.
 
@@ -105,8 +105,8 @@ For more information about controlling visibility of your posts and so on, [visi
 
 Hypothes.is is an overlay on the web that allows you to highlight or annotate any text you come across (including **inside pdfs**). All of your annotations can then be collected together. It is a very effective research tool.
 
-1. Create an account with [hypothes.is](https://web.hypothes.is/start/).
-2. Get the [hypothes.is plugin for chrome](https://chrome.google.com/webstore/detail/hypothesis-web-pdf-annota/bjfhmglciegochdpefhhlphglcehbmek). If you don't have/use chrome, go to [the hypothes.is start page](https://web.hypothes.is/start/#) and click on the 'other browsers' link.
+1. Create an account with [Hypothes.is](https://web.hypothes.is/start/).
+2. Get the [Hypothes.is plugin for chrome](https://chrome.google.com/webstore/detail/hypothesis-web-pdf-annota/bjfhmglciegochdpefhhlphglcehbmek). If you don't have/use chrome, go to [the Hypothes.is start page](https://web.hypothes.is/start/#) and click on the 'other browsers' link.
 
 Once you're logged into Hypothes.is, and you have the plugin installed, highlight THIS TEXT and leave an annotation! Who will be first? There are a few different kinds of annotations you can make; [here is a list with videos showing them](https://web.hypothes.is/blog/varieties-of-hypothesis-annotations-and-their-uses/).
 
@@ -118,13 +118,13 @@ Annotations are public by default. When you are making a new annotation you can 
 
 You can also 'tag' any annotation you make. If many people use the same set of tags, you can collect annotations by tag. This can make it easier to do group research projects, for instance.
 
-**Please always tag your annotations with 'hist3814o'. That way, everyone's tags will show up on [the course Hypothesis page](http://jonudell.net/h/facet.html?facet=tag&mode=documents&search=hist3814o)**
+**Please always tag your annotations with 'hist3814o'. That way, everyone's tags will show up on [the course Hypothes.is page](http://jonudell.net/h/facet.html?facet=tag&mode=documents&search=hist3814o)**
 
 #### Collecting your own annotations on your blog
 
 Hypothes.is has an **API** that allows you to do some neat things. 'API' stands for 'application programming interface', which is just a fancy way of saying, 'you can write a program that interacts with this web service'. [Kris Shaffer](http://pushpullfork.com/), a professor at the University of Mary Washington, has written a **plugin** for Wordpress that allows you to automatically collect annotations you make across the web and to display them all on a single page on your blog. So, we'll go get that plugin and install it on your blog:
 
-Open [Kris Shaffer's hypothes.is aggregator](https://github.com/kshaffer/hypothesis_aggregator) in a new browser window.
+Open [Kris Shaffer's Hypothes.is aggregator](https://github.com/kshaffer/hypothesis_aggregator) in a new browser window.
 
 1.  Click “Clone or Download” (the green button at the top right).
 2. In the pop-up, click 'Download ZIP'
@@ -163,7 +163,7 @@ To access our virtual computer, the DH Box, you will need to use Carleton's VPN 
 
 What is digital history anyway? How is it connected to so-called 'big data'? Read the following pieces. Annotate with Hypothes.is anything that strikes you as interesting; annotate anything that puzzles you - feel free to just say, 'I'm not sure what this means; does it mean.... does anybody have any ideas?' **and** if you see someone is asking questions, you can reply to that annotation with thoughts of your own!
 
-**NB** each week, I expect you to respond to at least someone else's annotation in a **substantive** way. No "I agree!" or "right on!" or that sort of thing. Make a **meaningful** contribution.
+**NB** Each week, I expect you to respond to at least someone else's annotation in a **substantive** way. No "I agree!" or "right on!" or that sort of thing. Make a **meaningful** contribution.
 
 Once you have read and annotated the works, **write a post on your blog that poses the question 'what is digital history for me anyway?'** . Explain why you're in this class, your level of comfort with digital tech, the kinds of history you're interested in, and what you hope to get out of this course. Your post should link to relevant annotations made by you or by your peers. (Every Hypothes.is annotation has a direct link visible when you click on the 'share' icon for an existing annotation).
 
@@ -176,8 +176,8 @@ Once you have read and annotated the works, **write a post on your blog that pos
 > Jo Guldi and David Armitage, ['The History Manifesto: Chapter 4](https://www.cambridge.org/core/books/history-manifesto/big-questions-big-data/F60D7E21EFBD018F5410FB315FBA4590/core-reader)'
 
 > Tim Hitchcock ['Big Data for Dead People' https://historyonics.blogspot.ca/2013/12/big-data-for-dead-people-digital.html](https://historyonics.blogspot.ca/2013/12/big-data-for-dead-people-digital.html)
->
-> On Diversity in Digital History [The Macroscope](http://www.themacroscope.org/2.0/diversity-in-digital-history/) Read and follow through the footnotes to at least two more articles
+
+> 'On Diversity in Digital History', [The Macroscope](http://www.themacroscope.org/2.0/diversity-in-digital-history/). Read and follow through the footnotes to at least two more articles
 
 # Acknowledgements
 

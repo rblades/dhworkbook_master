@@ -138,7 +138,13 @@ One last thing: let's convert the markdown file into both Word and HTML. Pandoc 
 
 12\. Type `$ pandoc -o todayscommands.docx dhbox-work-today.md`
 
-This says to pandoc, create an output file ( the `-o`) called 'todayscommands.docx' from 'dhbox-work-today.md'. Type `ls` after running this command to see if you've made the file. Any guesses how to create an HTML file? Pandoc is smart enough to know the kind of output you want from the file extension, so retype the command but use .html instead of .docx this time. Use filemanager to save copies of the .docx and .html files to your own machine. (Incidentally, if you use the arrow up and arrow down keys on your keyboard when you're at the command line, you can page through commands that you've previously typed).
+This says to pandoc, create an output file ( the `-o`) called 'todayscommands.docx' from 'dhbox-work-today.md'. 
+
+13\. Type `ls` after running this command to see if you've made the file. 
+
+Any guesses how to create an HTML file? Pandoc is smart enough to know the kind of output you want from the file extension.
+
+14\. Retype the command but use .html instead of .docx this time. Use the file manager to save copies of the .docx and .html files to your own machine. (Incidentally, if you use the arrow up and arrow down keys on your keyboard when you're at the command line, you can page through commands that you've previously typed).
 
 You've done some interesting work - you've installed software into a remote computer, you've copied all of the commands you typed into a new file, you've used markdown and a text editor to add information and context to those commands, and you've used pandoc to transform your basic text into the more complicated formats of Word or HTML.
 
@@ -163,7 +169,7 @@ Soon, you have a folder like:
     |-'this.doc'
 ```
 
-Things can get messy quite quickly. Imagine that you also have several spreadsheets in there as well, images, snippets of code... we don't want this. What we want is a way of managing the evolution of your files. We do this with a program called [Git](https://git-scm.com/). Git is not a user-friendly piece of software, and it takes some work to get your head around. Git is also very powerful, but fortunately, the basic uses to which most of us put it to are more or less straightforward. There are many other programs that make use of Git for version control; these programs weld a graphical user interface on top of the main Git program. For now, we'll content ourselves with the [Github website](http://github.com), which does the same thing more or less, but from a browser.
+Things can get messy quite quickly. Imagine that you also have several spreadsheets in there as well, images, snippets of code... we don't want this. What we want is a way of managing the evolution of your files. We do this with a program called [git](https://git-scm.com/). Git is not a user-friendly piece of software, and it takes some work to get your head around. Git is also very powerful, but fortunately, the basic uses to which most of us put it to are more or less straightforward. There are many other programs that make use of git for version control; these programs weld a graphical user interface on top of the main git program. For now, we'll content ourselves with the [Github website](http://github.com), which does the same thing more or less, but from a browser.
 
 Firstly, let's define some terms.
 
@@ -215,7 +221,7 @@ Many websites - including this workbook - use a Github repository as a way of ho
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZVejLE8qtOI" frameborder="0" allowfullscreen></iframe>
 
 
-## Exercise 4: A detailed look at using Git on the command line
+## Exercise 4: A detailed look at using git on the command line
 
 At its heart, git is a way of taking 'snapshots' of the current state of a folder, and saving those snapshots in sequence. (For an excellent brief presentation on Git, visit [Alice Bartlett's presentation on git](https://speakerdeck.com/alicebartlett/git-for-humans); Bartlett is a senior developer for the Financial Times). In git's lingo, as stated earlier, a folder on your computer is known as a `repository`. This sequence of snapshots in total lets you see how your project unfolded over time. Each time you wish to take a snapshot, you make a `commit`. A commit is a git command to take a snapshot of the entire repository. Thus, your folder we discussed above, with its proliferation of documents becomes:
 
@@ -224,7 +230,7 @@ At its heart, git is a way of taking 'snapshots' of the current state of a folde
     |-'final.doc'
 ```    
 
-**But** its commit history could be visualized like a string of pearls, where each pearl is a unique commit. Each one of those pearls represents a point in time when you the writer made a commit; git compared the state of the file to the earlier state, and saved a snapshot of the `differences`. What is particularly useful about making a commit is that Git requires two more pieces of information about the git: who is making it, and when. The final useful bit about a commit is that you can save a detailed message about **why** the commit is being made. In our hypothetical situation, your first commit message might look like this:
+**But** its commit history could be visualized like a string of pearls, where each pearl is a unique commit. Each one of those pearls represents a point in time when you the writer made a commit; git compared the state of the file to the earlier state, and saved a snapshot of the `differences`. What is particularly useful about making a commit is that git requires two more pieces of information about the git: who is making it, and when. The final useful bit about a commit is that you can save a detailed message about **why** the commit is being made. In our hypothetical situation, your first commit message might look like this:
 
 ```
 Fixed conclusion
@@ -241,9 +247,9 @@ What would happen if you wanted to experiment or take your project in a new dire
 
 Git is also a powerful tool for backing up your work. You can work quite happily with git on your own machine, but when you store those files and the history of commits somewhere remote, you open up the possibility of collaboration **and** a safe place where your materials can be recalled if - perish the thought - something happened to your computer. In git-speak, the remote location is, well, the `remote`. There are many different places on the web that can function as a remote for git repositories. You can even set one up on your own server, if you want. To get material **out** of Github and onto your own computer, you `clone` it. If that hypothetical paper you were writing was part of a group project, your partners could clone it from your Github space, and work on it as well!
 
-Let us imagine a scenario.... You and Anna are working together on the project. You have made a new project repository in your Github space, and you have cloned it to your computer. Anna has cloned it to hers. Let's assume that you have a very productive weekend and you make some real headway on the project. You `commit` your changes, and then `push` them from your computer to the Github version of your repository. That repository is now one commit **ahead** of Anna's version. Anna `pulls` those changes from Github to her own version of the repository, which now looks **exactly** like your version. What happens if you make changes to the exact same part of the exact same file? This is called a `conflict`. Git will make a version of the file that contains text clearly marking off the part of the file where the conflict occurs, with the conflicting information marked out as well. The way to `resolve` the conflict is to open the file (typically with a text editor) and to delete the added Git text, making a decision on which information is the correct information.
+Let us imagine a scenario.... You and Anna are working together on the project. You have made a new project repository in your Github space, and you have cloned it to your computer. Anna has cloned it to hers. Let's assume that you have a very productive weekend and you make some real headway on the project. You `commit` your changes, and then `push` them from your computer to the Github version of your repository. That repository is now one commit **ahead** of Anna's version. Anna `pulls` those changes from Github to her own version of the repository, which now looks **exactly** like your version. What happens if you make changes to the exact same part of the exact same file? This is called a `conflict`. Git will make a version of the file that contains text clearly marking off the part of the file where the conflict occurs, with the conflicting information marked out as well. The way to `resolve` the conflict is to open the file (typically with a text editor) and to delete the added git text, making a decision on which information is the correct information.
 
-**Caution** what follows might take a bit of time. It walks you through setting up a Git repository in your DH Box; making changes to it; making different branches; and publishing the repository to your space on Github.com.
+**Caution** what follows might take a bit of time. It walks you through setting up a git repository in your DH Box; making changes to it; making different branches; and publishing the repository to your space on Github.com.
 
 ### 4.1. git init 
 
@@ -323,7 +329,7 @@ Fixed the headings that were broken in the about section of readme.md
 
 Now let's assume that your `experiment` branch was successful - everything you did there you were happy with and you want to integrate all of those changes back into your `master` branch. We're going to merge things. To merge, we have to go back to the master branch: `$ git checkout master`. (Good practice is to keep separate branches for all major experiments or directions you go. In case you lose track of the names of the branches you've created, this command: `git branch -va` will list them for you.)
 
-1. Now, we merge with `$ git merge experiment`. Remember, a merge is a special kind of commit that rolls all previous commits from both branches into one - Git will open your text editor and prompt you to add a message (it will have a default message already there if you want it). 
+1. Now, we merge with `$ git merge experiment`. Remember, a merge is a special kind of commit that rolls all previous commits from both branches into one - git will open your text editor and prompt you to add a message (it will have a default message already there if you want it). 
 2. Save and exit and ta da! Your changes have been merged together.
 
 ### 4.5 git push
