@@ -40,12 +40,13 @@ The text you've just cleaned could now be loaded into something like [Palladio](
 
 In order to get this correspondence data into a network visualization tool, we will have to rename the "Sender" column to "source" and the "Recipient" column to "target". You could do this in a spreadsheet, of course. But since you have Open Refine running: 
 
-1. In the arrow to the left of Sender in the main OpenRefine window, select Edit column->Rename this column, and rename the column "source".
-2. In the top right of the window, select 'Export->Custom tabular exporter'.
-3. Notice that "source", "target", and "Date" are checked in the content tab; uncheck "Date", as it will not be used in Gephi (networks where the nodes have different dates, ie dynamic networks, are beyond us for the moment). 
-4. Go to the download tab and change the download option from 'Tab-separated values (TSV)' to 'Comma-separated values (CSV)' and press download. The file will likely download to your automatic download directory. We will revisit this file later. 
-5. Go ahead and drop this file into the Palladio interface. Do you see any interesting patterns? Make a note!
-6. Upload your cleaned file with a new name back **into** your DH Box; we will use this in the next module.
+1. In the arrow to the left of Sender in the main OpenRefine window, select Edit column->Rename this column, and rename the column "source"
+2. In the arrow to the left of Recipient in the main OpenRefine window, select Edit column->Rename this column, and rename the column "target"
+3. In the top right of the window, select 'Export->Custom tabular exporter'.
+4. Notice that "source", "target", and "Date" are checked in the content tab; uncheck "Date", as it will not be used in Gephi (networks where the nodes have different dates, ie dynamic networks, are beyond us for the moment). 
+5. Go to the download tab and change the download option from 'Tab-separated values (TSV)' to 'Comma-separated values (CSV)' and press download. The file will likely download to your automatic download directory. We will revisit this file later. 
+6. Go ahead and drop this file into the Palladio interface. Do you see any interesting patterns? Make a note!
+7. Upload your cleaned file with a new name back **into** your DH Box; we will use this in the next module.
 
 **Remember to copy your notes and any other information/observations/thoughts to your Github repo**
 

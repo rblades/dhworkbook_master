@@ -14,7 +14,7 @@ Many of these involve having to install more software on your own machine. In th
 
 **NB It is always very important to record in your own notebooks what version of R you used for your analysis, what version of any R packages you installed and used, and so on because packages can go out of date.**
 
-In the table below I've gathered the exercises together under the headings of **Text**, **Networks**, **Maps**, and **Charts**. I've also added some entries that I am categorizing under **Art** The first is a series of exercises on [the sonification of data](http://programminghistorian.org/lessons/sonification) and the second is a guide [to making twitterbots](https://programminghistorian.github.io/ph-submissions/lessons/intro-to-twitterbots); the third is about glitching digital imagery. These approaches can provide surprising and novel insights into history, as they move from representing history digitally to **performing** it. See for instance the final project in an undergraduate digital history class at the University of Saskatchewan by [Daniel Ruten](https://danielruten.wordpress.com/2017/04/15/sonic-word-clouds-an-experiment-with-data-sonification-part-i-introduction/) where he translated simple wordclouds of a WWI diary into a profound auditory performance. I would be very interested indeed to see if any final projects in HIST3814o gave sonification or twitterbots or glitch a try.
+In the table below I've gathered the exercises together under the headings of **Text**, **Networks**, **Maps**, and **Charts**. I've also added some entries that I am categorizing under **Art** The first is a series of exercises on [the sonification of data](http://programminghistorian.org/lessons/sonification) and the second is a guide [to making twitterbots](https://programminghistorian.github.io/ph-submissions/lessons/intro-to-twitterbots); the third is about glitching digital imagery. These approaches can provide surprising and novel insights into history, as they move from representing history digitally to **performing** it. Visit for instance [the final project in an undergraduate digital history class at the University of Saskatchewan by Daniel Ruten](https://danielruten.wordpress.com/2017/04/15/sonic-word-clouds-an-experiment-with-data-sonification-part-i-introduction/). Daniel translated simple wordclouds of a First World War diary into a profound auditory performance. I would be very interested indeed to see if any final projects in HIST3814o gave sonification or twitterbots or glitch a try.
 
 | Texts        | Networks         | Maps  | Charts | Art |
 | ------------- |:-------------:|:-----:|:--------:|--------:|
@@ -29,16 +29,14 @@ In the table below I've gathered the exercises together under the headings of **
 
 ## Exercise 1: Network Visualization
 
-This exercise uses the open source programme **Gephi** which you install on your own computer. If you'd rather not install anything, please see [Network Analysis in R](#exercise-9) instead.
+This exercise uses the open source program **Gephi** which you install on your own computer. If you'd rather not install anything, please see [Network Analysis in R](#exercise-9-network-analysis-in-r) instead.
 
 Recall that the index of the collected letters of the Republic of Texas was just a list of letters from so-and-so to so-and-so. We haven't looked at the content of those letters, but the shape of network - the meta data of that correspondence - can be revealing (remember [Paul Revere!](https://kieranhealy.org/blog/archives/2013/06/09/using-metadata-to-find-paul-revere/)) When we stitch that together into a network of people connected because they exchanged letters, we end up with a shard of their social network. Networks can be queried for things like power, position, and role, and so used judiciously, we can begin to suss something of the social structures in which their history took place. I would recommend that you also take a long look at Scott Weingart's series, [Networks Demystified](http://scottbot.net/networks-demystified-9-modality/). Finally, [heed our warning](http://www.themacroscope.org/?page_id=449).
 
-In this exercise, you will transform your Texan Correspondence data into a network, which you will then visualize with the open source programme **Gephi** The detailed instructions are [in our supporting materials](../supporting materials/gephi.txt.md).
-
------
+In this exercise, you will transform your Texan Correspondence data into a network, which you will then visualize with the open source programme **Gephi**. The detailed instructions are [in our supporting materials](../supporting materials/gephi.txt.md).
 
 ## Exercise 2: Topic Modeling Tool
-In exercise 2, you will use the **Topic Modeling Tool** to create a simple topic model and a webpage that allows you to browse the results.
+In this exercise you will use the **Topic Modeling Tool** to create a simple topic model and a webpage that allows you to browse the results.
 
 1. Download the [topic modeling tool from Github](https://github.com/senderle/topic-modeling-tool).
 2. Make sure you have some content on your own machine; the Colonial Newspaper Database is a handy corpus. (Created by Melodee Beals, it's a series of late 18th, early 19th century cleanly transcribed newspaper articles from Scotland and Northern England; You can grab [my copy from Github](https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv)). Or perhaps you might move your copy of the Shawville equity out of DH Box onto your computer. 
@@ -56,22 +54,18 @@ In exercise 2, you will use the **Topic Modeling Tool** to create a simple topic
 
 Make a note in your open notebook about your process and your observations. How does reading this material in this way change/challenge/or focus your understanding of the material?
 
------
-
 ## Exercise 3: Topic Modeling in R
 
 Exercise 2 was quite a simple way to do topic modeling. In this exercise, we are going to use a package for the R statistical language called 'Mallet' to do our topic modeling. One way isn't necessarily better than the other, although doing our analysis within R allows the potential for extending the analysis or combining it with other data. First, read [this introduction to R](../supporting materials/quick-intro-r.md) so what follows isn't a complete shock!
 
- - Guidance for doing this in RStudio [in the DH Box](../supporting materials/topicmodel-r-dhbox.md)
+ - Guidance for doing this in RStudio [**in the DH Box**](../supporting materials/topicmodel-r-dhbox.md)
  - Guidance for doing this in RStudio [**installed on your own computer**](../supporting materials/topicmodel-r-yourmachine.md)
-
-----
 
 ## Exercise 4: Text Analysis with Overview
 
-In exercise 4, we're going to look at the Colonial Newspaper Database again, but this time using a tool called 'Overview'. Overview uses a different approach that the topic models we've been discussing. In essence, it looks at word frequencies and their distributions within a document, and within a corpus, to organize the documents into folders of progressively similar word use.
+In this exercise, we're going to look at the Colonial Newspaper Database again, but this time using a tool called 'Overview'. Overview uses a different approach that the topic models we've been discussing. In essence, it looks at word frequencies and their distributions within a document, and within a corpus, to organize the documents into folders of progressively similar word use.
 
-1. You can download Overview to run on your own machine, but for our purposes, the hosted version on the [Overview Docs website](https://www.overviewdocs.com/) is sufficient. Go to that page, watch the video, create an account, and then log in. (More help about how Overview works [may be found on their blog](https://blog.overviewdocs.com/), including helpful videos.)
+1. You can download Overview to run on your own machine, but for our purposes, the hosted version on the [Overview Docs website](https://www.overviewdocs.com/) is sufficient. Go to that page, watch the video, create an account, and then log in (**you must create an account to use overview**). (More help about how Overview works [may be found on their blog](https://blog.overviewdocs.com/), including helpful videos.)
 2. Once you're inside, click 'import from a CSV file', and upload the CND.csv (which you can download and save to your own machine from [my Github](https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv) <- right-click and save as. 
 3. On the 'UPLOAD A CSV FILE' page in Overview click 'browse' and select the CND.csv. It will give you a preview. There are a number of options here - you can tell Overview which words to ignore, and which words to give added importance to. What words will you select? Make a note in your notebook. 
 4. Hit 'upload'.
@@ -80,22 +74,18 @@ In exercise 4, we're going to look at the Colonial Newspaper Database again, but
 
 **Going further:** Do you see how you could upload your documents that you collected during Module 2?
 
-----
-
 ## Exercise 5: Corpus Linguistics with AntConc
-Heather Froelich has put together an excellent step-by-step with using AntConc for exploring textual patterns within, and across, corpora of texts. Work your way through her [tutorial](http://hfroehli.ch/workshops/getting-started-with-antconc/)
+Heather Froelich has put together an excellent step-by-step with using AntConc for exploring textual patterns within, and across, corpora of texts. Work your way through her [tutorial](http://hfroehli.ch/workshops/getting-started-with-antconc/).
 
 Can you get our example materials (from the Colonial Newspaper Database) into AntConc? [This might help you](http://www.themacroscope.org/?page_id=418) to split the csv into individual txt files. Alternatively, do you have any materials of your own, already collected? Feed them into AntConc. What patterns do you see? What if you compare your materials against other corpora of texts?
 
-FYI, [CoRD has a collection of corpora that you can explore](http://www.helsinki.fi/varieng/CoRD/corpora/index.html).
-
------
+For your information, [CoRD has a collection of corpora that you can explore](http://www.helsinki.fi/varieng/CoRD/corpora/index.html).
 
 ## Exercise 6: Text Analysis with Voyant
 
-In module 2 if you recall, we worked through how to transform XML using stylesheets. Melodee Beals used a [stylesheet ](https://github.com/mhbeals/Colonial-Newspaper-Database/tree/master/Transformers) to transform her database into a series of individual txt files. In the exercises above, a transformer was used to make the database into a single CSV file. In this exercise, we are going to use [Voyant Tools](http://voyant-tools.org) to visualize patterns in word use in the database. Voyant can read either a CSV *or* text files. The advantage of uploading a folder of text files is that, if the files are in chronological order, Voyant's default visualizations will also be arranged in chronological order and thus we can see change over time.
+In [Module 2](../module-2/Exercises/#exercise-3-tei), if you recall, we worked through how to transform XML using stylesheets. Melodee Beals used a [stylesheet ](https://github.com/mhbeals/Colonial-Newspaper-Database/tree/master/Transformers) to transform her database into a series of individual txt files. In the exercises above, a transformer was used to make the database into a single CSV file. In this exercise, we are going to use [Voyant Tools](http://voyant-tools.org) to visualize patterns in word use in the database. Voyant can read either a CSV **or** text files. The advantage of uploading a folder of text files is that, if the files are in chronological order, Voyant's default visualizations will also be arranged in chronological order and thus we can see change over time.
 
-1\. Go to [Voyant Tools](http://voyant-tools.org). Paste the URL to the csv of the CND database: [https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv](https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv).
+1\. Go to [Voyant Tools](http://voyant-tools.org). Paste the following URL to the csv of the CND database: [https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv](https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv).
 
 2\. Now, open a new browser window, and go to this [colonial newspaper file on Voyant tools](http://voyant-tools.org/?corpus=colonial-newspapers&stopList=stop.en.taporware.txt)
 
@@ -109,24 +99,23 @@ Do you see the difference? In the latter window, the individual articles have be
 
 **Going further:** Upload materials you collected in module 2 and explore them.
 
------
 
 ## Exercise 7: RAW
 ### Quick Charts Using RAW
 
-A quick chart can be a handy thing to have. Google spreadsheets, Microsoft Excel, and a host of other programs can make excellent charts quickly with their wizard functions. Never hesitate to turn to these. However, they are not always good with non-numeric data. In module 3, you used the NER to extract place names from a text. After some further munging with regex, you might have ended up with a CSV that looks like [this similar CSV](https://raw.githubusercontent.com/hist3907b-winter2015/module4-holes/master/texas.csv). Can we do a quick visualization of this information? One useful tool is [RAW](http://raw.densitydesign.org/). 
+A quick chart can be a handy thing to have. Google spreadsheets, Microsoft Excel, and a host of other programs can make excellent charts quickly with their wizard functions. Never hesitate to turn to these. However, they are not always good with non-numeric data. In module 3, you used the NER to extract place names from a text. After some further munging with regex, you might have ended up with a CSV that looks like [this similar CSV](https://raw.githubusercontent.com/hist3907b-winter2015/module4-holes/master/texas.csv). Can we do a quick visualization of this information? One useful tool is [RAW](http://app.rawgraphs.io/). 
 
 1. Open RAW in a new window
 2. Copy the table of data of places mentioned in the Texan correspondence, and paste it into the data input box at the top of the RAW screen.
 
-**oh noes an error!**
+**Oh no, an error!**
 
 #### A quick data munge
 You should get an error message, to the effect that you need to check 'line 2'. What's gone wrong? RAW has checked the number of values you have in that row, and compared it to the number of columns in row 1 (which contains all the column names). It sees that the two don't match. What we need to do is add a default null value in those cells.
 
 1\. Go to [Google Sheets](https://www.google.ca/sheets/about/)
 
-2\. Click the 'go to google sheets' button, and then click on the big green plus sign to start a new sheet. 
+2\. Click the 'Go to Google Sheets' button, and then click on the big green plus sign to start a new sheet. 
 
 3\. Paste the following into the top-left cell (cell A1):
 
@@ -156,6 +145,8 @@ The formula you put in cell A1 now says `#REF!`. You can delete this now. This m
 
 You can now copy and paste your table of data into the data input box in RAW, and you should get the green thumbs up saying x records have been successfully parsed!
 
+**NB The Blank Detector add on may take a long time. Try it out on the CSV. You can copy the parsed data from [my Google Sheets file](https://docs.google.com/spreadsheets/d/12FRAMe0QaDfii3JL4RS7XYHiOFMusUVHhGsfP79uYaE/edit?usp=sharing).**
+
 #### Playing with RAW
 RAW takes your data, and depending on your choices, passes it into chart templates built on the D3.js code library. D3.js is a powerful library for making all sorts of charts (including interactive ones). If this sort of thing interests you, you can follow the tutorials in [Elijah Meeks' excellent new book](http://manning.com/meeks/).
 
@@ -175,7 +166,6 @@ When we look at the original letters, we see that the writer often identified th
 
 6\. You can export your visualization under the 'download' box at the bottom of the RAW page - your choices are as a simple raster image (png), a vector image (svg) or a data representation (json).
 
------
 ## Exercise 8: Simple Mapping and Georectifying
 
 In this exercise, you will find a historical map online, upload a copy to a mapwarper service, georectify it, and then display the map online, via a hosted service like CartoDB, and also through a map you will build yourself using leaflet.js. Finally, we will also convert csv to geojson using [Mapbox's geojson converter](https://mapbox.github.io/togeojson/), and we'll map that as a github gist. We'll also grab a geojson file hosted on github gist and import it into cartodb.
@@ -203,11 +193,11 @@ Georectifying is the process of taking an image (whether it is of a historical m
 
 10\. Having selected your control points, click on 'warp image'.
 
-11\. You can now click on the 'export' panel, and get the URL for your georectified image in a few different formats. If you clicked on the KML option, [a new google map window will open](https://maps.google.com/maps?q=http://warp.worldmap.harvard.edu/maps/4152.kml&output=classic&dg=feature). For many webmapping applications, the Tiles (Google/OSM scheme): Tiles Based URL is what you want. You'll get a URL like this: ```http://warp.worldmap.harvard.edu/maps/tile/4152/z/x/y.png``` Save that info. You'll need it later.
+11\. You can now click on the 'export' panel, and get the URL for your georectified image in a few different formats. If you clicked on the KML option, [a new Google Map window will open](https://maps.google.com/maps?q=http://warp.worldmap.harvard.edu/maps/4152.kml&output=classic&dg=feature). For many webmapping applications, the Tiles (Google/OSM scheme): Tiles Based URL is what you want. You'll get a URL like this: ```http://warp.worldmap.harvard.edu/maps/tile/4152/z/x/y.png``` Save that info. You'll need it later.
 
 You have now georectified a map. Let's use that map as a base layer in [Palladio](http://palladio.designhumanities.org/#/)
 
-We need some place data for Palladio. Here's what I'm using <br> ![Image for Palladio showing coordinates of landmarks in Ottawa](http://i.imgur.com/vTEiRxh.png) <br> Note how I've formatted this data. I'll be copying and pasting it into Palladio. (For more on how to input geographic data into Palladio, visit [the hdlab tutorial (pdf opens in new tab)](http://hdlab.stanford.edu/doc/scenario-point-to-point.pdf)). Basically, you want something like this:<br>
+We need some place data for Palladio. I'm using some landmarks in Ottawa as seen in the image below. <br><br> ![Image for Palladio showing coordinates of landmarks in Ottawa](http://i.imgur.com/vTEiRxh.png) <br><br> Note how I've formatted this data. I'll be copying and pasting it into Palladio. (For more on how to input geographic data into Palladio, visit [the hdlab tutorial (pdf opens in new tab)](http://hdlab.stanford.edu/doc/scenario-point-to-point.pdf)). Basically, you want something like this:<br>
 
 |   | Place      | Coordinates            |
 |---|------------|------------------------|
@@ -233,13 +223,11 @@ etc: that is, a tab between 'place' and 'coordinates' in the first line, a tab b
 
 Below is a video walk through; places where you might have got into trouble include getting past the initial data entry box on Palladio, and finding where exactly to past in your georectified map url.
 
-<iframe width="420" height="315" src="https://www.youtube.com/embed/KgLrvcA8v_M" frameborder="0" allowfullscreen></iframe>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/KgLrvcA8v_M" frameborder="0" allowfullscreen></iframe><br>
 
 Congratulations! You've georectified a map, and used it as a base layer for a visualization of some point data. References these [notes on using a georectified map with the CartoDB service](https://gist.github.com/shawngraham/a49a9834984ae0792345).
 
 ![Image showing historical map overlayed on modern map](http://i.imgur.com/0gCjh5X.jpg)
-
-----
 
 ## Exercise 9: Network Analysis in R
 
@@ -248,17 +236,12 @@ Earlier, we took the index from the Texan Correspondence, a list of letters from
 This exercise uses the R language to do our analysis, which in DH Box we access via R Studio, a programming environment. Please read [the introduction to R in our supporting materials](../supporting materials/quick-intro-r.md) and then progress to the [netviz exercise](../supporting materials/netviz.md).
 
 ## Exercise 10: QGIS
-### QGIS
 
 There are many excellent tutorials around concerning how to get started with GIS. Our own library, in the [MADGIC centre](https://www.library.carleton.ca/contact/service-points/maps-data-and-government-information-centre) has tremendous resources and I would encourage you to speak with the map librarians before embarking on any **serious** mapping projects. In the short term, the historian [Fred Gibbs](http://fredgibbs.net/) has an excellent series on using the open source GIS platform **QGIS** to make and map historical data.
 
-For this exercise, I would recommend you try Gibbs' first tutorial,
+For this exercise, I would recommend you try Gibbs' first tutorial, ['Making a map with QGIS'](http://fredgibbs.net/tutorials/qgis/making-a-map-with-qgis.html).
 
-['Making a map with QGIS'](http://fredgibbs.net/tutorials/qgis/making-a-map-with-qgis.html)
-
-...and then, try georectifying a historical map and adding it to your GIS:
-
-['Using Historical maps with qgis'](http://fredgibbs.net/tutorials/qgis/overlaying-historic-maps-with-qgis.html)
+Next, try georectifying a historical map and adding it to your GIS following Gibbs' other tutorial ['Using Historical maps with qgis'](http://fredgibbs.net/tutorials/qgis/overlaying-historic-maps-with-qgis.html).
 
 ## Going Further
 There are many tutorials at [The Programming Historian](http://programminghistorian.org/lessons/) that are appropriate here. Try some under the 'data manipulation' or 'distant reading' headings.

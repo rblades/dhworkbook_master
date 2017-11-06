@@ -9,10 +9,28 @@ In the script panel (top left; click on the green plus side and select new R scr
 ```r
 install.packages("mallet")
 library("mallet")
-install.packages('RCurl')
-library(RCurl)
+install.packages("RCurl")
+library("RCurl")
 ```
 In the future, now that you've installed these packages you won't have to again, so you can comment them out by placing a ```\#```in front.
+
+### How to fix RCurl Package installation error
+
+When attempting to run `install.packages("RCurl")` you may get an error along the lines of 
+
+```
+checking for curl-config... no
+Cannot find curl-config
+ERROR: configuration failed for package ‘RCurl’
+```
+
+To fix this, navigate to the DH Box command line and type `sudo apt-get install libcurl4-gnutls-dev`. When the installation is successful, you can now install RCurl by running the last two lines of the script:
+
+```
+install.packages("RCurl")
+library("RCurl")
+```
+
 
 ## Importing data directly from the web
 

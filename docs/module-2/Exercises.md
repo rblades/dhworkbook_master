@@ -105,12 +105,13 @@ The problem is: how to retrieve those oocihm numbers. The answer is, 'we write a
 
 5\. We need the command line program jq. We install it into our DH Box with `$ sudo apt-get install jq -y`
 
-6\. We need to create a program. Make a new directory for this exercise like so: `$ mkdir m2e4`. Then, change into that directory by typing `$ cd m2e4`. Make sure that's where you are by typing `$ pwd`. Now, make an empty file for our program with `$ touch canadiana.sh`. Touch makes an empty file; the .sh in the filename indicates that this is a shell script.
+6\. We need to create a program. Make a new directory for this exercise like so: `$ mkdir m2e4`. Then, change into that directory by typing `$ cd m2e4`. 
 
-7\. Open the empty file with `$ nano canadiana.sh`. Now, the program that Ian Milligan wrote makes calls to the API that **used to live** at eco.canadiana.ca. But note the [error message on Canadiana's website](http://eco.canadiana.ca/view/oocihm.16278/?r=0&s=1&fmt=json&api_text=1). So we have to change Milligan's script so that it points to the API at search.canadiana.ca. Copy the script below into your empty canadiana.sh. If you want, adjust the search parameters (in the line starting with `pages`) for material you're more interested in.
+7\. Make sure that's where you are by typing `$ pwd`. Now, make an empty file for our program with `$ touch canadiana.sh`. Touch makes an empty file; the .sh in the filename indicates that this is a shell script.
+
+8\. Open the empty file with `$ nano canadiana.sh`. Now, the program that Ian Milligan wrote makes calls to the API that **used to live** at eco.canadiana.ca. But note the [error message on Canadiana's website](http://eco.canadiana.ca/view/oocihm.16278/?r=0&s=1&fmt=json&api_text=1). So we have to change Milligan's script so that it points to the API at search.canadiana.ca. Copy the script below into your empty canadiana.sh. If you want, adjust the search parameters (in the line starting with `pages`) for material you're more interested in.
 
 ```
-bash
 #! /bin/bash
 
 pages=$(curl 'http://search.canadiana.ca/search?q=ottawa*&field=&so=score&df=1914&dt=1918&fmt=json' | jq '.pages')
@@ -139,17 +140,17 @@ awk '$0="search.canadiana.ca/view/"$0' cleanlist.txt| awk '{print $0 "/1?r=0&s=1
 wget -i urlstograb.txt -O output.txt
 ```
 
-8\. Hit ctrl+x to exit Nano, and save the changes.
+9\. Hit ctrl+x to exit Nano, and save the changes.
 
-9\. Before we can run this program, we have to tell DH Box that it is alright to run it. To change the 'permissions' on the file, type `$ chmod 755 canadiana.sh`
+10\. Before we can run this program, we have to tell DH Box that it is alright to run it. To change the 'permissions' on the file, type `$ chmod 755 canadiana.sh`
 
 The `$ chmod` command means change mode. Each number represents a user permission for reading, writing, and executing files on your computer.  
 
-10\. And now we can run the program (the ./ is important!) by typing `$ ./canadiana.sh`
+11\. And now we can run the program (the ./ is important!) by typing `$ ./canadiana.sh`
 
 Ta da! You now have a pretty powerful tool now for grabbing data from one of the largest portals for Canadian history! 
 
-11\. Download your output.txt file to your computer via the file manager and have a look at it. 
+12\. Download your output.txt file to your computer via the file manager and have a look at it. 
 
 Make sure to make a file noting what you've done, commands you've made, etc, and upload it in your Github repository.
 
@@ -191,7 +192,7 @@ If you search for `canada150` , there are, what, 36 million Canadians? How many 
 
 **Note that Twitter only gives access to the last two weeks or so via search.** For grabbing the stream **as an event happens** you'd use the `twarc stream` command - see the Twarc documentation for more.
 
-It might take some time for the search to happen. **You can always force-stop the search by hitting ctrl+c.** If you do that though there could be an error in the formatting of the file which will throw an error when you get to step 10. You can still open the json in a text editor though, but you will have to go to the end of the file and fix the formatting.
+It might take some time for the search to happen. **You can always force-stop the search by hitting ctrl+c.** If you do that though there could be an error in the formatting of the file which will throw an error when you get to step 15. You can still open the json in a text editor though, but you will have to go to the end of the file and fix the formatting.
 
 The data being collected is in json format. That is, a list of 'keys' and 'values'. This is a handy format for computers, and some data visualization platforms require data in this format. For our purposes we might want to transform the json into a csv (comma separated) table - a spreadsheet.
 

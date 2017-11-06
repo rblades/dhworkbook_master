@@ -4,9 +4,10 @@ This worksheet, and all related files, are released CC-BY.
 
 [By M. H. Beals](https://github.com/mhbeals/TEI-Close-Reading); Adapted for HIST3814o by S Graham
 
-1. You will need the files in [the Crafting Digital History Github module 3 folder](https://github.com/craftingdigitalhistory/module3-wranglingdata). 
+1. You will need the files in [the Crafting Digital History Github module 3 folder](https://github.com/craftingdigitalhistory/module3-wranglingdata). **You need the folder `tei-hist3907` **
 2. Select the Clone or Download button and choose download zip to download that repository as a zip file. 
-3. Unzip it somewhere handy on your machine. Inside will be the subfolder named tei-hist3907.
+3. Unzip it somewhere handy on your machine. Inside will be the subfolder named `tei-hist3907`.
+4. Open the subfolder named `tei-hist3907`.
 
 This exercise will explore a historical text and help you create a digital record of your analysis
 
@@ -77,7 +78,7 @@ Now that you have highlighted these, you are going to put proper code around the
 ```<placeName key="Sheffield, United Kingdom" ref="http://tools.wmflabs.org/geohack/geohack.php?pagename=Sheffield&params=53_23_01_N_1_28_01_W_type:city_region:GB""> </placeName>```
 
 + In **key**, put the city and country with best information you can find for the modern names for this location
-+ In **ref**, put a link to the relevant coordinates on Wikipedia GeoHack website (http://tools.wmflabs.org/geohack/)
++ In **ref**, put a link to the relevant coordinates on [Wikipedia GeoHack website](http://tools.wmflabs.org/geohack/).
 **To obtain this, go to the Wikipedia page for this city and click on the latitude/longitude coordinates for the location. For large areas, such as entire countries or continents, just use the Wikipedia page URL.**
 
 4\. For claims or arguments, surround your text with these

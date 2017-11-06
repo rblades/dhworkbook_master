@@ -31,13 +31,13 @@ In the previous module, we learned how to automatically grab text from sites lik
 
 The `curl` command downloads the txt file and the the `>` pushes the result of the curl command to a file called texas.txt.
 
-2\. Open `texas.txt` with Nano and delete everything for the index of the list of letters (we just want the index). 
+2\. Open `texas.txt` with Nano and delete everything except for the index of the list of letters (we just want the index). 
 
-3\. To select a lot of text in Nano, you set a starting point (a mark) with ctrl+shift+6 (the 'carat' symbol: ^). 
+> a. To select a lot of text in Nano, you set a starting point (a mark) with ctrl+shift+6 (the 'carat' symbol: ^). 
 
-4\. Then hit the down arrow on your keyboard, and you will highlight the text. 
+> b. Then hit the down arrow on your keyboard, and you will highlight the text. 
 
-5\. When you've selected everything you want, hit ctrl + k to cut the text.
+> c. When you've selected everything you want, hit ctrl+k to cut the text.
 
 That is, you’re looking for the table of letters, starting with ‘Sam Houston to J. Pinckney Henderson, December 31, 1836 51’ and ending with ‘Wm. Henry Daingerfield to Ebenezer Allen, February 2, 1846 1582’. Your file will now have approximately 2000 lines in it.
 
@@ -52,6 +52,8 @@ Sender, Recipient, Date
 We want to keep every line that has this information in it:
 
 + Sender to Recipient, Month, Date, Year, Page
+
+7\. Save the file in nano: ctrl+x, Y, enter 
 
 WARNING: Regex can be very tricky. When I'm working with Regex, I copy and paste some of the text I'm working on into the box at [RegExr](http://www.regexr.com/) and fiddle with the pattern until it does what I want. In fact, spend some time looking at their examples before you go any further in this exercise.
 
@@ -73,19 +75,23 @@ and grep works like this:
 
 **Discussion:** Read in full before doing any manipulation of your text!
 
-**If you were using a text editor on your own computer** like, for instance Notepad++, you would press ctrl-f or search->find to open the find dialogue box.  In that box, go to the 'Replace' tab, and check the radio box for 'Regular expression' at the bottom of the search box. In TextWrangler, hit command+f to open the find and replace dialogue box.  Tick off the ‘grep’ radio button (which tells TextWrangler that we want to do a regex search) and the ‘wraparound’ button (which tells TextWrangler to search everywhere). In Sublime text, command+f opens the 'find' box (and shift+command+f opens find **and** replace). Tick the '.\*' button to tell Sublime we're working with regular expressions.
+**If you were using a text editor on your own computer like, for instance**
+
++ **Notepad++:** press ctrl+f or search->find to open the find dialogue box. In that box, go to the 'Replace' tab, and check the radio box for 'Regular expression' at the bottom of the search box. 
++ **TextWrangler:** hit command+f to open the find and replace dialogue box. Tick off the ‘grep’ radio button (which tells TextWrangler that we want to do a regex search) and the ‘wraparound’ button (which tells TextWrangler to search everywhere). 
++ **Sublime text:** command+f opens the 'find' box (and shift+command+f opens find **and** replace). Tick the '.\*' button to tell Sublime we're working with regular expressions.
 
 **However, we're going to use the two commands sed and grep at the command prompt in DH Box**.
 
-Remember from our basic introduction that there's a way to see if the word "to" appears in full. Type
+Remember from our basic introduction that there's a way to see if the word "to" appears in full. 
 
-```
-$ grep '\bto\b' texas.txt
-```
+1\. Type `$ grep '\bto\b' texas.txt`
 
 The results print out to the screen. This command finds every instance of the word "to" (and not, for instance, also ‘potato’ or ‘tomorrow’ - try `grep 'to' texas.txt` instead to see the difference).
 
-We don't just want to find "to", but the entire line that contains it. We assume that every line that contains the word “to” in full is a line that has relevant letter information, and every line that does not is one we do not need. You learned earlier that the query ```.+``` returns any amount of text, no matter what it says. Thus, the pattern that we will build when we are ready to use the `sed` command (where the 's' means 'stream' and 'ed' means 'editor') will include `.+\bto\b.+` so that we edit every line which includes the word "to" in full, no matter what comes before or after it, and none of the lines which don't.
+We don't just want to find "to", but the entire line that contains it. We assume that every line that contains the word “to” in full is a line that has relevant letter information, and every line that does not is one we do not need. 
+
+You learned earlier that the query `.+` returns any amount of text, no matter what it says. Thus, the pattern that we will build when we are ready to use the `sed` command (where the 's' means 'stream' and 'ed' means 'editor') will include `.+\bto\b.+` so that we edit every line which includes the word "to" in full, no matter what comes before or after it, and none of the lines which don't.
 
 As mentioned earlier, we want to add a tilde ~ before each of the lines that look like letters, so we can save them for later. This involves the find-and-replace function, and a query identical to the one before, but with parentheses around it, so it looks like
 
@@ -95,11 +101,11 @@ As mentioned earlier, we want to add a tilde ~ before each of the lines that loo
 
 and the entire line is placed within a parenthetical group. Since this the first group in our search expression, we can replace that group with `\1` and put the tilde in front of it like so: `~\1`.
 
-1\. Copy and past some of your text into [RegExr.com](http://RegExr.com). 
+2\. Copy and past some of your text into [RegExr.com](http://RegExr.com). 
 
-2\. Write your regular expression (ie. what you're trying to find), and your substitution (ie, what you're replace with) in the RegExr interface. 
+3\. Write your regular expression (ie. what you're trying to find), and your substitution (ie. what you're replace with) in the RegExr interface. 
 
-3\. Once you're satisfied that you've got it right, we put the complete expression into our sed command:
+4\. Once you're satisfied that you've got it right, we put the complete expression into our sed command:
 
 `sed -r -i.bak 's/(.+\bto\b.+)/~\1/g' texas.txt`
 
@@ -112,11 +118,11 @@ where:
 
 When you hit enter, the computer seems to pause for a moment, and then gives you the command prompt again. 
 
-4\. Type `ls` and you'll see that a new file, `texas.txt.bak` has been created.
+5\. Type `ls` and you'll see that a new file, `texas.txt.bak` has been created.
 
-5\. Type `nano texas.txt` and examine the file. You should now have ~ characters at the start of each entry of the index!
+6\. Type `nano texas.txt` and examine the file. You should now have ~ characters at the start of each entry of the index!
 
-> If for some reason you don't, or you've mangled your original file, you can replace texas.txt with the backup file you made like so: `$ mv old-file-name new-file-name` thus, `$ mv texas.txt.bak texas.txt`. Use Nano to confirm that you're back to where you needed to be, and try again.
+If for some reason you don't, or you've mangled your original file, you can replace texas.txt with the backup file you made like so: `$ mv old-file-name new-file-name` thus, `$ mv texas.txt.bak texas.txt`. Use Nano to confirm that you're back to where you needed to be, and try again.
 
 ### Step Two
 
@@ -244,10 +250,10 @@ The pattern you want in step three is
 The pattern for step four is
 `sed -r -i.bak 's/~//g' index.txt`.
 
-The pattern for step five is:
+The pattern for step five is
 `sed -r -i.bak 's/(\b to \b)/,/g' index.txt`
 
-The pattern for step six is:
+The pattern for step six is
 
 `grep -E ".+,.+,.+," index.txt`
 
@@ -255,4 +261,4 @@ In DH Box, the command will use `-r`
 
 `grep -r ".+,.+,.+," index.txt`
 
-The `-E` tells grep to treat the pattern as an extended regex (regex with a few more bells and whistles). On DHBox, the flag would be `-r`, nb.
+The `-E` tells grep to treat the pattern as an extended regex (regex with a few more bells and whistles). On DH Box, the flag would be `-r`.

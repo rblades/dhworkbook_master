@@ -8,7 +8,7 @@ A regular expression (also called regex) is a powerful tool for finding and mani
 
 Regular expressions can look pretty complex, but once you know the basic syntax and vocabulary, simple ‘regexes’ will be easy. Regular expressions can often be used right inside the 'Find and Replace' box in many text and document editors, such as Sublime Text, Atom, or Notepad++. You cannot use Microsoft Word, however!
 
-**NB** In text editors, you have to indicate that you wish to do a regex search. For instance, in Notepad++ when you do a search, to use regular expressions you must tick off the checkbox enabling them. Otherwise, Notepad++ will treat your search literally, looking for that exact **text** rather than the **pattern**. Similarly in Textwrangler, you need to tick off the box marked 'grep' when you bring up the search dialogue panel. In Sublime Text, you need to tick the box that has `.*` in the search panel to enable regular expression searches.**
+**NB** In text editors, you have to indicate that you wish to do a regex search. For instance, in Notepad++ when you do a search, to use regular expressions you must tick off the checkbox enabling them. Otherwise, Notepad++ will treat your search literally, looking for that exact **text** rather than the **pattern**. Similarly in Textwrangler, you need to tick off the box marked 'grep' when you bring up the search dialogue panel. In Sublime Text, you need to tick the box that has `.*` in the search panel to enable regular expression searches.
 
 Please also note that while this information on regex basics was initially written with the text editors Notepad++ and Textwrangler in mind, all that follows applies equally to other text editors that can work with regular expressions.
 
@@ -98,7 +98,7 @@ Parentheses in regular expressions are also very useful when replacing text. The
 
 ```(dogs)( and )(cats)```
 
-which would find all instances of "dogs and cats" in your document, your program would remember "dogs" is group 1, " and " is group 2, and "cats" is group 3. Notepad++ remembers them as `"\1"`, `"\2"`, and `"\3"` for each group respectively.
+which would find all instances of "dogs and cats" in your document, your program would remember "dogs" is group 1, "and" is group 2, and "cats" is group 3. Notepad++ remembers them as `"\1"`, `"\2"`, and `"\3"` for each group respectively.
 
 If you wanted to switch the order of "dogs" and "cats" every time the phrase "dogs and cats" appeared in your document, you would type
 

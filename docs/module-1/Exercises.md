@@ -411,11 +411,19 @@ $ git remote add upstream THE-FULL-URL-TO-THEIR-REPO-ENDING-WITH-.git
 $ git fetch upstream
 ```
 
-3\. Now let's make a `pull` request (you might want to [bookmark Github's help document for pull requests](https://help.github.com/articles/creating-a-pull-request/)). Go to your copy of your classmate's repository at your Github account. Make sure you've selected the correct branch you pushed your changes to, by selecting it from the Branches menu drop down list.
+Now let's make a `pull` request (you might want to [bookmark Github's help document for pull requests](https://help.github.com/articles/creating-a-pull-request/)). 
+
+3\. Go to your copy of your classmate's repository at your Github account. Make sure you've selected the correct branch you pushed your changes to, by selecting it from the Branches menu drop down list.
 
 4\. Click the 'new pull request' button.
 
-5\. The new page that appears can be confusing, but it is trying to double check with you which changes you want to make, and where. **Base Branch** is the branch where you want your changes to go, ie, your classmate's repository. **head branch** is the branch where you made **your** changes. Make sure these are set properly. Remember: the first one is the TO, the second one is the FROM: the place where you want your changes to go TO, FROM the place where you made the changes.
+5\. The new page that appears can be confusing, but it is trying to double check with you which changes you want to make, and where. 
+
++ **Base branch** is the branch where you want your changes to go, ie. your classmate's repository. 
+
++ **Head branch** is the branch where you made **your** changes. 
+
+Make sure these are set properly. Remember: the first one is the TO, the second one is the FROM: the place where you want your changes to go TO, FROM the place where you made the changes.
 
 6\. A pull request has to have a message attached to it, so that your classmate knows what kind of change you're proposing. Fill in the message fields appropriately, then hit the 'create pull request' button.
 

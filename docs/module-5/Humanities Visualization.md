@@ -31,3 +31,4 @@ I also have a [number of pieces of my own archaeological work](https://carleton-
 No formal readings are assigned this week. Below you can watch a video of me sonifying a topic model of John Adam's mind.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ikqRXtI3JeA" frameborder="0" allowfullscreen></iframe>
+<br>
