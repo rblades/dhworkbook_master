@@ -1,4 +1,4 @@
-#Crafting Digital History, A Workbook by Shawn Graham
+#Crafting Digital History, A Workbook by Shawn Graham and Rob Blades
 
 ![Black and white historical image showing women studying in library. Title overlays on image saying "Crafting Digital History, A Workbook by Shawn Graham"](https://www.penflip.com/shawngraham/crafting-digital-history-workbook/blob/master/images/cover.png?raw=true)
 

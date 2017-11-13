@@ -241,7 +241,7 @@ There are many excellent tutorials around concerning how to get started with GIS
 
 For this exercise, I would recommend you try Gibbs' first tutorial, ['Making a map with QGIS'](http://fredgibbs.net/tutorials/qgis/making-a-map-with-qgis.html).
 
-Next, try georectifying a historical map and adding it to your GIS following Gibbs' other tutorial ['Using Historical maps with qgis'](http://fredgibbs.net/tutorials/qgis/overlaying-historic-maps-with-qgis.html).
+Next, try georectifying a historical map and adding it to your GIS following Gibbs' other tutorial ['Using Historical maps with QGIS'](http://fredgibbs.net/tutorials/qgis/overlaying-historic-maps-with-qgis.html).
 
 ## Going Further
 There are many tutorials at [The Programming Historian](http://programminghistorian.org/lessons/) that are appropriate here. Try some under the 'data manipulation' or 'distant reading' headings.
