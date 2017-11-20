@@ -1,6 +1,6 @@
 #Module 3 Exercises
 
-## Exercise 1
+## Exercise 1: Regular Expressions
 
 When we have text that has been marked up, we can do interesting things with it. In the previous module, you saw that XSL can be used to add styles to your XML (which a browser can interpret and display). You can see how having those tags makes for easier searching for information as well, right? Sometimes things are not well marked up. Sometimes, it's all a real mess. In this exercise, we'll explore 'regular expressions', (aka 'Regex') or ways of asking the computer to search for *patterns* rather than matching exact text.
 
@@ -14,7 +14,7 @@ What if you had **a lot** of documents that you needed to clean up? One way of d
 
 **Remember to copy your history file and any other information, observations, or thoughts to your Github repo.**
 
-## Exercise 2
+## Exercise 2: Open Refine
 
 **Open Refine** is the final tool we'll explore in this module. This engine allows us to clean up our messy data. We will feed it the results from Exercise 2 in order to consolidate individuals (ie. 'Shawn' and 'S4awn' are probably the same person, so Open Refine will consolidate that information for us). This exercise also follows a tutorial originally written for [The Macroscope](http://themacroscope.org).
 

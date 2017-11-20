@@ -22,9 +22,15 @@ Popular general purpose plain text editors include [TextWrangler](https://www.ba
 
 In this exercise, I want you to become familiar with Markdown syntax. Check out [Sarah Simpkin's quick primer on markdown](http://programminghistorian.org/lessons/getting-started-with-markdown). There are a number of 'flavours' for Markdown, but in essence, they all mimic the kinds of conventions you would see in an email, using asterisks to indicate emphasis and so on.
 
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DZRVhlRGMjg" frameborder="0" gesture="media" allowfullscreen></iframe>
+
 1. Check out [the markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 2. Visit [dillinger.io](http://dillinger.io) in a new browser window. This looks like a wordprocessor. The left hand side of the screen is where you write, the right hand side shows you what your text will look like if you converted the text to html. Dillinger 'saves' your work in your browser's memory. You can also point it to save to your Dropbox, Google Drive, or Github account (under the cogwheel icon).
 3. Write a short 200-500 word piece on the most interesting annotation you've seen one of your classmates make. Why is it interesting? Why has it struck you?
+<br><br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/B08Dnmk_6OU" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br>
 4. Grab at least two Creative Commons images and link outwards to four websites that are relevant to your piece. The Creative Commons license allows re-use. Do you know how to [find Creative Commons images](https://search.creativecommons.org/)?
 5. Make sure you link to the annotation in question.
 6. Make sure to add the file type .md at the end, in the 'document name' slot.
