@@ -27,6 +27,10 @@ install.packages('igraph')
 library('igraph')
 ```
 
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vRg71uHhEA0" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br>
+
 ## Getting the data into your project
 
 For future reference, we're adapting our script from a more in-depth [tutorial of R igraph](http://kateto.net/networks-r-igraph).
@@ -121,6 +125,10 @@ plot(net, edge.arrow.size=.4,vertex.label=NA)
 
 ```
 
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LOky3-Rycms" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br>
+
 Before we jump down the rabbit hole of visualization, let's recognize right now that **visualizing** a network is only rarely of analytical value. The value of network analysis comes from the various questions we can now start posing of our data when it is represented as a network. In this correspondence network, who is in the centre of the web? To whom would information flow? To whom would information leak? Are there cliques or ingroups? When we identify such individuals, how does that confirm or confound our expectations of the period and place?
 
 Many different kinds of metrics can be calculated (and [the Kateto R igraph tutorial will show you how](http://kateto.net/networks-r-igraph)) but it's always worth remembering that a metric is only meaningful for a given network when we're dealing with like things - a network of people who write letters to one another; a network of banks that swap mortgages with one another. These are called 'one mode networks'. A network of people connected to the banks they use - a two mode network, because it connects two different kinds of things - might be useful to **visualize** but the metrics calculated might not be **valid** if the metric was designed to work on a one-mode network (for more on this and allied issues, visit [Scott Weingart's website](http://www.scottbot.net/HIAL/index.html@p=6279.html)).
@@ -179,6 +187,10 @@ lapply(cfg, function(x) write.table( data.frame(x), 'cfg.csv'  , append= T, sep=
 
 We create a new variable called 'cfg' and get the 'cluster_fast_greedy' algorithm to perform its calculations. The next line writes the groups to a file, separating each group with an x. (If you tried 'write.csv' as before, you'll get an error message because the output of the algorithm gives a different kind of data type. R is fussy like this.) Examine that file - what groups do you spot? What might these mean, if you went back to the content of the original letters?
 
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ek1QvOoN6q8" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br>
+
 ## Visualization
 
 1\. The line below will plot out our network, colouring it by the communities discerned above:
@@ -222,3 +234,7 @@ for (layout in layouts) {
 ```
 
 4\. Good luck! Remember to save your script, and upload the entire project folder to your github repository.
+
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lqGBYzNJCu0" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br>

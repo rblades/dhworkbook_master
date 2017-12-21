@@ -16,6 +16,10 @@ In this exercise, we are going to use a tool that originated with Google. Since 
 3. Follow the installation instructions. 
 4. Start Open Refine by double clicking on its icon. This will open a new browser window, pointing to `http://127.0.0.1:3333`. This location is your own computer, so even though it looks like it’s running on the internet, it isn’t. The ‘3333’ is a ‘port’, meaning that Open Refine is running much like a server, serving up a webpage via that port to the browser. (If the browser window doesn't open automatically, open one and put `http://127.0.0.1:3333` in the address bar).
 
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Y1M8zEsy9NE" title="Installing Open Refine" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br>
+
 ## Start Cleaning our Texan Correspondence
 
 Make sure you have your data handy that you created in exercise 1, the Texan correspondence. You can get it out of your DH Box by using the DH Box filemanager. 
@@ -35,6 +39,10 @@ Make sure you have your data handy that you created in exercise 1, the Texan cor
 13. Repeat step 12 for "Recipient". The resulting spreadsheet will not be perfect, but it will be much easier to clean by hand than it would have been before taking this step. 
 14. Click on ‘export’ at the top right of the window to get your data back out as a .csv file.
 
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/o8-e3_iKI1I" title="Cleaning our Correspondence with Open Refine" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br>
+
 ## Now what?
 The text you've just cleaned could now be loaded into something like [Palladio](http://palladio.designhumanities.org/) or [Gephi](http://gephi.org) or [Connect the Dots](https://databasic.io/en/connectthedots/) for network analysis! However, every network analysis program has its own idiosyncracies. Gephi and Connect the Dots, for instance, can import lists of relationships if the CSV file has columns labelled 'source' and 'target' (Connect the Dots will _only_ accept those two columns, so you'd have to delete the date column if you wanted to give that a try). So let's assume that's where we want to visualize & analyze this data:
 
@@ -47,6 +55,10 @@ In order to get this correspondence data into a network visualization tool, we w
 5. Go to the download tab and change the download option from 'Tab-separated values (TSV)' to 'Comma-separated values (CSV)' and press download. The file will likely download to your automatic download directory. We will revisit this file later. 
 6. Go ahead and drop this file into the Palladio interface. Do you see any interesting patterns? Make a note!
 7. Upload your cleaned file with a new name back **into** your DH Box; we will use this in the next module.
+
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QdJYiUODFE8" title="Preparing our file for export" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br>
 
 **Remember to copy your notes and any other information/observations/thoughts to your Github repo**
 

@@ -56,6 +56,10 @@ The data is in this location: `http://collections.banq.qc.ca:8008/jrn03/equity/s
 
 5\. Open some of the text files in Nano. How good, how careful was the 'object character recognition'? Part of the point of working with the Equity files is to show that even with horrible 'digitization', we can still extract useful insights. Digitization is more than simply throwing automatically generated files online. Good digitization requires scholarly work and effort! We will learn how to do this properly in the next exercise.
 
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/66ZimGEOF2M" title="Using wget to download historical sources" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br>
+
 ## Exercise 3: TEI
 
 Digitization requires human intervention. This can be as straightforward as correcting errors or adjusting the scanner settings when we do OCR, or it can be the rather more involved work of adding a layer of semantic information to the text. When we mark up a text with the semantic hooks and signs that explain we are talking about **London, Ontario** rather than **London, UK**, we've made the text a whole lot more useful for other scholars or tools. In this exercise, you will do some basic marking up of a text using standards from the [Text Encoding Initiative](http://www.tei-c.org/index.xml). (Some of the earliest digital history work was along these lines). 
@@ -96,6 +100,10 @@ Your search query has been put into the URL. You're looking at the API! Everythi
 If you go to the [Canadiana API support page](http://search.canadiana.ca/support/api) you can see the full list of options. What we are particularly interested in now is the bit that says `&fmt=json`
 
 4\. Add that to your query URL. How different the results now look! What's nice here is that the data is formatted in a way that makes sense to a machine - which we'll learn more about in due course.
+
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9d_VKJg7f04" title="Introduction to the Canadiana API" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br>
 
 If you look back at the full list of API options, you'll see at the bottom that one of the options is 'retrieving individual item records'; the key for that is a field called **oocihm**. If you look at your page of json results, and scroll through them, you'll see that each individual record has its own oocihm number. If we could get a list of those, we'd be able to programmatically slot them into the commands for retrieving individual item records:
 
@@ -142,6 +150,10 @@ wget -i urlstograb.txt -O output.txt
 
 9\. Hit ctrl+x to exit Nano, and save the changes.
 
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eluDmaNPKKc" title="Writing a bash script with the command line" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br>
+
 10\. Before we can run this program, we have to tell DH Box that it is alright to run it. To change the 'permissions' on the file, type `$ chmod 755 canadiana.sh`
 
 The `$ chmod` command means change mode. Each number represents a user permission for reading, writing, and executing files on your computer.  
@@ -153,6 +165,10 @@ Ta da! You now have a pretty powerful tool now for grabbing data from one of the
 12\. Download your output.txt file to your computer via the file manager and have a look at it. 
 
 Make sure to make a file noting what you've done, commands you've made, etc, and upload it in your Github repository.
+
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1on4g8qjEKI" title="Accessing the Canadiana API with a command line script" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br>
 
 ## Exercise 5: Mining Twitter
 
@@ -182,6 +198,10 @@ Ed Summers is part of a project called '[Documenting the Now](http://www.docnow.
 
 12\. Now type `$ twarc configure ` and give it the information it asks for (your consumer secret etc).
 
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UgpK6daPSP8" title="Preparing the command line to interact with Twitter" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br>
+
 You're now ready to search. For instance, `$ twarc search canada150 > search.json` will search Twitter for posts using the canada150 hashtag. 
 
 **Wait! Don't run that command! (Force-stop the search by hitting ctrl+c.)** 
@@ -205,6 +225,10 @@ The data being collected is in json format. That is, a list of 'keys' and 'value
 17\. Use twarc to create a file with a list of ids. 
 
 18\. Lodge this list and your history and notes in your repository.
+
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bdsJwoWjj6s" title="Mining data from Twitter with the command line" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br>
 
 **NB Twitter forbids the sharing of the full metadata of a collection of tweets. You may however share a list of tweet IDs. See the Twarc documentation for the instructions on how to do that.**
 
@@ -249,6 +273,10 @@ In this exercise, you'll:
 
 9\. Extract text! `$ tesseract file.tiff output.txt` This might also take some time.
 
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/i7Q8rw-lgrc" title="Preparing the command line to convert PDF to text" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br>
+
 10\. Download the output.txt file to your own machine via DH Box's filemanager. 
 
 11\. Open the file with a text editor (there might be a lot of white space at the start of the file, fyi). 
@@ -258,6 +286,10 @@ In this exercise, you'll:
 13\. Look up the [Tesseract wiki](https://github.com/tesseract-ocr/tesseract/wiki/Command-Line-Usage). What other options could you use with the tesseract command to improve the results? 
 
 14\. When you decide to download Tesseract to you own computer, use the following two guides to automating bulk OCR (multiple files) with tesseract: [Peirson's](https://diging.atlassian.net/wiki/display/DCH/Tutorial%3A+Text+Extraction+and+OCR+with+Tesseract+and+ImageMagick), [Schmidt's](http://benschmidt.org/dighist13/?page_id=129).
+
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vMQVomuo_CU" title="Using the command line to convert PDF to text" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br>
 
 ## wget command to grab The Equity
 

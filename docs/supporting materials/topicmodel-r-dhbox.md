@@ -31,6 +31,9 @@ install.packages("RCurl")
 library("RCurl")
 ```
 
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=ca9WV88XUv8" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br> 
 
 ## Importing data directly from the web
 
@@ -74,6 +77,10 @@ mallet.instances <- mallet.import(documents$Article_ID, documents$Text, "en.txt"
 ```
 That line above passes the article ID and the text of our newspaper articles to the Mallet routine.  The stopwords list is generic; it might need to be curated to take into account the pecularities of your data. You might want to create your own, one for each project given the particulars of your project. Note that Jockers compiled hist stoplist for his research in literary history of the 19th century. Your mileage may vary! Finally, the last bit after ‘token.regexp’ applies a regular expression against our newspaper articles, cleaning them up.
 
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=TBW-rMXPFH0" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br> 
+
 ## Reading data from a directory
 
 This is an alternative way of ingesting documents for topic modeling. Earlier, you learned how to use wget and some other scripts to download full text documents from Canadiana.org as well as from the Provincial Archives in Quebec (the Shawville Equity). The code below loads those documents into Mallet, after which you can proceed to build a topic model. In the command line, cd into your folder that has your downloaded materials. At the command line, cd into your folder, and type $ pwd to get the full path. Copy it, go back to RStudio, and paste it into the line below between the " marks.
@@ -86,6 +93,10 @@ documents <- mallet.read.dir("/home/shawngraham/equity")
 mallet.instances <- mallet.import(documents$id, documents$text, "en.txt", token.regexp = "\\p{L}[\\p{L}\\p{P}]+\\p{L}")
 ```
 **NB Do either one or the other, but not both: read from a file, where each row contains the complete text of the document, or read from a folder where each file contains the complete text of the document.**
+
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tMfa2ENjqVM" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br> 
 
 ## Building the topic model
 
@@ -132,6 +143,10 @@ doc.topics <- mallet.doc.topics(topic.model, smoothed=T, normalized=T)
 topic.words <- mallet.topic.words(topic.model, smoothed=T, normalized=T)
 ```
 
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IKAwSASkXjY" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br> 
+
 Congratulations! You now have a topic model. Let’s look at some of our topics. What are the top words in topic 7? Notice that R indexes from 1, so this will be the topic that mallet called topic 6:
 ```r
 mallet.top.words(topic.model, topic.words[7,])
@@ -154,6 +169,10 @@ write.csv(topics.labels, "topics-labels.csv")
 ```
 Some interesting patterns suggest themselves already! But a list of words doesn’t capture the relative importance of particular words in particular topics. A word might appear in more than one topic, for instance, but really dominate one rather than the other. When you examine the csv files, you'll notice that each document is given a series of percentages; these add up to 1, and are indicating the percentage which the different topics contribute to the overall composition of that document. Look for the largest numbers to get a sense of what's going on. We could ask R to cluster similarly composed documents together though...
 
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=MaN3b3rSkxQ" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br> 
+
 ## A simple histogram
 
 ```
@@ -165,6 +184,10 @@ Do you see any interesting clusters? Topics that end up in the same clusters we 
 ```
 plot(hclust(dist(topic.words)))
 ```
+
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=TShK40wQ5GY" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br> 
 
 Now, if we want to get really fancy, we can make a network visualization of how topics interlink due to their distribution in documents. The next bit of code does that, and saves in .graphml format, which packages like Gephi http://gephi.org can read.
 
@@ -180,6 +203,11 @@ topic_df_dist <- as.matrix(daisy(t(topic_docs), metric = "euclidean", stand = TR
 # that's difficult to interpret (hat-tip: http://stackoverflow.com/a/16047196/1036500)
 topic_df_dist[ sweep(topic_df_dist, 1, (apply(topic_df_dist,1,min) + apply(topic_df_dist,1,sd) )) > 0 ] <- 0
 ```
+
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=RQdKc6FEqjY" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br>
+
 ```r
 install.packages("igraph")
 # the line above would normally install igraph. However, the latest version is not compatible
@@ -208,5 +236,9 @@ When you look at this network, you can see clusters of documents by virtue of la
 ```
 write.graph(g, file="cnd.graphml", format="graphml")
 ```
+
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=BL9tlD9T3OU" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br>
 
 There are many ways of visualizing and transforming our data. This document only captures a small fraction of the kinds of things you could do. Another good exploration is at [Matthew Jockers' website](http://www.matthewjockers.net/macroanalysisbook/expanded-stopwords-list/) or the [global stopwords lists](http://www.ranks.nl/stopwords/). [Ben Marwick does really fun things with the Day of Archaeology blog posts](https://github.com/benmarwick/dayofarchaeology) and indeed, some of the code above comes from Marwick’s explorations. Keep your R scripts in your open notebook, and somebody might come along and use them, cite them, improve them, share them! Keep also all your data. Visit [my own work for an example](https://github.com/shawngraham/ferguson).

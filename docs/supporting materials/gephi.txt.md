@@ -72,7 +72,7 @@ This file is called 'an edge list' - it's a list of connections, or edges, betwe
 3. In the Data Laboratory, select “Import Spreadsheet.” 
 4. Press the ellipsis “...” and locate the CSV you created. Make sure that the Separator is listed as “Comma” and the “As table” is listed as “Edges table.” 
 5. Press “Next,” then “Finish.” Your data should load up. 
-6. Click on the “overview” tab and you will be presented with a tangled network graph. 
+6. Click on the “overview” tab and you will be presented with a tangled network graph.
 
 ## Navigating Gephi
 
@@ -93,6 +93,10 @@ There is one tweak that needs to done in the Data Table before the dataset is fu
 5\. While you’re still in the Data Laboratory, look in the “Edges” tab and notice there is a “Weight” column. Gephi automatically counted every time a letter was sent from correspondent A to correspondent B and summed up all the occurrences, resulting in the “Weight.” This means that J. Pinckney Henderson sent three letters to James Webb, because Henderson is in the “Source” column, Webb in the “Target,”, and the “Weight” is three.
 
 6\. Clicking on the Overview pane will take you to a visual representation of the network you just imported. In the middle of the screen, you will see your network in the “Graph” tab. The “Context” tab, at the top right, will show that you imported 234 nodes and 394 edges. At first, all the nodes will be randomly strewn across the screen and make little visual sense. 
+
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/s5_jgK5hEFA" title="Importing your data into Gephi" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br> 
 
 7\. Fix the nodes by selecting a layout in the “Layout” tab – the best one for beginners is “Force Atlas 2.” 
 
@@ -120,6 +124,10 @@ There are many possible algorithms you could use for the analysis step, but in t
  
 16\. Once PageRank is calculated, if you click back into the "Data Laboratory" and select the "Nodes" list in the Data Table, you can see that a new "PageRank" column has been added, with values for every node. The higher the PageRank, the more central a correspondent is in the network. 
 
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nEAO04nQeQc" title="Modifying your network visualization" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br> 
+
 17\. Going back to the Overview pane, you can visualize this centrality by changing the size of each correspondent’s node based on its PageRank. Do this in the "Ranking" tab on the left side of the Overview pane.
 
 18\. Make sure "Nodes" is selected, press the icon of a little red diamond, and select PageRank from the drop-down menu. 
@@ -130,11 +138,19 @@ There are many possible algorithms you could use for the analysis step, but in t
 
 20\. To be on the safe side and decrease clutter, re-run the "Force Atlas 2" layout as described above, making sure to keep the "Prevent Overlap" box checked.
  
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kh9nR_W7B9w" title="Styling your network visualization" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br> 
+
 At this point, the network is processed enough to visualize in the Preview pane, to finally begin making sense of the data. 
 
 21\. In Preview, on the left-hand side, select "Show Labels," "Proportional Size," "Rescale Weight," and deselect "Curved" edges. 
 
 22\. Press "Refresh." 
+
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2YBNnEmazq8" title="Previewing your final network visualization" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br> 
 
 ## So what have we got?
 
