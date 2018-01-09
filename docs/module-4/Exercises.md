@@ -245,7 +245,7 @@ Georectifying is the process of taking an image (whether it is of a historical m
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Wu_dTz-q9Ig" title="Georectifying your map" frameborder="0" gesture="media" allowfullscreen></iframe>
 <br>
 
-11\. You can now click on the 'export' panel, and get the URL for your georectified image in a few different formats. If you clicked on the KML option, a new Google Map window will open. For many webmapping applications, the Tiles (Google/OSM scheme): Tiles Based URL is what you want. You'll get a URL like this: ```http://mapwarper.net/maps/tile/27418/{z}/{x}/{y}.png``` Save that info. You'll need it later.
+11\. You can now click on the 'export' panel, and get the URL for your georectified image in a few different formats. If you clicked on the KML option, a new Google Map window will open. For many webmapping applications, the Tiles (Google/OSM scheme): Tiles Based URL is what you want. You'll get a URL like this: ```http://mapwarper.net/maps/tile/27421/{z}/{x}/{y}.png``` Save that info. You'll need it later.
 
 <br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Vg8Nv6fIl_k" title="Exporting your map" frameborder="0" gesture="media" allowfullscreen></iframe>
@@ -263,19 +263,21 @@ We need some place data for Palladio. I'm using some landmarks in Ottawa as seen
 
 etc: that is, a tab between 'place' and 'coordinates' in the first line, a tab between 'mexico' and the latitude, and a comma between latitude and logitude.
 
-12\. Go to [Palladio](http://palladio.designhumanities.org/). Hit 'start' then 'upload spreadsheet or csv'. In the box, paste in your data. **You can progress to the next step without having any real data: just paste or type something in - see the video below.** Obviously, you won't have any points on your map, but if you were having trouble with that step, this allows you to bypass it to continue on with this tutorial.
+12\. Go to [Palladio](http://palladio.designhumanities.org/). Hit 'start'. You will see 'Load .csv or spreadsheet'. 
 
-13\. Click on 'map'
+13\. In the box, paste in your data. **You can progress to the next step without having any real data: just paste or type something in and hit enter so you have two lines.** Obviously, you won't have any points on your map, but if you were having trouble with that step, this allows you to bypass it to continue on with this tutorial.
 
-14\. Under 'places', select 'coordinates'
+14\. Click the 'Map' tab at the top of the screen.
 
-15\. Click 'add new layer'
+15\. Click 'New layer' on the right side menu.
 
-16\. In the popup, beside 'Choose one of Palladio default layers or create a new one.', select 'custom'. This is where you're going to paste it that tiles based URL from the map warper
+16\. Click the Tiles tab and in the right side menu.
 
-17\. Click add
+17\. Select Custom tiles.
 
-Below is a video walk through; places where you might have got into trouble include getting past the initial data entry box on Palladio, and finding where exactly to past in your georectified map url.
+18\. Paste your Map Warper URL into the Tileset URL field. Your URL will look like `http://mapwarper.net/maps/tile/27421/{z}/{x}/{y}.png`.
+
+19\. Click 'Add layer'.
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/KgLrvcA8v_M" frameborder="0" allowfullscreen></iframe><br>
 
