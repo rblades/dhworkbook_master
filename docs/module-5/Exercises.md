@@ -1,5 +1,194 @@
 # Module 5 Exercises
 
+## Omeka
+Omeka is an open source Content Management System (CMS) for sharing digital collections and creating media-rich online exhibits. A CMS is a web program that manages content including graphics, text, videos, and more for a web site. A CMS allows users to upload their content via a Graphical User Interface (GUI) and organizes it into appropriate folder structures. Traditional websites are programmed from the ground up - everything from structure, to styling, to creating folders and specifiying where multi-media content is located. The main advantage of using a CMS is that it requires little to no actual, background-level programming. That being said, anyone can edit a CMS's source code files, add their own, or modify them to fit their needs. Most CMSs are built using PHP, a web scripting program used to dynamically create content. However, most CMSs are also accompanied by massive native and third party plugin libraries that allow users to modify their website without touching any source code. Examples of CMSs include Wordpress, Drupal, Grav, Known, Joomla, and many more. 
+
+Unlike many popular CMSs, Omeka is not a blogging platform. Omeka is used to create online exhibits. Today we are going to create a simple online exhibit. 
+
+Our overall steps are as follows:
+
+1. Create a subdomain of your website where Omeka will live. This will allow you to host Omeka as an entity of its own on your website, keeping your main website separate.
+2. Install Omeka through cPanel on Reclaim Hosting.
+3. Create an online exhibit with several historical items.
+4. Change the style of our Omeka site by modifying the CSS of our theme.  
+
+## Creating a subdomain
+
+1\. Login to your Reclaim Hosting account through the [Reclaim Hosting login page](http://portal.reclaimhosting.com/).
+
+2\. In the client area, select the cPanel tab.
+
+3\. Under the Domains section, select Subdomains. Typically a subdomain divides your overall website into distinct portions. For instance, you could have your landing page at `mysite.com`, your blog at `blog.mysite.com`, and your class work at `hist3814.mysite.com`. That way each subdomain could have different styles and serve different purposes, but still be connected to your overall domain. You can add as many subdomains to your site as you'd like. 
+
+Subdomains are essentially just an easier way of organizing your files and showing distinct differences from your main domain. You could technically also do `mysite.com/blog` or `mysite.com/hist3814`. In that case, however, it seems expected they would all be styled similarly to `mysite.com`. Furthermore, it might cause difficulty to have, for example, Wordpress running your mysite.com and Omeka running `mysite.com/Omeka`. It's best to stick with your free subdomains.
+
+4\. Enter the name of your online exhibit in the Subdomain field. You could simply put `omeka`, `omeka-test`, etc. or get more descriptive and say `commemorationexhibit`. Choose a title relevant to your Omeka site's purpose.
+
+5\. Leave the Domain field set to your domain.
+
+6\. The Document Root will be automatically created (an advantage of adding a subdomain!). I would not recommend changing this, but if you want to further organize your folder strucutre, you are able to change the location.
+
+7\. Click the Create button. It will take a moment, but your new subdomain will be approved. 
+
+**NB Since the subdomain has nothing in it, if you navigate to it now, you will see 'Index of/' showing the file structure. This is normal.**
+
+## Installing Omeka 
+
+1\. Navigate back to your cPanel home page. 
+
+2\. Under the Applications section, select Omeka. 
+
+3\. On the right hand side, click the '+ install this application' button. 
+
+4\. Under the Location section, select the subdomain you created in the previous instructions. Do not choose your main `mysite.com` domain. Choose your `omeka.mysite.com` domain or your variant of it. You can choose the https or http version. Https is more secure.
+
+5\. Delete cms under Directory (Optional). We want it installed to the root of our subdomain, not a folder called cms.
+
+6\. Under the Version section, leave the settings as they are. Make sure 'I accept the license agreement' is selected. It's also good practice to allow it to update as needed and to allow backups.
+
+7\. Under the Settings section, either create a new Administrator Username and Administrator Password or securely write down the Administrator Username and Administrator Password generated for you. (You can click Show Password to show it.) **You NEED the username and password to make changes to your Omeka site.**
+
+8\. Add an Administrator Email.
+
+9\. Change the Website Title to a fitting and appropriate title.
+
+10\. Under Advanced, leave the settings as they are.
+
+11\. Click the Install button. You will be redirected to 'My Applications'. The installation may take a minute to process.
+
+12\. Select the middle link of your new Omeka application that says `omeka.mysite.com/admin` or your variant of the subdomain.
+
+13\. Login using your Administrator Username and your Administrator Password.
+
+14\. At the top of the admin page, click on Settings.
+
+15\. Scroll down to the bottom. In the ImageMagick Directory Path field, type `/usr/bin`. Reclaim Hosting comes with ImageMagick preinstalled. ImageMagick resizes and generates thumbnails of your images.
+
+16\. Click Save Changes.
+
+## Uploading content to Omeka
+
+For the purposes of this exercise, we will use the [Gatineau Valley Historical Society Fire insurance plans](http://www.gvhs.ca/research/maps/maps-fire-insurance.html) used in [Module 4, Exercise 8](#exercise-8-simple-mapping-and-georectifying). You are also allowed to use any historical sources to create an exhibit. Maybe you want to choose historical newspapers that have been digitized from the Library and Archives? Just make sure to note where you got your sources and, preferably, you can download them as images
+
+1\. On the left hand side, select Collections.
+
+2\. Click Add a Collection. 
+
+3\. My new collection will be fire insurance maps. Under title, add Maps of the Gatineau Valley - Fire Insurance Plans. 
+
+4\. Go through each metadata field and fill in as much information as you can about your collection.
+
+5\. Under Add Collection, click Public to make your collection publicly viewable. Click Add Collection.
+
+6\. On the left hand side, select Items.
+
+7\. Click Add an item.
+
+8\. Navigate to the [Gatineau Valley Historical Society Fire insurance plans](http://www.gvhs.ca/research/maps/maps-fire-insurance.html) or your own source of historical files.
+
+9\. Using the information provided with first map, fill in as much information as you can about your item. 
+
+10\. Click on the map image.
+
+11\. Right click and save the image to your desktop or easy to reach folder. 
+
+12\. Select the Files tab.
+
+13\. Click Browse and choose your image file (note you cannot upload an image larger than 128MB).
+
+14\. On the right hand side under Collection, select your Collection and make sure it is set to public.
+
+15\. Click Add Item. It may take a few minutes to upload.
+
+16\. On the right hand side, click the blue View Public Page button.
+
+17\. Go ahead and upload several exhibit items. If you can find other items related to your collection elsewhere, that'd be great too. 
+
+18\. Go to `omeka.mysite.com` or your variant of the subdomain to view how to page looks to the public.
+
+## Styling our exhibit (and making it more accessible!)
+
+1\. At the top of the admin page, click Appearance. The default theme is 'Thanks, Roy'. You can choose any theme you want. They are all different and each has different advantages and disadvantages for editing.
+
+2\. For this exercise, we will use the 'Thanks, Roy' theme. 
+
+**NB If you choose a different theme to modify, you may see different options. Proceed at your own intent.**
+
+3\. Click the blue Configure Theme button. Each theme configuration allows you to change basic style and content settings.
+
+4\. With the configuration page open in one tab, open your `omeka.mysite.com` to view the public page. Whenever you make an update, simply refresh the public page to view it.
+
+**NB When editing your website, it's best to use your browser's incognito mode. Browsers cache certain files like CSS rules and images so they can load quickly when you revisit that website. If you are making constant changes, however, they will get cached and you might not be able to view any of your changes. Since incognito mode does not cache anything, you are viewing a 'fresh' page each time. If you are sure you did everything right and no changes appear, make sure to clear your cache and use incognito mode.**
+
+5\. Notice the Browse Items and Browse Collections links on the left of your public page are a bit light and hard to read. In the configuration, copy the text colour hex code `#444444`.
+
+6\. Go to the [Color Hex website](http://www.color-hex.com/) and search `#444444`. Hex codes are an internet convention where a series of numbers or numbers and letters correspond with a unique colour. 
+
+7\. Scroll down to Shades of `#444444`. I think `#1b1b1b` looks dark enough.
+
+8\. Navigate back to the Omeka configuration page and replace The Text and Links fields hex codes of `#444444` with `#1b1b1b`.
+
+9\. On the right hand side, click Save Changes.
+
+10\. Refresh the public page and notice the text darkens. This will help make your website more readable.
+
+### Using browser tools to make design easier
+
+1\. Navigate to your public Omeka page.
+
+2\. Right click on the Featured Item text.
+
+3\. Select Inspect Element. The browser inspection tool allows you to view the code behind a website. 
+
+**NB Chrome and Firefox have great inspector tools. Not all browsers have these tools, however, notably Safari.**
+
+4\. The font is not that easy to read either. We will change it, but first let's find the current font. Scroll down on the right hand side under the Rules tab until you see the body CSS. This rule shows the font is called PT serif
+
+```
+body {
+    font-family: "PT Serif", Times, serif;
+}
+```
+
+5\. Serifs are not very accessible fonts. Sans-Serifs are much more readable. Go to [Google Fonts](https://fonts.google.com/) to choose a new, more readable font.
+
+6\. Search Roboto. Roboto is a clean, easy to read font.
+
+7\. Click the red plus sign to select the font. It will add to a queue below.
+
+8\. Click the black queue bar.
+
+9\. Scroll to where it says Specify in CSS. 
+
+10\. Copy the text that says `font-family: 'Roboto', sans-serif;`. We will add this rule to our CSS file.
+
+11\. Navigate to your cPanel home page and select File Manager at the top of the page.
+
+12\. On the left hand side click on the folder for your Omeka site. The folder should have the same name as your domain. For instance, if your site is called `omeka.mysite.com`, the folder will be called `omeka.mysite.com` unless you changed the name earlier.
+
+13\. Double click each folder: Themes > Default > css
+
+14\. Right click `style.css` and select Edit. Reclaim Hosting has some great editing tools within the cPanel so you don't have to make updates within your desktop text editor.
+
+15\. Search `font-family` by hitting ctrl-f (Windows) or cmnd-f (Mac). We **ONLY** want to change the rules that say `font-family: "PT Serif", Times, serif;`.
+
+16\. Use the search to replace each instance of `font-family: "PT Serif", Times, serif;` with `font-family: 'Roboto', sans-serif;`.
+
+17\. Click the blue Save Changes button at the top right of the editor.
+
+18\. Navigate to your Omeka site and refresh the page. Notice the font changes to Roboto.
+
+19\. Use your browser's inspector to find out the rule of a specific element. 
+
+20\. If you make any major mistakes and want to start from scratch, you can copy the original `style.css` [file from Github](https://raw.githubusercontent.com/omeka/theme-thanksroy/master/css/style.css) and paste it into your file and save the changes. This will revert it back to the original style.
+
+It is important to note that for our purposes, we edited the default `style.css` file directly. This was to introduce you to CSS and making changes to the source code. Typically, you'd want to add a new file called, for example, `custom.css` and specify the path to that file in our source code. That way you keep your own changes distinct from the default source code files. However, that would involve editing different PHP rules which is beyond the scope of this exercise. This is very important for making upgrades. If your theme ever upgrades, you will lose all your changes if you only edited the default `style.css`. This applies to any file type. Therefore, you may want to keep a copy of your changes somewhere handy, like on your desktop.
+
+
+
+
+# Module 5 Exercises
+
 The exercises in this module are about colour, layout, and manipulating graphics - but not necessarily in that order. You might find 'Sprucing up a PDF in Inkscape' exercise useful, as well as the 'Typography', 'Colour', and 'Layout' exercises.
 
 Finally: while we haven't explored the possibilities here, I do not want to leave you thinking that all digital history work is necessarily text based. To that end, if you are looking for a challenge or for exposure to something rather different, I suggest you at least bookmark my [series of tutorials on augmented reality, games, and 3d models for history and archaeology](https://github.com/shawngraham/ar-archaeology/tree/master/workshop%20materials).
