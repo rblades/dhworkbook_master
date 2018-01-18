@@ -12,13 +12,14 @@ library("mallet")
 install.packages("RCurl")
 library("RCurl")
 ```
-In the future, now that you've installed these packages you won't have to again, so you can comment them out by placing a ```\#```in front.
+
+In the future, now that you've installed these packages you won't have to again, so you can comment them out by placing a ```\#``` in front.
 
 ### How to fix RCurl Package installation error
 
 When attempting to run `install.packages("RCurl")` you may get an error along the lines of 
 
-```
+```r
 checking for curl-config... no
 Cannot find curl-config
 ERROR: configuration failed for package ‘RCurl’
@@ -26,13 +27,13 @@ ERROR: configuration failed for package ‘RCurl’
 
 To fix this, navigate to the DH Box command line and type `sudo apt-get install libcurl4-gnutls-dev`. When the installation is successful, you can now install RCurl by running the last two lines of the script:
 
-```
+```r
 install.packages("RCurl")
 library("RCurl")
 ```
 
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=ca9WV88XUv8" title="Preparing RStudio for network analysis" frameborder="0" gesture="media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ca9WV88XUv8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 <br> 
 
 ## Importing data directly from the web
@@ -41,12 +42,12 @@ Melodee Beals has been using TEI to markup newspaper articles, creating the Colo
 
 Now we want to tell R Studio to grab our data from our github page. The thing is, R Studio can easily grab materials from websites where the url is http; but when it is https (as it is with github), things get a bit more fussy. So what we do is use a special package to grab the data, and then shove it into a variable that we can then tease apart for our analysis.
 
-```R
+```r
 x <- getURL("https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv", .opts = list(ssl.verifypeer = FALSE))
 ```
 That line reaches out to the webpage and grabs the information and puts it into a variable called `x`.
 
-```R
+```r
 documents <- read.csv(text = x, col.names=c("Article_ID", "Newspaper Title", "Newspaper City", "Newspaper Province", "Newspaper Country", "Year", "Month", "Day", "Article Type", "Text", "Keywords"), colClasses=rep("character", 3), sep=",", quote="")
 ```
 Now we've created a variable called `documents` and the `read.csv` command read all of the data pulled into x, and tells R that `documents` has columns called "Newspaper Title" etc. When we only want information from a particular column, we modify the variable slightly, eg `documents$Keywords` would only look at the information in the keywords column. Let's go on a brief digression and actually do that, and see what we learn about this corpus:
@@ -62,7 +63,7 @@ barplot(counts, main="Cities", xlab="Number of Articles")
 The plot will appear in the bottom right pane of RStudio. You can click on 'zoom' to see the plot in a popup window. You can also export it as a png or pdf file. Clearly, we’re getting an Edinburgh/Glasgow perspective on things. And somewhere in our data, there’s a mispelled ‘Edinbugh’. Do you see any other error(s) in the plot? How would you correct it(them)?
 
 Let's do the same thing for year, and count the number of articles per year in this corpus:
-```R
+```r
 years <- table(documents$Year)
 barplot(years, main="Publication Year", xlab="Year", ylab="Number of Articles")
 ```
@@ -72,13 +73,13 @@ Now, let's return to getting our data ready to create a topic model. In the line
 
 To create that file, click on the 'new file' icon in the tool ribbon and select new text file. This will open a blank file in the edit window here. Copy and paste the list of words at [en.txt](en.txt) into that blank file and save it as en.txt. This file was put together by Matt Jockers.
 
-```R
+```r
 mallet.instances <- mallet.import(documents$Article_ID, documents$Text, "en.txt", token.regexp = "\\p{L}[\\p{L}\\p{P}]+\\p{L}")
 ```
 That line above passes the article ID and the text of our newspaper articles to the Mallet routine.  The stopwords list is generic; it might need to be curated to take into account the pecularities of your data. You might want to create your own, one for each project given the particulars of your project. Note that Jockers compiled hist stoplist for his research in literary history of the 19th century. Your mileage may vary! Finally, the last bit after ‘token.regexp’ applies a regular expression against our newspaper articles, cleaning them up.
 
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=TBW-rMXPFH0" title="Importing data directly from the web" frameborder="0" gesture="media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TBW-rMXPFH0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 <br> 
 
 ## Reading data from a directory
@@ -170,7 +171,7 @@ write.csv(topics.labels, "topics-labels.csv")
 Some interesting patterns suggest themselves already! But a list of words doesn’t capture the relative importance of particular words in particular topics. A word might appear in more than one topic, for instance, but really dominate one rather than the other. When you examine the csv files, you'll notice that each document is given a series of percentages; these add up to 1, and are indicating the percentage which the different topics contribute to the overall composition of that document. Look for the largest numbers to get a sense of what's going on. We could ask R to cluster similarly composed documents together though...
 
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=MaN3b3rSkxQ" title="Training topics with MALLET" frameborder="0" gesture="media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MaN3b3rSkxQ" title="Training topics with MALLET" frameborder="0" gesture="media" allowfullscreen></iframe>
 <br> 
 
 ## A simple histogram
@@ -186,7 +187,7 @@ plot(hclust(dist(topic.words)))
 ```
 
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=TShK40wQ5GY" title="Creating a simple histogram" frameborder="0" gesture="media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TShK40wQ5GY" title="Creating a simple histogram" frameborder="0" gesture="media" allowfullscreen></iframe>
 <br> 
 
 Now, if we want to get really fancy, we can make a network visualization of how topics interlink due to their distribution in documents. The next bit of code does that, and saves in .graphml format, which packages like Gephi http://gephi.org can read.
@@ -205,7 +206,7 @@ topic_df_dist[ sweep(topic_df_dist, 1, (apply(topic_df_dist,1,min) + apply(topic
 ```
 
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=RQdKc6FEqjY" title="Clustering your data" frameborder="0" gesture="media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RQdKc6FEqjY" title="Clustering your data" frameborder="0" gesture="media" allowfullscreen></iframe>
 <br>
 
 ```r
@@ -238,7 +239,7 @@ write.graph(g, file="cnd.graphml", format="graphml")
 ```
 
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=BL9tlD9T3OU" title="Graphing your data" frameborder="0" gesture="media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BL9tlD9T3OU" title="Graphing your data" frameborder="0" gesture="media" allowfullscreen></iframe>
 <br>
 
 There are many ways of visualizing and transforming our data. This document only captures a small fraction of the kinds of things you could do. Another good exploration is at [Matthew Jockers' website](http://www.matthewjockers.net/macroanalysisbook/expanded-stopwords-list/) or the [global stopwords lists](http://www.ranks.nl/stopwords/). [Ben Marwick does really fun things with the Day of Archaeology blog posts](https://github.com/benmarwick/dayofarchaeology) and indeed, some of the code above comes from Marwick’s explorations. Keep your R scripts in your open notebook, and somebody might come along and use them, cite them, improve them, share them! Keep also all your data. Visit [my own work for an example](https://github.com/shawngraham/ferguson).

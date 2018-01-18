@@ -55,10 +55,6 @@ We want to keep every line that has this information in it:
 
 7\. Save the file in nano: ctrl+x, Y, enter 
 
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AFoHj91meVo" title="Downloading and editing our correspondence" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
-
 WARNING: Regex can be very tricky. When I'm working with Regex, I copy and paste some of the text I'm working on into the box at [RegExr](http://www.regexr.com/) and fiddle with the pattern until it does what I want. In fact, spend some time looking at their examples before you go any further in this exercise.
 
 ## The workflow
@@ -126,10 +122,6 @@ When you hit enter, the computer seems to pause for a moment, and then gives you
 
 6\. Type `nano texas.txt` and examine the file. You should now have ~ characters at the start of each entry of the index!
 
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nXDFbLH59_M" title="Editing our file with grep and sed in the command line" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
-
 If for some reason you don't, or you've mangled your original file, you can replace texas.txt with the backup file you made like so: `$ mv old-file-name new-file-name` thus, `$ mv texas.txt.bak texas.txt`. Use Nano to confirm that you're back to where you needed to be, and try again.
 
 ### Step Two
@@ -163,10 +155,6 @@ We are simply going to get grep to find all the lines that have a tilde in them,
 Use Nano to confirm that this is true. 
 
 Wasn't that easy?
-
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EcbvmipiuLI" title="Removing irrelevant lines in our correspondence" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
 
 ### Step Three
 
@@ -218,19 +206,11 @@ Find the dates using a regex, and replace so that only the **second** group in t
 
 Remember, the first part of the sed command will be: `sed -r -i.bak` then the pattern to find, the pattern to replace with, and the file name. You want to use sed on the new index.txt file you made. Can you devise the right pattern?
 
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qy_xzaBk9cs" title="Transforming our file into CSV format" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
-
 ### Step Four
 
 **Removing the tildes***
 
 + Find the tildes that we used to mark off our text of interest, and replace them with nothing to delete them.
-
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/g_1QGPgFbdE" title="Removing the tildes before each line" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
 
 ### Step Five
 
@@ -241,10 +221,6 @@ Remember, the first part of the sed command will be: `sed -r -i.bak` then the pa
 Finally, to separate the sender and recipient by a comma, we find all instances of the word "to" and replace it with a comma. Although we used ```\b``` and ```\b``` to denote the beginning and end of a word earlier in the lesson, we don't exactly do that here. We include the space preceding “to” in the regular expression, as well as the ```\b``` to denote the word ending. Once we find instances of the word and the space preceding it, ```to\b``` we replace it with a comma ```,```.
 
 + Devise the regex to find the word, and replace with a comma.
-
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/L6iBhhQmGKY" title="Separating Senders and Receivers" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
 
 ### Step Six
 
@@ -261,10 +237,6 @@ The only non-standard lines we need to worry about with regular expressions are 
 will show you every line with more than 2 commas, because it finds any line that has any set of characters, then a comma, then any other set, then another comma, and so forth. Use Grep to find these.  
 
 + At the top of the file, add a new line that simply reads "Sender, Recipient, Date". These will be the column headers. Make a copy as a csv file by using the `cp` command: `cp index.txt cleaned-correspondence.csv`.
-
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PG3tRoRbR8M" title="Cleaning our file" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
 
 **Congratulations!**
 

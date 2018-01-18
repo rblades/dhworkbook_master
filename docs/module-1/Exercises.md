@@ -28,10 +28,6 @@ In this exercise, I want you to become familiar with Markdown syntax. Check out 
 
 3\. Write a short 200-500 word piece on the most interesting annotation you've seen one of your classmates make. Why is it interesting? Why has it struck you?
 
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DZRVhlRGMjg" title="Learning markdown with dillinger.io" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
-
 4\. Grab at least two Creative Commons images and link outwards to four websites that are relevant to your piece. The Creative Commons license allows re-use. Do you know how to [find Creative Commons images](https://search.creativecommons.org/)?
 
 5\. Make sure you link to the annotation in question.
@@ -41,10 +37,6 @@ In this exercise, I want you to become familiar with Markdown syntax. Check out 
 7\. Select 'Export to' markdown to save a copy of the file in your downloads folder.
 
 8\. Try 'exporting to' pdf or html. Since you've separated the content from the format, this illustrates how you can convert your text into other formats as necessary. (The text is converted using a piece of software called [pandoc](http://www.pandoc.org/installing.html))
-
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/B08Dnmk_6OU" title="Inserting images and exporting in dillinger.io" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
 
 See how easy that was? Don't worry about submitting this.... yet.
 
@@ -125,10 +117,6 @@ This will **pipe** that information into a new file.
 
 When you hit enter, the computer seems to pause for a moment, and then it shows you the command prompt again. How do we know if anything happened? Generally, when working at the command prompt, no news is good news. There are two ways you can check to see if the new file `dhbox-work-today.md` was created. **You can click on the File Manager** (the first folder will have your username; click on that, and then you'll see a list of files) and there it is! **Click on the file name,** and it will download to your computer where you can open it with a text editor.
 
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JzdADfnwfcg" title="Using the command line: wget and installing programs" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
-
 Alterntively, type `$ ls`
 
 This **lists** - ls - all the files in the directory. How do you know what directory you're in? You can use the `pwd` command, which prints the working directory.
@@ -151,10 +139,6 @@ The computer makes things a little more difficult sometimes when you're asking i
 
 10\. Nano will ask you if you want to 'Save modified buffer?'. **Hit `y`, then when it asks you for the file name, hit enter.**
 
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gByQ5aY21x4" title="Using the command line: editing files with nano" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
-
 11\. Use the File Manager to save a copy of `dhbox-work-today.md` onto your own computer.
 
 One last thing: let's convert the markdown file into both Word and HTML. Pandoc is capable of quite sophisticated transformations, but these are two of the easiest. 
@@ -168,10 +152,6 @@ This says to pandoc, create an output file ( the `-o`) called 'todayscommands.do
 Any guesses how to create an HTML file? Pandoc is smart enough to know the kind of output you want from the file extension.
 
 14\. Retype the command but use .html instead of .docx this time. Use the file manager to save copies of the .docx and .html files to your own machine. (Incidentally, if you use the arrow up and arrow down keys on your keyboard when you're at the command line, you can page through commands that you've previously typed).
-
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iU5PzBraAlo" title="Using the command line: converting files with pandoc" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
 
 You've done some interesting work - you've installed software into a remote computer, you've copied all of the commands you typed into a new file, you've used markdown and a text editor to add information and context to those commands, and you've used pandoc to transform your basic text into the more complicated formats of Word or HTML.
 
@@ -224,10 +204,6 @@ Notice, when you're on your repository's page, that there is a button to 'create
 6\. Drag the html file you created in the previous exercise (the one you made with Pandoc, and then saved to your computer via the DH Box File Manager) into the large grey box. This will upload the file. You can drag multiple files into the box to upload them into your repository. 
 
 7\. Enter a brief commit message in the commit message box. Then hit the green commit changes button. Git - and Github - attach messages to any 'commits' you make. These messages are brief notes explaining why you were making the commit. This way, if you ever had to roll back (go back to an earlier version) you can understand the evolution of the repository and find the spot you want. 
-
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OLKGp8t3YBw" title="Setting up your Github space" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
 
 Instead of creating multiple versions of a file, you have a single file that has a version history. Neat, eh?
 
@@ -300,10 +276,6 @@ How do you turn a folder into a repository? With the `git init` command. At the 
 7. Type `$ git init` to tell the git program that this folder is to be tracked as a repository. If all goes correctly, you should see a variation on this message: `Initialized empty Git repository in /home/demonstration/first-repo/.git/`.
 8. Type `$ ls` again. What do you (not) see?
 
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/R9CQC08AJO0" title="Initializing a repository with git" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
-
 The changes in your repo will now be stored in that **hidden** directory, `.git`. Most of the time, you will never have reason to search that folder out. But know that the config file that describes your repo is in that folder. There might come a time in the future where you want to alter some of the default behaviour of the git program. You do that by opening the config file (which you can read with a text editor). Google 'show hidden files and folders' for your operating system when that time comes.
 
 ### 4.2. git status
@@ -345,10 +317,6 @@ What happened? Remember, git keeps track not only of the changes, but **who** is
 
 12\. Save and exit the text editor. **DO NOT** change the filename!
 
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VA56xqcGOig" title="Checking our repository with git status" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
-
 Congratulations, you are now able to track your changes, and keep your materials under version control!
 
 ### 4.3. git merge
@@ -369,20 +337,12 @@ Fixed the headings that were broken in the about section of readme.md
 4. Add a number of new files, making commits after each one. 
 5. Check your git status, and check your git log as you go to make sure you're getting everything. Make sure there are no unstaged changes - everything's been committed.
 
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SYPYOiSbPgk" title="Merging repository branches with git merge" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
-
 ### 4.4. git merge continued
 
 Now let's assume that your `experiment` branch was successful - everything you did there you were happy with and you want to integrate all of those changes back into your `master` branch. We're going to merge things. To merge, we have to go back to the master branch: `$ git checkout master`. (Good practice is to keep separate branches for all major experiments or directions you go. In case you lose track of the names of the branches you've created, this command: `git branch -va` will list them for you.)
 
 1. Now, we merge with `$ git merge experiment`. Remember, a merge is a special kind of commit that rolls all previous commits from both branches into one - git will open your text editor and prompt you to add a message (it will have a default message already there if you want it). 
 2. Save and exit and ta da! Your changes have been merged together.
-
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6OakUFaO4gQ" title="Merging repository branches with git merge continued" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
 
 ### 4.5 git push
 
@@ -422,10 +382,6 @@ The changes can sometimes take a few minutes to show up on the website. Now, the
 
 9\. Add a new text file. Commit the changes. Push the changes to your account.
 
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HO_VSYcpL98" title="Updating your repository with git push" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
-
 ### 4.6. git clone
 
 Imagine you are collaborating with one of your classmates. Your classmate is in charge of the project, and is keeping track of the 'official' folder of materials (eg, the repo). You wish to make some changes to the files in that repository. You can manage that collaboration via Github by making a copy, what Github calls a `fork`.
@@ -450,15 +406,7 @@ $ ls
 
 You now have a folder called 'Spoon-Knife' on your machine! Any changes you make inside that folder can be tracked with commits. You can also `git push -u origin master` when you're inside it, and the changes will show up on your OWN copy (your fork) on Github.com.
 
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/h00B1EHd314" title="Cloning another repository with git clone" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
-
 5\. Make a fork of, and then clone, one of your classmates' repositories. Create a new branch. Add a new file to the repository on your machine, and then push it to your fork on Github. Remember, your new file will appear on the new branch you created, NOT the master branch.
-
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vvy-YKILex8" title="Merging repositories with git merge" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
 
 ### 4.7. pull request
 
@@ -489,15 +437,7 @@ Now let's make a `pull` request (you might want to [bookmark Github's help docum
 
 Make sure these are set properly. Remember: the first one is the TO, the second one is the FROM: the place where you want your changes to go TO, FROM the place where you made the changes.
 
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cQVBIxDfEh4" title="Preparing your changes to a repository for a pull request" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
-
 6\. A pull request has to have a message attached to it, so that your classmate knows what kind of change you're proposing. Fill in the message fields appropriately, then hit the 'create pull request' button.
-
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NNf-fPnrxcY" title="Making a pull request on a friend's respository" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
 
 ### 4.8. git merge again
 

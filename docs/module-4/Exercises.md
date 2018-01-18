@@ -40,10 +40,6 @@ In this exercise you will use the **Topic Modeling Tool** to create a simple top
 
 1\. Download the [topic modeling tool from Github](https://github.com/senderle/topic-modeling-tool).
 
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AICkCLWJYfI" title="Installing the Topic Modeling Tool" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br> 
-
 2\. Make sure you have some content on your own machine; the Colonial Newspaper Database is a handy corpus. (Created by Melodee Beals, it's a series of late 18th, early 19th century cleanly transcribed newspaper articles from Scotland and Northern England; You can grab [my copy from Github](https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv)). Or perhaps you might move your copy of the Shawville equity out of DH Box onto your computer. 
 
 3\. At the command prompt in DH Box, type `$ ls` to make sure you can see your Equity folder (ie. you can't zip a folder from the command line if you are **in** that folder, so `cd` out of it if necessary). 
@@ -64,17 +60,9 @@ In this exercise you will use the **Topic Modeling Tool** to create a simple top
 
 11\. Click 'train topics' to run the algorithm.
 
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/IyCdJp9koiU" title="Preparing and importing your data" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br> 
-
 12\. When it finishes, go to the folder you selected for output, and find the file 'all_topics.html' in the 'output_html' folder. 
 
 13\. Click on 'all_topics.html'. You now have a browser-based way of navigating your topics and documents. In the output_csv folder created, you will find the same information as csv, which you could then input into a spreadsheet for other kinds of visualizations (which we'll talk about in class.)
-
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/x_3RAyWiYvU" title="Viewing your data output" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br> 
 
 Make a note in your open notebook about your process and your observations. How does reading this material in this way change/challenge/or focus your understanding of the material?
 
@@ -95,10 +83,6 @@ In this exercise, we're going to look at the Colonial Newspaper Database again, 
 4. Hit 'upload'.
 5. A new page appears, called **YOUR DOCUMENT SETS**. Click on the one you just uploaded. A file folder tree showing documents of progressively greater similarity will open; on the right hand side will be the list of documents within each box (the box in question will be greyed out when you click on it, so you know where you are). You can search for words in your document, and Overview will tell you where they are; you can tag documents that you find interesting. The Overview system allows you to jump between a distant, macroscopic view and a close, document level view. 
 6. Jump back and forth, see what you can find. For suggestions about how to use Overview effectively, try [their blog](https://blog.overviewdocs.com/). Make notes about what you observe in your notebook. Also, you can export your tagged document set from Overview, so that you could visualize the patterns of tagging in a spreadsheet (for instance).
-
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y8ZIVgkuwKo" title="Analyising text with Overview" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br> 
 
 **Going further:** Do you see how you could upload your documents that you collected during Module 2?
 
@@ -124,10 +108,6 @@ Do you see the difference? In the latter window, the individual articles have be
 4\. Google these terms and tools for what they mean and how others have used them. You can embed any of the tools in your blogs by using the 'save' icon and getting the iframe or embed code. You can apply **stopwords** by clicking on the cogwheel in any of the different tools, and selecting stopwords. 
 
 5\. Apply the stopwords globally, and you'll only have to do this once! What patterns do you see? What do different tools highlight? Which ones are useful? What patterns do you see that strike you as interesting? Note this all down.
-
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CrryInB6JSE" title="Analyising text with Voyant" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br> 
 
 **Going further:** Upload materials you collected in module 2 and explore them.
 
@@ -177,10 +157,6 @@ The formula you put in cell A1 now says `#REF!`. You can delete this now. This m
 
 You can now copy and paste your table of data into the data input box in RAW, and you should get the green thumbs up saying x records have been successfully parsed!
 
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/83-tFiXLXeQ" title="Importing data into RAW" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br> 
-
 **NB The Blank Detector add on may take a long time. Try it out on the CSV. You can copy the parsed data from [my Google Sheets file](https://docs.google.com/spreadsheets/d/12FRAMe0QaDfii3JL4RS7XYHiOFMusUVHhGsfP79uYaE/edit?usp=sharing).**
 
 #### Playing with RAW
@@ -202,10 +178,6 @@ When we look at the original letters, we see that the writer often identified th
 
 6\. You can export your visualization under the 'download' box at the bottom of the RAW page - your choices are as a simple raster image (png), a vector image (svg) or a data representation (json).
 
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xYY8rl4c_nc" title="Playing with RAW" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
-
 ## Exercise 8: Simple Mapping and Georectifying
 
 In this exercise, you will find a historical map online, upload a copy to a mapwarper service, georectify it, and then display the map online, via a hosted service like CartoDB, and also through a map you will build yourself using leaflet.js. Finally, we will also convert csv to geojson using [Mapbox's geojson converter](https://mapbox.github.io/togeojson/), and we'll map that as a github gist. We'll also grab a geojson file hosted on github gist and import it into cartodb.
@@ -219,17 +191,9 @@ Georectifying is the process of taking an image (whether it is of a historical m
 
 3\. Go to [Map Warper](http://mapwarper.net) and sign up for an account. Then login.
 
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bidOaQiQU-4" title="Getting a historical map" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
-
 4\. Go to the upload screen: <br> ![Image showing upload screen for Map Warper](http://i.imgur.com/bmNCzg6.png)
 
 5\. Fill in as much of the metadata as you can. Then select your map from your computer, and upload it.
-
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/08HjvUlOpdM" title="Adding metadata to your map" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
 
 6\. On the next page, click 'rectify'. <br> ![Image showing user ability to rectify the historical map on the left with the modern map on the right to ensure locations match coordinates](http://i.imgur.com/yULDRQR.jpg)
 
@@ -241,15 +205,7 @@ Georectifying is the process of taking an image (whether it is of a historical m
 
 10\. Having selected your control points, click on 'warp image'.
 
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Wu_dTz-q9Ig" title="Georectifying your map" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
-
 11\. You can now click on the 'export' panel, and get the URL for your georectified image in a few different formats. If you clicked on the KML option, a new Google Map window will open. For many webmapping applications, the Tiles (Google/OSM scheme): Tiles Based URL is what you want. You'll get a URL like this: ```http://mapwarper.net/maps/tile/27421/{z}/{x}/{y}.png``` Save that info. You'll need it later.
-
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Vg8Nv6fIl_k" title="Exporting your map" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
 
 You have now georectified a map. Let's use that map as a base layer in [Palladio](http://palladio.designhumanities.org/#/)
 
@@ -279,8 +235,6 @@ etc: that is, a tab between 'place' and 'coordinates' in the first line, a tab b
 
 19\. Click 'Add layer'.
 
-<iframe width="420" height="315" src="https://www.youtube.com/embed/KgLrvcA8v_M" frameborder="0" allowfullscreen></iframe><br>
-
 Congratulations! You've georectified a map, and used it as a base layer for a visualization of some point data. References these [notes on using a georectified map with the CartoDB service](https://gist.github.com/shawngraham/a49a9834984ae0792345).
 
 ![Image showing historical map overlayed on modern map](http://i.imgur.com/0gCjh5X.jpg)
@@ -296,24 +250,6 @@ This exercise uses the R language to do our analysis, which in DH Box we access 
 There are many excellent tutorials around concerning how to get started with GIS. Our own library, in the [MADGIC centre](https://www.library.carleton.ca/contact/service-points/maps-data-and-government-information-centre) has tremendous resources and I would encourage you to speak with the map librarians before embarking on any **serious** mapping projects. In the short term, the historian [Fred Gibbs](http://fredgibbs.net/) has an excellent series on using the open source GIS platform **QGIS** to make and map historical data.
 
 For this exercise, I would recommend you try Gibbs' first tutorial, ['Making a map with QGIS'](http://fredgibbs.net/tutorials/qgis/making-a-map-with-qgis.html).
-
-1\. Installing QGIS
-
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/orFgSnjF3xo" title="Installing QGIS" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
-
-2\. Downloading geographic data
-
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KoVxeTkhNRA" title="Downloading geographic data" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
-
-3\. Displaying data in QGIS
-
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BpVprBOaAzo" title="Displaying data in QGIS" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br>
 
 Next, try georectifying a historical map and adding it to your GIS following Gibbs' other tutorial ['Using Historical maps with QGIS'](http://fredgibbs.net/tutorials/qgis/overlaying-historic-maps-with-qgis.html).
 
