@@ -18,25 +18,25 @@ It may be that you are interested in the structure of links on the internet. Per
 
 ## Getting set up to scrape
 
-1\. In Chrome, go to the settings page (the 'hamburg' icon at the extreme right of the address bar, or by typing ```chrome://settings/``` in the address bar. 
+1. In Chrome, go to the settings page (the 'hamburg' icon at the extreme right of the address bar, or by typing ```chrome://settings/``` in the address bar. 
 
-2\. Click on 'show advanced settings' at the bottom of the page.
+2. Click on 'show advanced settings' at the bottom of the page.
 
-3\. Scroll down to 'Network' and click on 'change proxy settings'. 
+3. Scroll down to 'Network' and click on 'change proxy settings'. 
 
-4\. In the popup that opens, click the 'connections' tab, and then the 'LAN Settings' button. 
+4. In the popup that opens, click the 'connections' tab, and then the 'LAN Settings' button. 
 
-**Another** popup will open. 
+    **Another** popup will open. 
 
-5\. Select the 'Use a proxy server for your LAN'. 
+5. Select the 'Use a proxy server for your LAN'. 
 
-6\. Enter ```127.0.0.1``` for the address, and ```8088``` for the port. Now, whenever you go to a website, the info will be echoed through that port. We need to set Gephi up to hear what's being passed.
+6. Enter ```127.0.0.1``` for the address, and ```8088``` for the port. Now, whenever you go to a website, the info will be echoed through that port. We need to set Gephi up to hear what's being passed.
 
-7\. Open Gephi and start a new project. 
+7. Open Gephi and start a new project. 
 
-8\. Go to 'file', then 'generate', and then 'http graph'. A pop up will open, asking you to specify a port. 
+8. Go to 'file', then 'generate', and then 'http graph'. A pop up will open, asking you to specify a port. 
 
-9\. Input ```8088```. Accept the defaults, and press OK. On the overview panel, nodes will begin to appear when you go to a URL in Chrome. 
+9. Input ```8088```. Accept the defaults, and press OK. On the overview panel, nodes will begin to appear when you go to a URL in Chrome. 
 
 ## Begin the scrape
 

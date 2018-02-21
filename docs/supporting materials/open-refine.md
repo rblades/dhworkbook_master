@@ -16,6 +16,10 @@ In this exercise, we are going to use a tool that originated with Google. Since 
 3. Follow the installation instructions. 
 4. Start Open Refine by double clicking on its icon. This will open a new browser window, pointing to `http://127.0.0.1:3333`. This location is your own computer, so even though it looks like it’s running on the internet, it isn’t. The ‘3333’ is a ‘port’, meaning that Open Refine is running much like a server, serving up a webpage via that port to the browser. (If the browser window doesn't open automatically, open one and put `http://127.0.0.1:3333` in the address bar).
 
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Y1M8zEsy9NE" title="Installing Open Refine" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br>
+
 ## Start Cleaning our Texan Correspondence
 
 Make sure you have your data handy that you created in exercise 1, the Texan correspondence. You can get it out of your DH Box by using the DH Box filemanager. 
@@ -35,6 +39,10 @@ Make sure you have your data handy that you created in exercise 1, the Texan cor
 13. Repeat step 12 for "Recipient". The resulting spreadsheet will not be perfect, but it will be much easier to clean by hand than it would have been before taking this step. 
 14. Click on ‘export’ at the top right of the window to get your data back out as a .csv file.
 
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/o8-e3_iKI1I" title="Cleaning our Correspondence with Open Refine" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br>
+
 ## Now what?
 The text you've just cleaned could now be loaded into something like [Palladio](http://palladio.designhumanities.org/) or [Gephi](http://gephi.org) or [Connect the Dots](https://databasic.io/en/connectthedots/) for network analysis! However, every network analysis program has its own idiosyncracies. Gephi and Connect the Dots, for instance, can import lists of relationships if the CSV file has columns labelled 'source' and 'target' (Connect the Dots will _only_ accept those two columns, so you'd have to delete the date column if you wanted to give that a try). So let's assume that's where we want to visualize & analyze this data:
 
@@ -48,7 +56,11 @@ In order to get this correspondence data into a network visualization tool, we w
 6. Go ahead and drop this file into the Palladio interface. Do you see any interesting patterns? Make a note!
 7. Upload your cleaned file with a new name back **into** your DH Box; we will use this in the next module.
 
-**Remember to copy your notes and any other information/observations/thoughts to your Github repo**
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QdJYiUODFE8" title="Preparing our file for export" frameborder="0" gesture="media" allowfullscreen></iframe>
+<br>
+
+**Remember to copy your notes and any other information/observations/thoughts to your GitHub repo**
 
 ### Optional: Going further with Open Refine: Named Entity Extraction
 
@@ -72,7 +84,7 @@ Say we wanted, instead of the correspondence network, a visualization of all the
 
 One interesting tool is called 'RezoViz', which will extract entities and tie them together into a network based on appearing in the same document. 
 
-1. Upload some of your Equity texts to Voyant-Tools.
+1. Upload some of your Canadian war diary texts to Voyant-Tools.
 2. In the top right, there's a 'save' icon. 
 3. Select 'url for a different tool/skin'. 
 4. Select 'RezoViz' from the tools list that pops up. A new URL will appear in the box. 
@@ -82,31 +94,30 @@ What kinds of questions could this answer?
 
 ####Stanford NER
 
-1\. Download [Stanford NER](http://nlp.stanford.edu/software/CRF-NER.shtml).
+1. Download [Stanford NER](http://nlp.stanford.edu/software/CRF-NER.shtml).
 
-+ [Mac instructions for Stanford NER](http://historyinthecity.blogspot.ca/2014/06/how-to-use-stanfords-ner-and-extract.html). The link is to Michelle Moravec's instructions, for Mac.
+    + [Mac instructions for Stanford NER](http://historyinthecity.blogspot.ca/2014/06/how-to-use-stanfords-ner-and-extract.html). The link is to Michelle Moravec's instructions, for Mac.
 
-+ Windows: If you're on windows and want to do this, things are a bit more complicated. Download and unzip the NER package.
+    + Windows: If you're on windows and want to do this, things are a bit more complicated. Download and unzip the NER package.
 
-  + Open a command prompt in the Stanford NER folder on your Windows machine (you can right-click on the folder in your windows explorer, and select ‘open command prompt here’).
+      + Open a command prompt in the Stanford NER folder on your Windows machine (you can right-click on the folder in your windows explorer, and select ‘open command prompt here’).
 
-  + Changing the file names as appropriate, type the following as a single line (highlight the text with your mouse - it scrolls to the right beyond the page, and then copy it):
+      + Changing the file names as appropriate, type the following as a single line (highlight the text with your mouse - it scrolls to the right beyond the page, and then copy it):
 
-```
-java -mx500m -cp stanford-ner.jar edu.stanford.nlp.ie.crf.CRFClassifier -loadClassifier classifiers/english.all.3class.distsim.crf.ser.gz -textFile texas-letters.txt -outputFormat inlineXML > “my-ner-output.txt”
-```
+            java -mx500m -cp stanford-ner.jar edu.stanford.nlp.ie.crf.CRFClassifier -loadClassifier classifiers/english.all.3class.distsim.crf.ser.gz -textFile texas-letters.txt -outputFormat inlineXML > “my-ner-output.txt”
 
-+ The first bit, `java –mx500m` says how much memory to use. If you have 1gb of memory available, you can type `java –mx 1g` (or 2g, or 3g, etc). 
-+ The next part of the command calls the NER programme itself. You can set which classifier to use after the `–loadClassifier classifiers/` by typing in the exact file name for the classifier you wish to use (you are telling ‘loadClassifier’ the exact path to the classifier). 
-+ At `–textFile` you give it the name of your input file (on our machine, called ‘texas-letters.txt’, and then specify the outputFormat. 
-+ The `>` character sends the output to a new text file, here called “my-ner-output.txt”. 
 
-2\. Hit enter, and a few moments later the programme will tell you something along the lines of
+    + The first bit, `java –mx500m` says how much memory to use. If you have 1gb of memory available, you can type `java –mx 1g` (or 2g, or 3g, etc). 
+    + The next part of the command calls the NER programme itself. You can set which classifier to use after the `–loadClassifier classifiers/` by typing in the exact file name for the classifier you wish to use (you are telling ‘loadClassifier’ the exact path to the classifier). 
+    + At `–textFile` you give it the name of your input file (on our machine, called ‘texas-letters.txt’, and then specify the outputFormat. 
+    + The `>` character sends the output to a new text file, here called “my-ner-output.txt”. 
 
-`CRFCLassifier tagged 375281 words in 13745 documents at 10833.43 words per second`
+2. Hit enter, and a few moments later the programme will tell you something along the lines of
 
-3\. Open the text file in your text editor, and you’ll see output like this:
+    `CRFCLassifier tagged 375281 words in 13745 documents at 10833.43 words per second`
 
-> In the name of the ```<LOCATION>```Republic of Texas```</LOCATION>```, Free, Sovereign and Independent. To all whom these Presents shall come or may in any wise concern. I ```<PERSON>```Sam Houston```</PERSON>``` President thereof send Greeting
+3. Open the text file in your text editor, and you’ll see output like this:
+
+    > In the name of the ```<LOCATION>```Republic of Texas```</LOCATION>```, Free, Sovereign and Independent. To all whom these Presents shall come or may in any wise concern. I ```<PERSON>```Sam Houston```</PERSON>``` President thereof send Greeting
 
 Congratulations! You've tagged a body of letters. What next? You could organize this into XML, you could visualize, you could regex to find and extract all of your locations, or persons, or...

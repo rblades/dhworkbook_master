@@ -3,7 +3,7 @@
 ## Concepts
 As historians, we aren't all that accustomed to sharing our research notes. We go to the archives, we take our photographs, we spend **hours** pouring over documents, photographs, diaries, newspapers... why should someone else benefit from **our** work?
 
-There are a number of reasons why you should want to do this. This week we will read and discuss the arguments advanced by various historians, including
+There are a number of reasons why you should want to do this. This week we will read and discuss the arguments advanced by various historians, including:
 
 + [Trevor Owens](http://www.trevorowens.org/2008/03/sunrise-on-methodology-and-radical-transparency-of-sources-in-historical-writing/)
 + [Caleb McDaniel](http://wcm1.web.rice.edu/open-notebook-history.html)
@@ -13,7 +13,7 @@ There are a number of reasons why you should want to do this. This week we will 
 + [Kathleen Fitzpatrick](http://www.plannedobsolescence.net/generous-thinking-introduction/#more-2828)
 + [Sheila Brennan](http://www.lotfortynine.org/2017/06/my-digital-publishing-update-nothing/)
 
-But most importantly, **change is coming whether historians like it or not**. Here in Canada, SSHRC has a [research data archiving policy](http://www.sshrc-crsh.gc.ca/about-au_sujet/policies-politiques/statements-enonces/edata-donnees_electroniques-eng.aspx)
+But most importantly, **change is coming whether historians like it or not**. Here in Canada, [SSHRC](http://www.sshrc-crsh.gc.ca) has a [research data archiving policy](http://www.sshrc-crsh.gc.ca/about-au_sujet/policies-politiques/statements-enonces/edata-donnees_electroniques-eng.aspx)
 
 > All research data collected with the use of SSHRC funds must be preserved and made available for use by others within a reasonable period of time. SSHRC considers “a reasonable period” to be within two years of the completion of the research project for which the data was collected.
 
@@ -26,7 +26,7 @@ Note the [conversation that ensued on Twitter after Milligan mentioned all this]
 
 Really, it's also a kind of ['knowledge mobilization'](http://www.sshrc-crsh.gc.ca/society-societe/community-communite/index-eng.aspx#2). In this module you will find exercises related to setting up your github account, how to commit, fork, push and pull files to your own repository and to others'. Really, it's about [sustainable authorship](http://programminghistorian.org/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown) and [preserving your research data](http://programminghistorian.org/lessons/preserving-your-research-data).
 
-### By the end of this module you will know:
+### By the end of this module you will know
 + how to work with github to foster collaboration
 + how to set up, fork, and make changes to files and repositories
 + the rationale for historians to make their work public

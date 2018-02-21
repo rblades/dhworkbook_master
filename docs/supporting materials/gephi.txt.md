@@ -15,29 +15,27 @@ Mac users might have some trouble installing Gephi 0.8. We have found that, on M
 
 To fix this:
 
-1\. Control click (or right-click) on the Gephi package
+1. Control click (or right-click) on the Gephi package
 
-2\. Select “show package contents.” 
+2. Select “show package contents.” 
 
-3\. Click on “contents >> resources >> gephi >> etc.” 
+3. Click on “contents >> resources >> gephi >> etc.” 
 
-4\. Control-click (or right-click) on “gephi.conf” and open with your text editor. 
+4. Control-click (or right-click) on “gephi.conf” and open with your text editor. 
 
-5\. Find the line reading:
+5. Find the line reading:
 
-```#jdkhome="/path/to/jdk"```
+        #jdkhome="/path/to/jdk"
 
-and paste the following code:
+    and paste the following code:
 
-``` 
-jdkhome="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home 
-```
+        jdkhome="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home 
 
-6\. Save that file. Then, go to [Apple support](http://support.apple.com/kb/DL1572) and install the older version of Java (Java 6). Once that is installed, Gephi should run normally.
+6. Save that file. Then, go to [Apple support](http://support.apple.com/kb/DL1572) and install the older version of Java (Java 6). Once that is installed, Gephi should run normally.
 
-7\. Run Gephi once it is installed. You will be presented with a welcome prompting you to open a recent file, create a new project, or load a sample file. 
+7. Run Gephi once it is installed. You will be presented with a welcome prompting you to open a recent file, create a new project, or load a sample file. 
 
-8\. Click “New Project” and then click the “Data Laboratory” tab on the horizontal bar at the top of the Gephi window (Fig. 7.3).
+8. Click “New Project” and then click the “Data Laboratory” tab on the horizontal bar at the top of the Gephi window (Fig. 7.3).
 
 ## When Not To Use Networks 
 
@@ -84,73 +82,73 @@ Gephi is broken up into three panes: **Overview**, **Data Laboratory**, and **Pr
 
 There is one tweak that needs to done in the Data Table before the dataset is fully ready to be explored in Gephi. 
 
-1\. Click on the Data Laboratory tab.
+1. Click on the Data Laboratory tab.
 
-2\. Click on the “Nodes” tab in the Data Table (this should be open already) and notice that, of the three columns, “Label” (the furthermost field on the right) is blank in every row. This will be a problem when viewing the network visualization, as those labels are essential for the network to be meaningful. 
+2. Click on the “Nodes” tab in the Data Table (this should be open already) and notice that, of the three columns, “Label” (the furthermost field on the right) is blank in every row. This will be a problem when viewing the network visualization, as those labels are essential for the network to be meaningful. 
 
-3\. In the “Nodes” tab, click “Copy data to other column” at the bottom, select “ID”, and press “Ok” (Fig. 7.5). Upon doing so, the “Label” column will be filled with the appropriate labels for each correspondent. 
+3. In the “Nodes” tab, click “Copy data to other column” at the bottom, select “ID”, and press “Ok” (Fig. 7.5). Upon doing so, the “Label” column will be filled with the appropriate labels for each correspondent. 
 
-5\. While you’re still in the Data Laboratory, look in the “Edges” tab and notice there is a “Weight” column. Gephi automatically counted every time a letter was sent from correspondent A to correspondent B and summed up all the occurrences, resulting in the “Weight.” This means that J. Pinckney Henderson sent three letters to James Webb, because Henderson is in the “Source” column, Webb in the “Target,”, and the “Weight” is three.
+4. While you’re still in the Data Laboratory, look in the “Edges” tab and notice there is a “Weight” column. Gephi automatically counted every time a letter was sent from correspondent A to correspondent B and summed up all the occurrences, resulting in the “Weight.” This means that J. Pinckney Henderson sent three letters to James Webb, because Henderson is in the “Source” column, Webb in the “Target,”, and the “Weight” is three.
 
-6\. Clicking on the Overview pane will take you to a visual representation of the network you just imported. In the middle of the screen, you will see your network in the “Graph” tab. The “Context” tab, at the top right, will show that you imported 234 nodes and 394 edges. At first, all the nodes will be randomly strewn across the screen and make little visual sense. 
+5. Clicking on the Overview pane will take you to a visual representation of the network you just imported. In the middle of the screen, you will see your network in the “Graph” tab. The “Context” tab, at the top right, will show that you imported 234 nodes and 394 edges. At first, all the nodes will be randomly strewn across the screen and make little visual sense. 
 
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/s5_jgK5hEFA" title="Importing your data into Gephi" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br> 
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/s5_jgK5hEFA" title="Importing your data into Gephi" frameborder="0" gesture="media" allowfullscreen></iframe>
+    <br> 
 
-7\. Fix the nodes by selecting a layout in the “Layout” tab – the best one for beginners is “Force Atlas 2.” 
+6. Fix the nodes by selecting a layout in the “Layout” tab – the best one for beginners is “Force Atlas 2.” 
 
-8\. Press the “Run” button and watch the nodes and edges reorganize on the screen into something slightly more manageable. After the layout runs for a few minutes, re-press the button (now labeled “Stop”) to settle the nodes in their place. 
+7. Press the “Run” button and watch the nodes and edges reorganize on the screen into something slightly more manageable. After the layout runs for a few minutes, re-press the button (now labeled “Stop”) to settle the nodes in their place. 
 
-You just ran a force-directed layout. Each dot is a correspondent in the network, and lines between dots represent letters sent between individuals. Thicker lines represent more letters, and arrows represent the direction the letters were sent, such that there may be up to two lines connecting any two correspondents (one for each direction).
+    You just ran a force-directed layout. Each dot is a correspondent in the network, and lines between dots represent letters sent between individuals. Thicker lines represent more letters, and arrows represent the direction the letters were sent, such that there may be up to two lines connecting any two correspondents (one for each direction).
+     
+    About two-dozen smaller components of the network will appear to shoot off into the distance, unconnected from the large, connected component in the middle. For the purpose of this exercise, we are not interested in those disconnected components, so the next step will be to filter them out of the network. 
+
+8. The first step is to calculate which components of the network are connected to which others; do this by clicking “Run” next to the text that says “Connected Components” in the “Statistics” tab on the right-hand side.  
+
+9. Once there, select “UnDirected” and press “OK.” 
+
+10. Press “Close” when the report pops up indicating that the algorithm has finished running. Now that this is done, Gephi knows which is the giant connected component and has labeled that component “0”. 
+
+11. To filter out everything but the giant component, click on the “Filters” tab on the right-hand side and browse to "Component ID Integer (Node)" in the folder directory (you’ll find it under "Attributes," then "Equal"). 
+
+12. Double-click "Component ID Integer (Node)" and click the "Filter" button at the bottom. Doing this removes the disconnected bundles of nodes.
+
+    There are many possible algorithms you could use for the analysis step, but in this case you will use the PageRank of each node in the network. This measurement calculates the prestige of a correspondent according to how often others write to him or her. The process is circular, such that correspondents with high prestige will confer their prestige on those they write to, who in turn pass their prestige along to their own correspondents. For the moment let us take its results to equate with a correspondent’s importance in the Republic of Texas letter network.
+
+13. Calculate the PageRank by clicking on the "Run" button next to "PageRank" in the "Statistics" tab. You will be presented with a prompt asking for a few parameters; make sure "Directed" network is selected and that the algorithm is taking edge weight into account (by selecting "Use edge weight"). Leave all other parameters at their default. 
+
+14. Press "OK".
  
-About two-dozen smaller components of the network will appear to shoot off into the distance, unconnected from the large, connected component in the middle. For the purpose of this exercise, we are not interested in those disconnected components, so the next step will be to filter them out of the network. 
+15. Once PageRank is calculated, if you click back into the "Data Laboratory" and select the "Nodes" list in the Data Table, you can see that a new "PageRank" column has been added, with values for every node. The higher the PageRank, the more central a correspondent is in the network. 
 
-9\. The first step is to calculate which components of the network are connected to which others; do this by clicking “Run” next to the text that says “Connected Components” in the “Statistics” tab on the right-hand side.  
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/nEAO04nQeQc" title="Modifying your network visualization" frameborder="0" gesture="media" allowfullscreen></iframe>
+    <br> 
 
-10\. Once there, select “UnDirected” and press “OK.” 
+16. Going back to the Overview pane, you can visualize this centrality by changing the size of each correspondent’s node based on its PageRank. Do this in the "Ranking" tab on the left side of the Overview pane.
 
-11\. Press “Close” when the report pops up indicating that the algorithm has finished running. Now that this is done, Gephi knows which is the giant connected component and has labeled that component “0”. 
+17. Make sure "Nodes" is selected, press the icon of a little red diamond, and select PageRank from the drop-down menu. 
 
-12\. To filter out everything but the giant component, click on the “Filters” tab on the right-hand side and browse to "Component ID Integer (Node)" in the folder directory (you’ll find it under "Attributes," then "Equal"). 
+18. In the parameter options just below, enter the "Min size" as 1 and the "Max size" as 10. 
 
-13\. Double-click "Component ID Integer (Node)" and click the "Filter" button at the bottom. Doing this removes the disconnected bundles of nodes.
+19. Press "Apply," and watch the nodes resize based on their PageRank. 
 
-There are many possible algorithms you could use for the analysis step, but in this case you will use the PageRank of each node in the network. This measurement calculates the prestige of a correspondent according to how often others write to him or her. The process is circular, such that correspondents with high prestige will confer their prestige on those they write to, who in turn pass their prestige along to their own correspondents. For the moment let us take its results to equate with a correspondent’s importance in the Republic of Texas letter network.
+20. To be on the safe side and decrease clutter, re-run the "Force Atlas 2" layout as described above, making sure to keep the "Prevent Overlap" box checked.
+     
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/kh9nR_W7B9w" title="Styling your network visualization" frameborder="0" gesture="media" allowfullscreen></iframe>
+    <br> 
 
-14\. Calculate the PageRank by clicking on the "Run" button next to "PageRank" in the "Statistics" tab. You will be presented with a prompt asking for a few parameters; make sure "Directed" network is selected and that the algorithm is taking edge weight into account (by selecting "Use edge weight"). Leave all other parameters at their default. 
+    At this point, the network is processed enough to visualize in the Preview pane, to finally begin making sense of the data. 
 
-15\. Press "OK".
- 
-16\. Once PageRank is calculated, if you click back into the "Data Laboratory" and select the "Nodes" list in the Data Table, you can see that a new "PageRank" column has been added, with values for every node. The higher the PageRank, the more central a correspondent is in the network. 
+21. In Preview, on the left-hand side, select "Show Labels," "Proportional Size," "Rescale Weight," and deselect "Curved" edges. 
 
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nEAO04nQeQc" title="Modifying your network visualization" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br> 
+22. Press "Refresh." 
 
-17\. Going back to the Overview pane, you can visualize this centrality by changing the size of each correspondent’s node based on its PageRank. Do this in the "Ranking" tab on the left side of the Overview pane.
-
-18\. Make sure "Nodes" is selected, press the icon of a little red diamond, and select PageRank from the drop-down menu. 
-
-19\. In the parameter options just below, enter the "Min size" as 1 and the "Max size" as 10. 
-
-18\. Press "Apply," and watch the nodes resize based on their PageRank. 
-
-20\. To be on the safe side and decrease clutter, re-run the "Force Atlas 2" layout as described above, making sure to keep the "Prevent Overlap" box checked.
- 
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kh9nR_W7B9w" title="Styling your network visualization" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br> 
-
-At this point, the network is processed enough to visualize in the Preview pane, to finally begin making sense of the data. 
-
-21\. In Preview, on the left-hand side, select "Show Labels," "Proportional Size," "Rescale Weight," and deselect "Curved" edges. 
-
-22\. Press "Refresh." 
-
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2YBNnEmazq8" title="Previewing your final network visualization" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br> 
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/2YBNnEmazq8" title="Previewing your final network visualization" frameborder="0" gesture="media" allowfullscreen></iframe>
+    <br> 
 
 ## So what have we got?
 

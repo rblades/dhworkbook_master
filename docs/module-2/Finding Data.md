@@ -36,7 +36,7 @@ Finally, Cameron Blevins has some thoughts on the ['perpetual sunrise of methodo
 This week, I want you to choose just **one** of the articles linked to above to do your 'official' annotations on OR annotate one of these two articles regarding the 'Transcribing Bentham' project:
 
 + Causer & Wallace, [Building A Volunteer Community: Results and Findings from Transcribe Bentham](http://www.digitalhumanities.org/dhq/vol/6/2/000125/000125.html) DHQ 6.2, 2012
-+ Causer, Tonra, & Wallace [Transcription maximized; expense minimized? Crowdsourcing and editing The Collected Works of Jeremy Bentham](http://llc.oxfordjournals.org/content/27/2/119.abstract)LLC 27.2, 2012
++ Causer, Tonra, & Wallace [Transcription maximized; expense minimized? Crowdsourcing and editing The Collected Works of Jeremy Bentham](http://llc.oxfordjournals.org/content/27/2/119.abstract) LLC 27.2, 2012
 
 Again, I also want you to respond to at least one substantive annotation made by your peers. Remember, with Hypothes.is you can annotate pdfs that you have opened in your browser from a website.
 

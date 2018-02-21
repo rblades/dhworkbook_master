@@ -10,7 +10,7 @@ In this exercise, you will need to have Python installed on your machine. [You c
 
 You should also read and understand Fred Gibbs' tutorial on [installing python modules](http://fredgibbs.net/tutorials/install-python-modules) because you will need to install some helper modules.
 
-In Module 3, you used the NER to extract place names from a text. After some further munging with regex, you might have ended up with a CSV that looks like [this one on Github](https://raw.githubusercontent.com/hist3907b-winter2015/module4-holes/master/texas.csv).
+In Module 3, you used the NER to extract place names from a text. After some further munging with regex, you might have ended up with a CSV that looks like [this one on GitHub](https://raw.githubusercontent.com/hist3907b-winter2015/module4-holes/master/texas.csv).
 
 1. Use Openrefine to open that csv file. In the same way you tidied up in the [Open Refine tutorial in module 3](https://github.com/hist3907b-winter2015/module3-wranglingdata/blob/master/openrefine.md), clean up this CSV so that you merge together place names appropriately (ie. so that '4ustin' gets merged with 'Austin'). Do this for all the columns.
 2. Export the table as a new csv - call it 'cleaned-places.csv'.

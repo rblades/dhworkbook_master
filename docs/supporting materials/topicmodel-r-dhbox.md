@@ -1,17 +1,15 @@
 # Topic Modeling in R, DH Box version
 
-In this exercise, we're going to grab the Colonial Newspaper Database from my Github page, do some exploratory visualizations, and then create a topic model whose output can then be visualized further in other platforms (including as a network in Gephi or other such packaged). At the appropriate point, I show you how to import a directory of texts rather than a single file of data, and to feed that into the script.
+In this exercise, we're going to grab the Colonial Newspaper Database from my GitHub page, do some exploratory visualizations, and then create a topic model whose output can then be visualized further in other platforms (including as a network in Gephi or other such packaged). At the appropriate point, I show you how to import a directory of texts rather than a single file of data, and to feed that into the script.
 
 Go to your DH Box, and click on RStudio. At the right hand side where it says 'project (none)', click and create a new project in a new empty directory. (If you want to put this directory under version control with git, so that you can push your work to your github account, please read [the RStudio instructions](git-rstudio.md).)
 
 In the script panel (top left; click on the green plus side and select new R script if this pane isn't open) paste the following code and then run each line by putting the cursor in the line and hitting code > run lines.
 
-```r
-install.packages("mallet")
-library("mallet")
-install.packages("RCurl")
-library("RCurl")
-```
+        install.packages("mallet")
+        library("mallet")
+        install.packages("RCurl")
+        library("RCurl")
 
 In the future, now that you've installed these packages you won't have to again, so you can comment them out by placing a ```\#``` in front.
 
@@ -25,7 +23,7 @@ Cannot find curl-config
 ERROR: configuration failed for package ‘RCurl’
 ```
 
-To fix this, navigate to the DH Box command line and type `sudo apt-get install libcurl4-gnutls-dev`. When the installation is successful, you can now install RCurl by running the last two lines of the script:
+To fix this, navigate to the DH Box command line and type `$ sudo apt-get install libcurl4-gnutls-dev`. When the installation is successful, you can now install RCurl by running the last two lines of the script:
 
 ```r
 install.packages("RCurl")
@@ -33,14 +31,14 @@ library("RCurl")
 ```
 
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ca9WV88XUv8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ca9WV88XUv8" title="Preparing RStudio for network analysis" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 <br> 
 
 ## Importing data directly from the web
 
-Melodee Beals has been using TEI to markup newspaper articles, creating the Colonial Newspapers Database (which she shared on github). We then used Github Pages and an XLST stylesheet to convert that database into a table of comma-separated values, a copy of which is at https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv. We are now going to topic model the text of those newspaper articles, to see what patterns of discourse may lie within.
+Melodee Beals has been using TEI to markup newspaper articles, creating the Colonial Newspapers Database (which she shared on github). We then used GitHub Pages and an XLST stylesheet to convert that database into a table of comma-separated values, a copy of which is at https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv. We are now going to topic model the text of those newspaper articles, to see what patterns of discourse may lie within.
 
-Now we want to tell R Studio to grab our data from our github page. The thing is, R Studio can easily grab materials from websites where the url is http; but when it is https (as it is with github), things get a bit more fussy. So what we do is use a special package to grab the data, and then shove it into a variable that we can then tease apart for our analysis.
+Now we want to tell RStudio to grab our data from our github page. The thing is, RStudio can easily grab materials from websites where the url is http; but when it is https (as it is with github), things get a bit more fussy. So what we do is use a special package to grab the data, and then shove it into a variable that we can then tease apart for our analysis.
 
 ```r
 x <- getURL("https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv", .opts = list(ssl.verifypeer = FALSE))
@@ -79,15 +77,15 @@ mallet.instances <- mallet.import(documents$Article_ID, documents$Text, "en.txt"
 That line above passes the article ID and the text of our newspaper articles to the Mallet routine.  The stopwords list is generic; it might need to be curated to take into account the pecularities of your data. You might want to create your own, one for each project given the particulars of your project. Note that Jockers compiled hist stoplist for his research in literary history of the 19th century. Your mileage may vary! Finally, the last bit after ‘token.regexp’ applies a regular expression against our newspaper articles, cleaning them up.
 
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TBW-rMXPFH0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-<br> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ca9WV88XUv8" title="Importing data directly from the web" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<br>
 
 ## Reading data from a directory
 
-This is an alternative way of ingesting documents for topic modeling. Earlier, you learned how to use wget and some other scripts to download full text documents from Canadiana.org as well as from the Provincial Archives in Quebec (the Shawville Equity). The code below loads those documents into Mallet, after which you can proceed to build a topic model. In the command line, cd into your folder that has your downloaded materials. At the command line, cd into your folder, and type $ pwd to get the full path. Copy it, go back to RStudio, and paste it into the line below between the " marks.
+This is an alternative way of ingesting documents for topic modeling. Earlier, you learned how to use wget and some other scripts to download full text documents from Canadiana.org as well as from the Library and Archives Canada (the Canadian war diary). The code below loads those documents into Mallet, after which you can proceed to build a topic model. In the command line, cd into your folder that has your downloaded materials. At the command line, cd into your folder, and type $ pwd to get the full path. Copy it, go back to RStudio, and paste it into the line below between the " marks.
 
 ```r
-documents <- mallet.read.dir("/home/shawngraham/equity")
+documents <- mallet.read.dir("/home/shawngraham/war-diary-text")
 
 # your path will probably look like /home/your-account-in-dhbox/your-folder-of-materials
 
@@ -96,8 +94,8 @@ mallet.instances <- mallet.import(documents$id, documents$text, "en.txt", token.
 **NB Do either one or the other, but not both: read from a file, where each row contains the complete text of the document, or read from a folder where each file contains the complete text of the document.**
 
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tMfa2ENjqVM" title="Reading Data from a directory" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ca9WV88XUv8" title="Reading data from a directory" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<br>
 
 ## Building the topic model
 
@@ -145,8 +143,8 @@ topic.words <- mallet.topic.words(topic.model, smoothed=T, normalized=T)
 ```
 
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/IKAwSASkXjY" title="Building the topic model" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ca9WV88XUv8" title="Building the topic model" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<br>
 
 Congratulations! You now have a topic model. Let’s look at some of our topics. What are the top words in topic 7? Notice that R indexes from 1, so this will be the topic that mallet called topic 6:
 ```r
@@ -171,8 +169,8 @@ write.csv(topics.labels, "topics-labels.csv")
 Some interesting patterns suggest themselves already! But a list of words doesn’t capture the relative importance of particular words in particular topics. A word might appear in more than one topic, for instance, but really dominate one rather than the other. When you examine the csv files, you'll notice that each document is given a series of percentages; these add up to 1, and are indicating the percentage which the different topics contribute to the overall composition of that document. Look for the largest numbers to get a sense of what's going on. We could ask R to cluster similarly composed documents together though...
 
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MaN3b3rSkxQ" title="Training topics with MALLET" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ca9WV88XUv8" title="Training topics with MALLET" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<br>
 
 ## A simple histogram
 
@@ -187,8 +185,8 @@ plot(hclust(dist(topic.words)))
 ```
 
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TShK40wQ5GY" title="Creating a simple histogram" frameborder="0" gesture="media" allowfullscreen></iframe>
-<br> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ca9WV88XUv8" title="Creating a simple histogram" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<br>
 
 Now, if we want to get really fancy, we can make a network visualization of how topics interlink due to their distribution in documents. The next bit of code does that, and saves in .graphml format, which packages like Gephi http://gephi.org can read.
 
@@ -206,8 +204,9 @@ topic_df_dist[ sweep(topic_df_dist, 1, (apply(topic_df_dist,1,min) + apply(topic
 ```
 
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RQdKc6FEqjY" title="Clustering your data" frameborder="0" gesture="media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ca9WV88XUv8" title="Clustering your data" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 <br>
+
 
 ```r
 install.packages("igraph")
@@ -239,7 +238,7 @@ write.graph(g, file="cnd.graphml", format="graphml")
 ```
 
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BL9tlD9T3OU" title="Graphing your data" frameborder="0" gesture="media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ca9WV88XUv8" title="Graphing your data" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 <br>
 
 There are many ways of visualizing and transforming our data. This document only captures a small fraction of the kinds of things you could do. Another good exploration is at [Matthew Jockers' website](http://www.matthewjockers.net/macroanalysisbook/expanded-stopwords-list/) or the [global stopwords lists](http://www.ranks.nl/stopwords/). [Ben Marwick does really fun things with the Day of Archaeology blog posts](https://github.com/benmarwick/dayofarchaeology) and indeed, some of the code above comes from Marwick’s explorations. Keep your R scripts in your open notebook, and somebody might come along and use them, cite them, improve them, share them! Keep also all your data. Visit [my own work for an example](https://github.com/shawngraham/ferguson).

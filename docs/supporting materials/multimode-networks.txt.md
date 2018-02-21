@@ -30,39 +30,39 @@ The data for this exercise comes from a former Carleton public history MA studen
 
 There is a plugin for Gephi that we will use to transform our network. 
 
-1\. Open Gephi. Across the top of Gephi in the menu ribbon you’ll see **File Workspace View Tools Window Plugins Help**. 
+1. Open Gephi. Across the top of Gephi in the menu ribbon you’ll see **File Workspace View Tools Window Plugins Help**. 
 
-2\. To get and install the plugin, select **Tools >> Plugins** (The top level menu item 'Plugins' is empty and not used - a useful reminder that Gephi is still in **beta**).
+2. To get and install the plugin, select **Tools >> Plugins** (The top level menu item 'Plugins' is empty and not used - a useful reminder that Gephi is still in **beta**).
 
-3\. In the popup, under ‘available plugins’ look for ‘MultimodeNetworksTransformation’. Tick this box, then click on Install.
+3. In the popup, under ‘available plugins’ look for ‘MultimodeNetworksTransformation’. Tick this box, then click on Install.
 
-4\. Follow the instructions, ignore any warnings, click on ‘finish’. You may or may not need to restart Gephi to get the plugin running. If you suddenly see on the far right of ht Gephi window a new tab besid ‘statistics’, ‘filters’, called ‘Multimode Network’, then you’re ok.
+4. Follow the instructions, ignore any warnings, click on ‘finish’. You may or may not need to restart Gephi to get the plugin running. If you suddenly see on the far right of ht Gephi window a new tab besid ‘statistics’, ‘filters’, called ‘Multimode Network’, then you’re ok.
 
-![Image of Gephi plugin interface](http://electricarchaeologist.files.wordpress.com/2013/10/slide1.jpg)
+    ![Image of Gephi plugin interface](http://electricarchaeologist.files.wordpress.com/2013/10/slide1.jpg)
 
 ## Importing the data
 
-1\. Under ‘file’, select -> New project.
+1. Under ‘file’, select -> New project.
 
-2\. On the data  laboratory tab, select Import-spreadsheet, and in the pop-up, make sure to select under ‘as table: EDGES table. Select women-orgs.csv.
+2. On the data  laboratory tab, select Import-spreadsheet, and in the pop-up, make sure to select under ‘as table: EDGES table. Select women-orgs.csv.
 
-3\. Click ‘next’, click finish.
+3. Click ‘next’, click finish.
 
-4\. On the data table, have ‘edges’ selected. This is showing you the source and the target for each link (aka ‘edge’). This implies a directionality to the relationship that we just don’t know – so down below, when we get to statistics, we will always have to make sure to tell Gephi that we want the network treated as ‘undirected’. More on that below.
+4. On the data table, have ‘edges’ selected. This is showing you the source and the target for each link (aka ‘edge’). This implies a directionality to the relationship that we just don’t know – so down below, when we get to statistics, we will always have to make sure to tell Gephi that we want the network treated as ‘undirected’. More on that below.
 
-![Image of Gephi data import interface](http://electricarchaeologist.files.wordpress.com/2013/10/slide2.jpg)
+    ![Image of Gephi data import interface](http://electricarchaeologist.files.wordpress.com/2013/10/slide2.jpg)
 
-Loading your csv file, step 1.
+    Loading your csv file, step 1.
 
-![Image of CSV import interface](http://electricarchaeologist.files.wordpress.com/2013/10/slide3.jpg)
+    ![Image of CSV import interface](http://electricarchaeologist.files.wordpress.com/2013/10/slide3.jpg)
 
-Loading your CSV file, step 2
+    Loading your CSV file, step 2
 
-5\. Click on ‘copy data to other column’. Select ‘Id’. In the pop-up, select ‘Label’. You now have your edges labelled.
+5. Click on ‘copy data to other column’. Select ‘Id’. In the pop-up, select ‘Label’. You now have your edges labelled.
 
-6\. Just as you did above, now import NODES (Women-names.csv)
+6. Just as you did above, now import NODES (Women-names.csv)
 
-7\. Making sure you're on the Nodes page in the data laboratory, copy ID to Label to that your nodes are labelled.
+7. Making sure you're on the Nodes page in the data laboratory, copy ID to Label to that your nodes are labelled.
 
 **NB You can always add more attribute data to your network this way, as long as you always use a column called Id so that Gephi knows where to slot the new information. Make sure to never tick off the box labeled ‘force nodes to be created as new ones’**
 
@@ -71,21 +71,21 @@ Loading your CSV file, step 2
 We're now going to manipulate the data a bit in order to get it ready for the transformation. In this data, we have women, and we have organizations. We need to tell Gephi which rows are the organizations. In Peter's original data input phase, he decided to use a unique number for each woman so that he would minimize data entry errors (misspellings and so on), as well as control for the use of maiden and married names. Miss Eliza Smith might become, at a later date, Mrs. George Doe. In Peter's scheme, this is the same person (remember in module 3 in the TEI exercise how we dealt with such issues?).
 
 
-1\. On your NODES page in the data laboratory, add new column, make it boolean. Call it ‘organization’
+1. On your NODES page in the data laboratory, add new column, make it boolean. Call it ‘organization’
 
-![Image of CSV modification interface](http://electricarchaeologist.files.wordpress.com/2013/10/slide4.jpg)
+    ![Image of CSV modification interface](http://electricarchaeologist.files.wordpress.com/2013/10/slide4.jpg)
 
-2\. In the Filter box, type [a-z], and select Id – this filters out all the women. (What would you have to do to filter out the organizations? Remember, this is a regex search!)
+2. In the Filter box, type [a-z], and select Id – this filters out all the women. (What would you have to do to filter out the organizations? Remember, this is a regex search!)
 
-3\. Tick off the check boxes in the ‘organization’ columns.
+3. Tick off the check boxes in the ‘organization’ columns.
 
-![Image of filter interface](http://electricarchaeologist.files.wordpress.com/2013/10/slide5.jpg)
+    ![Image of filter interface](http://electricarchaeologist.files.wordpress.com/2013/10/slide5.jpg)
 
-**I note a TYPO in the image above, 'a-b'. that should be, 'a-z'**
+    **I note a TYPO in the image above, 'a-b'. that should be, 'a-z'**
 
-4\. Save this as ```women-organizations-2-mode.gephi```.
+4. Save this as ```women-organizations-2-mode.gephi```.
 
-**Pro tip**: always export your data from gephi (file >> export) in .net or .graphml or .gefx format as the .gephi format (which is your only option under file >> save as) is unstable. That is, sometimes gephi won't read .gephi files! I did say this was **beta** software).
+    **Pro tip**: always export your data from gephi (file >> export) in .net or .graphml or .gefx format as the .gephi format (which is your only option under file >> save as) is unstable. That is, sometimes gephi won't read .gephi files! I did say this was **beta** software).
 
 ## Transforming the network
 
@@ -95,23 +95,23 @@ At this point, you have a two mode network in gephi. You could click on the 'ove
 
 On the multimode networks projection tab:
 
-1\. Click load attributes.
+1. Click load attributes.
 
-2\. In ‘attribute type’, select organization
+2. In ‘attribute type’, select organization
 
-3\. In left matrix, select ‘false – true’ (or ‘null – true’)
+3. In left matrix, select ‘false – true’ (or ‘null – true’)
 
-4\. In right matrix, select ‘true – false’. (or ‘true – null’) (do you see why this is the case? what would selecting the inverse accomplish?)
+4. In right matrix, select ‘true – false’. (or ‘true – null’) (do you see why this is the case? what would selecting the inverse accomplish?)
 
-5\. Select ‘remove edges’ and ‘remove nodes’.
+5. Select ‘remove edges’ and ‘remove nodes’.
 
-6\. Once you hit ‘run’, organizations will be removed from your bipartite network, leaving you with a single-mode network. hit ‘run’.
+6. Once you hit ‘run’, organizations will be removed from your bipartite network, leaving you with a single-mode network. hit ‘run’.
 
-7\. Save as ```women-to-women-network.gephi``` **and** export as ```women-to-women.net```
+7. Save as ```women-to-women-network.gephi``` **and** export as ```women-to-women.net```
 
-**NB If your nodes data table is blank, your filter might still be active. make sure the filter box is clear. You should be left with a list of women (ie, a list of nodes where the identiers are numbers, per Peter's schema).**
+    **NB If your nodes data table is blank, your filter might still be active. make sure the filter box is clear. You should be left with a list of women (ie, a list of nodes where the identiers are numbers, per Peter's schema).**
 
-8\. At this point, you could re-start Gephi and reload your ‘women-organizations-2-mode.gephi’ file and re-run the multimode networks projection so that you are left with an organization to organization network. Do this, and save and export with appropriate file names.
+8. At this point, you could re-start Gephi and reload your ‘women-organizations-2-mode.gephi’ file and re-run the multimode networks projection so that you are left with an organization to organization network. Do this, and save and export with appropriate file names.
 
 ## Exploring this network
 

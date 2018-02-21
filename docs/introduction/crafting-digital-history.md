@@ -3,15 +3,15 @@
 
 "'Getting Ready for the Fire, Kasier Wilhelm' Bain Collection, Library of Congress hdl.loc.gov/loc.pnp/ggbain.10412 Call Number: LC-B2- 2400-7"
 
-Welcome! This workbook is made by converting several plain-text files into a fully-operational website using the ['mkdocs' static website generator](http://www.mkdocs.org/). That means, if you want to keep a copy of all these files for your own records, you may. Simply click on the 'edit on github' link at the top right. This will bring you to the repository that houses this workbook. Then, when you're signed into 'github', you can 'fork' (that is, make a copy) the repo into your own account. Why 'forking'? It seems an odd phrase. Think of it like this:
+Welcome! This workbook is made by converting several plain-text files into a fully-operational website using the [**MkDocs** static website generator](http://www.mkdocs.org/). That means, if you want to keep a copy of all these files for your own records, you may. Simply click on the 'edit on github' link at the top right. This will bring you to the repository that houses this workbook. Then, when you're signed into GitHub, you can **fork** (that is, make a copy) the repo into your own account. Why 'forking'? It seems an odd phrase. Think of it like this:
 
 Writing, crafting, coding: these are like a small river, flowing in one direction into the future. You get new ideas, new hunches: the river branches. There's a fork in its path. Sometimes new ideas, new hunches fold back into that original stream: they merge.
 
-Github is a way of mapping that stream, and a guide to revisiting the interesting parts of it.
+GitHub is a way of mapping that stream, and a guide to revisiting the interesting parts of it.
 
 It's not the best metaphor, but it'll do. No doubt you've had that experience where, after working on an essay for days, you make a change that you regret. You wish you could go back to fix it, but ctrl+z only goes so far. You realize that everything you've done for the last week needs to be thrown out, and you start over.
 
-Well, with 'versioning control', you can travel back upriver, back to where things were good. There are two tools that we will use to make this happen: [git](https://git-scm.com/) and [Github](http://github.com). You'll learn more about making those things work in [**Module 1**](../module-1/Open-Access-Research/). You'll see why you'd want to do that, and how to future-proof your work, writing things [in a plain-text format called 'markdown'](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+Well, with 'versioning control', you can travel back upriver, back to where things were good. There are two tools that we will use to make this happen: [git](https://git-scm.com/) and [GitHub](http://github.com). You'll learn more about making those things work in [**Module 1**](../module-1/Open-Access-Research/). You'll see why you'd want to do that, and how to future-proof your work, writing things [in a plain-text format called 'markdown'](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 In [**Module 2**](../module-2/Finding%20Data/), we'll start exploring the wide variety of historical data out there. We'll talk about some of the ethical dilemmas posed by having so much data out there. 'Data' are not neutral 'things given'; rather, they are 'capta': things **taken**.
 
@@ -21,7 +21,7 @@ In [**Module 3**](../module-3/Wrangling%20Data/), we'll see that data/capta are 
 
 In [**Module 4**](../module-4/Seeing%20Patterns/), we talk about doing the analysis. I present finding, cleaning, and analyzing as if they were sequential steps, but in reality they are circular. Movement in one aspect often requires revisiting another one! This module explores how we do this, and what it means for us as historians.
 
-In [**Module 5**](../module-5/Humanities%20Visualization/), we begin at last to think about how we communicate all of this to our audiences. Look at how [one university lays out the expectations for digital history work](http://historyarthistory.gmu.edu/graduate/phd-history/digital-dissertation-guidelines) (and, do you see how this ties back to ideas about [paradata](http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#final-project)?). We will think about things like typography and layout. We'll look at ways of making our visualizations more compelling, more effective.
+In [**Module 5**](../module-5/Humanities%20Visualization/), we begin at last to think about how we communicate all of this to our audiences. Look at how [one university lays out the expectations for digital history work](http://historyarthistory.gmu.edu/graduate/phd-history/digital-dissertation-guidelines) (and, do you see how this ties back to ideas about [paradata](http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#final-project)?). We will think about things like typography and layout. We'll look at ways of making our visualizations more compelling, more effective. We will also create an online digital exhibit using [Omeka](https://omeka.org/).
 
 Finally, while there is no formal requirement for you to do this, it would be a great way of launching yourself as a digital historian to think about how you would formally reveal your project work in this class to the wider world: and then do it. There's a lot of noise on the internet, especially when it comes to history. How do you, as a digital historian, make the strongest possible signal?
 
@@ -44,8 +44,8 @@ A digital historian needs to have a digital workshop/lab/studio/performance spac
 
 Now, the final part of your studio/lab/workshop is a domain (website + complete access to the webserver that powers it, so that you can install other platforms/services) of your own. A typical setup will be something along the lines of:
 
-1. your-domain-name.org for your narrative, annotations, and anything you build regarding your work
-2. github.com/your-name for your scratch pad and code repository
+1. `your-domain-name.org` for your narrative, annotations, and anything you build regarding your work.
+2. `github.com/your-name` for your scratch pad and code repository.
 
 On your blog/narrative, you'll have a page that collates all of your web annotations as well. You'll also have - typically - an 'about' page where you can signal the kinds of history you're interested in, and the preferred way for people to get in touch with you. You do not have to use your real name. Remember the [real names policy](http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#real-names-policy)
 
@@ -83,11 +83,11 @@ You can close the cPanel webpage now (log out first).
 
 If you look at the dashboard for your blog, you'll see a lot of options down the left hand side of your screen. If you want to change the look of your blog, click on 'appearance' then click on 'themes'. A number of themes are pre-installed. You can click on the different themes and select 'preview' to see how your blog might look. When you find one you like, select 'activate'. Go to the other browser window where you have your-domain.ca open. Reload the page to see the changes take effect!
 
-> If you're the sort of person who likes to sketch ideas out on paper, Lauren Heywood of the [Disruptive Media Learning Lab](http://dmll.org.uk/) has designed a paper-based exercise to prototype ideas. Why not give it a try? [Print this PDF of Wordpress design (opens in a new windows)](http://dmll.org.uk/wp-content/uploads/2017/06/plan-your-wordpress-site-with-paper-dmll.pdf) and follow the instructions.
+If you're the sort of person who likes to sketch ideas out on paper, Lauren Heywood of the [Disruptive Media Learning Lab](http://dmll.org.uk/) has designed a paper-based exercise to prototype ideas. Why not give it a try? [Print this PDF of Wordpress design (opens in a new windows)](http://dmll.org.uk/wp-content/uploads/2017/06/plan-your-wordpress-site-with-paper-dmll.pdf) and follow the instructions.
 
 To write new content, know that there is a difference between a 'post' and a 'page'. A page is a new link on your site, while posts appear in chronological order on a page, with the most recent on top. Most themes show the most recent post by default, and pages appear in any menus on the site. **When you are logged into your blog** any post or page will have an 'edit' button at the bottom that you can click. You'll then be presented with an editing box with the standard toolbar across the top (allowing you to change the font, insert images, change the alignment of the text and so on). At the top right will be a button to save or publish/update the post/page.
 
-+ Your blog will have a default 'about' page. Change that default text now to reflect something about who you are and why you are taking this course
+Your blog will have a default 'about' page. Change that default text now to reflect something about who you are and why you are taking this course
 
 To create new pages, you click on the 'pages' link in your dashboard and select 'add new'
 
@@ -110,7 +110,7 @@ Hypothes.is is an overlay on the web that allows you to highlight or annotate an
 
 Once you're logged into Hypothes.is, and you have the plugin installed, highlight THIS TEXT and leave an annotation! Who will be first? There are a few different kinds of annotations you can make; [here is a list with videos showing them](https://web.hypothes.is/blog/varieties-of-hypothesis-annotations-and-their-uses/).
 
-If you need step-by-step instructions for installing and using Hypothes.is, please [visit the Hypothes.is help page](https://web.hypothes.is/quick-start-guide-for-students/) and/or watch this video:
+If you need step-by-step instructions for installing and using Hypothes.is, please [visit the Hypothes.is help page](https://web.hypothes.is/quick-start-guide-for-students/) and/or watch the video below:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MjSpol-oPm4" frameborder="0" allowfullscreen></iframe>
 
@@ -136,17 +136,17 @@ Open [Kris Shaffer's Hypothes.is aggregator](https://github.com/kshaffer/hypothe
 8. Shaffer has created a 'shortcode' that tells Wordpress to go over to Hypothes.is and grab the latest information. So, in the text of your new page (in the editor window, make sure to click the 'text' button or else this won't work), enter the shortcode that will grab all of your public annotations: `[hypothesis user = 'kris.shaffer']` where you remove the `kris.shaffer` and put in your own Hypothes.is username.
 9. Hit the 'publish' button. Wordpress will report that the page has been published and give you a link to it; click on this link to see your new always-updating list of annotations! Of course, if you haven't made any public annotations yet, nothing will display. Go annotate something, then come back and reload the page.
 
-### Github
+### GitHub
 
-Finally, you need a github account. We will go into more detail about how to use Github in the next module. For now, go to [Github.com](http://github.com) and sign up for a new account. Follow all the prompts, and make a note of the direct URL to your account (mine for instance is [http://github.com/shawngraham](http://github.com/shawngraham)). Put this link in your 'about' page on your blog. You'll learn how to use this space in exercise 3 in module 1.
+Finally, you need a github account. We will go into more detail about how to use GitHub in the next module. For now, go to [GitHub.com](http://github.com) and sign up for a new account. Follow all the prompts, and make a note of the direct URL to your account (mine for instance is [http://github.com/shawngraham](http://github.com/shawngraham)). Put this link in your 'about' page on your blog. You'll learn how to use this space in [Module 1, Exercise 3](../module-1/exercises/#exercise-3-setting-up-your-github-space).
 
 ### Your digital history lab/studio/workshop
 
-You now have a digital history lab equipped with all of the necessary ingredients for doing digital history. You have an open notebook for recording what you are up to (both your narrative and your annotations). In Github, you have a scratch pad for keeping track of the actual nuts-and-bolts of any digital work you do (and note that it is entirely possible to do digital history successfully without having to do anything that a computer scientist for instance would call coding). You have a domain that you control completely, and where you can install other platforms and services as seems necessary.
+You now have a digital history lab equipped with all of the necessary ingredients for doing digital history. You have an open notebook for recording what you are up to (both your narrative and your annotations). In GitHub, you have a scratch pad for keeping track of the actual nuts-and-bolts of any digital work you do (and note that it is entirely possible to do digital history successfully without having to do anything that a computer scientist for instance would call coding). You have a domain that you control completely, and where you can install other platforms and services as seems necessary.
 
 ### VPN & DH Box
 
-To access our virtual computer, the DH Box, you will need to use Carleton's VPN service. Please visit [Carleton's VPN help page](https://carleton.ca/its/help-centre/page-type/vpn/) and follow the instructions for your particular computer. Once you've got it installed, you will need to connect to Carleton through the VPN with your mycarletone credentials. Indeed, you should always connect via a VPN whenever you're using a public wifi point (like in coffee shops). The VPN acts like a private tunnel from your computer to Carleton's servers. To the rest of the internet, it will now look as if you actually are on campus. Once you're connected via the VPN, you can [access the DH Box through your browser](http://134.117.26.132:5000/). Bookmark the site; you'll use it in the exercises in module 1.
+To access our virtual computer, the DH Box, you will need to use Carleton's VPN service. Please visit [Carleton's VPN help page](https://carleton.ca/its/help-centre/page-type/vpn/) and follow the instructions for your particular computer. Once you've got it installed, you will need to connect to Carleton through the VPN with your mycarletone credentials. Indeed, you should always connect via a VPN whenever you're using a public wifi point (like in coffee shops). The VPN acts like a private tunnel from your computer to Carleton's servers. To the rest of the internet, it will now look as if you actually are on campus. Once you're connected via the VPN, you can [access the DH Box through your browser](http://134.117.26.132:5000/). Bookmark the site; you'll use it in the exercises in Module 1.
 
 #### Using the DH Box
 
@@ -157,7 +157,7 @@ To access our virtual computer, the DH Box, you will need to use Carleton's VPN 
 5. A new tool ribbon appears below the purple bar. Most of what you will do in this course involves the 'command line', 'R studio', and 'File Manager'.
 6. Anytime the command line or R Studio should ask for your username or password, you use the DH Box username and password you just created.
 
-**A note on using the university computer labs** if you are using an official University computer lab computer to access DHBox, aspects of the University's security system might block the RStudio aspect. I am working on a solution to this problem. If you know that you are going to have to use Carleton computers, get in touch right away.
+**A note on using the university computer labs** if you are using an official University computer lab computer to access DH Box, aspects of the University's security system might block the RStudio aspect. I am working on a solution to this problem. If you know that you are going to have to use Carleton computers, get in touch right away.
 
 ## Some Readings To Kick Things Off
 
@@ -183,4 +183,4 @@ Once you have read and annotated the works, **write a post on your blog that pos
 
 The writing of this workbook took place alongside the writing of my more formal book on [digital methods](http://themacroscope.org) co-authored with the exceptional [Ian Milligan](http://ianmilligan.ca/) and [Scott Weingart](http://scottbot.net/i-am/). I learned far more about doing digital history from them than they ever from me, and someday, I hope to repay the debt. Other folks who've been instrumental in getting this workbook and course off the ground include Melodee Beals, John Bonnett, Chad Gaffield, Tamara Vaughan, the staff of the EDC at Carleton University, [eCampusOntario](http://ecampusontario.org) and of course, the digital history community on Twitter. My thanks to you all.
 
-**This class was first offered in the Winter 2015 semester at Carleton University in Ottawa Canada as HIST3907b. I am grateful to the participants in that class for the feedback and frank discussions of what worked and what didn't. To see the earlier version of the course, please feel free to browse its [Github repository](https://github.com/hist3907b-winter2015/)**
+**This class was first offered in the Winter 2015 semester at Carleton University in Ottawa Canada as HIST3907b. I am grateful to the participants in that class for the feedback and frank discussions of what worked and what didn't. To see the earlier version of the course, please feel free to browse its [GitHub repository](https://github.com/hist3907b-winter2015/)**
