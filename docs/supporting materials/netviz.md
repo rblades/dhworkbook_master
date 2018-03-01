@@ -1,6 +1,6 @@
 # Using igraph to visualize network data
 
-In this exercise, we are doing a quick first pass on the network data generated from the Republic of Texas correspondence. I am providing you with the **edge list**, the links of to - from that we generated earlier. I am also providing you the **node list**, the list of individuals extracted from that edge list. If we keep our nodes and edges separated in csv tables, we can add other **attributes** later (things like date, or number of times a pair of individuals corresponded ie weight, or gender, or location, or what have you) to create different views or analyses. I used Open Refine to clean this data up for you (recall our [lesson on open refine](../supporting materials/open-refine.md)). Remember, 80 percent of all digital history work involves cleaning data!
+In this exercise, we are doing a quick first pass on the network data generated from the Republic of Texas correspondence. I am providing you with the **edge list**, the links of to &mdash; from that we generated earlier. I am also providing you the **node list**, the list of individuals extracted from that edge list. If we keep our nodes and edges separated in CSV tables, we can add other **attributes** later (things like date, or number of times a pair of individuals corresponded ie weight, or gender, or location, or what have you) to create different views or analyses. I used Open Refine to clean this data up for you (recall our [lesson on open refine](../supporting materials/open-refine.md)). Remember, 80 percent of all digital history work involves cleaning data!
 
 Below is the data that you need; download both files and use the filemanager to load them into your DH Box into your new R project for this tutorial.
 
@@ -28,14 +28,14 @@ library('igraph')
 ```
 
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bidOaQiQU-4" title="Preparing your data for RStudio" frameborder="0" gesture="media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xDArmsNYf1g?rel=0" title="Preparing your data for RStudio" frameborder="0" gesture="media" allowfullscreen></iframe>
 <br>
 
 ## Getting the data into your project
 
 For future reference, we're adapting our script from a more in-depth [tutorial of R igraph](http://kateto.net/networks-r-igraph).
 
-1. Bringing data into R is straightforward. We create a variable 'nodes' and a variable for 'links' and load the data from our csv files into them:
+1. Bringing data into R is straightforward. We create a variable 'nodes' and a variable for 'links' and load the data from our CSV files into them:
 
         # now let's load up the data by putting the csv files into nodes and links.
         nodes <- read.csv("texasnodes.csv", header=T, as.is=T)
@@ -111,12 +111,12 @@ For future reference, we're adapting our script from a more in-depth [tutorial o
 
 
     <br>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/bidOaQiQU-4" title="Getting data into your project" frameborder="0" gesture="media" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/pcZwwZDEoN4?rel=0" title="Getting data into your project" frameborder="0" gesture="media" allowfullscreen></iframe>
     <br>
 
     Before we jump down the rabbit hole of visualization, let's recognize right now that **visualizing** a network is only rarely of analytical value. The value of network analysis comes from the various questions we can now start posing of our data when it is represented as a network. In this correspondence network, who is in the centre of the web? To whom would information flow? To whom would information leak? Are there cliques or ingroups? When we identify such individuals, how does that confirm or confound our expectations of the period and place?
 
-    Many different kinds of metrics can be calculated (and [the Kateto R igraph tutorial will show you how](http://kateto.net/networks-r-igraph)) but it's always worth remembering that a metric is only meaningful for a given network when we're dealing with like things - a network of people who write letters to one another; a network of banks that swap mortgages with one another. These are called 'one mode networks'. A network of people connected to the banks they use - a two mode network, because it connects two different kinds of things - might be useful to **visualize** but the metrics calculated might not be **valid** if the metric was designed to work on a one-mode network (for more on this and allied issues, visit [Scott Weingart's website](http://www.scottbot.net/HIAL/index.html@p=6279.html)).
+    Many different kinds of metrics can be calculated (and [the Kateto R igraph tutorial will show you how](http://kateto.net/networks-r-igraph)) but it's always worth remembering that a metric is only meaningful for a given network when we're dealing with like things &mdash; a network of people who write letters to one another; a network of banks that swap mortgages with one another. These are called 'one mode networks'. A network of people connected to the banks they use &mdash; a two mode network, because it connects two different kinds of things &mdash; might be useful to **visualize** but the metrics calculated might not be **valid** if the metric was designed to work on a one-mode network (for more on this and allied issues, visit [Scott Weingart's website](http://www.scottbot.net/HIAL/index.html@p=6279.html)).
 
 6. Given our correspondence network, let's imagine that 'closeness' (a measure of how central a person is) and 'betweenness' (a measure of how many different strands of the network pass through this person) are the most historically interesting. Further, we're going to try to determine if there are subgroups in our network, cliques.
 
@@ -161,10 +161,10 @@ For future reference, we're adapting our script from a more in-depth [tutorial o
 
         lapply(cfg, function(x) write.table( data.frame(x), 'cfg.csv'  , append= T, sep=',' ))
 
-    We create a new variable called 'cfg' and get the 'cluster_fast_greedy' algorithm to perform its calculations. The next line writes the groups to a file, separating each group with an x. (If you tried 'write.csv' as before, you'll get an error message because the output of the algorithm gives a different kind of data type. R is fussy like this.) Examine that file - what groups do you spot? What might these mean, if you went back to the content of the original letters?
+    We create a new variable called 'cfg' and get the 'cluster_fast_greedy' algorithm to perform its calculations. The next line writes the groups to a file, separating each group with an x. (If you tried 'write.csv' as before, you'll get an error message because the output of the algorithm gives a different kind of data type. R is fussy like this.) Examine that file &mdash; what groups do you spot? What might these mean, if you went back to the content of the original letters?
 
     <br>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/bidOaQiQU-4" title="Measuring closeness in our network" frameborder="0" gesture="media" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/2-rH88PU3vw?rel=0" title="Measuring closeness in our network" frameborder="0" gesture="media" allowfullscreen></iframe>
     <br>
 
 ## Visualization
@@ -173,7 +173,7 @@ For future reference, we're adapting our script from a more in-depth [tutorial o
 
         plot(cfg, net, vertex.size = 1, vertex.label.cex =.2, edge.arrow.size=.1, main="Communities")
 
-2. You can export the plot by clicking on the 'export' button in the plot panel, to pdf or to png. But this is a pretty ugly network. We need to apply a **layout** to try to make it more visually understandable. There are many different layout options in igraph. We'll assign the layout we want to a variable, and then we'll give that variable to the plot command:
+2. You can export the plot by clicking on the 'export' button in the plot panel, to PDF or to PNG. But this is a pretty ugly network. We need to apply a **layout** to try to make it more visually understandable. There are many different layout options in igraph. We'll assign the layout we want to a variable, and then we'll give that variable to the plot command:
 
         # In older DH Box version of igraph in RStudio:
         l1 <- layout.fruchterman.reingold(net)
@@ -183,10 +183,10 @@ For future reference, we're adapting our script from a more in-depth [tutorial o
 
         plot(cfg, net, layout=l1, vertex.size = 1, vertex.label.cex =.2, edge.arrow.size=.1, main="Communities")
 
-    The 'layout_with_fr' is calling the 'Fruchterman-Reingold' algorithm, a kind of layout that imagines each node as a repulsive power, pushing against all the other nodes (it's part of a family of layouts called 'Forced Atlast'). That also means that if you ran the plot command a couple of times, the nodes might end up in different places each time - they are jostling for relative position, and this positioning itself carries no meaning in and of itself (so if a node is at the top of the screen, or the centre of the screen, don't read that to mean anything about importance).
+    The 'layout_with_fr' is calling the 'Fruchterman-Reingold' algorithm, a kind of layout that imagines each node as a repulsive power, pushing against all the other nodes (it's part of a family of layouts called 'Forced Atlast'). That also means that if you ran the plot command a couple of times, the nodes might end up in different places each time &mdash; they are jostling for relative position, and this positioning itself carries no meaning in and of itself (so if a node is at the top of the screen, or the centre of the screen, don't read that to mean anything about importance).
 
-3. Good luck! Remember to save your script, and upload the entire project folder to your github repository.
+3. Good luck! Remember to save your script, and upload the entire project folder to your GitHub repository.
 
     <br>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/bidOaQiQU-4" title="Visualizing our network" frameborder="0" gesture="media" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/j2KOE-gTqkg?rel=0" title="Visualizing our network" frameborder="0" gesture="media" allowfullscreen></iframe>
     <br>

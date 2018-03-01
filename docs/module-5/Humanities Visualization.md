@@ -20,11 +20,11 @@ I also have a [number of pieces of my own archaeological work](https://carleton-
 
 ## What you need to do this week
 
-1. Work on your project. You have until midnight August 16th to submit it. See the [Final Project requirements](http://site.craftingdigitalhistory.ca/final-project-1.html). Remember that all supporting files need to be in their own github repository (it is not necessary to share the Equity files, unless you have created some sort of dataset from them), while the final project itself has to be mounted on your own domain.
+1. Work on your project. You have until midnight August 16th to submit it. See the [Final Project requirements](http://site.craftingdigitalhistory.ca/final-project-1.html). Remember that all supporting files need to be in their own GitHub repository (it is not necessary to share the Equity files, unless you have created some sort of dataset from them), while the final project itself has to be mounted on your own domain.
 2. Talk to me, talk to each other in Slack. Feel free to collaborate, but keep a record of who does what and how much.
 3. If you missed completing a module, now might also be a good time to finish it (see [2.4 of the course manual](http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#submitting-evidence))
 4. Use the materials in this module to help make your project.
-5. Write a blog post describing what you've been up to THIS WEEK re your project (your successes, your failures, the help you may have found/received), and link to your 'faillog' (ie, the notes on your process that you upload to your github. If you did any of the exercises, mention that).
+5. Write a blog post describing what you've been up to THIS WEEK re your project (your successes, your failures, the help you may have found/received), and link to your 'faillog' (ie, the notes on your process that you upload to your GitHub. If you did any of the exercises, mention that).
 
 ## Readings
 

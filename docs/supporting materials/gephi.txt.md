@@ -49,9 +49,9 @@ When deciding whether to use networks to explore a historiographical question, t
 
 You will need the information you [created in Module 3, after cleaning the correspondence data using Open Refine](/module-3/Exercises/).
 
-### Umm, I never did manage that openrefine stuff...
+### Umm, I never did manage that Open Refine stuff...
 
-In module 3, you used Notepad++ or Textwrangler, regular expressions, and OpenRefine to create a comma-separated value file (****.csv) of the diplomatic correspondence of the Republic of Texas. The final version of the file you created has a row for each letter listed in the volume, and in each row the name of the sender and the recipient. The file should look like this:
+In module 3, you used Notepad++ or Textwrangler, regular expressions, and OpenRefine to create a comma-separated value file like &mdash; `****.csv` &mdash; of the diplomatic correspondence of the Republic of Texas. The final version of the file you created has a row for each letter listed in the volume, and in each row the name of the sender and the recipient. The file should look like this:
 
 ```
 source,target
@@ -61,7 +61,7 @@ David G. Burnet,Richard G. Dunlap
 ...
 ```
 
-This file is called 'an edge list' - it's a list of connections, or edges, between the individuals. If you no longer have the file, you can find it on [The Macroscope website](http://themacroscope.org/2.0/datafiles/texas-correspondence-OpenRefine.csv).  
+This file is called 'an edge list' &mdash; it's a list of connections, or edges, between the individuals. If you no longer have the file, you can find it on [The Macroscope website](http://themacroscope.org/2.0/datafiles/texas-correspondence-OpenRefine.csv).  
 
 ## Quick instructions for getting the data into Gephi:
 
@@ -93,7 +93,7 @@ There is one tweak that needs to done in the Data Table before the dataset is fu
 5. Clicking on the Overview pane will take you to a visual representation of the network you just imported. In the middle of the screen, you will see your network in the “Graph” tab. The “Context” tab, at the top right, will show that you imported 234 nodes and 394 edges. At first, all the nodes will be randomly strewn across the screen and make little visual sense. 
 
     <br>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/s5_jgK5hEFA" title="Importing your data into Gephi" frameborder="0" gesture="media" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/1yj3o56SniE?rel=0" title="Importing your data into Gephi" frameborder="0" gesture="media" allowfullscreen></iframe>
     <br> 
 
 6. Fix the nodes by selecting a layout in the “Layout” tab – the best one for beginners is “Force Atlas 2.” 
@@ -123,7 +123,7 @@ There is one tweak that needs to done in the Data Table before the dataset is fu
 15. Once PageRank is calculated, if you click back into the "Data Laboratory" and select the "Nodes" list in the Data Table, you can see that a new "PageRank" column has been added, with values for every node. The higher the PageRank, the more central a correspondent is in the network. 
 
     <br>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/nEAO04nQeQc" title="Modifying your network visualization" frameborder="0" gesture="media" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XAdMxOb8KX0?rel=0" title="Modifying your network visualization" frameborder="0" gesture="media" allowfullscreen></iframe>
     <br> 
 
 16. Going back to the Overview pane, you can visualize this centrality by changing the size of each correspondent’s node based on its PageRank. Do this in the "Ranking" tab on the left side of the Overview pane.
@@ -137,7 +137,7 @@ There is one tweak that needs to done in the Data Table before the dataset is fu
 20. To be on the safe side and decrease clutter, re-run the "Force Atlas 2" layout as described above, making sure to keep the "Prevent Overlap" box checked.
      
     <br>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/kh9nR_W7B9w" title="Styling your network visualization" frameborder="0" gesture="media" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/IJn2F4Aqslw?rel=0" title="Styling your network visualization" frameborder="0" gesture="media" allowfullscreen></iframe>
     <br> 
 
     At this point, the network is processed enough to visualize in the Preview pane, to finally begin making sense of the data. 
@@ -147,11 +147,11 @@ There is one tweak that needs to done in the Data Table before the dataset is fu
 22. Press "Refresh." 
 
     <br>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/2YBNnEmazq8" title="Previewing your final network visualization" frameborder="0" gesture="media" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/hE6teieJZzw?rel=0" title="Previewing your final network visualization" frameborder="0" gesture="media" allowfullscreen></iframe>
     <br> 
 
 ## So what have we got?
 
 The visualization immediately reveals apparent structure: central figures on the top (Ashbel Smith and Anson Jones) and bottom (Mirabeau B. Lamar, James Webb, and James Treat), and two central figures who connect the two split communities (James Hamilton and James S. Mayfield). A quick search online shows the top network to be associated with the last president of the Republic of Texas, Anson Jones; whereas the bottom network largely revolves around the second president, Mirabeau Lamar. Experts on this period in history could use this analysis to understand the structure of communities building to the annexation of Texas or they could ask meta-questions about the nature of the data themselves. For example, why is Sam Houston, the first and third president of the Republic of Texas, barely visible in this network?
 
-Write up your own observations on this process in your open notebook, and export your gephi file as a .graphml file (because Gephi's `.gephi` format is a bit unstable, always save as or export your work in a variety of formats). Upload that to your repository.
+Write up your own observations on this process in your open notebook, and export your gephi file as a `.graphml` file (because Gephi's `.gephi` format is a bit unstable, always save as or export your work in a variety of formats). Upload that to your repository.

@@ -34,6 +34,10 @@ In this exercise, we will use MkDocs in the DH Box to build a site that updates 
 
 10. Hit ctrl-x, Y, enter to save and exit nano.
 
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/X6U-YauY7dQ?rel=0" title="Preparing MkDocs in DH Box" frameborder="0" gesture="media" allowfullscreen></iframe>
+    <br>
+
 ## Creating a git repository
 
 1. Navigate to GitHub and create a new repository with the same name as your MkDocs folder. For example, my MkDocs folder is called `static-site`. Therefore, I call my GitHub repository `static-site`.
@@ -55,6 +59,10 @@ In this exercise, we will use MkDocs in the DH Box to build a site that updates 
     MkDocs will show a message saying `INFO    -  Your documentation should shortly be available at: https://myname.github.io/my-site/`. This means it pushed your changes to a project folder and not the main `https://myname.github.io/`. 
 
 9. Navigate to your URL `https://myname.github.io/my-site/`. You should now see a webpage that looks a lot like the course website.
+
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/hSxZDktdSdY?rel=0" title="Creating a GitHub repository" frameborder="0" gesture="media" allowfullscreen></iframe>
+    <br>
 
 ## Adding content to your site
 
@@ -101,6 +109,10 @@ Let's say we now want to add an About page and a Blog page to our site. We need 
 
 15. Back in your `docs` folder, you can use nano to edit any of the markdown files. If you add any files, make sure to declare them in `mkdocs.yml`. 
 
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/H6ygQwHNUFk?rel=0" title="Adding content to your site" frameborder="0" gesture="media" allowfullscreen></iframe>
+    <br>
+
 ## Customizing your theme
 
 MkDocs also allows you to customize your theme. We don't want to directly edit the theme files, so we will create a new one.
@@ -141,3 +153,7 @@ MkDocs also allows you to customize your theme. We don't want to directly edit t
 12. Use git to add your files, commit, push, and then use mkdocs to deploy to gh-pages to view your changes.
 
     You can now use you knowledge to customize your theme. Remember to use your browser inspector tool to check which rules you want to change.
+
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/1y62qUm2OSM?rel=0" title="Customizing your theme" frameborder="0" gesture="media" allowfullscreen></iframe>
+    <br>

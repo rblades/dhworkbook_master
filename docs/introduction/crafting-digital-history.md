@@ -11,11 +11,11 @@ GitHub is a way of mapping that stream, and a guide to revisiting the interestin
 
 It's not the best metaphor, but it'll do. No doubt you've had that experience where, after working on an essay for days, you make a change that you regret. You wish you could go back to fix it, but ctrl+z only goes so far. You realize that everything you've done for the last week needs to be thrown out, and you start over.
 
-Well, with 'versioning control', you can travel back upriver, back to where things were good. There are two tools that we will use to make this happen: [git](https://git-scm.com/) and [GitHub](http://github.com). You'll learn more about making those things work in [**Module 1**](../module-1/Open-Access-Research/). You'll see why you'd want to do that, and how to future-proof your work, writing things [in a plain-text format called 'markdown'](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+Well, with 'versioning control', you can travel back upriver, back to where things were good. There are two tools that we will use to make this happen: [git](https://git-scm.com/) and [GitHub](http://github.com). You'll learn more about making those things work in [**Module 1**](../module-1/Open-Access-Research/). You'll see why you'd want to do that, and how to future-proof your work, writing things [in a plain-text format called 'Markdown'](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
-In [**Module 2**](../module-2/Finding%20Data/), we'll start exploring the wide variety of historical data out there. We'll talk about some of the ethical dilemmas posed by having so much data out there. 'Data' are not neutral 'things given'; rather, they are 'capta': things **taken**.
+In [**Module 2**](../module-2/Finding%20Data/), we'll start exploring the wide variety of historical data out there. We'll talk about some of the ethical dilemmas posed by having so much data out there. **Data** are not neutral 'things given'; rather, they are **capta**: things **taken**.
 
-(Caveat: I am assuming, in this course, that the digital materials we want have already been digitized. Digitizing, adding meta-data (information that describes the data), and structuring it **properly** are very complex topics on their own that could be the subject of a complete course! If you are interested in those problems, a good place to start is this open course from SOAS on [database design for historians](http://port.sas.ac.uk/mod/book/view.php?id=75&chapterid=125).)
+**NB** I am assuming, in this course, that the digital materials we want have already been digitized. Digitizing, adding meta-data (information that describes the data), and structuring it **properly** are very complex topics on their own that could be the subject of a complete course! If you are interested in those problems, a good place to start is this open course from SOAS on [database design for historians](http://port.sas.ac.uk/mod/book/view.php?id=75&chapterid=125).
 
 In [**Module 3**](../module-3/Wrangling%20Data/), we'll see that data/capta are **messy**, and that they make a kind of illusory order that as historians, we are not normally in the habit of thinking about. The big secret of digital history is that the majority of your time on **any** digital history project won't be finding the capta, won't be analyzing the capta, won't be thinking about the historical meaning of the capta. We'll be **cleaning it up**. The exercises in this module will help you do that more efficiently (and be aware that 'efficiency' in computing terms is not a theoretically neutral idea!)
 
@@ -36,11 +36,11 @@ Finally, while there is no formal requirement for you to do this, it would be a 
 
 A digital historian needs to have a digital workshop/lab/studio/performance space. Such a space serves a number of functions:
 
-- a scratch pad / fail log and code repository so that we remember what we were doing, or (more importantly) **what** we we did - that is to say, the actual commands we typed, the sequence of manipulations or [data moves](http://liu.english.ucsb.edu/data-moves/)
-- a narrative that connects the dots, that explains the **why** of that what and how. You can use this narrative to point to when sharing your work with others. Digital history is not done in isolation or in a vaccuum. Sometimes, you will need to share a link to your work (often on twitter) asking, 'does anybody know why this isn't working?' or, 'does anybody know a better way of accomplishing this?', or, 'hey, I'm the first to do this!'
-- a way of keeping notes on things we've read/come across on the web. There are a number of ways of accomplishing this. In this course, I will mandate one particular solution: ([Hypothes.is](http://web.hypothes.is)).
-- when you're working with academic databases such as JSTOR, then you'll also need a bibliography manager. We don't go into this aspect very much in this course (if you take other courses with me, you will) but you might want to check out [Zotero](http://zotero.org).
-- it can sometimes be useful to make little videos of your work to explain when something isn't working - [Screen-cast-o-matic](http://screencast-o-matic.com/) is free and does a good job
++ A scratch pad / fail log and code repository so that we remember what we were doing, or (more importantly) **what** we we did - that is to say, the actual commands we typed, the sequence of manipulations or [data moves](http://liu.english.ucsb.edu/data-moves/).
++ A narrative that connects the dots, that explains the **why** of that what and how. You can use this narrative to point to when sharing your work with others. Digital history is not done in isolation or in a vaccuum. Sometimes, you will need to share a link to your work (often on twitter) asking, 'does anybody know why this isn't working?' or, 'does anybody know a better way of accomplishing this?', or, 'hey, I'm the first to do this!'
++ A way of keeping notes on things we've read/come across on the web. There are a number of ways of accomplishing this. In this course, I will mandate one particular solution: ([Hypothes.is](http://web.hypothes.is)).
++ When you're working with academic databases such as JSTOR, then you'll also need a bibliography manager. We don't go into this aspect very much in this course (if you take other courses with me, you will) but you might want to check out [Zotero](http://zotero.org).
++ It can sometimes be useful to make little videos of your work to explain when something isn't working - [Screen-cast-o-matic](http://screencast-o-matic.com/) is free and does a good job.
 
 Now, the final part of your studio/lab/workshop is a domain (website + complete access to the webserver that powers it, so that you can install other platforms/services) of your own. A typical setup will be something along the lines of:
 
@@ -75,7 +75,7 @@ Wordpress is probably the best option for a platform for writing the narrative b
 4. The next screen presents you with a number of options. Leave these set to their defaults. For 'location', leave this blank (you want to leave the directory option blank). That tells the installtron to put Wordpress at your-domain.ca . (When/if you install other pieces of software, you'd change this variable so that the new software doesn't overwrite this software!)
 5. Further down the page, under 'settings', you need to change 'administrator username', 'administrator password', 'web site title', 'website tagline'. **this is the username and password to actually do things with your blog, and the name of your blog itself**. Leave everything else alone.
 6. Click Install!
-7. Once it's done, the installer will remind you of the url to your site, and the url to the blog's dashboard (where you go to write posts, make changes to the look and feel of the site). Open these in a new browser window, and bookmark them. To login to your blog, remember to go to the dashboard URL (eg. http://your-domain.ca/wp-admin), enter your blog administrator username and password.
+7. Once it's done, the installer will remind you of the URL to your site, and the URL to the blog's dashboard (where you go to write posts, make changes to the look and feel of the site). Open these in a new browser window, and bookmark them. To login to your blog, remember to go to the dashboard URL (eg. `http://your-domain.ca/wp-admin`), enter your blog administrator username and password.
 
 You can close the cPanel webpage now (log out first).
 
@@ -112,7 +112,7 @@ Once you're logged into Hypothes.is, and you have the plugin installed, highligh
 
 If you need step-by-step instructions for installing and using Hypothes.is, please [visit the Hypothes.is help page](https://web.hypothes.is/quick-start-guide-for-students/) and/or watch the video below:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MjSpol-oPm4" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MjSpol-oPm4?rel=0" title="Installing the Hypothesis Chrome extention" frameborder="0" allowfullscreen></iframe>
 
 Annotations are public by default. When you are making a new annotation you can toggle the visibility so that they are private and so visible only to you.
 
@@ -138,7 +138,7 @@ Open [Kris Shaffer's Hypothes.is aggregator](https://github.com/kshaffer/hypothe
 
 ### GitHub
 
-Finally, you need a github account. We will go into more detail about how to use GitHub in the next module. For now, go to [GitHub.com](http://github.com) and sign up for a new account. Follow all the prompts, and make a note of the direct URL to your account (mine for instance is [http://github.com/shawngraham](http://github.com/shawngraham)). Put this link in your 'about' page on your blog. You'll learn how to use this space in [Module 1, Exercise 3](../module-1/exercises/#exercise-3-setting-up-your-github-space).
+Finally, you need a GitHub account. We will go into more detail about how to use GitHub in the next module. For now, go to [GitHub.com](http://github.com) and sign up for a new account. Follow all the prompts, and make a note of the direct URL to your account (mine for instance is [http://github.com/shawngraham](http://github.com/shawngraham)). Put this link in your 'about' page on your blog. You'll learn how to use this space in [Module 1, Exercise 3](../module-1/exercises/#exercise-3-setting-up-your-github-space).
 
 ### Your digital history lab/studio/workshop
 
@@ -167,17 +167,19 @@ What is digital history anyway? How is it connected to so-called 'big data'? Rea
 
 Once you have read and annotated the works, **write a post on your blog that poses the question 'what is digital history for me anyway?'** . Explain why you're in this class, your level of comfort with digital tech, the kinds of history you're interested in, and what you hope to get out of this course. Your post should link to relevant annotations made by you or by your peers. (Every Hypothes.is annotation has a direct link visible when you click on the 'share' icon for an existing annotation).
 
-> Excerpts from [Chapter 1, the Historian's Macroscope original draft](http://www.themacroscope.org/?page_id=595); read from 'Joys of Big Data' to 'Chapter One Conclusion'. Use Hypothes.is to annotate rather than the 'commenting' function on the site.
+### Readings
 
-> James Baker ['The soft digital history that underpins my book' https://cradledincaricature.com/2017/05/24/the-soft-digital-history-that-underpins-my-book/](https://cradledincaricature.com/2017/05/24/the-soft-digital-history-that-underpins-my-book/)
+Excerpts from [Chapter 1, the Historian's Macroscope original draft](http://www.themacroscope.org/?page_id=595); read from 'Joys of Big Data' to 'Chapter One Conclusion'. Use Hypothes.is to annotate rather than the 'commenting' function on the site.
 
-> James Baker ['The hard digital history that underpins my book' https://cradledincaricature.com/2017/06/06/the-hard-digital-history-that-underpins-my-book/](https://cradledincaricature.com/2017/06/06/the-hard-digital-history-that-underpins-my-book/)
+James Baker ['The soft digital history that underpins my book' https://cradledincaricature.com/2017/05/24/the-soft-digital-history-that-underpins-my-book/](https://cradledincaricature.com/2017/05/24/the-soft-digital-history-that-underpins-my-book/)
 
-> Jo Guldi and David Armitage, ['The History Manifesto: Chapter 4](https://www.cambridge.org/core/books/history-manifesto/big-questions-big-data/F60D7E21EFBD018F5410FB315FBA4590/core-reader)'
+James Baker ['The hard digital history that underpins my book' https://cradledincaricature.com/2017/06/06/the-hard-digital-history-that-underpins-my-book/](https://cradledincaricature.com/2017/06/06/the-hard-digital-history-that-underpins-my-book/)
 
-> Tim Hitchcock ['Big Data for Dead People' https://historyonics.blogspot.ca/2013/12/big-data-for-dead-people-digital.html](https://historyonics.blogspot.ca/2013/12/big-data-for-dead-people-digital.html)
+Jo Guldi and David Armitage, ['The History Manifesto: Chapter 4](https://www.cambridge.org/core/books/history-manifesto/big-questions-big-data/F60D7E21EFBD018F5410FB315FBA4590/core-reader)'
 
-> 'On Diversity in Digital History', [The Macroscope](http://www.themacroscope.org/2.0/diversity-in-digital-history/). Read and follow through the footnotes to at least two more articles
+Tim Hitchcock ['Big Data for Dead People' https://historyonics.blogspot.ca/2013/12/big-data-for-dead-people-digital.html](https://historyonics.blogspot.ca/2013/12/big-data-for-dead-people-digital.html)
+
+'On Diversity in Digital History', [The Macroscope](http://www.themacroscope.org/2.0/diversity-in-digital-history/). Read and follow through the footnotes to at least two more articles
 
 # Acknowledgements
 

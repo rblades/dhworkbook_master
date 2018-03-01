@@ -2,7 +2,7 @@
 
 This exercise draws from the work of [Fred Gibbs](http://fredgibbs.net/)
 
-+ [extract, transform, and save as csv](http://fredgibbs.net/tutorials/extract-transform-save-csv.html)
++ [extract, transform, and save as CSV](http://fredgibbs.net/tutorials/extract-transform-save-csv.html)
 + [extract geocoded placenames from a text file](http://fredgibbs.net/tutorials/extract-geocode-placenames-from-text-file.html)
 + [create a kml file with python](http://fredgibbs.net/tutorials/create-kml-file-python.html)
 
@@ -12,10 +12,10 @@ You should also read and understand Fred Gibbs' tutorial on [installing python m
 
 In Module 3, you used the NER to extract place names from a text. After some further munging with regex, you might have ended up with a CSV that looks like [this one on GitHub](https://raw.githubusercontent.com/hist3907b-winter2015/module4-holes/master/texas.csv).
 
-1. Use Openrefine to open that csv file. In the same way you tidied up in the [Open Refine tutorial in module 3](https://github.com/hist3907b-winter2015/module3-wranglingdata/blob/master/openrefine.md), clean up this CSV so that you merge together place names appropriately (ie. so that '4ustin' gets merged with 'Austin'). Do this for all the columns.
-2. Export the table as a new csv - call it 'cleaned-places.csv'.
-3. Open that csv in your spreadsheet program. Copy and paste all of the columns so that they become a single list. (ie. one column of place names).
-4. Using your spreadsheet's filtering options, see if you can remove any more duplicates. (It might be useful to keep track of how many duplicates you delete, in a new file, eg -> Texas,200 <- that kind of information might be handy, as in [the mapping texts project (pdf opens in new tab)](http://mappingtexts.stanford.edu/whitepaper/MappingTexts_WhitePaper.pdf)).
+1. Use Openrefine to open that CSV file. In the same way you tidied up in the [Open Refine tutorial in module 3](https://github.com/hist3907b-winter2015/module3-wranglingdata/blob/master/openrefine.md), clean up this CSV so that you merge together place names appropriately (ie. so that '4ustin' gets merged with 'Austin'). Do this for all the columns.
+2. Export the table as a new CSV &mdash; call it `cleaned-places.csv`.
+3. Open that CSV in your spreadsheet program. Copy and paste all of the columns so that they become a single list. (ie. one column of place names).
+4. Using your spreadsheet's filtering options, see if you can remove any more duplicates. (It might be useful to keep track of how many duplicates you delete, in a new file, eg -> Texas,200 <- that kind of information might be handy, as in [the mapping texts project (PDF opens in new tab)](http://mappingtexts.stanford.edu/whitepaper/MappingTexts_WhitePaper.pdf)).
 5. Save the file you were removing the duplicates from (which has just a single column of unique place names) as 'placelist.txt'
 6. Now, at this point, we're going to open up our text editor and create a new python program, following [Gibbs' tutorial](http://fredgibbs.net/tutorials/extract-geocode-placenames-from-text-file.html). His complete script is at the bottom of his post, but make sure you understand everything that is going on. Do you see the places where he has to import new python modules to make his script work? Make sure you've installed those modules. Let's call your completed script 'geoparse.py'. Done that? Good. 
 7. Open your terminal, navigate to the folder you're working in, and run your script: ```python geoparse.py```

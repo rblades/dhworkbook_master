@@ -10,7 +10,7 @@ Let us use the NER to extract person, organization, and locations.
 
 1. First, download the [Stanford NER](https://nlp.stanford.edu/software/CRF-NER.shtml#Download) and extract it to your machine. 
 2. Open the location where you extracted the files. 
-3. On a Mac, double-click on the one called ‘ner-gui.command’. (Mac Users: there is also an [excellent tutorial from Michelle Moravec you may wish to consult](http://historyinthecity.blogspot.ca/2014/06/how-to-use-stanfords-ner-and-extract.html).
+3. On a Mac, double-click on the one called `ner-gui.command`. (Mac Users: there is also an [excellent tutorial from Michelle Moravec you may wish to consult](http://historyinthecity.blogspot.ca/2014/06/how-to-use-stanfords-ner-and-extract.html).
 4. On PC, double-click on ner-gui.bat. This opens up a new window (using Java) with ‘Stanford Named Entity Recognizer’ and also a terminal window. 
 
 Don’t touch the terminal window for now. (**PC users, hang on a moment** – there is a bit more that you need to know before you can use this tool successfully. You will have to use the command line in order to get the output out).

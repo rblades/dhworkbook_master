@@ -21,7 +21,7 @@ You should always keep your research materials (scripts and associated data) org
 
 3. Follow the prompts, and create it in a new directory. R keeps track of what you're up to in a project file, so that you can pick up where you left off. [You should also keep your code under version control as well](../supporting materials/git-rstudio.md) so that you can recover from disaster and/or share your code/data with collaborators; click on that link to get version control set up.
 
-4. Sometimes, it might happen that RStudio crashes (this can be, in DH Box, related to memory issues). If that happens - if it just seems to 'hang' (and you've waited several minutes), you can refresh your browser, and go back to DH Box. You'll probably have to re-open your project file. 
+4. Sometimes, it might happen that RStudio crashes (this can be, in DH Box, related to memory issues). If that happens &mdash; if it just seems to 'hang' (and you've waited several minutes), you can refresh your browser, and go back to DH Box. You'll probably have to re-open your project file. 
 
 5. Use the file panel at bottom right to find your \*.rproj file (your R project file) and click on it to re-open. 
 

@@ -72,7 +72,7 @@ and replace with nothing. We had a few new commands in there: the ```?!``` tells
     Find: ` `     **<-a single space**<br>
     Replace: `,`
 
-9. Save your work as a ****.csv file. You now have a file that you can load into a variety of other platforms or tools to perform your analysis. Of course, NER is not perfect, especially when dealing with names like ‘Houston’ that were a personal name long before they were a place name.
+9. Save your work as a `****.csv` file. You now have a file that you can load into a variety of other platforms or tools to perform your analysis. Of course, NER is not perfect, especially when dealing with names like ‘Houston’ that were a personal name long before they were a place name.
 
 ## REGEX on PC to Useful Output:
 
@@ -127,8 +127,8 @@ and replace with nothing. We had a few new commands in there: the ```?!``` tells
 
 10. Let’s remove the comma that starts each line by searching for ```^,``` (remembering that the carat character indicates the start of a line) and replacing with nothing. 
 
-11. Save this as 'cleaned-locations.csv' 
+11. Save this as `cleaned-locations.csv`.
 
     Congratulations! You’ve taken quite complicated output and cleaned it so that every place mentioned on a single page in the original publication is now on its own line, which means you can import it into a network visualization package, a spreadsheet, or some other tool!
 
-12. Now you can upload this csv to Gephi.
+12. Now you can upload this CSV to Gephi.

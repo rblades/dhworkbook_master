@@ -55,7 +55,7 @@ The [leaflet.js](http://leafletjs.com/) library allows you to create quite nice 
         </body>
 
 ### Going further
-Let's say you have a whole bunch of information that you want to represent on the map. Perhaps it's in a well organized csv file, with a latitude and a longitude column in decimal degrees. Adding points one at a time to the map as described above would take ages. Instead, let's convert that csv to geojson, and then use [bootleaf](https://github.com/bmcbride/bootleaf) to make a map.
+Let's say you have a whole bunch of information that you want to represent on the map. Perhaps it's in a well organized CSV file, with a latitude and a longitude column in decimal degrees. Adding points one at a time to the map as described above would take ages. Instead, let's convert that CSV to geojson, and then use [bootleaf](https://github.com/bmcbride/bootleaf) to make a map.
 
 Bootleaf is a template that uses a common html template package, '[Bootstrap](http://getbootstrap.com/)' as a wrapper for a leaflet powered map that draws its points of interest from a geojson file. To get this up and running, do the following steps:
 
@@ -65,7 +65,7 @@ Bootleaf is a template that uses a common html template package, '[Bootstrap](ht
 
 3. In your copy of bootleaf, you now have a gh-pages version of the site. If you go to ```<yourusername>.github.io/bootleaf``` you should see an active version of the map.
 
-4. Now, the map is grabbing its data from a series of geojson files. You can use [the 'to geo json' service](https://mapbox.github.io/togeojson/) to convert your csv to geojson. There are other services.
+4. Now, the map is grabbing its data from a series of geojson files. You can use [the 'to geo json' service](https://mapbox.github.io/togeojson/) to convert your CSV to geojson. There are other services.
 
 5. Clone your repository in your desktop (by pressing the clone your repo in desktop).
 
@@ -139,6 +139,6 @@ Bootleaf is a template that uses a common html template package, '[Bootstrap](ht
 
     ...and then you'd have to go through the rest of that file and change up the .geojson pointers to point to your own data.
 
-14. Visit GitHub for a [template for mapping with leaflet](https://github.com/shawngraham/daea), drawing all of your point data and ancillary information from a csv file. Study the index.html file carefully to identify which lines you'd modify to change the base map, and to identify how elements in the csv are being rendered on the screen. [Visit this example that a former student made](https://xtina-r.github.io/daea/).
+14. Visit GitHub for a [template for mapping with leaflet](https://github.com/shawngraham/daea), drawing all of your point data and ancillary information from a CSV file. Study the index.html file carefully to identify which lines you'd modify to change the base map, and to identify how elements in the CSV are being rendered on the screen. [Visit this example that a former student made](https://xtina-r.github.io/daea/).
 
 **Further reading:** Arian Katsimbras on making beautiful maps with [Tilemill](https://medium.com/@ArianKatsimbras/tilemill-c886a3ccba6a).

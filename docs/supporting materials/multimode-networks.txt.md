@@ -1,6 +1,6 @@
 # Transforming 2-mode network data to 1-mode
 
-Networks can be composed of all sorts of things. Trains, busses, Uber, metro - all of these can be combined into a 'transportation' network. Books, authors, editors, funders, censors, sponsors - a publishing network. Students, profs, classes, universities - an education network. Anytime you have more than one kind of **thing** (however defined) in your network, you formally have a bipartite (or tripartite, and so on, depending on the number of things) network. Visualizing such a network as nodes and edges can be a useful heuristic exercise. 
+Networks can be composed of all sorts of things. Trains, busses, Uber, metro &mdash; all of these can be combined into a 'transportation' network. Books, authors, editors, funders, censors, sponsors &mdash; a publishing network. Students, profs, classes, universities &mdash; an education network. Anytime you have more than one kind of **thing** (however defined) in your network, you formally have a bipartite (or tripartite, and so on, depending on the number of things) network. Visualizing such a network as nodes and edges can be a useful heuristic exercise. 
 
 **But**
 
@@ -32,7 +32,7 @@ There is a plugin for Gephi that we will use to transform our network.
 
 1. Open Gephi. Across the top of Gephi in the menu ribbon you’ll see **File Workspace View Tools Window Plugins Help**. 
 
-2. To get and install the plugin, select **Tools >> Plugins** (The top level menu item 'Plugins' is empty and not used - a useful reminder that Gephi is still in **beta**).
+2. To get and install the plugin, select **Tools >> Plugins** (The top level menu item 'Plugins' is empty and not used &mdash; a useful reminder that Gephi is still in **beta**).
 
 3. In the popup, under ‘available plugins’ look for ‘MultimodeNetworksTransformation’. Tick this box, then click on Install.
 
@@ -44,7 +44,7 @@ There is a plugin for Gephi that we will use to transform our network.
 
 1. Under ‘file’, select -> New project.
 
-2. On the data  laboratory tab, select Import-spreadsheet, and in the pop-up, make sure to select under ‘as table: EDGES table. Select women-orgs.csv.
+2. On the data  laboratory tab, select Import-spreadsheet, and in the pop-up, make sure to select under ‘as table: EDGES table. Select `women-orgs.csv`.
 
 3. Click ‘next’, click finish.
 
@@ -52,7 +52,7 @@ There is a plugin for Gephi that we will use to transform our network.
 
     ![Image of Gephi data import interface](http://electricarchaeologist.files.wordpress.com/2013/10/slide2.jpg)
 
-    Loading your csv file, step 1.
+    Loading your CSV file, step 1.
 
     ![Image of CSV import interface](http://electricarchaeologist.files.wordpress.com/2013/10/slide3.jpg)
 
@@ -60,7 +60,7 @@ There is a plugin for Gephi that we will use to transform our network.
 
 5. Click on ‘copy data to other column’. Select ‘Id’. In the pop-up, select ‘Label’. You now have your edges labelled.
 
-6. Just as you did above, now import NODES (Women-names.csv)
+6. Just as you did above, now import NODES `women-names.csv`.
 
 7. Making sure you're on the Nodes page in the data laboratory, copy ID to Label to that your nodes are labelled.
 
@@ -152,7 +152,7 @@ Let’s resize the nodes to show off betweeness-centrality (to figure out which 
 
 Mrs. Mary Elliot-Murray-Kynynmound and Mrs. John Henry Wilson should now dominate your network (if you go back to the original data zip, you'll be able to find Peter's key to figure out who's who). Who were these ladies? What organizations were they members of? Who were they connected to? To the archives!
 
-Congratulations! You’ve imported historical network data into Gephi, transformed it, manipulated it, and run some analyses. Play with the settings on ‘preview’ in order to share your visualization as svg, pdf, or png.
+Congratulations! You’ve imported historical network data into Gephi, transformed it, manipulated it, and run some analyses. Play with the settings on ‘preview’ in order to share your visualization as SVG, PDF, or PNG.
 
 Now go back to your original gephi file, and recast it as organizations to organizations via shared members, to figure out which organizations were key in early 20th century Ontario… make appropriate notes in your open notebook.
 

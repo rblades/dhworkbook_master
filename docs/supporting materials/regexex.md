@@ -19,9 +19,9 @@ Sam Houston, A. B. Roman, October 29 1842
 Isaac Van Zandt, Anson Jones, January 11 1843
 ```
 
-The change doesn't look like much, and you might think to yourself, 'hey, I could just do that by hand'. You could; but it'd take you ages, and if you made a mistake somewhere - are you sure you could do this consistently, for a couple of hours at a time? Probably not. Your time is better spent figuring out the search and replace patterns, and then setting your machine loose to implement it.
+The change doesn't look like much, and you might think to yourself, 'hey, I could just do that by hand'. You could but it'd take you ages, and if you made a mistake somewhere &mdash; are you sure you could do this consistently, for a couple of hours at a time? Probably not. Your time is better spent figuring out the search and replace patterns, and then setting your machine loose to implement it.
 
-Data formatted like this could be fed into a network analysis program, for instance, or otherwise visualized and analyzed (which we will do in the next module). Regex as we are going to use in this tutorial allows us to go from unstructured to structured data. **There is a video at the end of this document that captures someone working through this exercise.**
+Data formatted like this could be fed into a network analysis program, for instance, or otherwise visualized and analyzed (which we will do in the next module). Regex as we are going to use in this tutorial allows us to go from unstructured to structured data.
 
 ## Getting started
 
@@ -29,7 +29,7 @@ In the previous module, we learned how to automatically grab text from sites lik
 
 1. At the command line, type `$ curl http://archive.org/stream/diplomaticcorre33statgoog/diplomaticcorre33statgoog_djvu.txt > texas.txt`
 
-The `curl` command downloads the txt file and the the `>` pushes the result of the curl command to a file called texas.txt.
+    The `curl` command downloads the txt file and the the `>` pushes the result of the curl command to a file called `texas.txt`.
 
 2. Open `texas.txt` with Nano and delete everything except for the index of the list of letters (we just want the index). 
 
@@ -52,7 +52,7 @@ The `curl` command downloads the txt file and the the `>` pushes the result of t
 4. Save the file in nano: ctrl+x, Y, enter 
 
     <br>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/AFoHj91meVo" title="Downloading and editing our correspondence" frameborder="0" gesture="media" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/4Qf334BqXm4?rel=0" title="Downloading and editing our correspondence" frameborder="0" gesture="media" allowfullscreen></iframe>
     <br>
 
 WARNING: Regex can be very tricky. When I'm working with Regex, I copy and paste some of the text I'm working on into the box at [RegExr](http://www.regexr.com/) and fiddle with the pattern until it does what I want. In fact, spend some time looking at their examples before you go any further in this exercise.
@@ -60,11 +60,11 @@ WARNING: Regex can be very tricky. When I'm working with Regex, I copy and paste
 ## The workflow
 We start by finding every line that looks like a reference to a letter, and put a tilde (a `~` symbol) at the beginning of it so we know to save it for later. Next, we get rid of all the lines that don't start with tildes, so that we're left with only the relevant text. After this is done, we format the remaining text by putting commas in appropriate places, so we can import it into a spreadsheet and do further edits there.
 
-We're going to use the `sed` and `grep` commands at the command prompt in our DH Box. Sed works by first identifying text that matches a pattern, and then swapping in the text we want to have-
+We're going to use the `sed` and `grep` commands at the command prompt in our DH Box. Sed works by first identifying text that matches a pattern, and then swapping in the text we want to have, like the following:
 
 `$ sed 's/old text/new text/g' filename`
 
-and grep works like this:
+and grep works in the following way:
 
 `$ grep 'PATTERN WE WANT' inputfile` which will print the results to the screen. If we want to redirect the results to a new file, we add this to the end: `> outputfile`.
 
@@ -87,19 +87,19 @@ Remember from our basic introduction that there's a way to see if the word "to" 
 
 1. Type `$ grep '\bto\b' texas.txt`
 
-    The results print out to the screen. This command finds every instance of the word "to" (and not, for instance, also ‘potato’ or ‘tomorrow’ - try `grep 'to' texas.txt` instead to see the difference).
+    The results print out to the screen. This command finds every instance of the word "to" (and not, for instance, also ‘potato’ or ‘tomorrow’ &mdash; try `grep 'to' texas.txt` instead to see the difference).
 
     We don't just want to find "to", but the entire line that contains it. We assume that every line that contains the word “to” in full is a line that has relevant letter information, and every line that does not is one we do not need. 
 
     You learned earlier that the query `.+` returns any amount of text, no matter what it says. Thus, the pattern that we will build when we are ready to use the `sed` command (where the 's' means 'stream' and 'ed' means 'editor') will include `.+\bto\b.+` so that we edit every line which includes the word "to" in full, no matter what comes before or after it, and none of the lines which don't.
 
-    As mentioned earlier, we want to add a tilde ~ before each of the lines that look like letters, so we can save them for later. This involves the find-and-replace function, and a query identical to the one before, but with parentheses around it, so it looks like
+    As mentioned earlier, we want to add a tilde `~` before each of the lines that look like letters, so we can save them for later. This involves the find-and-replace function, and a query identical to the one before, but with parentheses around it, so it looks like
 
         (.+\<to\>)
 
     and the entire line is placed within a parenthetical group. Since this the first group in our search expression, we can replace that group with `\1` and put the tilde in front of it like so: `~\1`.
 
-2. Copy and past some of your text into [RegExr.com](http://RegExr.com). 
+2. Copy and paste some of your text into [RegExr.com](http://RegExr.com). 
 
 3. Write your regular expression (ie. what you're trying to find), and your substitution (ie. what you're replace with) in the RegExr interface. 
 
@@ -107,21 +107,22 @@ Remember from our basic introduction that there's a way to see if the word "to" 
 
     `sed -r -i.bak 's/(.+\bto\b.+)/~\1/g' texas.txt`
 
-    where:
+    Where:
 
-    `-r` means extended regex. this saves us from having to 'escape' certain characters <br />
-    `-i.bak` means make a backup of the original input file, in case things go wrong <br />
-    `-'s/old-pattern/newpattern/g'` is how we find and switch what we're looking for the final g means 'globally', everywhere in the file <br />
-    `texas.txt` the filename that we're looking to change <br />
+    + `-r` means extended regex. this saves us from having to 'escape' certain characters.
+    + `-i.bak` means make a backup of the original input file, in case things go wrong.
+    + `-'s/old-pattern/newpattern/g'` is how we find and switch what we're looking for the final g means 'globally', everywhere in the file.
+    + `texas.txt` the filename that we're looking to change.
 
+    <br />
     When you hit enter, the computer seems to pause for a moment, and then gives you the command prompt again. 
 
 5. Type `ls` and you'll see that a new file, `texas.txt.bak` has been created.
 
-6. Type `nano texas.txt` and examine the file. You should now have ~ characters at the start of each entry of the index!
+6. Type `nano texas.txt` and examine the file. You should now have `~` characters at the start of each entry of the index!
 
     <br>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/nXDFbLH59_M" title="Editing our file with grep and sed in the command line" frameborder="0" gesture="media" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/RQNyjSyQzjg?rel=0" title="Editing our file with grep and sed in the command line" frameborder="0" gesture="media" allowfullscreen></iframe>
     <br>
 
 If for some reason you don't, or you've mangled your original file, you can replace texas.txt with the backup file you made like so: `$ mv old-file-name new-file-name` thus, `$ mv texas.txt.bak texas.txt`. Use Nano to confirm that you're back to where you needed to be, and try again.
@@ -138,7 +139,7 @@ A ```\n``` at the beginning of a query searches for a new line, which means it's
 
 **However, given the evolution of computing, it may well be that this won’t quite work on your system.**
 
-Linux based systems use ```\n``` for a new line, while Windows often uses ```\r\n```, and older Macs just use ```\r```. These are the sorts of things that can drive us crazy, and so we digital historians need to keep in mind! Since this will likely cause much frustration, your safest bet will be to save a copy of what you are working on, and then experiment to see what gives you the best result. In most cases, this will be:
+Linux based systems use ```\n``` for a new line, while Windows often uses ```\r\n```, and older Macs just use ```\r```. These are the sorts of things that can drive us crazy, and so we digital historians need to keep in mind! Since this will likely cause much frustration, your safest bet will be to save a copy of what you are working on, and then experiment to see what gives you the best result. In most cases, the syntax will be the following:
 
 ```
 \r\n[^~].+
@@ -150,16 +151,14 @@ By finding all ```\r\n[^~].+``` and replacing it with nothing, you effectively d
 
 **But DH Box makes this so much easier**
 
-We are simply going to get grep to find all the lines that have a tilde in them, and write them to a new file:
-
-`$ grep '~' texas.txt > index.txt`
+We are simply going to get grep to find all the lines that have a tilde in them, and write them to a new file: `$ grep '~' texas.txt > index.txt`.
 
 Use Nano to confirm that this is true. 
 
 Wasn't that easy?
 
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EcbvmipiuLI" title="Removing irrelevant lines in our correspondence" frameborder="0" gesture="media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TRI46x2zp2U?rel=0" title="Removing irrelevant lines in our correspondence" frameborder="0" gesture="media" allowfullscreen></iframe>
 <br>
 
 ### Step Three
@@ -168,11 +167,11 @@ Wasn't that easy?
 
 **Discussion**
 
-To turn this text file into a spreadsheet, we'll want to separate it out into one column for sender, one for recipient, and one for date, each separated by a single comma. Notice that most lines have extraneous page numbers attached to them; we can get rid of those with regular expressions. There's also usually a comma separating the month-date and the year, which we'll get rid of as well. In the end, the first line should go from looking like:
+To turn this text file into a spreadsheet, we'll want to separate it out into one column for sender, one for recipient, and one for date, each separated by a single comma. Notice that most lines have extraneous page numbers attached to them; we can get rid of those with regular expressions. There's also usually a comma separating the month-date and the year, which we'll get rid of as well. In the end, the first line should go from looking like the following:
 
         ~Sam Houston to J. Pinckney Henderson, December 31, 1836 51
 
-to
+to looking like the following:
 
         Sam Houston, J. Pinckney Henderson, December 31 1836
 
@@ -182,18 +181,17 @@ You will start by removing the page number after the year and the comma between 
 
         [0-9]{4}
 
-We can find any digit between 0 and 9 by searching for ```[0-9] ```, and ```{4} ``` will find four of them together. Now extend that search out by appending ```.+``` to the end of the query; as seen before, it will capture the entire rest of the line. The query
+We can find any digit between 0 and 9 by searching for ```[0-9] ```, and ```{4} ``` will find four of them together. Now extend that search out by appending ```.+``` to the end of the query; as seen before, it will capture the entire rest of the line. The following query:
 
         [0-9]{4}.+
 
-will return, for example, "1836 51", "1839 52", and "1839 53" from the first three lines of the text. We also want to capture the comma preceding the year, so add a comma and a space before the query, resulting in
+will return, for example, "1836 51", "1839 52", and "1839 53" from the first three lines of the text. We also want to capture the comma preceding the year, so add a comma and a space before the query, resulting in the following: 
 
          , [0-9]{4}.+
  
 which will return ", 1836 51", ", 1839 52", etc.
 
-The next step is making the parenthetical groups which will be used to remove parts of the text with find-and-replace. In this case, we want to remove the comma and everything after year, but not the year or the space before it. Thus our query will look like:
-
+The next step is making the parenthetical groups which will be used to remove parts of the text with find-and-replace. In this case, we want to remove the comma and everything after year, but not the year or the space before it. Thus our query will look like the following:
 
         (,)( [0-9]{4})(.+)
 
@@ -201,10 +199,10 @@ with the comma as the first group `"\1"`, the space and the year as the second `
 
 Find the dates using a regex, and replace so that only the **second** group in the expression is kept. You might want to consult the introduction to regex again before you execute this one.
 
-Remember, the first part of the sed command will be: `sed -r -i.bak` then the pattern to find, the pattern to replace with, and the file name. You want to use sed on the new index.txt file you made. Can you devise the right pattern?
+Remember, the first part of the sed command will be: `sed -r -i.bak` then the pattern to find, the pattern to replace with, and the file name. You want to use sed on the new `index.txt` file you made. Can you devise the right pattern?
 
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qy_xzaBk9cs" title="Transforming our file into CSV format" frameborder="0" gesture="media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/syyFk2rhSc8?rel=0" title="Transforming our file into CSV format" frameborder="0" gesture="media" allowfullscreen></iframe>
 <br>
 
 ### Step Four
@@ -214,7 +212,7 @@ Remember, the first part of the sed command will be: `sed -r -i.bak` then the pa
 + Find the tildes that we used to mark off our text of interest, and replace them with nothing to delete them.
 
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/g_1QGPgFbdE" title="Removing the tildes before each line" frameborder="0" gesture="media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eg3p5BN1oKs?rel=0" title="Removing the tildes before each line" frameborder="0" gesture="media" allowfullscreen></iframe>
 <br>
 
 ### Step Five
@@ -228,7 +226,7 @@ Finally, to separate the sender and recipient by a comma, we find all instances 
 + Devise the regex to find the word, and replace with a comma.
 
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/L6iBhhQmGKY" title="Separating Senders and Receivers" frameborder="0" gesture="media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ESj9_rYQ2jw?rel=0" title="Separating Senders and Receivers" frameborder="0" gesture="media" allowfullscreen></iframe>
 <br>
 
 ### Step Six
@@ -239,21 +237,21 @@ Finally, to separate the sender and recipient by a comma, we find all instances 
 
 You may notice that some lines still do not fit our criteria. Line 22, for example, reads "Abner S. Lipscomb, James Hamilton and A. T. Bumley, AugUHt 15, ". It has an incomplete date; these we don't need to worry about for our purposes. More worrisome are lines, like 61 "Copy and summary of instructions United States Department of State, " which include none of the information we want. We can get rid of these lines later in a spreadsheet. 	
 
-The only non-standard lines we need to worry about with regular expressions are the ones with more than 2 commas, like line 178, "A. J. Donelson, Secretary of State [Allen,. arf interim], December 10 1844". Notice that our second column, the name of the recipient, has a comma inside of it. If you were to import this directly into a spreadsheet, you would get four columns, one for sender, two for recipient, and one for date, which would break any analysis you would then like to run. Unfortunately these lines need to be fixed by hand, but happily regular expressions make finding them easy. The query:
+The only non-standard lines we need to worry about with regular expressions are the ones with more than 2 commas, like line 178, "A. J. Donelson, Secretary of State [Allen,. arf interim], December 10 1844". Notice that our second column, the name of the Recipient, has a comma inside of it. If you were to import this directly into a spreadsheet, you would get four columns, one for Sender, two for Recipient, and one for date, which would break any analysis you would then like to run. Unfortunately these lines need to be fixed by hand, but happily regular expressions make finding them easy. The query:
 
 `.+,.+,.+, `
 
-will show you every line with more than 2 commas, because it finds any line that has any set of characters, then a comma, then any other set, then another comma, and so forth. Use Grep to find these.  
+will show you every line with more than 2 commas, because it finds any line that has any set of characters, then a comma, then any other set, then another comma, and so forth. Use grep to find these.  
 
-+ At the top of the file, add a new line that simply reads "Sender, Recipient, Date". These will be the column headers. Make a copy as a csv file by using the `cp` command: `cp index.txt cleaned-correspondence.csv`.
++ At the top of the file, add a new line that simply reads "Sender, Recipient, Date". These will be the column headers. Make a copy as a CSV file by using the `cp` command: `cp index.txt cleaned-correspondence.csv`.
 
 **Congratulations!**
 
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PG3tRoRbR8M" title="Cleaning our file" frameborder="0" gesture="media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4bLRLWlQYG0?rel=0" title="Cleaning our file" frameborder="0" gesture="media" allowfullscreen></iframe>
 <br>
 
-You've now used regex to extract, transform, and clean historical text. As a csv file, you could now load this data into a network analysis program such as [Gephi](http://gephi.org) to explore the ramifications of this correspondence network. Upload your file to your repository, and make a note of the original location of the file, the transformations that you've done, and the date/time. You will be using your `cleaned-correspondence.csv` file in the next exercise using [**Open Refine**](../supporting materials/open-refine.md), where we'll sort out some of the messy OCR (fixing names, and so on).
+You've now used regex to extract, transform, and clean historical text. As a CSV file, you could now load this data into a network analysis program such as [Gephi](http://gephi.org) to explore the ramifications of this correspondence network. Upload your file to your repository, and make a note of the original location of the file, the transformations that you've done, and the date/time. You will be using your `cleaned-correspondence.csv` file in the next exercise using [**Open Refine**](../supporting materials/open-refine.md), where we'll sort out some of the messy OCR (fixing names, and so on).
 
 #### The pattern you're after:
 

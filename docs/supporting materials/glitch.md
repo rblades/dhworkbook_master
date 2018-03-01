@@ -9,7 +9,7 @@ Spend some time on the articles and resources curated on [Glitch's GitHub](https
 1. Get images from Open Context (`ocget.sh`)
 2. Glitch them (`do-glitch.sh`)
 3. Make a website out of them (`expose`)
-4. Push them to github Pages (`git`)
+4. Push them to GitHub Pages (`git`)
 
 ## Open Context
 
@@ -54,7 +54,7 @@ The next step is to glitch the image.
 
 3. Make a new folder for the output of this process: `mkdir out`.
 
-    Now, this code is meant to be run on one file at a time, like this: `$ bndrimg photo-name.jpg `. Typing in each file name by hand would take a very long time to glitch everything. So instead, we write a little script that we'll call `do-glitch.sh`. 
+    Now, this code is meant to be run on one file at a time, like this: `$ bndrimg photo-name.jpg`. Typing in each file name by hand would take a very long time to glitch everything. So instead, we write a little script that we'll call `do-glitch.sh`. 
 
 4. In Nano, paste the following:
 
@@ -90,7 +90,7 @@ Finally, let's turn that folder of pictures into a website. We're going to use t
 
     Ta da! You now have a fully functional website showing off your glitch art.
 
-    You can customize it to use an alternative theme, a few bells and whistles; see the Expose documentation. One thing that you should do is to add captions for your images. You write these as either .txt or .md files, but make sure the file name for the caption is the same as for the image **and** put it in the same folder as the source images! You do this **before** you run the expose script. So `beaker-pic.png` would have as a caption file `beaker-pic.txt` or `beaker-pic.md`. You specify where the caption goes on the image in the YAML; that is, the metadata for your caption. So, if we opened 'beaker-pic.md' we might see,
+    You can customize it to use an alternative theme, a few bells and whistles; see the Expose documentation. One thing that you should do is to add captions for your images. You write these as either .txt or .md files, but make sure the file name for the caption is the same as for the image **and** put it in the same folder as the source images! You do this **before** you run the expose script. So `beaker-pic.png` would have as a caption file `beaker-pic.txt` or `beaker-pic.md`. You specify where the caption goes on the image in the YAML; that is, the metadata for your caption. So, if we opened `beaker-pic.md` we might see,
 
         ---
         top: 30
@@ -104,9 +104,9 @@ Finally, let's turn that folder of pictures into a website. We're going to use t
 
 More possibilities for sorting out the position of the text are discussed in the Expose documentation.
 
-## Host the site on github
+## Host the site on GitHub
 
-You can push the code for your site to github, and then use github's gh-pages feature to serve it up as a live website! Expose creates all of the code for the website inside a new folder called `_site`.
+You can push the code for your site to GitHub, and then use GitHub's gh-pages feature to serve it up as a live website! Expose creates all of the code for the website inside a new folder called `_site`.
 
 1. Type `$ cd _site`
 2. Turn this folder into a git repository: `git init`.
@@ -116,7 +116,7 @@ You can push the code for your site to github, and then use github's gh-pages fe
 6. Tell git where your remote repository is: `$ git remote add origin https://github.com/YOUR-ACCOUNT/YOUR-NEW-REPO-YOU-JUST-MADE.git`
 7. Push your materials to GitHub: `$ git push -u origin master` (Git might ask for your account username and password)
 8. Once that finishes, go back to GitHub and reload the page at https://github.com/YOUR-ACCOUNT/YOUR-NEW-REPO-YOU-JUST-MADE. You should see your changes.
-9. On the button where it says 'Branch: Master', click on the down arrow. In the box where it says faintly 'Find or create a branch', type `gh-pages`. This is a special branch which tells GitHub, 'serve this up as actual code when the user goes to the special github.io version of github'.
+9. On the button where it says 'Branch: Master', click on the down arrow. In the box where it says faintly 'Find or create a branch', type `gh-pages`. This is a special branch which tells GitHub, 'serve this up as actual code when the user goes to the special github.io version of GitHub'.
 10. Click on the gearwheel icon, to go to the settings page (You can also find it at https://github.com/YOUR-ACCOUNT/YOUR-NEW-REPO-YOU-JUST-MADE/settings). 
 11. Scroll down to the box that says 'GitHub Pages'. 
 12. In the green box, it says 'you're site is published at https://YOUR-ACCOUNT.github.io/YOUR-NEW-REPO-YOU-JUST-MADE'. 

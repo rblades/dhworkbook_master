@@ -24,10 +24,10 @@ Note the [conversation that ensued on Twitter after Milligan mentioned all this]
 + what that implies for how we do research,
 + and how we can use this process to maintain our scholarly voice online.
 
-Really, it's also a kind of ['knowledge mobilization'](http://www.sshrc-crsh.gc.ca/society-societe/community-communite/index-eng.aspx#2). In this module you will find exercises related to setting up your github account, how to commit, fork, push and pull files to your own repository and to others'. Really, it's about [sustainable authorship](http://programminghistorian.org/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown) and [preserving your research data](http://programminghistorian.org/lessons/preserving-your-research-data).
+Really, it's also a kind of ['knowledge mobilization'](http://www.sshrc-crsh.gc.ca/society-societe/community-communite/index-eng.aspx#2). In this module you will find exercises related to setting up your GitHub account, how to commit, fork, push and pull files to your own repository and to others'. Really, it's about [sustainable authorship](http://programminghistorian.org/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown) and [preserving your research data](http://programminghistorian.org/lessons/preserving-your-research-data).
 
 ### By the end of this module you will know
-+ how to work with github to foster collaboration
++ how to work with GitHub to foster collaboration
 + how to set up, fork, and make changes to files and repositories
 + the rationale for historians to make their work public
 
@@ -36,7 +36,7 @@ Remember: I do expect you to click through every link I provide, and to read the
 # What you need to do this week
 
 1. Respond to the readings and the reading questions through annotation (taking care to respond to others' annotations as well) - see the instructions below. Remember to tag your annotations with 'hist3814o' so we can find them [on the course Hypothesis group](http://jonudell.net/h/facet.html?facet=tag&mode=documents&search=hist3814o)
-2. Do the exercises for this module, pushing yourself as far as you can. Annotate the instructions where they might be unclear or confusing; see if others have annotated them as well, and respond to them with help if you can. Keep an eye on our Slack channel - you can always offer help or seek out help there. Write a blog post describing what happened as you went through the exercises (your successes, your failures, the help you may have found/received), and link to your 'faillog' (ie, the notes you upload to your github account - for more on that, see the exercises!).
+2. Do the exercises for this module, pushing yourself as far as you can. Annotate the instructions where they might be unclear or confusing; see if others have annotated them as well, and respond to them with help if you can. Keep an eye on our Slack channel - you can always offer help or seek out help there. Write a blog post describing what happened as you went through the exercises (your successes, your failures, the help you may have found/received), and link to your 'faillog' (ie, the notes you upload to your GitHub account - for more on that, see the exercises!).
 3. [Submit your work to the course submission form](http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#submitting-evidence)
 
 # Readings
