@@ -12,7 +12,7 @@ For more advanced tutorials and help, please see
 
 - Shawn Graham, shawn dot graham at carleton dot ca, [@electricarchaeo](http://twitter.com/electricarchaeo)
 
-## Disclaimer: Photosensitivity and eye strain
+## CAUTION: Photosensitivity and eye strain
 
 Some of the digital tools and tutorial videos used in this workbook can potentially cause eye strain or effect those with photosensitivity. Make sure to take breaks often, relax your eyes, and stretch.
 
