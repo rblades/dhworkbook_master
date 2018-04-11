@@ -26,9 +26,9 @@ This exercise will explore a historical text and help you create a digital recor
 ### Finding a Source ###
 
 1. Visit the site's collections via the 'Browse' function. 
-2. Locate the pamphlet **Negro Slavery** by Zachary Macaulay and open it.
+2. Locate the pamphlet *Negro Slavery* by Zachary Macaulay and open it.
 
-This is an abolitionist pamphlet regarding the Atlantic slave trade, presenting and examine evidence of how it is run.  When you approach a primary source like this, it is tempting to read through it from beginning to end, to get an overview of its contents, and then 'mine' or 'cherry-pick' good quotations to include in your assessments.  However, we are going to focus on examining a very small part of the text in a very high level of detail.  
+This is an abolitionist pamphlet regarding the Atlantic slave trade, presenting and examining evidence of how it is run.  When you approach a primary source like this, it is tempting to read through it from beginning to end, to get an overview of its contents, and then 'mine' or 'cherry-pick' good quotations to include in your assessments.  However, we are going to focus on examining a very small part of the text in a very high level of detail.  
 
 <br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KN_HhfPHH30?rel=0" title="Finding your source" frameborder="0" gesture="media" allowfullscreen></iframe>
@@ -41,11 +41,11 @@ You will use your own machine rather than DH Box for this work.
 1. Arrange your workspace so that you have the scanned text of the pamphlet easily visible on one side of your screen. 
 2. Open the `blanktemplate.txt` file in [Sublime Text](https://www.sublimetext.com/), [Atom](https://atom.io/), [Textwrangler](http://www.barebones.com/products/textwrangler/) or [Notepad++](https://notepad-plus-plus.org/) (or any text editor that understands encoding) and have that on the other side of the screen.
 
-The last lines will be ```</body></text></TEI></teiCorpus>```. Everything you write today should be just above `</body>`.
+The last lines will be ```</body></text></TEI></teiCorpus>```. Everything you write today should be just above `</body>` tag.
 
 ### Transcribing Your Page ###
 
-1. The first thing you will need is go to the tag
+1. Go to the following tag:
 
         <biblScope>1</biblScope>
 
@@ -53,9 +53,9 @@ The last lines will be ```</body></text></TEI></teiCorpus>```. Everything you wr
 
 2. Select a page in the document that you find interesting.
 
-3. Next, you will need to **very carefully** transcribe your page of text from the image into your document.  Make sure you do not make any changes to the text, even if you think they author has used poor grammar or misspelled a word.  You do not need to worry about line breaks but should start every new paragraph (or heading) with a `</p>` and end every paragraph (or heading) with a `</p>`.
+3. Next, you will need to **very carefully** transcribe your page of text from the image into your document.  Make sure you **do not make any changes to grammar or structure in the text**, even if you think the author has used poor grammar or misspelled a word. You do not need to worry about line breaks but should start every new paragraph (or heading) with a `<p>` and end every paragraph (or heading) with a `</p>`.
 
-4. Once you have completed your transcription, look away from your computer for 30-45 seconds.  Staring into the distance every 10-20 minutes will keep your eyes from straining.  Also, shake out your hands at the wrists, to prevent repetitive stress injuries to your fingers.  
+4. Once you have completed your transcription, look away from your computer for 30-45 seconds. Staring into the distance every 10-20 minutes will keep your eyes from straining.  Also, shake out your hands at the wrists, to prevent repetitive stress injuries to your fingers.  
 
     <br>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/VVslASqbUfs?rel=0" title="Transcribing your document" frameborder="0" gesture="media" allowfullscreen></iframe>
@@ -88,7 +88,7 @@ You are now going to **encode** or **mark-up** your text.
 
 3. For places, surround your text with the following:
 
-        <placeName key="Sheffield, United Kingdom" ref="http://tools.wmflabs.org/geohack/geohack.php?pagename=Sheffield&params=53_23_01_N_1_28_01_W_type:city_region:GB""> </placeName>
+        <placeName key="Sheffield, United Kingdom" ref="http://tools.wmflabs.org/geohack/geohack.php?pagename=Sheffield&params=53_23_01_N_1_28_01_W_type:city_region:GB"> </placeName>
 
     + In **key**, put the city and country with best information you can find for the modern names for this location
     + In **ref**, put a link to the relevant coordinates on [Wikipedia GeoHack website](http://tools.wmflabs.org/geohack/).
@@ -113,33 +113,33 @@ You are now going to **encode** or **mark-up** your text.
     <iframe width="560" height="315" src="https://www.youtube.com/embed/eTHlA7oCHGY?rel=0" title="Transcribing your document: arguments" frameborder="0" gesture="media" allowfullscreen></iframe>
     <br>
 
-Alex Gill has made [The Short and Sweet TEI Handout](https://docs.google.com/document/edit?id=12ErwXGHGaFL71M3cWHpI6gkfVzzsKHfk7U6N6vRmIS4&authkey=CKG3l6oG&hl=en#heading=h.uy40z0-ctpi0) which you might want to explore as well. When you embark on encoding documents for your own research, [Northeastern Univeristy has some questions to think about](http://www.wwp.northeastern.edu/outreach/seminars/_current/handouts/document_analysis.xhtml) to help you decide what kinds of tagging you'll need; these [templates from HisTEI](https://github.com/odaata/HisTEI/tree/master/frameworks/HisTEI/templates) might be useful (open the whole project with OxygenXML for full functionality, but you can copy those templates in any editor).
+Alex Gill has made [The Short and Sweet TEI Handout](https://docs.google.com/document/edit?id=12ErwXGHGaFL71M3cWHpI6gkfVzzsKHfk7U6N6vRmIS4&authkey=CKG3l6oG&hl=en#heading=h.uy40z0-ctpi0) which you might want to explore as well. When you embark on encoding documents for your own research, [Northeastern University has some questions to think about](http://www.wwp.northeastern.edu/outreach/seminars/_current/handouts/document_analysis.xhtml) to help you decide what kinds of tagging you'll need; these [templates from HisTEI](https://github.com/odaata/HisTEI/tree/master/frameworks/HisTEI/templates) might be useful (open the whole project with OxygenXML for full functionality, but you can copy those templates in any editor).
 
 ### Viewing Your Encoded Text ###
 
-To see your encoded text, make sure your .xml and .xsl file are in the same folder. **Open either Internet Explorer or Firefox**. The following will not work in Chrome because it has different security settings.
+To see your encoded text, make sure your `.xml` and `.xsl` file are in the same folder. **Open either Internet Explorer or Firefox**. The following **will not work in Google Chrome** because it has different security settings.
 
-Making sure both your `(page number).xml` file and your `000style.xsl` file are in the same folder (or both on your desktop), drag the icon for `(page number).xml` into your Internet Explorer Browser window.
+Making sure both your `(page number).xml` file and your `000style.xsl` file are in the same folder (or both on your desktop), drag the icon for `(page number).xml` into your browser window.
 
 If you now see a colour-coded version of your text, Congratulations! If you hover over the coloured sections, you should see a pop-up with the additional information you entered.
 
-If your text comes up only in black, with no paragraph divisions or headings, or doesn't come up at all, something has gone wrong. Re-open your .xml file and check that you have:
+If your text comes up only in black, with no paragraph divisions or headings, or doesn't come up at all, something has gone wrong. Re-open your `.xml` file and check that you have:
 
-+ Placed `<p>` at the start of every paragraph, including the start of the page
++ Placed `<p>` at the start of every paragraph, including the start of the page.
 
-+ Placed `</p>` at the end of every paragraph, including the end of the page
++ Placed `</p>` at the end of every paragraph, including the end of the page.
 
-+ Made sure all your `<persName>`, `<placeName>` and `<interp>` tags are properly enclosed in `<>`s
++ Made sure all your `<persName>`, `<placeName>` and `<interp>` tags are properly enclosed in `<>`s.
 
-+ Made sure you have both an open `<>` and close `<\>` tag for each tag you use
++ Made sure you have both an open `<>` and close `<\>` tag for each tag you use.
 
 + Made sure you attribute values are fully enclosed in `""`.
 
-+ Made sure you have a space between the `"` of one attribute and the start of the next
++ Made sure you have a space between the `"` of one attribute and the start of the next attribute.
 
-+ Made sure you do NOT have a space after the `=` of an attribute
++ Made sure you do NOT have a space after the `=` of an attribute.
 
-If your text still does not appear formatted, you may need to remove the text one paragraph at a time, refreshing your browser window, until it appears. This will help you identify which paragraph (or sentence) has the error within it).
+If your text still does not appear formatted, you may need to remove the text one paragraph at a time (pasting it somewhere handy), refreshing your browser window, until it appears. This will help you identify which paragraph (or sentence) has the error within it.
 
 <br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oc8AtydJx6o?rel=0" title="Viewing your encoded text" frameborder="0" gesture="media" allowfullscreen></iframe>
@@ -155,7 +155,7 @@ In which case, we can do the following:
 2. Select 'XML Tools' from the list, and install it. 
 3. You'll probably have to restart the program to complete the plugin installation. 
 4. Open up the [1.xml](https://github.com/craftingdigitalhistory/module3-wranglingdata/blob/master/tei-hist3907/1.xml) file in Notepad ++.
-5. Under 'plugins'>>'xml tools" select 'XSL Transformation settings'. 
+5. Under 'Plugins'>>'xml tools" select 'XSL Transformation settings'. 
 6. In the popup, click on the elipses: ```...``` to open up the file finder, and select the ```000style.xsl``` stylesheet. 
 7. Click 'transform'. A new tab will open in Notepad++ **with a fully-formed html file displaying your data according to the stylesheet.** 
 8. Save this new file and open it in a browser!
@@ -164,11 +164,11 @@ You can also check 'validate' from the XML Tools menu in Notepad++, which will i
 
 **Advanced:** If you install a [WAMP](http://www.wampserver.com/en/) or [MAMP](http://www.mamp.info/en/) server, and put your `xml` and `xsl` files in the `WWW` folder, you **should** be able to see the transformation no problem at ```localhost\myxml.xml``` (for example). (You can also use [Python's built in webserver if you have Python on your machine](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/) &mdash; all Mac users for instance do.)
 
-[You can access the `CND.xml`, transformed into a CSV on my GitHub](http://shawngraham.github.io/exercise/cnd.xml). If you 'view page source', you'll see the original XML again! Save-as the page as `whatever-you-want.csv` and you can do some data mining on it.
+[You can access the `CND.xml`, transformed into a CSV on my GitHub](http://shawngraham.github.io/exercise/cnd.xml). If you right click and choose 'View page source', you'll see the original XML again! Save-as the page as `whatever-you-want.csv` and you can do some data mining on it.
 
 
 ### More on transformations
 
-I made a file I've called [SG_transformer.xsl](https://github.com/hist3907b-winter2015/module3-wranglingdata/blob/master/tei-hist3907/SG_transformer.xsl). Open that file in your text editor. What tags would it be looking for in the xml file? What might it do to your markup? What line would you change in your XML file to get it to point to this stylesheet? Write all this down in your open notebook. It is a good habit to get into to keep track of your thoughts when looking at ancillary files like this.
+I made a file I've called [SG_transformer.xsl](https://github.com/hist3907b-winter2015/module3-wranglingdata/blob/master/tei-hist3907/SG_transformer.xsl). Open that file in your text editor. What tags would it be looking for in the XML file? What might it do to your markup? What line would you change in your XML file to get it to point to this stylesheet? Write all this down in your open notebook. It is a good habit to get into to keep track of your thoughts when looking at ancillary files like this.
 
 If the nature of your project will involve a lot of transcription, you would be well advised to use an XML editor like [OxygenXML](http://www.oxygenxml.com/), which has a free 1 month trial. The editor makes it easy to maintain **consistency** in your markup, and also, to quickly create stylesheets for whatever purpose you need. There are also a number of utility programs freely available that will convert XML to CSV or other formats. One such may be [found online on Google code](https://code.google.com/p/xml2csv-conv/). But the best way to transform these XML files is with XSL.

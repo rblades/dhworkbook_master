@@ -28,13 +28,13 @@ Writing in this way liberates the author from the tool. Markdown can be written 
 
 Popular general purpose plain text editors include [TextWrangler](https://www.barebones.com/products/textwrangler/), [Sublime](https://www.sublimetext.com/), and [Atom](https://atom.io/) for Mac, [Notepad++](https://notepad-plus-plus.org/) for Windows, as well as [Gedit](https://wiki.gnome.org/Apps/Gedit) and [Kate](https://kate-editor.org/) for Linux. However, there are also editors that specialize in displaying and editing Markdown. 
 
-**NB** A text editor is different from the default notepad app that comes with Windows or Mac. A text editor shows you **exactly** what is in a file.
+**NB** A text editor is different from the default notepad app that comes with Windows or Mac. A text editor shows you **exactly** what is in a file, including tags, code, and other 'hidden' markup.
 
 In this exercise, I want you to become familiar with Markdown syntax. Check out [Sarah Simpkin's quick primer on Markdown](http://programminghistorian.org/lessons/getting-started-with-markdown). There are a number of 'flavours' for Markdown, but in essence, they all mimic the kinds of conventions you would see in an email, using asterisks to indicate emphasis and so on.
 
 1. Check out [the Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
-2. Visit [dillinger.io](http://dillinger.io) in a new browser window. This looks like a word processor. The left hand side of the screen is where you write, the right hand side shows you what your text will look like if you converted the text to HTML. Dillinger 'saves' your work in your browser's memory. You can also point it to save to your Dropbox, Google Drive, or GitHub account (under the cogwheel icon).
+2. Visit [dillinger.io](http://dillinger.io) in a new browser window. This looks like a word processor. The left side of the screen is where you write, the right side shows you what your text will look like if you converted the text to HTML. Dillinger 'saves' your work in your browser's memory. You can also point it to save to your Dropbox, Google Drive, or GitHub account (under the cogwheel icon).
 
 3. Write a short 200-500 word piece on the most interesting annotation you've seen one of your classmates make. Why is it interesting? Why has it struck you?
 
@@ -50,7 +50,7 @@ In this exercise, I want you to become familiar with Markdown syntax. Check out 
 
 7. Select 'Export to' Markdown to save a copy of the file in your downloads folder.
 
-8. Try 'exporting to' PDF or HTML. Since you've separated the content from the format, this illustrates how you can convert your text into other formats as necessary. (The text is converted using a piece of software called [Pandoc](http://www.pandoc.org/installing.html))
+8. Try 'exporting to' PDF or HTML. Since you've separated the content from the format, this illustrates how you can convert your text into other formats as necessary. (The text is converted using a piece of software called [Pandoc](http://www.pandoc.org/installing.html)).
 
     <br>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/ip7HFi8zozY?rel=0" title="Inserting images and exporting in dillinger.io" frameborder="0" gesture="media" allowfullscreen></iframe>
@@ -68,11 +68,11 @@ For a richer discussion of some more ways Markdown and Pandoc can make your rese
 
 ### Setting up DH Box
 
-Many of the exercises in this workbook work without issue on a Mac or Linux computer, at the terminal. (On a Mac, you can find the terminal under applications > utilities). If you're on a Windows machine, it can be more difficult to get all of the various bits and pieces properly configured. If you're on a tablet, most digital history things you might like to do are not really feasible. One solution is for all of us to use the **same** computer. The CUNY Graduate Centre has created a digital-humanities focused virtual computer for just such an occasion, the [DH Box](http://dhbox.org/).
+Many of the exercises in this workbook work without issue on a Mac or Linux computer, at the terminal. (On a Mac, you can find the Terminal under Applications > Utilities). If you're on a Windows machine, it can be more difficult to get all of the various bits and pieces properly configured. If you're on a tablet, most digital history things you might like to do are not really feasible. One solution is for all of us to use the **same** computer. The CUNY Graduate Centre has created a digital-humanities focused virtual computer for just such an occasion, the [DH Box](http://dhbox.org/).
 
-In this exercise, you are going to set up an instance of a DH Box for your own use. We will be using the command line interface which is an essential way to interact with your computer. Normally, when you're on your Mac or your PC, you're clicking on icons or menus or windows of various sorts to get things done. You're clicking and dragging text. All of these graphical elements sit on top of sequences of commands that you don't have to type out, that only the computer sees. The command line (i.e. terminal or command prompt) lets you dispense with the graphical elements, and type the commands you want the way you want them. 
+In this exercise, you are going to set up an instance of a DH Box for your own use. We will be using the command line interface which is an essential way to interact with your computer. Normally, when you're on your Mac or your PC, you're clicking on icons or menus or windows of various sorts to get things done. You're clicking and dragging text. All of these graphical elements sit on top of sequences of commands that you don't have to type out, that only the computer sees. The command line (i.e. terminal or command prompt) lets you dispense with the graphical elements, and type the commands you want directly. 
 
-**NB this workbook assumes that you are using a DH Box**
+**NB This workbook assumes that you are using a DH Box**
 
 1. Carleton students: If you are on campus or are logged into Carleton's systems via a VPN, go to [the sign up page at http://134.117.26.132:5000/signup](http://134.117.26.132:5000/signup). Other folks: Go to [the DH Box sign up page at http://dhbox.org/signup](http://dhbox.org/signup). These are two separate installations of DH Box; whichever one you start with, continue to use.
 
@@ -95,7 +95,7 @@ For HIST3814o, we will use the **File Manager**, the **Command Line**, and **RSt
 
 ### Using the Command Line 
 
-In the previous exercise, [dillinger.io](http://dillinger.io) could convert your Markdown document into HTML or PDF. We will now add the Pandoc program to DH Box so that you can convert things for yourself. We will get the Pandoc program and bring it into our DH Box using the `wget` command. Wget is a program that allows us to download materials off the web. It can be used to only grab certain file types, or all files within a certain directory, or even to take a complete copy of a website! We'll discuss wget more in module 2 (visit also [the Programming Historian on wget](http://programminghistorian.org/lessons/automated-downloading-with-wget)).
+In the previous exercise, [dillinger.io](http://dillinger.io) could convert your Markdown document into HTML or PDF. We will now add the Pandoc program to DH Box so that you can convert things for yourself. We will get the Pandoc program and bring it into our DH Box using the `wget` command. Wget is a program that allows us to download materials off the web. It can be used to only grab certain file types, or all files within a certain directory, or even to take a complete copy of a website! We'll discuss wget more in [Module 2](../module-2/Exercises/#exercise-2-wget) (visit also [the Programming Historian on wget](http://programminghistorian.org/lessons/automated-downloading-with-wget)).
 
 1. Select Command Line in your DH Box. You will have to login again with your DH Box username and password. 
 
@@ -111,11 +111,12 @@ In the previous exercise, [dillinger.io](http://dillinger.io) could convert your
 
 2. Type `$ wget https://github.com/jgm/pandoc/releases/download/1.19.2.1/pandoc-1.19.2.1-1-amd64.deb`
 
-    This wget command gets a copy of the Pandoc program that will work in DH Box. The .deb file extension tells us that this is a Linux file. The next step is to unpack that file.
+    This wget command gets a copy of the Pandoc program that will work in DH Box. The `.deb` file extension tells us that this is a Linux file. The next step is to unpack that file.
 
 3. Type `$ sudo dpkg -i pandoc-1.19.2.1-1-amd64.deb`
 
-    Some commands can have nasty side effects, and the operating system won't let you do them unless you specify that you **really** want to do them. That's what the [sudo command](https://en.wikipedia.org/wiki/Sudo) achieves. The next part, dpkg with the `-i` 'flag' is a 'package manager' for installing software. The last part is the file that we used wget to copy to our own machine. 
+    Some commands can have nasty side effects, and the operating system won't let you do them unless you specify that you **really** want to do them. That's what the [sudo command](https://en.wikipedia.org/wiki/Sudo) achieves. The next part, `
+    dpkg` with the `-i` 'flag' is a 'package manager' for installing software. The last part is the file that we used wget to copy to our own machine. 
 
 4. Type `$ pandoc -v` to test that Pandoc is installed
 
@@ -177,7 +178,7 @@ In the previous exercise, [dillinger.io](http://dillinger.io) could convert your
 
     Any guesses how to create an HTML file? Pandoc is smart enough to know the kind of output you want from the file extension.
 
-14. Retype the command but use .html instead of .docx this time. Use the file manager to save copies of the .docx and .html files to your own machine. (Incidentally, if you use the arrow up and arrow down keys on your keyboard when you're at the command line, you can page through commands that you've previously typed).
+14. Retype the command but use `.html` instead of `.docx` this time. Use the file manager to save copies of the `.docx` and `.html` files to your own machine. (Incidentally, if you use the arrow up and arrow down keys on your keyboard when you're at the command line, you can page through commands that you've previously typed).
 
     <br>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/CZgJLys2RvU?rel=0" title="Using the command line: converting files with pandoc" frameborder="0" gesture="media" allowfullscreen></iframe>
@@ -225,7 +226,7 @@ In this exercise, we're going to create a repository via the GitHub website and 
 
 3. Write a short description in the 'description box', and tick off the 'initialize the repository with a readme'. You can also select a license from the drop down box &mdash; this will put some standard wording on your repository page about the conditions under which someone else might use (or cite) your code.
 
-4. Click create repository.
+4. Click 'Create repository'.
 
     At this point, you now have a folder &mdash; a repository &mdash; on the GitHub website into which you can deposit your files. It will be at `http://github.com/your-account-name/hist3814o`. So let's put some materials into that repository.
 
@@ -245,7 +246,7 @@ Instead of creating multiple versions of a file, you have a single file that has
 
 This is perhaps the simplest use case for GitHub. You can create files directly in the repository as well, by hitting the 'create new file' button, and following the prompts. GitHub has a [brief tutorial on using the website to collaborate with other people on a repository](https://guides.github.com/activities/hello-world/).
 
-**For the remainder of the course, use your hist3814o repository as your scratch pad, your fail log, and your open notebook for showing your work across these modules**
+**For the remainder of the course, use your hist3814o repository as your scratch pad, your fail log, and your open notebook for showing your work across these modules**.
 
 Check out [my example 'fail log' as a model](https://github.com/shawngraham/example-faillog-hist3814). 'Fail' is a pretty harsh word &mdash; I use it to point out that for everything that works perfectly, there's an awful lot of trial-and-error that happened first **upon which** our successes are built. We need to keep track of this! James Baker calls this, **[de-wizardification](https://cradledincaricature.com/2017/06/29/dewizardification/).**
 
@@ -272,7 +273,7 @@ Many websites &mdash; including this workbook &mdash; use a GitHub repository as
 
 ## Exercise 4: A detailed look at using git on the command line
 
-At its heart, git is a way of taking 'snapshots' of the current state of a folder, and saving those snapshots in sequence. (For an excellent brief presentation on git, visit [Alice Bartlett's presentation on git](https://speakerdeck.com/alicebartlett/git-for-humans); Bartlett is a senior developer for the Financial Times). In git's lingo, as stated earlier, a folder on your computer is known as a repository or repo. This sequence of snapshots in total lets you see how your project unfolded over time. Each time you wish to take a snapshot, you make a `commit`. A commit is a git command to take a snapshot of the entire repository. Thus, your folder we discussed above, with its proliferation of documents becomes:
+At its heart, git is a way of taking 'snapshots' of the current state of a folder, and saving those snapshots in sequence. (For an excellent brief presentation on git, visit [Alice Bartlett's presentation on the subject](https://speakerdeck.com/alicebartlett/git-for-humans); Bartlett is a senior developer for the Financial Times). In git's lingo, as stated earlier, a folder on your computer is known as a repository or repo. This sequence of snapshots in total lets you see how your project unfolded over time. Each time you wish to take a snapshot, you make a `commit`. A commit is a git command to take a snapshot of the entire repository. Thus, your folder we discussed above, with its proliferation of documents becomes:
 
 ```
 |-project
@@ -300,7 +301,7 @@ Git is also a powerful tool for backing up your work. You can work quite happily
 
 Let us imagine a scenario.... You and Anna are working together on the project. You have made a new project repository in your GitHub space, and you have cloned it to your computer. Anna has cloned it to hers. Let's assume that you have a very productive weekend and you make some real headway on the project. You `commit` your changes, and then `push` them from your computer to the GitHub version of your repository. That repository is now one commit **ahead** of Anna's version. Anna `pulls` those changes from GitHub to her own version of the repository, which now looks **exactly** like your version. What happens if you make changes to the exact same part of the exact same file? This is called a **conflict**. Git will make a version of the file that contains text clearly marking off the part of the file where the conflict occurs, with the conflicting information marked out as well. The way to **resolve** the conflict is to open the file (typically with a text editor) and to delete the added git text, making a decision on which information is the correct information.
 
-**Caution** what follows might take a bit of time. It walks you through setting up a git repository in your DH Box; making changes to it; making different branches; and publishing the repository to your space on GitHub's website.
+**Caution** What follows might take a bit of time. It walks you through setting up a git repository in your DH Box; making changes to it; making different branches; and publishing the repository to your space on GitHub's website.
 
 ### 4.1. git init 
 
@@ -322,7 +323,7 @@ How do you turn a folder into a repository? With the `git init` command. At the 
 The changes in your repo will now be stored in that **hidden** directory, `.git`. Most of the time, you will never have reason to search that folder out. But know that the config file that describes your repo is in that folder. There might come a time in the future where you want to alter some of the default behaviour of the git program. You do that by opening the config file (which you can read with a text editor). Google 'show hidden files and folders' for your operating system when that time comes.
 
 ### 4.2. git status
-Open your readme.md file again with the Nano text editor, from the command line. Add some more information to it, then save and exit the text editor.
+Open your `readme.md` file again with the Nano text editor, from the command line. Add some more information to it, then save and exit the text editor.
 
 1. Type `$ git status`
 
@@ -378,7 +379,7 @@ Now we're going to view the history of your commits.
 
         Fixed the headings that were broken in the about section of readme.md
 
-2. We're going to go back in time and create a new branch. You can escape the `git log` by typing `q`. Here's how the command will look: `$ git checkout -b branchname <commit>` where `branch` is the name you want the branch to be called, and `<commit>` is that unique ID. Make a new branch from your second last commit (don't use < or >).
+2. We're going to go back in time and create a new branch. You can escape the `git log` by typing `q`. Here's how the command will look: `$ git checkout -b branchname <commit>` where `branch` is the name you want the branch to be called, and `<commit>` is that unique ID. Make a new branch from your second last commit (don't use the `<` or `>` symbols).
 3. We typed `git checkout -b experiment 253506bc23070753c123accbe7c495af0e8b5a43`. The response: `Switched to a new branch 'experiment'` 
 4. Check git status and then list the contents of your repository. What do you see? You should notice that some of the files you had created before seem to have disappeared &mdash; congratulations, you've time travelled! Those files are not missing; but they **are** on a different branch (the master branch) and you can't harm them now. 
 5. Add a number of new files, making commits after each one. 
@@ -405,11 +406,11 @@ One of the most powerful aspects of using git is the possibility of using it to 
 
 1. Login to GitHub.
 
-2. On the upper right part of the screen there is a large + sign. Click on that, and select `new repository`.
+2. On the upper right part of the screen there is a large + sign. Click on that + sign, and select `new repository`.
 
 3. On the following screen, give your repo a name.
 
-4. Leave the repository set to 'Public'
+4. Leave the repository set to 'Public'.
 
 5. **DO NOT** 'initialize this repo with a readme.md'. Leave `add .gitignore` and `add license` set to NONE.
 
@@ -494,7 +495,7 @@ Now, you let your collaborator know that you've made a change that you want her 
 
     For example, say I clone Dr. Graham's `R` repository and create a new `experiment` branch: 
         
-    + If make changes to my `experiment` branch &mdash; that is the **Head** branch. 
+    + If I make changes to my `experiment` branch &mdash; that is the **Head** branch. 
     + Then I push those changes to Dr. Graham's `master` branch &mdash; that is the **Base** branch.
 
     <br>

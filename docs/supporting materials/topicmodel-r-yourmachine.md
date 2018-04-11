@@ -4,17 +4,17 @@ In this exercise, we're going to grab an archived copy of Melodee Beals' Colonia
 
 **When you start RStudio the first time for this exercise** make sure to create a new project in a new directory.
 
-By the way: when you run this line: ```topic.model$train(1000) ``` your console will fill up with data as it iterates 1000 times over the entire corpus, fitting a topic model to it. This is as it should be!
+By the way, when you run the line ```topic.model$train(1000) ``` your console will fill up with data as it iterates 1000 times over the entire corpus, fitting a topic model to it. This is as it should be!
 
 In this way, you'll build up an entire script for topic modeling materials you find on the web. You can then save your script and upload it to your open notebook. In the future, you'd be able to make just a few changes here and there in order to grab and explore different data.
 
 Make a note in your open notebook about your process and your observations.
 
-**Going further** If you wanted to use that script on the materials you collected in module 2, you would have to tell R to load up those materials from a directory, rather than by reading a CSV file. Take a look at [my script for topic modeling the Ferguson Grand Jury documents](https://github.com/shawngraham/ferguson/blob/master/R%20script/ferguson-topicmodel.R), especially this line:
+**Going further** If you wanted to use that script on the materials you collected in Module 2, you would have to tell R to load up those materials from a directory, rather than by reading a CSV file. Take a look at [my script for topic modeling the Ferguson Grand Jury documents](https://github.com/shawngraham/ferguson/blob/master/R%20script/ferguson-topicmodel.R), especially the following line:
 
 ```documents <- mallet.read.dir("originaldocs/1000chunks/")```
 
-You feed it the path to your documents. If you are on a windows machine, the path would look a bit different, for instance:
+You feed it the path to your documents. If you are on a Windows machine, the path would look a bit different, like the following:
 
 ``` "C:\\research\\originaldocs\\1000chunks\\"
 ```

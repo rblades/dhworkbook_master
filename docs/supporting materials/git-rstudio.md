@@ -1,6 +1,6 @@
 # Using Git with rstudio-pubs-static
 
-1. Before you can use git to keep track of your changes to your R project, you need to tell the Git program (which keeps snapshots of your changes) who you are. To do this, execute the following commands in the command line:
+1. Before you can use git to keep track of your changes to your R project, you need to tell the git program (which keeps snapshots of your changes) who you are. To do this, execute the following commands in the command line:
     `$ git config --global user.email "you@example.com"`
     `$ git config --global user.name "Your Name"`
 
@@ -8,9 +8,9 @@
 
 3. Under 'Version control system' select the 'Git' tab.
 
-    You now have a new option in the pane at top right, beside 'environment' and 'history': 'git'. 
+    You now have a new option in the pane at top right, beside 'Environment' and 'History': 'git'. 
 
-4. Click on 'git'.
+4. Click on 'Git'.
 
     The panel now displays all of the files created in this project folder. 
 
@@ -22,7 +22,7 @@
 
     A new window opens called 'RStudio: Review Changes'. This window shows you a preview of the text of each file, in green where material has been added, red where material has been deleted (these are the 'difs'). 
 
-7. Add a commit message int the top right 'commit message' box.
+7. Add a commit message into the top right 'commit message' box.
 
     You've now made a local commit to your git repository! If things go horribly wrong, you can roll back the changes. Now, let's setup your GitHub repo for this.
 
@@ -32,7 +32,7 @@
 
 10. Back in RStudio, click on the 'more' gearwheel on the Git tab. 
 
-11. Select shell (you could do this from the command line too, when you're in your project folder). This will open up a box into which you can type commands; we're going to tell Git the location of our remote repository, add that info into the config, and do two pulls.
+11. Select shell (you could do this from the command line too, when you're in your project folder). This will open up a box into which you can type commands; we're going to tell git the location of our remote repository, add that info into the config, and do two pulls.
 
 12. Open shell and execute the following commands:
 

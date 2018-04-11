@@ -20,18 +20,19 @@ There is so much data available; with these methods, we can gather enormous amou
 
 > [...] poor and misunderstood use of online newspapers can skew historical research. In a conference presentation or a lecture, it’s not uknown to see the familiar yellow highlighting of found searchwords on projected images: indicative of how the original primary material was obtained. But this historical approach generally usually remains unspoken, without a critical methodological reflection. As I hope I’ll show here, using Pages of the Past uncritically for historical research is akin to using a volume of the Canadian Historical Review with 10% or so of the pages ripped out. Historians, journalists, policy researchers, genealogists, and amateur researchers need to at least have a basic understanding of what goes on behind the black box.
 
-Ask yourself: what are some of the key dangers? Reflect: how have you used digitized resources uncritically in the past? Remember: **To digitize** doesn't &mdash; or shouldn't &mdash; mean uploading a photograph of a document. There's a lot more going on that that. We'll get to that in a moment.
+Ask yourself: what are some of the key dangers? Reflect: how have you used digitized resources uncritically in the past? Remember: **To digitize** doesn't &mdash; or shouldn't &mdash; mean uploading a photograph of a document. There's a lot more going on than that. We'll get to that in a moment.
 
 -----
 
 ## Exercise 1: The Dream Case
 In the dream case, your data are not just images, but are actually sorted and structured into some kind of pre-existing database. There are choices made in the **creation** of the database, but a good database, a good project, will lay out for you their decision making, their corpora, and how they've dealt with ambiguity and so on. You search using a robust interface, and you get a well-formed spreadsheet of data in return. Two examples of 'dream case' data:
     
-+ [Epigraphic Database Heidelberg](http://edh-www.adw.uni-heidelberg.de/inschrift/suche)
-+ [Commwealth War Graves Commission, Find War Dead](https://www.cwgc.org/find/find-war-dead)
+> + [Epigraphic Database Heidelberg](http://edh-www.adw.uni-heidelberg.de/inschrift/suche)
+> + [Commwealth War Graves Commission, Find War Dead](https://www.cwgc.org/find/find-war-dead)
+
 1. Explore both databases. Perform a search of interest to you. In the case of the epigraphic database, if you've done any Latin, try searching for terms related to occupations; or you could search [Figlina](http://www.latin-dictionary.org/Latin-English-Dictionary/figlina). 
 2. In the CWGC database, search your own surname. Download your results. You now have data that you can explore! 
-3. Using the Nano text editor in your DH Box, make a record (or records) of what you searched, the URL for your search & its results, and where you're keeping your data. 
+3. Using the Nano text editor in your DH Box, make a record (or records) of what you searched, the URL for your search and its results, and where you're keeping your data. 
 4. Lodge a copy of this record in your repository.
 
 -----
@@ -40,7 +41,7 @@ In the dream case, your data are not just images, but are actually sorted and st
 
 You've already encountered wget in the introduction to this workbook, when you were setting up your DH Box to use Pandoc. 
 
-1. In this exercise, I want you to do [Ian Milligan's wget tutorial at the Programming Historian](http://programminghistorian.org/lessons/automated-downloading-with-wget) to learn more about the power of this command, and how to wield that power properly. Skip ahead to step 2, since your DH Box already has wget installed. (If you want to continue to use wget after this course is over, you will have to install it on your own machine, obviously).
+1. In this exercise, I want you to do [Ian Milligan's wget tutorial at the Programming Historian](http://programminghistorian.org/lessons/automated-downloading-with-wget) to learn more about the power of this command, and how to wield that power properly. Skip ahead to step 2, since your DH Box already has wget installed. (If you want to continue to use wget after this course is over, you will have to install it on your own machine, obviously.)
 
     Once you've completed Milligan's tutorial, remember to put your history into a new Markdown file, and to lodge a copy of it in your repository.
 
@@ -93,7 +94,7 @@ There's no one right way to do things, digitally. There are many paths. The cruc
 
 Digitization requires human intervention. This can be as straightforward as correcting errors or adjusting the scanner settings when we do OCR, or it can be the rather more involved work of adding a layer of semantic information to the text. When we mark up a text with the semantic hooks and signs that explain we are talking about **London, Ontario** rather than **London, UK**, we've made the text a whole lot more useful for other scholars or tools. In this exercise, you will do some basic marking up of a text using standards from the [Text Encoding Initiative](http://www.tei-c.org/index.xml). (Some of the earliest digital history work was along these lines). 
 
-The TEI exercise requires carefully attention to detail. Read through it before you try it. In this exercise, you'll transcribe a page from an abolitionist's pamphlet. You'll also think about ways of transforming the resulting XML into other formats. Make notes in a file to upload to your repository, and upload your XML and your XSL file to your own repository as well. (As an added optional challenge, create a gh-pages branch and figure out the direct URL to your XML file, and email that URL to me).
+The TEI exercise requires careful attention to detail. Read through it before you try it. In this exercise, you'll transcribe a page from an abolitionist's pamphlet. You'll also think about ways of transforming the resulting XML into other formats. Make notes in a file to upload to your repository, and upload your XML and your XSL file to your own repository as well. (As an added optional challenge, create a gh-pages branch and figure out the direct URL to your XML file, and email that URL to me).
 
 For this exercise, do the following: 
 
@@ -117,7 +118,7 @@ The [**Canadiana Discovery Portal**](http://search.canadiana.ca/) has tonnes of 
 
 2. Set the date range to 1800 to 1900 and hit enter. You are presented with a page of results -56 249 results! That's a lot of data. But do you notice the address bar of your browser? It'll say something like this:
 
-        http://search.canadiana.ca/search?q=ottawa&field=&df=1900&dt=1900
+        http://search.canadiana.ca/search?q=ottawa&field=&df=1800&dt=1900
 
     Your search query has been put into the URL. You're looking at the API! Everything after `/search` is a command that you are sending to the Canadiana server.
 
@@ -147,9 +148,9 @@ The [**Canadiana Discovery Portal**](http://search.canadiana.ca/) has tonnes of 
 
 6. We need to create a program. Make a new directory for this exercise like so: `$ mkdir m2e4`. Then, change into that directory by typing `$ cd m2e4`. 
 
-7. Make sure that's where you are by typing `$ pwd`. Now, make an empty file for our program with `$ touch canadiana.sh`. Touch makes an empty file; the .sh in the filename indicates that this is a shell script.
+7. Make sure that's where you are by typing `$ pwd`. Now, make an empty file for our program with `$ touch canadiana.sh`. Touch makes an empty file; the `.sh` in the filename indicates that this is a shell script.
 
-8. Open the empty file with `$ nano canadiana.sh`. Now, the program that Ian Milligan wrote makes calls to the API that **used to live** at eco.canadiana.ca. But note the [error message on Canadiana's website](http://eco.canadiana.ca/view/oocihm.16278/?r=0&s=1&fmt=json&api_text=1). So we have to change Milligan's script so that it points to the API at [search.canadiana.ca](http://search.canadiana.ca/). Copy the script below into your empty `canadiana.sh`. If you want, adjust the search parameters (in the line starting with `pages`) for material you're more interested in.
+8. Open the empty file with `$ nano canadiana.sh`. Now, the program that Ian Milligan wrote makes calls to the API that **used to live** at `eco.canadiana.ca`. But note the [error message on Canadiana's website](http://eco.canadiana.ca/view/oocihm.16278/?r=0&s=1&fmt=json&api_text=1). So we have to change Milligan's script so that it points to the API at [search.canadiana.ca](http://search.canadiana.ca/). Copy the script below into your empty `canadiana.sh`. If you want, adjust the search parameters (in the line starting with `pages`) for material you're more interested in.
 
         #! /bin/bash
         pages=$(curl 'http://search.canadiana.ca/search?q=ottawa*&field=&so=score&df=1800&dt=1900&fmt=json' | jq '.pages')
@@ -180,7 +181,7 @@ The [**Canadiana Discovery Portal**](http://search.canadiana.ca/) has tonnes of 
 
 11. And now we can run the program by typing `$ ./canadiana.sh` (the ./ is important!)
 
-    Ta da! You now have a pretty powerful tool now for grabbing data from one of the largest portals for Canadian history! 
+    Ta da! You now have a pretty powerful tool for grabbing data from one of the largest portals for Canadian history! 
 
 12. Download your `output.txt` file to your computer via the file manager and have a look at it. 
 
@@ -272,7 +273,7 @@ Ed Summers is part of a project called '[Documenting the Now](http://www.docnow.
 
 ## Exercise 6: Using Tesseract to turn an image into text
 
-We've all used image files like JPGs and PNGs. Images always look the same on whatever machine they are displayed on, because they contain within themselves the complete description of what the 'page' should look like. You're likley familiar with the fact that you cannot select text within an image. When we digitize documens, the image that results only contains the image layer, not the text. 
+We've all used image files like JPGs and PNGs. Images always look the same on whatever machine they are displayed on, because they contain within themselves the complete description of what the 'page' should look like. You're likley familiar with the fact that you cannot select text within an image. When we digitize documents, the image that results only contains the image layer, not the text. 
 
 To turn that image into text, we have to do what's called 'object character recognition', or OCR. An OCR algorithm looks at the pattern of pixels in the image, and maps these against the shapes it 'knows' to be an A, or an a, or a B, or a &, and so on. Cleaner, sharper printing gives better results as do high resolution images free from noise. People who have a lot of material to OCR use some very powerful tools to identify blocks of text within the newspaper page, and then train the machine to identify these, a process beyond us just now (but visit [this Tesseract q & a on stackoverflow](https://stackoverflow.com/questions/28591117/how-do-i-segment-a-document-using-tesseract-then-output-the-resulting-bounding-b#28640570) if you're interested).
 
@@ -286,7 +287,7 @@ In this exercise, you'll:
  
 ### Converting images in the command line
 
-1. Begin by making a new director for this exercise: `$ mkdir ocr-test`. 
+1. Begin by making a new directory for this exercise: `$ mkdir ocr-test`. 
 
 2. Type `$ cd ocr-test` to change directories into ocr-test.
 
@@ -399,3 +400,13 @@ In this exercise, you'll:
 Think about how these conversions can change based on the image being run through Tesseract. Does Tesseract have an easier time converting computer text even though it's in an image format? How might OCR conversions affect the way historians work on batch files? How does the context of the text change how historians analyse it? 
 
 Look up the [Tesseract wiki](https://github.com/tesseract-ocr/tesseract/wiki/Command-Line-Usage). What other options could you use with the Tesseract command to improve the results? When you decide to download Tesseract to you own computer, use the following two guides to automating bulk OCR (multiple files) with Tesseract: [Peirson's](https://diging.atlassian.net/wiki/display/DCH/Tutorial%3A+Text+Extraction+and+OCR+with+Tesseract+and+ImageMagick) and [Schmidt's](http://benschmidt.org/dighist13/?page_id=129).
+
+## Reference
+
+Part of this tutorial was adapted from [The Programming Historian](https://programminghistorian.org) released under the CC-BY license, including:
+
+Ian Milligan, "Automated Downloading with Wget," The Programming Historian 1 (2012), https://programminghistorian.org/lessons/automated-downloading-with-wget.
+
+Kellen Kurschinski, "Applied Archival Downloading with Wget," The Programming Historian 2 (2013), https://programminghistorian.org/lessons/applied-archival-downloading-with-wget.
+
+[Twitter user 'superboreen' on R OCR](https://twitter.com/superboreen/status/958418116324790273).

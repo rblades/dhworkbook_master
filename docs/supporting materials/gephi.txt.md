@@ -5,7 +5,7 @@
 ## Introduction
 Gephi is quickly becoming the tool of choice for network analysts who do not need the full suite of algorithms offered by [Pajek](http://vlado.fmf.uni-lj.si/pub/networks/pajek/) or [UCINET](https://sites.google.com/site/ucinetsoftware/home). It is relatively easy to use (eclipsed in this only by [NodeXL](http://nodexl.codeplex.com/)), it is usable on all platforms, it can analyze fairly large networks, and it creates beautiful visualizations. The development community is also extremely active, with improvements being added constantly. We recommend Gephi for the majority of historians undertaking serious network analysis research. 
 
-Download and install [Gephi](http://gephi.github.io) onto your machine. 
+Download and install [Gephi](https://gephi.org/) onto your machine. 
 
 ### Installing Gephi on OS 10 Mavericks
 
@@ -15,13 +15,13 @@ Mac users might have some trouble installing Gephi 0.8. We have found that, on M
 
 To fix this:
 
-1. Control click (or right-click) on the Gephi package
+1. Control click (or right-click) on the Gephi package.
 
 2. Select “show package contents.” 
 
-3. Click on “contents >> resources >> gephi >> etc.” 
+3. Click on “Contents >> Resources >> Gephi >> etc.” 
 
-4. Control-click (or right-click) on “gephi.conf” and open with your text editor. 
+4. Control-click (or right-click) on `gephi.conf` and open with your text editor. 
 
 5. Find the line reading:
 
@@ -33,9 +33,9 @@ To fix this:
 
 6. Save that file. Then, go to [Apple support](http://support.apple.com/kb/DL1572) and install the older version of Java (Java 6). Once that is installed, Gephi should run normally.
 
-7. Run Gephi once it is installed. You will be presented with a welcome prompting you to open a recent file, create a new project, or load a sample file. 
+7. Run Gephi once it is installed. You will be presented with a welcome prompting you to Open a recent file, Create a new project, or Load a sample file. 
 
-8. Click “New Project” and then click the “Data Laboratory” tab on the horizontal bar at the top of the Gephi window (Fig. 7.3).
+8. Click “New Project” and then click the “Data Laboratory” tab on the horizontal bar at the top of the Gephi window.
 
 ## When Not To Use Networks 
 
@@ -51,7 +51,7 @@ You will need the information you [created in Module 3, after cleaning the corre
 
 ### Umm, I never did manage that Open Refine stuff...
 
-In module 3, you used Notepad++ or Textwrangler, regular expressions, and OpenRefine to create a comma-separated value file like &mdash; `****.csv` &mdash; of the diplomatic correspondence of the Republic of Texas. The final version of the file you created has a row for each letter listed in the volume, and in each row the name of the sender and the recipient. The file should look like this:
+In Module 3, you used Notepad++ or Textwrangler, regular expressions, and Open Refine to create a comma-separated value file like `****.csv` of the diplomatic correspondence of the Republic of Texas. The final version of the file you created has a row for each letter listed in the volume, and in each row the name of the sender and the recipient. The file should look like this:
 
 ```
 source,target
@@ -63,14 +63,14 @@ David G. Burnet,Richard G. Dunlap
 
 This file is called 'an edge list' &mdash; it's a list of connections, or edges, between the individuals. If you no longer have the file, you can find it on [The Macroscope website](http://themacroscope.org/2.0/datafiles/texas-correspondence-OpenRefine.csv).  
 
-## Quick instructions for getting the data into Gephi:
+## Quick instructions for getting the data into Gephi
 
 1. Open Gephi by double-clicking its icon. 
-2. Click “new project.” The middle pane of the interface window is the “Data Laboratory,” where you can interact with your network data in spreadsheet format. This is where we can import the data cleaned up in OpenRefine. 
+2. Click "New project". The middle pane of the interface window is the “Data Laboratory,” where you can interact with your network data in spreadsheet format. This is where we can import the data cleaned up in Open Refine. 
 3. In the Data Laboratory, select “Import Spreadsheet.” 
 4. Press the ellipsis “...” and locate the CSV you created. Make sure that the Separator is listed as “Comma” and the “As table” is listed as “Edges table.” 
 5. Press “Next,” then “Finish.” Your data should load up. 
-6. Click on the “overview” tab and you will be presented with a tangled network graph.
+6. Click on the "Overview” tab and you will be presented with a tangled network graph.
 
 ## Navigating Gephi
 
@@ -86,9 +86,9 @@ There is one tweak that needs to done in the Data Table before the dataset is fu
 
 2. Click on the “Nodes” tab in the Data Table (this should be open already) and notice that, of the three columns, “Label” (the furthermost field on the right) is blank in every row. This will be a problem when viewing the network visualization, as those labels are essential for the network to be meaningful. 
 
-3. In the “Nodes” tab, click “Copy data to other column” at the bottom, select “ID”, and press “Ok” (Fig. 7.5). Upon doing so, the “Label” column will be filled with the appropriate labels for each correspondent. 
+3. In the “Nodes” tab, click “Copy data to other column” at the bottom, select “ID”, and press “Ok”. Upon doing so, the “Label” column will be filled with the appropriate labels for each correspondent. 
 
-4. While you’re still in the Data Laboratory, look in the “Edges” tab and notice there is a “Weight” column. Gephi automatically counted every time a letter was sent from correspondent A to correspondent B and summed up all the occurrences, resulting in the “Weight.” This means that J. Pinckney Henderson sent three letters to James Webb, because Henderson is in the “Source” column, Webb in the “Target,”, and the “Weight” is three.
+4. While you’re still in the Data Laboratory, look in the “Edges” tab and notice there is a “Weight” column. Gephi automatically counted every time a letter was sent from correspondent A to correspondent B and summed up all the occurrences, resulting in the “Weight.” This means that J. Pinckney Henderson sent three letters to James Webb, because Henderson is in the “Source” column, Webb in the “Target”, and the “Weight” is three.
 
 5. Clicking on the Overview pane will take you to a visual representation of the network you just imported. In the middle of the screen, you will see your network in the “Graph” tab. The “Context” tab, at the top right, will show that you imported 234 nodes and 394 edges. At first, all the nodes will be randomly strewn across the screen and make little visual sense. 
 
@@ -104,13 +104,13 @@ There is one tweak that needs to done in the Data Table before the dataset is fu
      
     About two-dozen smaller components of the network will appear to shoot off into the distance, unconnected from the large, connected component in the middle. For the purpose of this exercise, we are not interested in those disconnected components, so the next step will be to filter them out of the network. 
 
-8. The first step is to calculate which components of the network are connected to which others; do this by clicking “Run” next to the text that says “Connected Components” in the “Statistics” tab on the right-hand side.  
+8. The first step is to calculate which components of the network are connected to which others; do this by clicking “Run” next to the text that says “Connected Components” in the “Statistics” tab on the right side.  
 
 9. Once there, select “UnDirected” and press “OK.” 
 
 10. Press “Close” when the report pops up indicating that the algorithm has finished running. Now that this is done, Gephi knows which is the giant connected component and has labeled that component “0”. 
 
-11. To filter out everything but the giant component, click on the “Filters” tab on the right-hand side and browse to "Component ID Integer (Node)" in the folder directory (you’ll find it under "Attributes," then "Equal"). 
+11. To filter out everything but the giant component, click on the “Filters” tab on the right side and browse to "Component ID Integer (Node)" in the folder directory (you’ll find it under "Attributes," then "Equal"). 
 
 12. Double-click "Component ID Integer (Node)" and click the "Filter" button at the bottom. Doing this removes the disconnected bundles of nodes.
 
@@ -142,7 +142,7 @@ There is one tweak that needs to done in the Data Table before the dataset is fu
 
     At this point, the network is processed enough to visualize in the Preview pane, to finally begin making sense of the data. 
 
-21. In Preview, on the left-hand side, select "Show Labels," "Proportional Size," "Rescale Weight," and deselect "Curved" edges. 
+21. In Preview, on the left side, select "Show Labels," "Proportional Size," "Rescale Weight," and deselect "Curved" edges. 
 
 22. Press "Refresh." 
 
@@ -154,4 +154,4 @@ There is one tweak that needs to done in the Data Table before the dataset is fu
 
 The visualization immediately reveals apparent structure: central figures on the top (Ashbel Smith and Anson Jones) and bottom (Mirabeau B. Lamar, James Webb, and James Treat), and two central figures who connect the two split communities (James Hamilton and James S. Mayfield). A quick search online shows the top network to be associated with the last president of the Republic of Texas, Anson Jones; whereas the bottom network largely revolves around the second president, Mirabeau Lamar. Experts on this period in history could use this analysis to understand the structure of communities building to the annexation of Texas or they could ask meta-questions about the nature of the data themselves. For example, why is Sam Houston, the first and third president of the Republic of Texas, barely visible in this network?
 
-Write up your own observations on this process in your open notebook, and export your gephi file as a `.graphml` file (because Gephi's `.gephi` format is a bit unstable, always save as or export your work in a variety of formats). Upload that to your repository.
+Write up your own observations on this process in your open notebook, and export your Gephi file as a `.graphml` file (because Gephi's `.gephi` format is a bit unstable, always save as or export your work in a variety of formats). Upload that to your repository.

@@ -1,6 +1,6 @@
 # Humanities Visualization Aug 7 - Aug 13
 
-In this week, I want you to focus on making your final project. You do not need to read or annotate any pieces this week, nor to work through the exercises that are included in module 5. They are there for you to dip into as you finish your project. YOU DO have to write a blog post explaining what you've been up to this week.
+In this week, I want you to focus on making your final project. You do not need to read or annotate any pieces this week, nor to work through the exercises that are included in Module 5. They are there for you to dip into as you finish your project. YOU DO have to write a blog post explaining what you've been up to this week.
 
 ## Concepts
 
@@ -16,15 +16,15 @@ The following are worth reading on these issues:
 + Owens, T. "Defining Data for Humanists: Text, Artifact, Information, or Evidence?" _Journal of Digital Humanities_ 2011 1.1. [http://journalofdigitalhumanities.org/1-1/defining-data-for-humanists-by-trevor-owens/](http://journalofdigitalhumanities.org/1-1/defining-data-for-humanists-by-trevor-owens/)
 + Watters, Audrey. ["Men (Still) Explain Technology to Me: Gender and Education Technology" _Hackeducation_](http://hackeducation.com/2015/03/11/men-still-explain)
 
-I also have a [number of pieces of my own archaeological work](https://carleton-ca.academia.edu/SMGraham) that I think provide examples of how humanistic visualization can be a driver of interpretation and understanding. For instance, one thing I am currently working on is the possibility for **sound** [to be a better representation of humanistic data](http://electricarchaeology.ca/2015/10/27/if-i-could-read-your-mind-sonifying-john-adams-diary/). Oh, and by the way: maps are great, but sometimes, maps of ideas are even better; check out this [landscape of Last.fm Folksonomy (pdf opens in new tab)](http://info.slis.indiana.edu/~katy/research/10-Last.fm.pdf). (If you have any facility with Python, you might like [this library that allows you to generate similar self-organizing maps](https://github.com/sevamoo/SOMPY)). Since Python 3 is installed in your DHBox, you're all set! (By the way, I find [dabapps piece on python](https://www.dabapps.com/blog/introduction-to-pip-and-virtualenv-python/) very helpful anytime I set out to do any Python on my own computer.)
+I also have a [number of pieces of my own archaeological work](https://carleton-ca.academia.edu/SMGraham) that I think provide examples of how humanistic visualization can be a driver of interpretation and understanding. For instance, one thing I am currently working on is the possibility for **sound** [to be a better representation of humanistic data](http://electricarchaeology.ca/2015/10/27/if-i-could-read-your-mind-sonifying-john-adams-diary/). Oh, and by the way: maps are great, but sometimes, maps of ideas are even better; check out this [landscape of Last.fm Folksonomy (PDF downloads in new tab)](http://info.slis.indiana.edu/~katy/research/10-Last.fm.pdf). (If you have any facility with Python, you might like [this library that allows you to generate similar self-organizing maps](https://github.com/sevamoo/SOMPY)). Since Python 3 is installed in your DH Box, you're all set! (By the way, I find [dabapps piece on python](https://www.dabapps.com/blog/introduction-to-pip-and-virtualenv-python/) very helpful anytime I set out to do any Python work on my own computer.)
 
 ## What you need to do this week
 
-1. Work on your project. You have until midnight August 16th to submit it. See the [Final Project requirements](http://site.craftingdigitalhistory.ca/final-project-1.html). Remember that all supporting files need to be in their own GitHub repository (it is not necessary to share the Equity files, unless you have created some sort of dataset from them), while the final project itself has to be mounted on your own domain.
-2. Talk to me, talk to each other in Slack. Feel free to collaborate, but keep a record of who does what and how much.
+1. Work on your project. You have until midnight August 16th to submit it. See the [Final Project requirements](http://site.craftingdigitalhistory.ca/final-project-1.html). Remember that all supporting files need to be in their own GitHub repository (it is not necessary to share the Canadian war diary files, unless you have created some sort of dataset from them), while the final project itself has to be mounted on your own domain.
+2. Talk to me and talk to each other in Slack. Feel free to collaborate, but keep a record of who does what and how much.
 3. If you missed completing a module, now might also be a good time to finish it (see [2.4 of the course manual](http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#submitting-evidence))
 4. Use the materials in this module to help make your project.
-5. Write a blog post describing what you've been up to THIS WEEK re your project (your successes, your failures, the help you may have found/received), and link to your 'faillog' (ie, the notes on your process that you upload to your GitHub. If you did any of the exercises, mention that).
+5. Write a blog post describing what you've been up to THIS WEEK on your project (your successes, your failures, the help you may have found/received), and link to your 'faillog' (ie, the notes on your process that you upload to your GitHub. If you did any of the exercises, mention that).
 
 ## Readings
 

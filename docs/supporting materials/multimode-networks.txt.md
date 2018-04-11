@@ -36,19 +36,19 @@ There is a plugin for Gephi that we will use to transform our network.
 
 3. In the popup, under ‘available plugins’ look for ‘MultimodeNetworksTransformation’. Tick this box, then click on Install.
 
-4. Follow the instructions, ignore any warnings, click on ‘finish’. You may or may not need to restart Gephi to get the plugin running. If you suddenly see on the far right of ht Gephi window a new tab besid ‘statistics’, ‘filters’, called ‘Multimode Network’, then you’re ok.
+4. Follow the instructions, ignore any warnings, click on ‘finish’. You may or may not need to restart Gephi to get the plugin running. If you suddenly see on the far right of the Gephi window a new tab beside ‘statistics’, ‘filters’, called ‘Multimode Network’, then you’re ok.
 
     ![Image of Gephi plugin interface](http://electricarchaeologist.files.wordpress.com/2013/10/slide1.jpg)
 
 ## Importing the data
 
-1. Under ‘file’, select -> New project.
+1. Under ‘File’, select New project.
 
-2. On the data  laboratory tab, select Import-spreadsheet, and in the pop-up, make sure to select under ‘as table: EDGES table. Select `women-orgs.csv`.
+2. On the Data Laboratory tab, select Import spreadsheet, and in the pop-up, make sure to select under ‘As table: EDGES table. Select `women-orgs.csv`.
 
-3. Click ‘next’, click finish.
+3. Click ‘Next’. Then click Finish.
 
-4. On the data table, have ‘edges’ selected. This is showing you the source and the target for each link (aka ‘edge’). This implies a directionality to the relationship that we just don’t know – so down below, when we get to statistics, we will always have to make sure to tell Gephi that we want the network treated as ‘undirected’. More on that below.
+4. On the data table, have ‘edges’ selected. This is showing you the source and the target for each link (AKA ‘edge’). This implies a directionality to the relationship that we just don’t know – so down below, when we get to statistics, we will always have to make sure to tell Gephi that we want the network treated as ‘undirected’. More on that below.
 
     ![Image of Gephi data import interface](http://electricarchaeologist.files.wordpress.com/2013/10/slide2.jpg)
 
@@ -58,7 +58,7 @@ There is a plugin for Gephi that we will use to transform our network.
 
     Loading your CSV file, step 2
 
-5. Click on ‘copy data to other column’. Select ‘Id’. In the pop-up, select ‘Label’. You now have your edges labelled.
+5. Click on ‘Copy data to other column’. Select ‘Id’. In the pop-up, select ‘Label’. You now have your edges labelled.
 
 6. Just as you did above, now import NODES `women-names.csv`.
 
@@ -68,7 +68,7 @@ There is a plugin for Gephi that we will use to transform our network.
 
 ## Prepping your data
 
-We're now going to manipulate the data a bit in order to get it ready for the transformation. In this data, we have women, and we have organizations. We need to tell Gephi which rows are the organizations. In Peter's original data input phase, he decided to use a unique number for each woman so that he would minimize data entry errors (misspellings and so on), as well as control for the use of maiden and married names. Miss Eliza Smith might become, at a later date, Mrs. George Doe. In Peter's scheme, this is the same person (remember in module 3 in the TEI exercise how we dealt with such issues?).
+We're now going to manipulate the data a bit in order to get it ready for the transformation. In this data, we have women, and we have organizations. We need to tell Gephi which rows are the organizations. In Peter's original data input phase, he decided to use a unique number for each woman so that he would minimize data entry errors (misspellings and so on), as well as control for the use of maiden and married names. Miss Eliza Smith might become, at a later date, Mrs. George Doe. In Peter's scheme, this is the same person (remember in [Module 2 in the TEI exercise](../supporting materials/tei/) how we dealt with such issues?).
 
 
 1. On your NODES page in the data laboratory, add new column, make it boolean. Call it ‘organization’
@@ -85,17 +85,17 @@ We're now going to manipulate the data a bit in order to get it ready for the tr
 
 4. Save this as ```women-organizations-2-mode.gephi```.
 
-    **Pro tip**: always export your data from gephi (file >> export) in .net or .graphml or .gefx format as the .gephi format (which is your only option under file >> save as) is unstable. That is, sometimes gephi won't read .gephi files! I did say this was **beta** software).
+    **Pro tip**: always export your data from Gephi (File >> Export) in `.net` or `.graphml` or `.gefx` format as the `.gephi` format (which is your only option under File >> Save as) is unstable. That is, sometimes Gephi won't read `.gephi` files! I did say this was **beta** software).
 
 ## Transforming the network
 
-At this point, you have a two mode network in gephi. You could click on the 'overview' panel and play with some of the layouts and begin to form impressions about the nature of your data. Remember though any metrics calculated at this point would be largely spurious. Let's transform this two-mode network so that we can explore how women are connected to other women via shared membership.
+At this point, you have a two mode network in Gephi. You could click on the 'Overview' panel and play with some of the layouts and begin to form impressions about the nature of your data. Remember though any metrics calculated at this point would be largely spurious. Let's transform this two-mode network so that we can explore how women are connected to other women via shared membership.
 
 ![Image showing how to save and run Gephi](http://electricarchaeologist.files.wordpress.com/2013/10/slide6.jpg)
 
 On the multimode networks projection tab:
 
-1. Click load attributes.
+1. Click Load attributes.
 
 2. In ‘attribute type’, select organization
 
@@ -109,39 +109,39 @@ On the multimode networks projection tab:
 
 7. Save as ```women-to-women-network.gephi``` **and** export as ```women-to-women.net```
 
-    **NB If your nodes data table is blank, your filter might still be active. make sure the filter box is clear. You should be left with a list of women (ie, a list of nodes where the identiers are numbers, per Peter's schema).**
+    **NB If your nodes data table is blank, your filter might still be active. Make sure the filter box is clear. You should be left with a list of women (ie. a list of nodes where the identifiers are numbers, per Peter's schema).**
 
-8. At this point, you could re-start Gephi and reload your ‘women-organizations-2-mode.gephi’ file and re-run the multimode networks projection so that you are left with an organization to organization network. Do this, and save and export with appropriate file names.
+8. At this point, you could re-start Gephi and reload your `women-organizations-2-mode.gephi` file and re-run the multimode networks projection so that you are left with an organization to organization network. Do this, and save and export with appropriate file names.
 
 ## Exploring this network
 
 Peter's data has a number of **attributes** describing it, including the membership year. So let's see what this network of women looks like in 1902.
 
-1. Under the filters tab at the right hand side of the Gephi interface, select ‘attributes – equal’ and then drag ‘1902’ to the queries box.
+1. Under the filters tab at the right side of the Gephi interface, select ‘attributes – equal’ and then drag ‘1902’ to the queries box.
 2. In ‘pattern’ enter [0-9] and tick the ‘use regex’ box.
 3. Click ok and then click ‘filter’.
 
 You should now have a network with 188 nodes and 8728 edges, showing the women who were active in 1902.
 
-Let’s learn something about this network. Under the statistics tab at the right hand side of the Gephi interface,
+Let’s learn something about this network. Under the Statistics tab at the right side of the Gephi interface, do the following:
 
-1. Run ‘avg. path length’ by clicking on ‘run’
+1. Run ‘avg. path length’ by clicking on ‘run’.
 2. In the pop up that opens, select ‘undirected’ (as we know nothing about directionality in this network; we simply know that two women were members of the same organization at the same time. Note also that if the same pair were members of the more than one organziation, the weight of their connection will be corresponding stronger).
 3. Click ok.
-4. Run ‘modularity’ to look for subgroups. make sure ‘randomize’ and ‘use weights’ are selected. Leave ‘resolution’ at 1.0
+4. Run ‘modularity’ to look for subgroups. Make sure ‘randomize’ and ‘use weights’ are selected. Leave ‘resolution’ at 1.0
 
 We selected 'average path length' because one of the byproducts of this routine is 'betweeness centrality'. We're making an assumption here that a woman who has a high betweeness centrality score was in a position to affect information flow in 1902 society. Modularity looks at similar patterns of connections to cluster women who have more-or-less similar connections into groups.
 
 Let’s visualize what we’ve just learned.
 
-1. On the ‘partition’ tab, over on the left hand side of the ‘overview’ screen, click on nodes, then click the green arrows beside ‘choose a partition parameter’.
+1. On the ‘partition’ tab, over on the left side of the ‘overview’ screen, click on nodes, then click the green arrows beside ‘choose a partition parameter’.
 2. Click on ‘choose a partition parameter’. 
 3. Scroll down to modularity class. The different groups will be listed, with their colours and their % composition of the network.
 4. Hit ‘apply’ to recolour your network graph.
 
 Let’s resize the nodes to show off betweeness-centrality (to figure out which woman was in the greatest position to influence flows of information in this network.) 
 
-1. Click ‘ranking’. (It's on the left hand side of the interface, beside 'partition' and just below 'overview'.
+1. Click ‘ranking’. (It's on the left side of the interface, beside 'partition' and just below 'overview'.
 2. Click ‘nodes’.
 3. Click the down arrow on ‘choose a rank parameter’. 
 4. Select ‘betweeness centrality’.
@@ -154,5 +154,5 @@ Mrs. Mary Elliot-Murray-Kynynmound and Mrs. John Henry Wilson should now dominat
 
 Congratulations! You’ve imported historical network data into Gephi, transformed it, manipulated it, and run some analyses. Play with the settings on ‘preview’ in order to share your visualization as SVG, PDF, or PNG.
 
-Now go back to your original gephi file, and recast it as organizations to organizations via shared members, to figure out which organizations were key in early 20th century Ontario… make appropriate notes in your open notebook.
+Now go back to your original Gephi file, and recast it as organizations to organizations via shared members, to figure out which organizations were key in early 20th century Ontario… make appropriate notes in your open notebook.
 

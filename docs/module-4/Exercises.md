@@ -10,11 +10,11 @@ You are welcome to work through more of them, of course, but I want the exercise
 
 Many of these involve having to install more software on your own machine. In those exercises that involve using R and RStudio, you are welcome to install RStudio on your own machine OR to use it in DH Box. Please read [this quick introduction to R and Rstudio carefully](../supporting materials/quick-intro-r.md).
 
-**If you decide to install R and RStudio on your own machine,** I would suggest you read the introductory bits from Lincoln Mullen's book-in-progress, [Computational Historical Thinking](http://dh-r.lincolnmullen.com/getting-started.html), especially the 'setup' part under 'getting started' (pay attention to the bit on installing packages and dependencies). If you spot any exercises in Mullen's book that seem relevant to your project, you may do those as an alternative to the ones here. **Alternatively**, go to [Swirl](http://swirlstats.com/) and [learn the basics of R within R](http://swirlstats.com/students.html). [DHNow](http://digitalhumanitiesnow.org/2016/01/resource-basic-text-mining-in-r/) links to a new [Basic Text Mining in R](https://web.archive.org/web/20160309170928/https://rstudio-pubs-static.s3.amazonaws.com/31867_8236987cf0a8444e962ccd2aec46d9c3.html) tutorial which is worth checking out as well.
+**If you decide to install R and RStudio on your own machine,** I would suggest you read the introductory bits from Lincoln Mullen's book-in-progress, [Computational Historical Thinking](http://dh-r.lincolnmullen.com/getting-started.html), especially the 'setup' part under 'getting started' (pay attention to the bit on installing packages and dependencies). If you spot any exercises in Mullen's book that seem relevant to your project, you may do those as an alternative to the ones here. **Alternatively**, go to [Swirl](http://swirlstats.com/) and [learn the basics of R within Swirl](http://swirlstats.com/students.html). [DHNow](http://digitalhumanitiesnow.org/2016/01/resource-basic-text-mining-in-r/) links to a new [Basic Text Mining in R](https://web.archive.org/web/20160309170928/https://rstudio-pubs-static.s3.amazonaws.com/31867_8236987cf0a8444e962ccd2aec46d9c3.html) tutorial which is worth checking out as well.
 
 **NB It is always very important to record in your own notebooks what version of R you used for your analysis, what version of any R packages you installed and used, and so on because packages can go out of date.**
 
-In the table below I've gathered the exercises together under the headings of **Text**, **Networks**, **Maps**, and **Charts**. I've also added some entries that I am categorizing under **Art** The first is a series of exercises on [the sonification of data](http://programminghistorian.org/lessons/sonification) and the second is a guide [to making twitterbots](https://programminghistorian.github.io/ph-submissions/lessons/intro-to-twitterbots); the third is about glitching digital imagery. These approaches can provide surprising and novel insights into history, as they move from representing history digitally to **performing** it. Visit, for instance, [the final project in an undergraduate digital history class at the University of Saskatchewan by Daniel Ruten](https://danielruten.wordpress.com/2017/04/15/sonic-word-clouds-an-experiment-with-data-sonification-part-i-introduction/). Daniel translated simple wordclouds of a First World War diary into a profound auditory performance. I would be very interested indeed to see if any final projects in HIST3814o gave sonification or twitterbots or glitch a try.
+In the table below I've gathered the exercises together under the headings of **Text**, **Networks**, **Maps**, and **Charts**. I've also added some entries that I am categorizing under **Art**. The first is a series of exercises on [the sonification of data](http://programminghistorian.org/lessons/sonification) and the second is a guide [to making Twitterbots](https://programminghistorian.github.io/ph-submissions/lessons/intro-to-twitterbots); the third is about glitching digital imagery. These approaches can provide surprising and novel insights into history, as they move from representing history digitally to **performing** it. Visit, for instance, [the final project in an undergraduate digital history class at the University of Saskatchewan by Daniel Ruten](https://danielruten.wordpress.com/2017/04/15/sonic-word-clouds-an-experiment-with-data-sonification-part-i-introduction/). Daniel translated simple word clouds of a First World War diary into a profound auditory performance. I would be very interested indeed to see if any final projects in HIST3814o gave sonification or Twitterbots or glitching a try.
 
 The exercises in this module are covered in the chart below:
 
@@ -72,7 +72,7 @@ In this exercise you will use the **Topic Modeling Tool** to create a simple top
 
 12. When it finishes, go to the folder you selected for output, and find the file `all_topics.html` in the `output_html` folder. 
 
-13. Click on `all_topics.html`. You now have a browser-based way of navigating your topics and documents. In the `output_csv` folder created, you will find the same information as CSV, which you could then input into a spreadsheet for other kinds of visualizations (which we'll talk about in class.)
+13. Click on `all_topics.html`. You now have a browser-based way of navigating your topics and documents. In the `output_csv` folder created, you will find the same information as CSV, which you could then input into a spreadsheet for other kinds of visualizations (which we'll talk about in class).
 
     <br>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/mFvSBR9mze8?rel=0" title="Viewing the topic model files" frameborder="0" gesture="media" allowfullscreen></iframe>
@@ -95,13 +95,13 @@ For this exercise, do **ONE** of the following:
 
 ## Exercise 4: Text Analysis with Overview
 
-In this exercise, we're going to look at the Colonial Newspaper Database again, but this time using a tool called 'Overview'. Overview uses a different approach that the topic models we've been discussing. In essence, it looks at word frequencies and their distributions within a document, and within a corpus, to organize the documents into folders of progressively similar word use.
+In this exercise, we're going to look at the Colonial Newspaper Database again, but this time using a tool called 'Overview'. Overview uses a different approach than the topic models we've been discussing. In essence, it looks at word frequencies and their distributions within a document, and within a corpus, to organize the documents into folders of progressively similar word use.
 
-1. You can download Overview to run on your own machine, but for our purposes, the hosted version on the [Overview Docs website](https://www.overviewdocs.com/) is sufficient. Go to that page, watch the video, create an account, and then log in (**you must create an account to use overview**). (More help about how Overview works [may be found on their blog](https://blog.overviewdocs.com/), including helpful videos.)
-2. Once you're inside, click 'import from a CSV file', and upload the `CND.csv` (which you can download and save to your own machine from [my GitHub](https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv) <- right-click and save as. 
+1. You can download Overview to run on your own machine, but for our purposes, the hosted version on the [Overview Docs website](https://www.overviewdocs.com/) is sufficient. Go to that page, watch the video, create an account, and then log in (**you must create an account to use Overview**). (More help about how Overview works [may be found on their blog](https://blog.overviewdocs.com/), including helpful videos.)
+2. Once you're inside, click 'import from a CSV file', and upload the `CND.csv` (which you can download and save to your own machine from [my GitHub](https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv) <- right-click and save as the previous link). 
 3. On the 'UPLOAD A CSV FILE' page in Overview click 'browse' and select the `CND.csv`. It will give you a preview. There are a number of options here &mdash; you can tell Overview which words to ignore, and which words to give added importance to. What words will you select? Make a note in your notebook. 
 4. Hit 'upload'.
-5. A new page appears, called **YOUR DOCUMENT SETS**. Click on the one you just uploaded. A file folder tree showing documents of progressively greater similarity will open; on the right hand side will be the list of documents within each box (the box in question will be greyed out when you click on it, so you know where you are). You can search for words in your document, and Overview will tell you where they are; you can tag documents that you find interesting. The Overview system allows you to jump between a distant, macroscopic view and a close, document level view. 
+5. A new page appears, called **YOUR DOCUMENT SETS**. Click on the one you just uploaded. A file folder tree showing documents of progressively greater similarity will open; on the right side will be the list of documents within each box (the box in question will be greyed out when you click on it, so you know where you are). You can search for words in your document, and Overview will tell you where they are; you can tag documents that you find interesting. The Overview system allows you to jump between a distant, macroscopic view and a close, document level view. 
 6. Jump back and forth, see what you can find. For suggestions about how to use Overview effectively, try [their blog](https://blog.overviewdocs.com/). Make notes about what you observe in your notebook. Also, you can export your tagged document set from Overview, so that you could visualize the patterns of tagging in a spreadsheet (for instance).
 
 <br>
@@ -116,7 +116,7 @@ In this exercise, we're going to look at the Colonial Newspaper Database again, 
 
 Heather Froelich has put together an excellent step-by-step with using AntConc for exploring textual patterns within, and across, corpora of texts. Work your way through her [tutorial](http://hfroehli.ch/workshops/getting-started-with-antconc/).
 
-Can you get our example materials (from the Colonial Newspaper Database) into AntConc? [Our instructions in The Macroscope might help you](http://www.themacroscope.org/?page_id=418) to split the CSV into individual txt files. Alternatively, do you have any materials of your own, already collected? Feed them into AntConc. What patterns do you see? What if you compare your materials against other corpora of texts?
+Can you get our example materials (from the Colonial Newspaper Database) into AntConc? [Our instructions in The Macroscope](http://www.themacroscope.org/?page_id=418) might help you to split the CSV into individual txt files. Alternatively, do you have any materials of your own, already collected? Feed them into AntConc. What patterns do you see? What if you compare your materials against other corpora of texts?
 
 For your information, [CoRD has a collection of corpora that you can explore](http://www.helsinki.fi/varieng/CoRD/corpora/index.html).
 
@@ -124,11 +124,11 @@ For your information, [CoRD has a collection of corpora that you can explore](ht
 
 ## Exercise 6: Text Analysis with Voyant
 
-In [Module 2](../module-2/Exercises/#exercise-3-tei), if you recall, we worked through how to transform XML using stylesheets. Melodee Beals used a [stylesheet ](https://github.com/mhbeals/Colonial-Newspaper-Database/tree/master/Transformers) to transform her database into a series of individual txt files. In the exercises above, a transformer was used to make the database into a single CSV file. In this exercise, we are going to use [Voyant Tools](http://voyant-tools.org) to visualize patterns in word use in the database. Voyant can read either a CSV **or** text files. The advantage of uploading a folder of text files is that, if the files are in chronological order, Voyant's default visualizations will also be arranged in chronological order and thus we can see change over time.
+In [Module 2](../module-2/Exercises/#exercise-3-tei), if you recall, we worked through how to transform XML using stylesheets. Melodee Beals used a [stylesheet ](https://github.com/mhbeals/Colonial-Newspaper-Database/tree/master/Transformers) to transform her database into a series of individual txt files. In the exercises above, a transformer was used to make the database into a single CSV file. In this exercise, we are going to use [Voyant Tools](http://voyant-tools.org) to visualize patterns of word use in the database. Voyant can read either a CSV **or** text files. The advantage of uploading a folder of text files is that, if the files are in chronological order, Voyant's default visualizations will also be arranged in chronological order and thus we can see change over time.
 
 1. Go to [Voyant Tools](http://voyant-tools.org). Paste the following URL to the CSV of the CND database: [https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv](https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv).
 
-2. Now, open a new browser window, and go to this [colonial newspaper file on Voyant tools](http://voyant-tools.org/?corpus=colonial-newspapers&stopList=stop.en.taporware.txt).
+2. Now, open a new browser window, and go to the [colonial newspaper file on Voyant tools](http://voyant-tools.org/?corpus=colonial-newspapers&stopList=stop.en.taporware.txt).
 
     Do you see the difference? In the latter window, the individual articles have been uploaded individually, and thus are treated as individual documents in chronological order.
 
@@ -142,7 +142,7 @@ In [Module 2](../module-2/Exercises/#exercise-3-tei), if you recall, we worked t
     <iframe width="560" height="315" src="https://www.youtube.com/embed/mQJt_M8KyHU?rel=0" title="Analyising text with Voyant" frameborder="0" gesture="media" allowfullscreen></iframe>
     <br> 
 
-**Going further:** Upload materials you collected in module 2 and explore them.
+**Going further:** Upload materials you collected in Module 2 and explore them.
 
 -----
 
@@ -181,7 +181,7 @@ You should get an error message, to the effect that you need to check 'line 2'. 
 
 8. Now, click somewhere in your data. On Mac, hit `cmnd+a`. On Windows, hit `ctrl+a`. This highlights all of your data. 
 
-9. Click `Add ons` -> `blank detector` -> `detect cells`. A dialogue panel will open on the right hand side of your screen. 
+9. Click `Add ons` -> `blank detector` -> `detect cells`. A dialogue panel will open on the right side of your screen. 
 
 10. Click the button beside `set value` and type in `null`. 
 
@@ -189,7 +189,7 @@ You should get an error message, to the effect that you need to check 'line 2'. 
 
 12. Delete column A (which formerly had record numbers, but is now just filled with the word `null`. We don't need it). **If you get the error, 'run exceeded maximum time'** just hit the run button again. This script might take a few minutes.
 
-    You can now copy and paste your table of data into the data input box in RAW, and you should get the green thumbs up saying x records have been successfully parsed!
+    You can now copy and paste your table of data into the data input box in RAW, and you should get the green thumbs up saying 'x records have been successfully parsed!'
 
     **NB The Blank Detector add on may take a long time. Try it out on the CSV. You can copy the parsed data from [my Google Sheets file](https://docs.google.com/spreadsheets/d/12FRAMe0QaDfii3JL4RS7XYHiOFMusUVHhGsfP79uYaE/edit?usp=sharing).**
 
@@ -198,7 +198,7 @@ You should get an error message, to the effect that you need to check 'line 2'. 
     <br> 
 
 #### Playing with RAW
-RAW takes your data, and depending on your choices, passes it into chart templates built on the D3.js code library. D3.js is a powerful library for making all sorts of charts (including interactive ones). If this sort of thing interests you, you can follow the tutorials in [Elijah Meeks' excellent new book](http://manning.com/meeks/).
+RAW takes your data, and depending on your choices, passes it into chart templates built on the [D3.js](https://d3js.org/) code library. D3.js is a powerful library for making all sorts of charts (including interactive ones). If this sort of thing interests you, you can follow the tutorials in [Elijah Meeks' excellent new book](http://manning.com/meeks/).
 
 1. With your data pasted in, you can now experiment with a number of different visualizations that are all built on the D3.js code library.  
 
@@ -224,7 +224,7 @@ RAW takes your data, and depending on your choices, passes it into chart templat
 
 ## Exercise 8: Simple Mapping and Georectifying
 
-In this exercise, you will find a historical map online, upload a copy to a mapwarper service, georectify it, and then display the map online, via a hosted service like CartoDB, and also through a map you will build yourself using Leaflet.js. Finally, we will also convert CSV to geojson using [Mapbox's geojson converter](https://mapbox.github.io/togeojson/), and we'll map that as a GitHub gist. We'll also grab a geojson file hosted on GitHub gist and import it into cartodb.
+In this exercise, you will find a historical map online, upload a copy to a map warper service, georectify it, and then display the map online, via a hosted service like CartoDB, and also through a map you will build yourself using Leaflet.js. Finally, we will also convert CSV to geojson using [Mapbox's geojson converter](https://mapbox.github.io/togeojson/), and we'll map that as a GitHub gist. We'll also grab a geojson file hosted on GitHub gist and import it into cartodb.
 
 ### Georectifying
 Georectifying is the process of taking an image (whether it is of a historical map, chart, airphoto, or whatever) and manipulating its geometry so that it matches a geographic projection. Think of it like this: you take your handdrawn map, and use pushpins to pin down known locations on your map to a globe. As you pin, your image stretches and warps. Traditionally, this has not been an easy thing to do, if you are new to GIS. In recent years, the curve has flattened significantly. In this exercise, we'll grab an image, upload it to the Map Warper website, and then export it as a tileset which can be used in other mapping programs.
@@ -247,35 +247,35 @@ Georectifying is the process of taking an image (whether it is of a historical m
     <iframe width="560" height="315" src="https://www.youtube.com/embed/GGlDkEwRj8g?rel=0" title="Adding metadata to your map" frameborder="0" gesture="media" allowfullscreen></iframe>
     <br>
 
-6. On the next page, click 'rectify'. <br> ![Image showing user ability to rectify the historical map on the left with the modern map on the right to ensure locations match coordinates](http://i.imgur.com/yULDRQR.jpg)
+6. On the next page, click 'Rectify'. <br> ![Image showing user ability to rectify the historical map on the left with the modern map on the right to ensure locations match coordinates](http://i.imgur.com/yULDRQR.jpg)
 
 7. Pan and zoom both maps until you're sure you're looking at the same area in both. Double click in a map, select the location icon, and click on a point (location) you are sure you can match in the other window.
 
 8. Click on the other map window, select the location icon, and then click on the same point. 
 
-9. The 'add control point' button below and between both maps will light up. Click on this to confirm that this is a control point you want. Do this at least three times; the more times you can do it, the better the map warp.
+9. Note the 'Add control point' button below and between both maps will light up. Click on this to confirm that this is a control point you want. Do this at least three times; the more times you can do it, the better the map warp.
 
-10. Having selected your control points, click on 'warp image'.
+10. Having selected your control points, click on 'Warp image'.
 
     <br>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/nhKvIGEDR9I?rel=0" title="Georectifying your map" frameborder="0" gesture="media" allowfullscreen></iframe>
     <br>
 
-11. You can now click on the 'export' panel, and get the URL for your georectified image in a few different formats. If you clicked on the KML option, a new Google Map window will open. For many webmapping applications, the Tiles (Google/OSM scheme): Tiles Based URL is what you want. You'll get a URL like this: ```http://mapwarper.net/maps/tile/27421/{z}/{x}/{y}.png``` Save that info. You'll need it later.
+11. You can now click on the 'Export' panel, and get the URL for your georectified image in a few different formats. If you clicked on the KML option, a new Google Map window will open. For many web mapping applications, the Tiles (Google/OSM scheme): Tiles Based URL is what you want. You'll get a URL like this: ```http://mapwarper.net/maps/tile/27421/{z}/{x}/{y}.png```. Save that info. You'll need it later.
 
     You have now georectified a map. Let's use that map as a base layer in [Palladio](http://palladio.designhumanities.org/#/).
 
 12. Go to [Palladio](http://palladio.designhumanities.org/). Hit 'start'. You will see 'Load .csv or spreadsheet'. 
 
-13. In the box, paste in your data. **You can progress to the next step without having any real data: just paste or type something in and hit enter so you have two lines.** Obviously, you won't have any points on your map, but if you were having trouble with that step, this allows you to bypass it to continue on with this tutorial.
+13. In the box, paste in some data. **You can progress to the next step without having any real data: just paste or type something in and hit enter so you have two lines.** Obviously, you won't have any points on your map, but if you were having trouble with that step, this allows you to bypass it to continue on with this tutorial.
 
 14. Click the 'Map' tab at the top of the screen.
 
 15. Click 'New layer' on the right side menu.
 
-16. Click the Tiles tab and in the right side menu.
+16. Click the Tiles tab in the right side menu.
 
-17. Select Custom tiles.
+17. Select Custom Tiles.
 
 18. Paste your Map Warper URL into the Tileset URL field. Your URL will look like `http://mapwarper.net/maps/tile/27421/{z}/{x}/{y}.png`.
 
@@ -285,7 +285,7 @@ Georectifying is the process of taking an image (whether it is of a historical m
     <iframe width="560" height="315" src="https://www.youtube.com/embed/-9UEgWQIM2o?rel=0" title="Importing your map into Palladio" frameborder="0" gesture="media" allowfullscreen></iframe>
     <br>
 
-Congratulations! You've georectified a map, and used it as a base layer for a visualization of some point data. References these [notes on using a georectified map with the CartoDB service](https://gist.github.com/shawngraham/a49a9834984ae0792345).
+Congratulations! You've georectified a map, and used it as a base layer for a visualization of some point data. Reference [these notes on using a georectified map with the CartoDB service](https://gist.github.com/shawngraham/a49a9834984ae0792345).
 
 ![Image showing historical map overlayed on modern map](http://i.imgur.com/0gCjh5X.jpg)
 
@@ -306,7 +306,7 @@ For this exercise, do the following:
 
 ## Exercise 10: QGIS
 
-There are many excellent tutorials around concerning how to get started with GIS. Our own library, in the [MADGIC centre](https://www.library.carleton.ca/contact/service-points/maps-data-and-government-information-centre) has tremendous resources and I would encourage you to speak with the map librarians before embarking on any **serious** mapping projects. In the short term, the historian [Fred Gibbs](http://fredgibbs.net/) has an excellent series on using the open source GIS platform **QGIS** to make and map historical data.
+There are many excellent tutorials around concerning how to get started with GIS. Our own MacOdrum Library's [MADGIC centre](https://www.library.carleton.ca/contact/service-points/maps-data-and-government-information-centre) has tremendous resources and I would encourage you to speak with the map librarians before embarking on any **serious** mapping projects. In the short term, the historian [Fred Gibbs](http://fredgibbs.net/) has an excellent series on using the open source GIS platform **QGIS** to make and map historical data.
 
 For this exercise, do the following: 
 
@@ -333,4 +333,4 @@ For this exercise, do the following:
 2. Next, try georectifying a historical map and adding it to your GIS following Gibbs' other tutorial ['Using Historical maps with QGIS'](http://fredgibbs.net/tutorials/qgis/overlaying-historic-maps-with-qgis.html).
 
 ## Going Further
-There are many tutorials at [The Programming Historian](http://programminghistorian.org/lessons/) that are appropriate here. Try some under the 'data manipulation' or 'distant reading' headings.
+There are many tutorials at [The Programming Historian](http://programminghistorian.org/lessons/) that are appropriate here. Try some under the 'Data Manipulation' or 'Distant Reading' headings.

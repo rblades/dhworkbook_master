@@ -4,7 +4,7 @@ In [Module 5](../module-5/Exercises/#exercise-2-typography), you learned how to 
 
 Static site generators are command line tools that use templates to build and create websites. Users define basic information in a yaml or toml filetype, write in markdown, and use a simple command to build it into a functioning static site. Due to the popularity of static site generators, most contain simple methods to link it to gh-pages. 
 
-In this exercise, we will use MkDocs in the DH Box to build a site that updates to GitHub and pushes changes to a `https://myname.github.io` URL. In this exercise we will use DH Box to download MkDocs and build the site. Although your changes will be saved in a GitHub repository, when your DH Box account expires, you will have to clone the website again and redowload everything. Therefore, if you want to use your MkDocs site past the purposes of this course, you may want to follow these steps on your desktop. These steps will be similar to using Mac's terminal, but may be different on a Windows machine.
+In this exercise, we will use MkDocs in the DH Box to build a site that updates to GitHub and pushes changes to a `https://myname.github.io` URL. We will use DH Box to download MkDocs and build the site. Although your changes will be saved in a GitHub repository, when your DH Box account expires, you will have to clone the website again and redownload everything. Therefore, if you want to use your MkDocs site past the purposes of this course, you may want to follow these steps on your desktop. These steps will be similar to using Mac's terminal, but may be different on a Windows machine.
 
 ## Preparing MkDocs in DH Box
 
@@ -16,7 +16,7 @@ In this exercise, we will use MkDocs in the DH Box to build a site that updates 
 
 4. Type `$ mkdocs new my-site` or whatever you want your site to be called. Mine is called `static-site`.
 
-5. Typically, you could now view your site by typing `$ mkdocs serve`. This would not work within DH Box, though, since DH Box already runs within your browser. It will work from your desktop terminal.
+5. Typically, you could now view your site in your browser by typing `$ mkdocs serve`. This would not work within DH Box, though, since DH Box runs as a virtual environment within your browser. It would work from your desktop terminal.
 
 6. Type `$ ls` to view the files MkDocs created. You will define your site within the `mkdocs.yml` file.
 
@@ -56,9 +56,13 @@ In this exercise, we will use MkDocs in the DH Box to build a site that updates 
 
 8. Type `$ mkdocs gh-deploy` to push your folder to a gh-pages site.
 
-    MkDocs will show a message saying `INFO    -  Your documentation should shortly be available at: https://myname.github.io/my-site/`. This means it pushed your changes to a project folder and not the main `https://myname.github.io/`. 
+    MkDocs will show a message which says the following:
+    
+        INFO    -  Your documentation should shortly be available at: https://myname.github.io/my-site/`. 
 
-9. Navigate to your URL `https://myname.github.io/my-site/`. You should now see a webpage that looks a lot like the course website.
+    The above means it pushed your changes to a project folder called `my-site` and not the main `https://myname.github.io/`. 
+
+9. Navigate to your URL `https://myname.github.io/my-site/`. You should now see a webpage that looks a lot like this workbook.
 
     <br>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/hSxZDktdSdY?rel=0" title="Creating a GitHub repository" frameborder="0" gesture="media" allowfullscreen></iframe>
@@ -87,7 +91,7 @@ Let's say we now want to add an About page and a Blog page to our site. We need 
 
 6. Type `$ cd docs` to enter the docs folder.
 
-7. Type `$ touch about.md` to create the About file and `touch blog.md` to create the blog file.
+7. Type `$ touch about.md` to create the About file and `touch blog.md` to create the Blog file.
 
 8. Type `$ ls` to make sure the files were created.
 
@@ -140,7 +144,7 @@ MkDocs also allows you to customize your theme. We don't want to directly edit t
 
     Let's change the font of our site to Open Sans.
 
-9. Add the following your css file:
+9. Add the following to your css file:
 
         h1, h2, h3, h4, h5, h6, legend {
             font-family: 'Open Sans', sans-serif;

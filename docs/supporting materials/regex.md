@@ -1,6 +1,6 @@
 # A gentle introduction to Regular Expressions
 
-**This text is adopted from the first drafts of** The Macroscope **which is was published by Imperial College Press.**
+This text is adopted from the first drafts of **The Macroscope** which is published by Imperial College Press.
 
 ## Introduction
 
@@ -16,7 +16,7 @@ For now, just read along. In the actual exercise, we will not be using a text ed
 
 ## Some basic principles
 
-**Protip:** there are libraries of regular expressions, online. For example, if you want to find all postal codes, you can search “regular expression Canadian postal code” and learn what ‘formula’ to search for to find them
+**Protip:** there are libraries of regular expressions, online. For example, if you want to find all postal codes, you can search “regular expression Canadian postal code” and learn what ‘formula’ to search for to find them.
 
 Let's say you're looking for all the instances of "cat" or "dog" in your document. When you type the vertical bar on your keyboard (it looks like ```|```, shift+backslash on windows keyboards), that means 'or' in regular expressions. So, if your query is dog|cat and you press 'find', it will show you the first time either dog or cat appears in your text.
 
@@ -70,15 +70,15 @@ instead. The parentheses signify a group, and like the order of operations in ar
 
 ```(that dog)|(that cat)```
 
- Notice that the vertical bar | can appear either inside or outside the parentheses, depending on what you want to search for.
+ Notice that the vertical bar `|` can appear either inside or outside the parentheses, depending on what you want to search for.
 
-The period character . in regular expressions directs the search to just find any character at all. For example, if we searched for:
+The period character `.` in regular expressions directs the search to just find any character at all. For example, if we searched for:
 
 ```d.g```
 
 the search would return "dig", "dog", "dug", and so forth.
 
-Another special character from our cheat sheet, the plus + instructs the program to find any number of the previous character. If we search for
+Another special character from our cheat sheet, the plus symbol `+` instructs the program to find any number of the previous character. If we search for
 
 ```do+g```
 
@@ -88,11 +88,11 @@ it would return any words that looked like "dog", "doog", "dooog", and so forth.
 
 would return "dog", "dodog", "dododog", and so forth.
 
-Combining the plus '+' and period '.' characters can be particularly powerful in regular expressions, instructing the program to find any amount of any characters within your search. A search for
+Combining the plus `+` and period `.` characters can be particularly powerful in regular expressions, instructing the program to find any amount of any characters within your search. A search for
 
 ```d.+g```
 
-for example, might return "dried fruits are g", because the string begins with "d" and ends with "g", and has various characters in the middle. Searching for simply ".+" will yield query results that are entire lines of text, because you are searching for any character, and any amount of them.
+for example, might return "dried fruits are g", because the string begins with "d" and ends with "g", and has various characters in the middle. Searching for simply `.+` will yield query results that are entire lines of text, because you are searching for any character, and any amount of them.
 
 Parentheses in regular expressions are also very useful when replacing text. The text within a regular expression forms what's called a group, and the software you use to search remembers which groups you queried in order of their appearance. For example, if you search for
 
@@ -110,7 +110,7 @@ in the 'find' box, and
 
 in the 'replace' box. That would replace the entire string with group 3 ("cats") in the first spot, group 2 (" and ") in the second spot, and group 1 ("dogs") in the last spot, thus changing the result to "cats and dogs".
 
-The vocabulary of regular expressions is pretty large, but there are many cheat sheets for regex online (one that I sometimes use is the [regex lib cheat sheet](http://regexlib.com/CheatSheet.aspx). Another good one is the [regex intro from Active State docs](http://docs.activestate.com/komodo/4.4/regex-intro.html))
+The vocabulary of regular expressions is pretty large, but there are many cheat sheets for regex online (one that I sometimes use is the [regex lib cheat sheet](http://regexlib.com/CheatSheet.aspx); another good one is the [regex intro from Active State docs](http://docs.activestate.com/komodo/4.4/regex-intro.html)).
 
 
 ## Now, continue on to the [main exercise](../supporting materials/regexex.md)

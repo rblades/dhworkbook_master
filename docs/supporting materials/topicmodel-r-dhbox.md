@@ -1,10 +1,10 @@
 # Topic Modeling in R, DH Box version
 
-In this exercise, we're going to grab the Colonial Newspaper Database from my GitHub page, do some exploratory visualizations, and then create a topic model whose output can then be visualized further in other platforms (including as a network in Gephi or other such packaged). At the appropriate point, I show you how to import a directory of texts rather than a single file of data, and to feed that into the script.
+In this exercise, we're going to grab the Colonial Newspaper Database from my GitHub page, do some exploratory visualizations, and then create a topic model whose output can then be visualized further in other platforms (including as a network in Gephi or other such package). At the appropriate point, I show you how to import a directory of texts rather than a single file of data, and to feed that into the script.
 
-Go to your DH Box, and click on RStudio. At the right hand side where it says 'project (none)', click and create a new project in a new empty directory. (If you want to put this directory under version control with git, so that you can push your work to your GitHub account, please read [the RStudio instructions](git-rstudio.md).)
+Go to your DH Box, and click on RStudio. At the right side where it says 'Project (NONE)', click and create a new project in a new empty directory. (If you want to put this directory under version control with git, so that you can push your work to your GitHub account, please read [the RStudio instructions](git-rstudio.md).)
 
-In the script panel (top left; click on the green plus side and select new R script if this pane isn't open) paste the following code and then run each line by putting the cursor in the line and hitting code > run lines.
+In the script panel (top left; click on the green plus sign and select new R script if this pane isn't open) paste the following code and then run each line by putting the cursor in the line and hitting Code > Run lines.
 
         install.packages("mallet")
         library("mallet")
@@ -36,9 +36,9 @@ library("RCurl")
 
 ## Importing data directly from the web
 
-Melodee Beals has been using TEI to markup newspaper articles, creating the Colonial Newspapers Database (which she shared on GitHub). We then used GitHub Pages and an XLST stylesheet to convert that database into a table of comma-separated values, a copy of which is at https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv. We are now going to topic model the text of those newspaper articles, to see what patterns of discourse may lie within.
+Melodee Beals has been using TEI to markup newspaper articles, creating the Colonial Newspapers Database (which she shared on GitHub). We then used GitHub Pages and an XLST stylesheet to convert that database into a [table of comma-separated values](https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv). We are now going to topic model the text of those newspaper articles, to see what patterns of discourse may lie within.
 
-Now we want to tell RStudio to grab our data from our GitHub page. The thing is, RStudio can easily grab materials from websites where the url is http; but when it is https (as it is with GitHub), things get a bit more fussy. So what we do is use a special package to grab the data, and then shove it into a variable that we can then tease apart for our analysis.
+Now we want to tell RStudio to grab our data from our GitHub page. The thing is, RStudio can easily grab materials from websites where the url is `http`; but when it is `https` (as it is with GitHub), things get a bit more fussy. So what we do is use a special package to grab the data, and then shove it into a variable that we can then tease apart for our analysis.
 
 ```r
 x <- getURL("https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv", .opts = list(ssl.verifypeer = FALSE))
@@ -48,13 +48,13 @@ That line reaches out to the webpage and grabs the information and puts it into 
 ```r
 documents <- read.csv(text = x, col.names=c("Article_ID", "Newspaper Title", "Newspaper City", "Newspaper Province", "Newspaper Country", "Year", "Month", "Day", "Article Type", "Text", "Keywords"), colClasses=rep("character", 3), sep=",", quote="")
 ```
-Now we've created a variable called `documents` and the `read.csv` command read all of the data pulled into x, and tells R that `documents` has columns called "Newspaper Title" etc. When we only want information from a particular column, we modify the variable slightly, eg `documents$Keywords` would only look at the information in the keywords column. Let's go on a brief digression and actually do that, and see what we learn about this corpus:
+Now we've created a variable called `documents` and the `read.csv` command read all of the data pulled into `x`, and tells R that `documents` has columns called "Newspaper Title" etc. When we only want information from a particular column, we modify the variable slightly (eg. `documents$Keywords` would only look at the information in the keywords column). Let's go on a brief digression and actually do that, and see what we learn about this corpus:
 
 ```r
 counts <- table(documents$Newspaper.City)
 ```
 
-We tell R to make a new variable called 'counts', and fill it with the information from the column 'newspaper city' in 'documents'. It counts them up! Let's make a simple barplot:
+We tell R to make a new variable called `counts`, and fill it with the information from the column 'newspaper city' in `documents`. It counts them up! Let's make a simple barplot:
 ```
 barplot(counts, main="Cities", xlab="Number of Articles")
 ```
@@ -65,16 +65,18 @@ Let's do the same thing for year, and count the number of articles per year in t
 years <- table(documents$Year)
 barplot(years, main="Publication Year", xlab="Year", ylab="Number of Articles")
 ```
-There’s a lot of material in 1789, another peak around 1819, againg in the late 1830s. We can ask ourselves now: is this an artefact of the data, or of our collection methods? This would be a question a reviewer would want answers to. Let’s assume for now that these two plots are ‘true’ &mdash; that, for whatever reasons, only Edinburgh and Glasgow were concerned with these colonial reports, and that they were particulary interested during those three periods. This is already an interesting question that we as historians would want to explore. Try making some more visualizations like this of other aspects of the data. What other patterns do you see that are worth investigating?
+There’s a lot of material in 1789, another peak around 1819, againg in the late 1830s. We can ask ourselves now: is this an artefact of the data, or of our collection methods? This would be a question a reviewer would want answers to. Let’s assume for now that these two plots are ‘true’ &mdash; that, for whatever reasons, only Edinburgh and Glasgow were concerned with these colonial reports, and that they were particulary interested during those three periods. This is already an interesting question that we as historians would want to explore.
 
-Now, let's return to getting our data ready to create a topic model. In the line below, note that there is a file called `en.txt` that it wants to load up. You need to create this file; it's a list of stopwords, or common words that we think do not add value to our model (words like 'the', 'and', 'of' and so on.) The decision of which words to exclude from our analysis is of course a theoretical position...
+Try making some more visualizations like this of other aspects of the data. What other patterns do you see that are worth investigating?
 
-To create that file, click on the 'new file' icon in the tool ribbon and select new text file. This will open a blank file in the edit window here. Copy and paste the list of words at [en.txt](en.txt) into that blank file and save it as `en.txt`. This file was put together by Matt Jockers.
+Now, let's return to getting our data ready to create a topic model. In the line below, note that there is a file called `en.txt` that it wants to load up. You need to create this file; it's a list of stopwords, or common words that we think do not add value to our model (words like 'the', 'and', 'of' and so on.) The decision of which words to exclude from our analysis is, of course, a theoretical position.
+
+To create that file, click on the 'New file' icon in the tool ribbon and select new text file. This will open a blank file in the edit window here. Copy and paste the list of words at [en.txt](en.txt) into that blank file and save it as `en.txt`. This file was put together by Matt Jockers.
 
 ```r
 mallet.instances <- mallet.import(documents$Article_ID, documents$Text, "en.txt", token.regexp = "\\p{L}[\\p{L}\\p{P}]+\\p{L}")
 ```
-That line above passes the article ID and the text of our newspaper articles to the Mallet routine.  The stopwords list is generic; it might need to be curated to take into account the pecularities of your data. You might want to create your own, one for each project given the particulars of your project. Note that Jockers compiled hist stoplist for his research in literary history of the 19th century. Your mileage may vary! Finally, the last bit after ‘token.regexp’ applies a regular expression against our newspaper articles, cleaning them up.
+That line above passes the article ID and the text of our newspaper articles to the Mallet routine.  The stopwords list is generic; it might need to be curated to take into account the pecularities of your data. You might want to create your own, one for each project given the particulars of your project. Note that Jockers compiled his stoplist for his research in literary history of the 19th century. Your mileage may vary! Finally, the last bit after `token.regexp` applies a regular expression against our newspaper articles, cleaning them up.
 
 <br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kMTFInx0qPw?rel=0" title="Importing data directly from the web" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -82,7 +84,7 @@ That line above passes the article ID and the text of our newspaper articles to 
 
 ## Reading data from a directory
 
-This is an alternative way of ingesting documents for topic modeling. Earlier, you learned how to use wget and some other scripts to download full text documents from Canadiana.org as well as from the Library and Archives Canada (the Canadian war diary). The code below loads those documents into Mallet, after which you can proceed to build a topic model. In the command line, cd into your folder that has your downloaded materials. At the command line, cd into your folder, and type $ pwd to get the full path. Copy it, go back to RStudio, and paste it into the line below between the " marks.
+This is an alternative way of ingesting documents for topic modeling. Earlier, you learned how to use wget and some other scripts to download full text documents from Canadiana.org as well as from the Library and Archives Canada (the Canadian war diary). The code below loads those documents into Mallet, after which you can proceed to build a topic model. In the command line, `cd` into your folder that has your downloaded materials. At the command line, `cd` into your folder, and type `$ pwd` to get the full path. Copy it, go back to RStudio, and paste it into the line below between the `"` quotation marks.
 
 ```r
 documents <- mallet.read.dir("/home/shawngraham/war-diary-text")
@@ -105,7 +107,7 @@ The 'correct' number of topics is going to require trial-and-error. You don't wa
 num.topics <- 20
 topic.model <- MalletLDA(num.topics)
 ```
-Now we’ve told Mallet how many topics to search for; this is a number you’d want to fiddle with, to find the ‘best’ number of topics. The next line creates a variable ‘topic.model’ which will eventually be filled by Mallet using the LDA approach, for 20 topics. Let’s get some info on our topic model, on our distribution of words in these materials.
+Now we’ve told Mallet how many topics to search for; this is a number you’d want to fiddle with, to find the ‘best’ number of topics. The next line creates a variable `topic.model` which will eventually be filled by Mallet using the LDA approach, for 20 topics. Let’s get some info on our topic model, on our distribution of words in these materials.
 
 ```r
 topic.model$loadDocuments(mallet.instances)
@@ -119,7 +121,7 @@ It is handy to write our output to our project folder periodically; that way you
 ```r
 write.csv(word.freqs, "word-freqs.csv" )
 ```
-Word frequencies are handy to look at because it will tell you if you've got words that are 'drowning out' the others. Some of these words you might want to consider adding to your stop words list (and thus, going back to where we first created the mallet.instances and restarting the analysis). By the way, do you see how you might create a bar plot of word frequencies?
+Word frequencies are handy to look at because it will tell you if you've got words that are 'drowning out' the others. Some of these words you might want to consider adding to your stop words list (and thus, going back to where we first created the `mallet.instances` and restarting the analysis). By the way, do you see how you might create a bar plot of word frequencies?
 
 Now we hit the heavy lifting: generating a topic model. Some of the comments below are very technical; just make sure to run each line of code! (Original code here came from Ben Marwick's analysis of the [Day of Archaeology](https://github.com/benmarwick/dayofarchaeology).)
 
@@ -178,7 +180,7 @@ Some interesting patterns suggest themselves already! But a list of words doesn�
 plot(hclust(dist(topic.words)), labels=topics.labels)
 ```
 
-Do you see any interesting clusters? Topics that end up in the same clusters we interpret as being related in some fashion. The plot is a bit crowded; in RStudio you can open it in a new window by clickining 'zoom' to see the dendrogram more clearly. You can also google 'hclust cran-r' to find tutorials to make a better plot. One thing we can do is to plot it again without labels, to see the structure a bit better:
+Do you see any interesting clusters? Topics that end up in the same clusters we interpret as being related in some fashion. The plot is a bit crowded; in RStudio you can open it in a new window by clicking 'zoom' to see the dendrogram more clearly. You can also Google 'hclust cran-r' to find tutorials to make a better plot. One thing we can do is to plot it again without labels, to see the structure a bit better:
 
 ```
 plot(hclust(dist(topic.words)))
@@ -188,7 +190,7 @@ plot(hclust(dist(topic.words)))
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zbdhK0KKGPE?rel=0" title="Creating a simple histogram" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 <br>
 
-Now, if we want to get really fancy, we can make a network visualization of how topics interlink due to their distribution in documents. The next bit of code does that, and saves in .graphml format, which packages like Gephi http://gephi.org can read.
+Now, if we want to get really fancy, we can make a network visualization of how topics interlink due to their distribution in documents. The next bit of code does that, and saves in `.graphml` format, which packages like [Gephi](http://gephi.org) can read.
 
 ```r
 topic_docs <- data.frame(topic.docs)
@@ -231,7 +233,7 @@ layout1 <- layout.fruchterman.reingold(g, niter=100)
 plot(g, layout=layout1, edge.curved = TRUE, vertex.size = 1, vertex.color= "grey", edge.arrow.size = 0, vertex.label.dist=0.5, vertex.label = NA)
 ```
 
-When you look at this network, you can see clusters of documents by virtue of largely shared topics. We export this data in a text format called 'graphml', which can be opened by any text editor, and visualized in nearly any network analysis program for further refinement and analysis. It might be interesting to explore why some issues are so topically focussed, for instance.
+When you look at this network, you can see clusters of documents by virtue of largely shared topics. We export this data in a text format called `graphml`, which can be opened by any text editor, and visualized in nearly any network analysis program for further refinement and analysis. It might be interesting to explore why some issues are so topically focussed, for instance.
 
 ```
 write.graph(g, file="cnd.graphml", format="graphml")
