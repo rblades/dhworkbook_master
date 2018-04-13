@@ -1,4 +1,4 @@
-# Humanities Visualization Aug 7 - Aug 13
+# Humanities Visualization &mdash; June 11-19, 2018
 
 In this week, I want you to focus on making your final project. You do not need to read or annotate any pieces this week, nor to work through the exercises that are included in Module 5. They are there for you to dip into as you finish your project. YOU DO have to write a blog post explaining what you've been up to this week.
 

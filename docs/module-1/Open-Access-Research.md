@@ -1,4 +1,4 @@
-# Open Access Research - July 10 - 16
+# Open Access Research &mdash; May 14-21, 2018
 
 ## Concepts
 As historians, we aren't all that accustomed to sharing our research notes. We go to the archives, we take our photographs, we spend **hours** pouring over documents, photographs, diaries, newspapers... why should someone else benefit from **our** work?
@@ -35,9 +35,9 @@ Remember: I do expect you to click through every link I provide, and to read the
 
 # What you need to do this week
 
-1. Respond to the readings and the reading questions through annotation (taking care to respond to others' annotations as well) - see the instructions below. Remember to tag your annotations with 'hist3814o' so we can find them [on the course Hypothesis group](http://jonudell.net/h/facet.html?facet=tag&mode=documents&search=hist3814o)
-2. Do the exercises for this module, pushing yourself as far as you can. Annotate the instructions where they might be unclear or confusing; see if others have annotated them as well, and respond to them with help if you can. Keep an eye on our Slack channel - you can always offer help or seek out help there. Write a blog post describing what happened as you went through the exercises (your successes, your failures, the help you may have found/received), and link to your 'faillog' (ie, the notes you upload to your GitHub account - for more on that, see the exercises!).
-3. [Submit your work to the course submission form](http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#submitting-evidence)
+1. Respond to the readings and the reading questions through annotation (taking care to respond to others' annotations as well) - see the instructions below.  Remember to tag your annotations with 'hist3814o' so that we can find them [on the course Hypothes.is group](http://jonudell.net/h/facet.html?facet=tag&mode=documents&search=hist3814o). **Remember to annotate using [our HIST3814o group](https://hypothes.is/groups/886ipqWe/hist3814o).**
+2. Do the exercises for this module, pushing yourself as far as you can. Annotate the instructions where they might be unclear or confusing; see if others have annotated them as well, and respond to them with help if you can. Keep an eye on our Slack channel - you can always offer help or seek out help there. Write a blog post describing what happened as you went through the exercises (your successes, your failures, the help you may have found/received), and link to your 'faillog' (ie. the notes you upload to your GitHub account - for more on that, see the exercises!).
+3. [Submit your work to the course submission form](http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#submitting-evidence).
 
 # Readings
 
@@ -47,6 +47,6 @@ As you read the posts linked to above (Brennan, Fitzgerald, Guldi and Armitage, 
 + How do they approach the idea of 'openness'?
 + How is your own work 'generous'? 
 
-Please annotate their work with your observations and questions; please also respond to someone else's annotation with a substantive observation of your own.
+Please annotate their work with your observations and questions; please also respond to someone else's annotation with a substantive observation of your own. **Remember to annotate using [our HIST3814o group](https://hypothes.is/groups/886ipqWe/hist3814o)**.
 
 Then, make an entry on your blog that contrasts this picture of 'open access research' with what you may have learned about doing history in your other courses. Where are the dangers and where are the opportunities? What does 'open access' mean for you as a student?

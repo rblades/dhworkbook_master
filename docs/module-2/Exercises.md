@@ -321,10 +321,12 @@ In this exercise, you'll:
 
         install.packages('magick')
         install.packages('magrittr')
+        install.packages('pdftools')
         install.packages('tesseract')
         library(magick) 
-        library(magrittr) 
-        library(tesseract) 
+        library(magrittr)
+        library(pdftools)
+        library(tesseract)
         text <- image_read("~/war-diary/e001518087.jpg") %>% 
           image_resize("2000") %>% 
           image_convert(colorspace = 'gray') %>% 
@@ -332,27 +334,33 @@ In this exercise, you'll:
           image_ocr()
         write.table(text, "~/ocr-test/R.txt")
 
-    Before installing any packages in RStudio, we need to install some dependencies in the command line. The reason is that since DH Box runs an older version of RStudio, not everything installs as planned.
+    The above script first installs three packages to RStudio, Magick, Magrittr, and Tesseract. Magick processes the image as high quality; Magrittr uses the symbols `%>%` as a pipe that forces the values of an expression into the next function (allowing our script to perform it's conversion in steps); Tesseract is the actual OCR engine that converts our image to text. Then the script loads each package. Lastly, the script processes the image, OCRs the text, and writes it to a `txt` file.
 
-4. Type `$ sudo apt-get install libmagick++-dev ` in the command line to install the libmagick library.
+    Before installing any packages in the DH Box RStudio, we need to install some dependencies in the command line. The reason is that since DH Box runs an older version of RStudio, not everything installs as planned compared to the desktop RStudio.
 
-5. Type `$ sudo apt-get install libtesseract-dev` in the command line to install the libtesseract library.
+4. Type `$ sudo apt-get install libcurl4-gnutls-dev` in the command line to install the libcurl library (this installs RCurl).
 
-6. Type `$ sudo apt-get install libleptonica-dev` in the command line to install the libleptonic library.
+5. Type `$ sudo apt-get install libmagick++-dev ` in the command line to install the libmagick library.
 
-7. Type `$ sudo apt-get install tesseract-ocr-eng` in the command line to install the English Tesseract library.
+6. Type `$ sudo apt-get install libtesseract-dev` in the command line to install the libtesseract library.
 
-8. Navigate to RStudio and run each `install.packages` line in our script. This will take some time.
+7. Type `$ sudo apt-get install libleptonica-dev` in the command line to install the libleptonic library.
 
-9. Run each `library()` line to load the libraries.
+8. Type `$ sudo apt-get install tesseract-ocr-eng` in the command line to install the English Tesseract library.
 
-10. Run each line up to `image_ocr()`. This may take some time to complete.
+9. Type `$ sudo apt-get install libpoppler-cpp-dev` in the command line to install the poppler cpp library.
 
-11. Run the last line `write.table()` to export the OCR to a text file with the same name.
+10. Navigate to RStudio and run each `install.packages` line in our script. This will take some time.
 
-12. Navigate to your file manager and download both the `output.txt` file and the `R.txt` file.
+11. Run each `library()` line to load the libraries.
 
-13. Compare the two text files in your desktop. How is the OCR in the command line versus within R? Note that they both use Tesseract just with different settings and in different environments. 
+12. Run each line up to `image_ocr()`. This may take some time to complete.
+
+13. Run the last line `write.table()` to export the OCR to a text file with the same name.
+
+14. Navigate to your file manager and download both the `output.txt` file and the `R.txt` file.
+
+15. Compare the two text files in your desktop. How is the OCR in the command line versus within R? Note that they both use Tesseract just with different settings and in different environments. 
 
     <br>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/2jAmfNdMdpk?rel=0" title="Converting an image to text using RStudio" frameborder="0" gesture="media" allowfullscreen></iframe>
@@ -367,13 +375,7 @@ In this exercise, you'll:
 3. In the command line, type `$ tesseract output_1.png output_1.txt`. 
 
 4. In RStudio, change the file paths in your script to the following:
-
-        install.packages('magick')
-        install.packages('magrittr')
-        install.packages('tesseract')
-        library(magick) 
-        library(magrittr) 
-        library(tesseract) 
+ 
         text <- image_read("~/ocr-test/R_1.png") %>% 
           image_resize("2000") %>% 
           image_convert(colorspace = 'gray') %>% 
@@ -391,7 +393,9 @@ In this exercise, you'll:
     <iframe width="560" height="315" src="https://www.youtube.com/embed/C6QasGX6Ncw?rel=0" title="Converting our images further" frameborder="0" gesture="media" allowfullscreen></iframe>
     <br>
 
-8. Choose either the command line or the R method to convert more of the war diary files to text. Save these files into a new directory called `war-diary-text`. We will use these text files for future work in topic modeling and text analysis. How might your decision on which method to use change the results you would get in, say, a topic modeling tool? 
+8. Choose either the command line or the R method to convert more of the war diary files to text. Save these files into a new directory called `war-diary-text`. We will use these text files for future work in topic modeling and text analysis. How might your decision on which method to use change the results you would get in, say, a topic modeling tool?
+
+    **Hint:** Check below for [a way to automate the conversion process](#batch-converting-image-files).
 
     <br>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/puUNq1qzFmY?rel=0" title="Converting the war diary files to text using RStudio" frameborder="0" gesture="media" allowfullscreen></iframe>
@@ -401,12 +405,49 @@ Think about how these conversions can change based on the image being run throug
 
 Look up the [Tesseract wiki](https://github.com/tesseract-ocr/tesseract/wiki/Command-Line-Usage). What other options could you use with the Tesseract command to improve the results? When you decide to download Tesseract to you own computer, use the following two guides to automating bulk OCR (multiple files) with Tesseract: [Peirson's](https://diging.atlassian.net/wiki/display/DCH/Tutorial%3A+Text+Extraction+and+OCR+with+Tesseract+and+ImageMagick) and [Schmidt's](http://benschmidt.org/dighist13/?page_id=129).
 
+### Batch converting image files
+
+Now that you've learned to convert image files to text individually, you should know that there is a quicker way to do this. The following script takes your Canadian war diary `jpg` image files and OCRs them using the same process as above. However this time, the `function(i)` (`i` stands for iterate), goes through the folder for each `jpg` file and converts them to a `png` file into a text file with the suffix `-ocr.txt` until it notes there are no more image files to convert. The converted files will output to the same folder, in our case `war-diary`. 
+
+        library(magick) 
+        library(magrittr)
+        library(pdftools)
+        library(tesseract) 
+
+        dest <- "/war-diary"
+        myfiles <- list.files(path = dest, pattern = "jpg", full.names = TRUE)
+         
+        # improve the images
+        # ocr 'em
+        # write the output to text file
+         
+        lapply(myfiles, function(i){
+            text <- image_read(i) %>%
+            image_resize("3000x") %>%
+            image_convert(type = 'Grayscale') %>%
+            image_trim(fuzz = 40) %>%
+            image_write(format = 'png', density = '300x300') %>%
+            tesseract::ocr()
+         
+        outfile <- paste(i,"-ocr.txt",sep="")
+        cat(text, file=outfile, sep="\n")
+         
+        })
+
+You can probably understand now why this method works much better than the previous R script: we automate our process (ie. we run the script just once and it iterates through the folder for us), append a suffix to the txt file name noting the OCRd text, and output it all to the same folder.
+
+Keep these files somewhere handy on your computer! We will use them throughout the course.
+
+By iterating through the folder, we have created a loop. Loops can be a very powerful tool for Digital Historians, as we can begin to automate processes that would take much longer by hand. Read more about ['for loops' on the R-blogger website](https://www.r-bloggers.com/how-to-write-the-first-for-loop-in-r/).
+
+**NB** The above script processes dozens of images and may take quite a bit of time to complete. 
+
 ## Reference
 
 Part of this tutorial was adapted from [The Programming Historian](https://programminghistorian.org) released under the CC-BY license, including:
 
-Ian Milligan, "Automated Downloading with Wget," The Programming Historian 1 (2012), https://programminghistorian.org/lessons/automated-downloading-with-wget.
+Ian Milligan, "Automated Downloading with Wget," The Programming Historian 1 (2012), [https://programminghistorian.org/lessons/automated-downloading-with-wget](https://programminghistorian.org/lessons/automated-downloading-with-wget).
 
-Kellen Kurschinski, "Applied Archival Downloading with Wget," The Programming Historian 2 (2013), https://programminghistorian.org/lessons/applied-archival-downloading-with-wget.
+Kellen Kurschinski, "Applied Archival Downloading with Wget," The Programming Historian 2 (2013), [https://programminghistorian.org/lessons/applied-archival-downloading-with-wget](https://programminghistorian.org/lessons/applied-archival-downloading-with-wget).
 
 [Twitter user 'superboreen' on R OCR](https://twitter.com/superboreen/status/958418116324790273).

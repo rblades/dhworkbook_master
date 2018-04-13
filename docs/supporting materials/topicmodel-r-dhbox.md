@@ -15,7 +15,7 @@ In the future, now that you've installed these packages you won't have to again,
 
 ### How to fix RCurl Package installation error
 
-When attempting to run `install.packages("RCurl")` you may get an error along the lines of 
+When attempting to run `install.packages("RCurl")` you may get an error along the lines of the following:
 
 ```r
 checking for curl-config... no
@@ -23,7 +23,11 @@ Cannot find curl-config
 ERROR: configuration failed for package ‘RCurl’
 ```
 
-To fix this, navigate to the DH Box command line and type `$ sudo apt-get install libcurl4-gnutls-dev`. When the installation is successful, you can now install RCurl by running the last two lines of the script:
+To fix this, navigate to the DH Box command line and type the following command:
+
+    $ sudo apt-get install libcurl4-gnutls-dev
+
+When the installation is successful, you can now install RCurl by running the last two lines of the script:
 
 ```r
 install.packages("RCurl")

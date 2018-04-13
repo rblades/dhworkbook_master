@@ -1,4 +1,4 @@
-# Module 5 Exercises
+# Module 5 Exercises (OPTIONAL)
 
 In this module, you will begin with an introduction to web design concepts and finish by creating your own online exhibit. While we will not explore every possibility here, I do not want to leave you thinking that all digital history work is necessarily text based. To that end, if you are looking for a challenge or for exposure to something rather different, I suggest you at least bookmark my [series of tutorials on augmented reality, games, and 3d models for history and archaeology](https://github.com/shawngraham/ar-archaeology/tree/master/workshop%20materials).
 

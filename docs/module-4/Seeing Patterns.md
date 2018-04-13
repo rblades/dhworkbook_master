@@ -1,4 +1,4 @@
-# Seeing Patterns July 31 - Aug 6
+# Seeing Patterns &mdash; June 4-11, 2018
 
 ## Concepts
 
@@ -37,9 +37,9 @@ When you choose your exploratory method, you need to consider that the method ha
 
 # What you need to do this week
 
-1. Respond to the readings and the reading questions through annotation (taking care to respond to others' annotations as well) - see the instructions below.  Remember to tag your annotations with 'hist3814o' so that we can find them [on the course Hypothes.is group](http://jonudell.net/h/facet.html?facet=tag&mode=documents&search=hist3814o)
-2. Do the exercises for this module, pushing yourself as far as you can. Annotate the instructions where they might be unclear or confusing; see if others have annotated them as well, and respond to them with help if you can. Keep an eye on our Slack channel - you can always offer help or seek out help there. The [exercises in this module](Exercises.md) will pick up where we left off, with the Texan Correspondence. You'll represent the exchange of letters as a network. We'll try to extract place names from it. We'll topic model the letters themselves. We'll explore various ways of visualizing those results. Write a blog post describing what happened as you went through the exercises (your successes, your failures, the help you may have found/received), and link to your 'faillog' (ie, the notes you upload to your GitHub account - for more on that, see the exercises!).
-3. [Submit your work to the course submission form](http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#submitting-evidence)
+1. Respond to the readings and the reading questions through annotation (taking care to respond to others' annotations as well) - see the instructions below.  Remember to tag your annotations with 'hist3814o' so that we can find them [on the course Hypothes.is group](http://jonudell.net/h/facet.html?facet=tag&mode=documents&search=hist3814o). **Remember to annotate using [our HIST3814o group](https://hypothes.is/groups/886ipqWe/hist3814o).**
+2. Do the exercises for this module, pushing yourself as far as you can. Annotate the instructions where they might be unclear or confusing; see if others have annotated them as well, and respond to them with help if you can. Keep an eye on our Slack channel - you can always offer help or seek out help there. The [exercises in this module](../module-4/exercises) will pick up where we left off, with the Texan Correspondence. You'll represent the exchange of letters as a network. We'll try to extract place names from it. We'll topic model the letters themselves. We'll explore various ways of visualizing those results. Write a blog post describing what happened as you went through the exercises (your successes, your failures, the help you may have found/received), and link to your 'faillog' (ie. the notes you upload to your GitHub account - for more on that, see the exercises!).
+3. [Submit your work to the course submission form](http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#submitting-evidence).
 
 # Readings
 

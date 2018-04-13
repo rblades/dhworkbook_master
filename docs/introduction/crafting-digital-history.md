@@ -1,4 +1,5 @@
-# Getting yourself ready July 4th - 9th
+# Getting yourself ready &mdash; May 7-14, 2018
+
 ![Black and white image of men standing around man in old fire fighter suit and air being pumped to him through a hose](https://c1.staticflickr.com/3/2197/2163099221_eb9ab72268.jpg)
 
 "'Getting Ready for the Fire, Kasier Wilhelm' Bain Collection, Library of Congress hdl.loc.gov/loc.pnp/ggbain.10412 Call Number: LC-B2- 2400-7"
@@ -117,7 +118,7 @@ Annotations are public by default. When you are making a new annotation you can 
 
 You can also 'tag' any annotation you make. If many people use the same set of tags, you can collect annotations by tag. This can make it easier to do group research projects, for instance.
 
-**Please always tag your annotations with 'hist3814o'. That way, everyone's tags will show up on [the course Hypothes.is page](http://jonudell.net/h/facet.html?facet=tag&mode=documents&search=hist3814o)**.
+**Please join our private HIST3814o annotation group. Remember to make all annotations to that group! Earlier iterations of this course used the ‘public’ group, and you can still see their annotations. However, we realized that it wasn’t fair to the people whose work we were annotating to have year after year of our annotations littering their page. Remember then: make your annotations in [our HIST3814o group](https://hypothes.is/groups/886ipqWe/hist3814o)**!
 
 #### Collecting your own annotations on your blog
 
@@ -133,7 +134,7 @@ Open [Kris Shaffer's Hypothes.is aggregator](https://github.com/kshaffer/hypothe
 6. Once it’s uploaded and installed, click 'Activate'.
 7. In the dashboard, click on 'pages' then add a new page. Call it 'Web Notes' or 'Annotations' or something similar.
 8. Shaffer has created a 'shortcode' that tells Wordpress to go over to Hypothes.is and grab the latest information. So, in the text of your new page (in the editor window, make sure to click the 'text' button or else this won't work), enter the shortcode that will grab all of your public annotations: `[hypothesis user = 'kris.shaffer']` where you remove the `kris.shaffer` and put in your own Hypothes.is username.
-9. Hit the 'Publish' button. Wordpress will report that the page has been published and give you a link to it; click on this link to see your new always-updating list of annotations! Of course, if you haven't made any public annotations yet, nothing will display. Go annotate something, then come back and reload the page.
+9. Hit the 'Publish' button. Wordpress will report that the page has been published and give you a link to it; click on this link to see your new always-updating list of annotations! Of course, if you haven't made any public annotations yet, nothing will display. Go annotate something, then come back and reload the page, but remember to annotate using [our HIST3814o group](https://hypothes.is/groups/886ipqWe/hist3814o).
 
 ### GitHub
 
@@ -160,7 +161,7 @@ To access our virtual computer, the DH Box, you will need to use Carleton's VPN 
 
 ## Some Readings To Kick Things Off
 
-What is digital history anyway? How is it connected to so-called 'big data'? Read the following pieces. Annotate with Hypothes.is anything that strikes you as interesting; annotate anything that puzzles you - feel free to just say, 'I'm not sure what this means; does it mean.... does anybody have any ideas?' **and** if you see someone is asking questions, you can reply to that annotation with thoughts of your own!
+What is digital history anyway? How is it connected to so-called 'big data'? Read the following pieces. Annotate with Hypothes.is anything that strikes you as interesting using [our HIST3814o group](https://hypothes.is/groups/886ipqWe/hist3814o); annotate anything that puzzles you - feel free to just say, 'I'm not sure what this means; does it mean.... does anybody have any ideas?' **and** if you see someone is asking questions, you can reply to that annotation with thoughts of your own!
 
 **NB** Each week, I expect you to respond to at least someone else's annotation in a **substantive** way. No "I agree!" or "right on!" or that sort of thing. Make a **meaningful** contribution.
 
@@ -168,7 +169,7 @@ Once you have read and annotated the works, **write a post on your blog that pos
 
 ### Readings
 
-Excerpts from [Chapter 1, the Historian's Macroscope original draft](http://www.themacroscope.org/?page_id=595); read from 'Joys of Big Data' to 'Chapter One Conclusion'. Use Hypothes.is to annotate rather than the 'commenting' function on the site.
+Excerpts from [Chapter 1, the Historian's Macroscope original draft](http://www.themacroscope.org/?page_id=595); read from 'Joys of Big Data' to 'Chapter One Conclusion'. Use Hypothes.is to annotate rather than the 'commenting' function on the site, but remember to annotate using [our HIST3814o group](https://hypothes.is/groups/886ipqWe/hist3814o).
 
 James Baker ['The soft digital history that underpins my book' https://cradledincaricature.com/2017/05/24/the-soft-digital-history-that-underpins-my-book/](https://cradledincaricature.com/2017/05/24/the-soft-digital-history-that-underpins-my-book/)
 

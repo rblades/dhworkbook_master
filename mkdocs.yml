@@ -5,8 +5,13 @@ site_url: http://craftingdigitalhistory.ca
 site_description: All course materials crafted ex novo by Shawn Graham are provided with an open source license as Markdown files. I welcome contributions in the form of pull requests.
 site_author: Shawn Graham
 repo_url: https://github.com/shawngraham/dhworkbook/tree/gh-pages
-extra_javascript:
-  - 'js/tota11y.min.js'
+# Below is the tota11y accessibility tool that adds a small button
+# on the bottom left of the screen. FOR TESTING PURPOSES ONLY.
+# To enable, download file (https://github.com/Khan/tota11y/releases/download/0.1.3/tota11y.min.js) 
+# and add file to /docs/js/ folder.
+# Uncomment below to enable.
+# extra_javascript:
+  # - 'js/tota11y.min.js'
 extra_css:
   - 'css/extra.css'
 pages:
@@ -26,7 +31,7 @@ pages:
     - 'Exercises': 'module-4/Exercises.md'
 - 5. Visualization:
     - 'Communicating your Findings': 'module-5/Humanities Visualization.md'
-    - 'Exercises': 'module-5/Exercises.md'
+    - 'Exercises (OPTIONAL)': 'module-5/Exercises.md'
 - 6. Final Thoughts: 'conclusion/conclusion.md'
 - Appendices:
     - 'Text Encoding Initiative': 'supporting materials/tei.md'
