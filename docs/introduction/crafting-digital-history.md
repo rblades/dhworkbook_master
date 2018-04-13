@@ -118,6 +118,8 @@ Annotations are public by default. When you are making a new annotation you can 
 
 You can also 'tag' any annotation you make. If many people use the same set of tags, you can collect annotations by tag. This can make it easier to do group research projects, for instance.
 
+#### Important information about annotating
+
 **Please join our private HIST3814o annotation group. Remember to make all annotations to that group! Earlier iterations of this course used the ‘public’ group, and you can still see their annotations. However, we realized that it wasn’t fair to the people whose work we were annotating to have year after year of our annotations littering their page. Remember then: make your annotations in [our HIST3814o group](https://hypothes.is/groups/886ipqWe/hist3814o)**!
 
 #### Collecting your own annotations on your blog
