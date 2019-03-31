@@ -17,7 +17,7 @@ The exercises in this module cover:
 
 ## Exercise 1: Layout
 
-'Layout' can mean different things in different contexts. A general overview on issues in layout is covered by ['What makes a design great', Lynda.com](https://www.lynda.com/Graphic-Design-tutorials/What-makes-design-great/419419/534011-4.html) and ['Exploring principles of layout and composition'](https://www.lynda.com/Graphic-Design-tutorials/Exploring-principles-layout-composition/419419/534012-4.html). The [Slideshare on effective layouts](http://www.slideshare.net/kernlearningsolutions/what-is-an-effective-layout-3435438) gives you a sense of things to watch out for as well.
+'Layout' can mean different things in different contexts. A general overview on issues in layout is covered by ['What makes a design great', Lynda.com (requires sign-up for free trial)](https://www.lynda.com/InDesign-tutorials/Introduction-Graphic-Design/633854-2.html) and ['Exploring principles of layout and composition' (requires sign-up for free trial)](https://www.lynda.com/Graphic-Design-tutorials/Exploring-principles-layout-composition/419419/534012-4.html). The [Slideshare on effective layouts](http://www.slideshare.net/kernlearningsolutions/what-is-an-effective-layout-3435438) gives you a sense of things to watch out for as well.
 
 For academic posters in particular, consider [these poster design suggestions from the APA](http://www.apa.org/gradpsych/2011/01/poster.aspx).
 
@@ -32,7 +32,7 @@ View the [Inkscape exercise in our supporting materials for a gentle introductio
 1. Download one of the scientific poster templates from [Ugo Sangiorgi](https://github.com/ugosan/svg-conference-poster) (These are developed from [Felix Breuer's blog post](http://blog.felixbreuer.net/2010/10/24/poster.html); note his discussion on design). 
 2. Open it in Inkscape. 
 3. Make notes in your open notebook **from the point of view of layout:** what elements of the design work? What aren't working? How would you repurpose this poster to fit the requirements of the assessment exercise ([remember, the details in the syllabus](https://github.com/hist3907b-winter2015/syllabus/blob/master/exercise_assessment_guideline.md))?
-4. Visit [Inkscape's website for help with the basics of Inkscape](https://inkscape.org/en/doc/tutorials/basic/tutorial-basic.en.html). 
+4. Visit [Inkscape's website for help with the basics of Inkscape](https://inkscape.org/en/doc/tutorials/basic/tutorial-basic.html). 
 5. Modify the poster, and upload the SVG, PDF, or PNG version to your repository.
 
 ### PowerPoint 
@@ -44,7 +44,7 @@ There's a lot of information out there on making posters with PowerPoint.
 3. Grab a template from [from Colin Purrington's website](http://colinpurrington.com/tips/poster-design#templates), and use it to prototype a poster that works. 
 4. Upload the poster as a PDF to your repository.
 
-If you want to explore layout in the context of webpage creation, I would point you to the the roster of lessons at [Codeacademy](http://www.codecademy.com/en/tracks/web). Same instructions: find an existing site that you will consider from the point of view of what works, what doesn't, and use that reflection to guide the construction of your own.
+If you want to explore layout in the context of webpage creation, I would point you to the the roster of lessons at [Codeacademy](https://www.codecademy.com/catalog/subject/web-development). Same instructions: find an existing site that you will consider from the point of view of what works, what doesn't, and use that reflection to guide the construction of your own.
 _____
 
 ## Exercise 2: Typography
@@ -130,13 +130,13 @@ In this exercise, I want you to take the webpage you developed in the previous e
 
 ### Resources
 
-Below is a graphic and a video tutorial from Lynda.com to help with the theoretical side of things:
+Below is a graphic and a video tutorial from Lynda.com (requires sign-up for free trial) to help with the theoretical side of things:
 
 ![Image showing color theory graphic](http://paper-leaf.com/wp-content/uploads/2010/01/ct_1920.jpg)
 
-Visit the tutorial [Understanding the rules of color, Lynda.com](https://www.lynda.com/Graphic-Design-tutorials/Understanding-rules-color/419419/534020-4.html)
+Visit the tutorial [Understanding the rules of color, Lynda.com (requires sign-up for free trial)](https://www.lynda.com/Graphic-Design-tutorials/Understanding-rules-color/419419/534020-4.html)
 
-To learn how to style your webpage appropriately, you can [follow this tutorial on CSS from codeacademy.com](http://www.codecademy.com/courses/web-beginner-en-TlhFi/0/1?curriculum_id=50579fb998b470000202dc8b).
+To learn how to style your webpage appropriately, you can [follow this tutorial on CSS from codeacademy.com](https://www.codecademy.com/learn/learn-css).
 
 Below is a graphic that presents how colours are perceived in different cultures:
 
@@ -239,7 +239,7 @@ Our overall steps are as follows:
 
 ### Uploading content to Omeka
 
-For the purposes of this exercise, we will use the [Gatineau Valley Historical Society fire insurance maps](http://www.gvhs.ca/research/maps/maps-fire-insurance.html) used in [Module 4, Exercise 8](#exercise-8-simple-mapping-and-georectifying). You are also allowed to use any historical sources to create an exhibit. Maybe you want to choose historical newspapers that have been digitized from the Library and Archives or the war diary from [Module 2, Exercise 2](../module-2/exercises/#exercise-2-wget). Just make sure to note where you got your sources and, preferably, that you can download them as images.
+For the purposes of this exercise, we will use the [Gatineau Valley Historical Society fire insurance maps](http://www.gvhs.ca/research/maps/maps-fire-insurance.html) used in [Module 4, Exercise 8](#exercise-8-simple-mapping-and-georectifying). You are also allowed to use any historical sources to create an exhibit. Maybe you want to choose historical newspapers that have been digitized from the Library and Archives or the war diary from [Module 2, Exercise 2](../module-2/Exercises/#exercise-2-wget). Just make sure to note where you got your sources and, preferably, that you can download them as images.
 
 1. On the left side, select Collections.
 
@@ -412,10 +412,9 @@ While most of this applies to websites, think also about how the general princip
 #### Infographics
 
 + [The Difference between Infographics and Visualizations](https://eagereyes.org/blog/2010/the-difference-between-infographics-and-visualization)
-+ [Design hints for infographics](http://piktochart.com/infographics-design-series-design-your-infographic-like-a-pro/)
++ [Design hints for infographics](https://piktochart.com/blog/infographics-design-series-design-your-infographic-like-a-pro/)
 + [Piktochart](http://piktochart.com/)
 + [Infogr.am](https://infogr.am/)
-+ [Infoactive.co](https://infoactive.co) (They have a free option, but might not allow exports. You'd have to check.)
 + [Easel.ly](http://www.easel.ly/)
 
 #### Storytelling

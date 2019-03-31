@@ -15,7 +15,7 @@ But often, we don't have a whole crowd. We're just one person, alone, with a com
 
 **This kind of work is extraordinarily important!** You already had a taste of it in the TEI exercise in the last module. (Now, if we had a **seriously** big project where we were transcribing lots of text, we'd invest in a dedicated XML editor like [Oxygen](http://www.oxygenxml.com/) - there are [plugins available and frameworks for doing historical transcription](https://github.com/odaata/HisTEI/wiki/Getting-Started) on this platform. There is a 30 day free trial license if you want to give it a try. But for now, Notepad++, Textwrangler, Komodo Edit, Sublime text, or any of a number of good text editors will do all that we need to do). 
 
-Also, check out the [TEI](http://www.tei-c.org/index.xml). Take 15 minutes and read through [What is XML and Why Should Humanists Care?](http://dh.obdurodon.org/what-is-xml.xhtml) by David Birnbaum. Annotate! If you didn't do the TEI exercise in Module 2, you could pause right now and give that a try - or at least, read it over and talk to some of your peers who DID do it.
+Also, check out the [TEI](https://tei-c.org/). Take 15 minutes and read through [What is XML and Why Should Humanists Care?](http://dh.obdurodon.org/what-is-xml.xhtml) by David Birnbaum. Annotate! If you didn't do the TEI exercise in Module 2, you could pause right now and give that a try - or at least, read it over and talk to some of your peers who DID do it.
 
 In this module we're going to do some other kinds of wrangling.
 

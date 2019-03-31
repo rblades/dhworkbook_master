@@ -77,7 +77,7 @@ Say we wanted, instead of the correspondence network, a visualization of all the
 4. Visualize the results in a spreadsheet.
 5. Write up a 'how to' in your notebook explaining these steps in detail.
 
-**[An interesting use case is discussed online](http://blog.spaziodati.eu/en/2014/07/24/using-openrefine-to-perform-text-mining-on-your-data-food-for-thoughts/)** and on the **[Free Your Metadata website (PDF downloads in new tab)](http://freeyourmetadata.org/publications/named-entity-recognition.pdf).**
+**[An interesting use case is discussed online](https://www.slideshare.net/spaziodati/using-entity-extraction-extension-with-openrefine-and-datatxt-apis)** and on the **[Free Your Metadata website (PDF downloads in new tab)](http://freeyourmetadata.org/publications/named-entity-recognition.pdf).**
 
 **Further Help:** Visit [Kalani Craig's page on maintaining digital data](http://www.kalanicraig.com/2014/12/aha-2015-managing-and-maintaining-digital-data-getting-started-in-digital-history-intermediate-workshop/).
 
