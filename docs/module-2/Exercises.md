@@ -112,84 +112,17 @@ That is, instead of **you** punching in the search terms, and copying and pastin
 
 ![Image showing JSON formating](http://i.imgur.com/LtZWyle.png)
 
-The [**Canadiana Discovery Portal**](http://search.canadiana.ca/) has tonnes of materials related to Canada's history, from a wide variety of sources.
+This exercises uses an [O-Date Binder](https://o-date.github.io/draft/book/using-application-programming-interfaces-apis-to-retrieve-data.html).
 
-1. Go to the [**Canadiana Discovery Portal**](http://search.canadiana.ca/), and search "ottawa".
+Launch the [jupyter binder](http://mybinder.org/v2/gh/o-date/open-context-jupyter/master). 
 
-2. Set the date range to 1800 to 1900 and hit enter. You are presented with a page of results -56 249 results! That's a lot of data. But do you notice the address bar of your browser? It'll say something like this:
+1. Open the 'Chronicling America API' notebook. Run through its various steps so that you end up with a json file of results. Imagine that you are writing a paper on the public reception of archaeology in the 19th century in the United States. Alter the notebook so that you can find primary source material for your study. **Going further:** Find another API for historical newspapers somewhere else in the world. Duplicate the notebook, and alter it to search this other API so that you can have material for a cross-cultural comparison.
+2. Open the 'Open Context API'. Notice how similar it is to the first notebook! Run through the steps so that you can see it work. Study the Open Context [API documentation](https://opencontext.org/about/services). Modify the search to return materials from a particular project or site.
+3. The final notebook, 'Open Context Measurements', is a much more complicated series of calls to the Open Context API (courtesy of Eric Kansa). In this notebook, we are searching for zoological data held in Open Context, using standardised vocabularies from that field that described faunal remains. Examine the code carefully - do you see a series of nested 'if' statements? Remember that data is often described using JSON attribute:value pairs. These can be nested within one another, like Russian dolls. This series of 'if' statements parses the data into these nested levels, looking for the faunal information. Open Context is using an _ontology_ or formal description of categorization of the data (which you can visit [on the Open Context website](https://opencontext.org/vocabularies/open-context-zooarch/)) that enables inter-operability with various Linked Open Data schemes. Run each section of the code. Do you see the section that defines how to make a plot? This code is called on later in the notebook, enabling us to plot the counts of the different kinds of faunal data. Try plotting different categories.
+4. The notebooks above were written in Python. We can also interact with APIs using the R statistical programming language. The [Portable Antiquities Scheme database](http://finds.org.uk) also has an API. Launch this [binder](https://mybinder.org/v2/gh/o-date/notebooks-archdata/master) and open the 'Retrieving Data from the Portable Antiquities Scheme Database' notebook (courtesy of Daniel Pett). This notebook is in two parts. The first frames a query and then writes the result to a csv file for you. Work out how to make the query search for medieval materials, and write a csv to keep more of the data fields.
+5. The second part of the notebook that interacts with the Portable Antiquities Scheme database uses that csv file to determine where the images for each item are located on the Scheme's servers, and to download them.
 
-        http://search.canadiana.ca/search?q=ottawa&field=&df=1800&dt=1900
-
-    Your search query has been put into the URL. You're looking at the API! Everything after `/search` is a command that you are sending to the Canadiana server.
-
-3. Scroll through the results, and you'll see a number just before the question mark `?`
-
-        http://search.canadiana.ca/search/2?df=1800&dt=1900&q=ottawa&field=
-        http://search.canadiana.ca/search/3?df=1800&dt=1900&q=ottawa&field=
-        http://search.canadiana.ca/search/4?df=1800&dt=1900&q=ottawa&field=
-
-    ....all the way up to 5625 (ie. 10 results per page, so 56249 / 10).
-
-    If you go to the [Canadiana API support page](http://search.canadiana.ca/support/api) you can see the full list of options. What we are particularly interested in now is the bit that says `&fmt=json`.
-
-4. Add that `&fmt=json` to your query URL. How different the results now look! What's nice here is that the data is formatted in a way that makes sense to a machine &mdash; which we'll learn more about in due course.
-
-    <br>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/-eNAcimCHsA?rel=0" title="Introduction to the Canadiana API" frameborder="0" gesture="media" allowfullscreen></iframe>
-    <br>
-
-    If you look back at the full list of API options, you'll see at the bottom that one of the options is 'retrieving individual item records'; the key for that is a field called **oocihm**. If you look at your page of JSON results, and scroll through them, you'll see that each individual record has its own oocihm number. If we could get a list of those, we'd be able to programmatically slot them into the commands for retrieving individual item records:
-
-        http://search.canadiana.ca/view/oocihm.16278/?r=0&s=1&fmt=json&api_text=1
-
-    The problem is: how to retrieve those oocihm numbers. The answer is, 'we write a program'. And the program that you want can be [found on Ian Milligan's website](http://ianmilligan.ca/api-example-sh/). Study that program carefully. There are a number of useful things happening in there, notably **curl**, **jq**, **sed**, and **awk**. **curl**  is a program for downloading webpages, **jq** for dealing with JSON, and **sed** and **awk** for searching within and cleaning up text. If this all sounds Greek to you, there is an excellent gentle introduction over at [William Turkel's blog](http://williamjturkel.net/2013/06/15/basic-text-analysis-with-command-line-tools-in-linux/).
-
-5. We need the command line program jq. We install it into our DH Box with `$ sudo apt-get install jq -y`
-
-6. We need to create a program. Make a new directory for this exercise like so: `$ mkdir m2e4`. Then, change into that directory by typing `$ cd m2e4`. 
-
-7. Make sure that's where you are by typing `$ pwd`. Now, make an empty file for our program with `$ touch canadiana.sh`. Touch makes an empty file; the `.sh` in the filename indicates that this is a shell script.
-
-8. Open the empty file with `$ nano canadiana.sh`. Now, the program that Ian Milligan wrote makes calls to the API that **used to live** at `eco.canadiana.ca`. But note the [error message on Canadiana's website](http://eco.canadiana.ca/view/oocihm.16278/?r=0&s=1&fmt=json&api_text=1). So we have to change Milligan's script so that it points to the API at [search.canadiana.ca](http://search.canadiana.ca/). Copy the script below into your empty `canadiana.sh`. If you want, adjust the search parameters (in the line starting with `pages`) for material you're more interested in.
-
-        #! /bin/bash
-        pages=$(curl 'http://search.canadiana.ca/search?q=ottawa*&field=&so=score&df=1800&dt=1900&fmt=json' | jq '.pages')
-        # this goes into the results and reads the value of 'pages' in each one of them.
-        # it then tells us how many pages we're going to have.
-        echo "Pages:"$pages
-        # this says 'for each one of these pages, download the 'key' value on each page'
-        for i in $(seq 1 $pages)
-        do
-                curl 'http://search.canadiana.ca/search/'${i}'?q=ottawa*&field=&so=score&df=1800&dt=1900&fmt=json' | jq '.docs[] | {key}' >> results.txt
-        done
-        # the next two lines take the results.txt file that is quite messy and clean it up. I'll try to explain what they all mean. Basically, tr deletes a given character - so we delete quotation marks "\"" (the slash tells the computer not to treat the quotation mark as a computer code, but as a quotation mark itself), to erase spaces, and to find the phrase "key:" and delete it too.
-        sed -e 's/\"key\": \"//g' results.txt | tr -d "\"" | tr -d "{" | tr -d "}" | tr -s " " | sed '/^\s*$/d' | tr -d ' ' > cleanlist.txt
-        # this adds a prefix and a suffix.
-        awk '$0="search.canadiana.ca/view/"$0' cleanlist.txt| awk '{print $0 "/1?r=0&s=1&fmt=json&api_text=1"}' > urlstograb.txt
-        # then if we want we can take those URLs and output them all to a big text file for analysis.
-        wget -i urlstograb.txt -O output.txt
-
-9. Hit ctrl+x to exit Nano, and save the changes.
-
-    <br>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/5ya8m-A6Lrs?rel=0" title="Writing a bash script with the command line" frameborder="0" gesture="media" allowfullscreen></iframe>
-    <br>
-
-10. Before we can run this program, we have to tell DH Box that it is alright to run it. To change the 'permissions' on the file, type `$ chmod 755 canadiana.sh`
-
-    The `$ chmod` command means change mode. Each number represents a user permission for reading, writing, and executing files on your computer.  
-
-11. And now we can run the program by typing `$ ./canadiana.sh` (the ./ is important!)
-
-    Ta da! You now have a pretty powerful tool for grabbing data from one of the largest portals for Canadian history! 
-
-12. Download your `output.txt` file to your computer via the file manager and have a look at it. 
-
-    <br>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/J2AZZs1uRuc?rel=0" title="Accessing the Canadiana API with a command line script" frameborder="0" gesture="media" allowfullscreen></iframe>
-    <br>
-
-Make sure to make a file noting what you've done, commands you've made, etc, and upload it in your GitHub repository.
+Going further - the [Programming Historian](https://programminghistorian.org/) has a lesson on [creating a web API](https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask). Follow that lesson and build a web api that serves some archaeological data that you've created or have access to. One idea might be to extend the [Digital Atlas of Egyptian Archaeology](https://msu-anthropology.github.io/daea/), a gazetteer created by [Anthropology undergraduates at Michigan State University](http://leadr.msu.edu/projects/fall-2014-3/daea/). The source data may be found [on the MSU Anthropology GitHub page](https://github.com/msu-anthropology/daea/blob/master/sites-popup.csv). 
 
 -----
 

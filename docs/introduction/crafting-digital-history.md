@@ -54,7 +54,16 @@ Because you have complete access and control over your domain, you can install o
 
 So let's get started.
 
-### Reclaim Hosting
+### Option 1: Jekyll Now
+
+Jekyll is a static site generator widely used to create a website quickly that you can run from your GitHub account. Jekyll requires some editing via the command line. [Jekyll Now](https://github.com/barryclark/jekyll-now) is a project from [Barry Clark](https://github.com/barryclark) that allows you to leverage the blogging power and simplicity of Jekyll without touching the command line.
+
+1. Ensure you have a GitHub account
+2. Follow the [Jekyll Now Quick Start guide on GitHub](https://github.com/barryclark/jekyll-now#quick-start).
+3. Customize your website.
+4. Start with a simple post like "Hello world!".
+
+### Option 2: Reclaim Hosting
 
 In the course space for cuLearn, I gave you a code to use to pay for a domain of your own. I have already purchased domain space for you from an academic web hosting service, [Reclaim Hosting](https://reclaimhosting.com/shared-hosting/). This space will last for one year, at which point you have the option of paying to renew it or letting it die. Previous students in this course have used their domain to help with their applications for jobs and graduate school.
 
@@ -66,7 +75,7 @@ Congratulations! You now own your very own domain. **It might take a bit of time
 
 Giving you a space of your own is my political act of protest against the centralization of learning inside learning management systems. Learning isn't 'managed', it's cultivated. Unlike cuLearn, I cannot monitor your activity inside your own domain. I can only see what you choose to make public. Unlike Facebook or Snapchat or Instagram, I am not trying to monetize your personality on the web.
 
-### Wordpress for your blog
+#### Wordpress for your blog
 
 Wordpress is probably the best option for a platform for writing the narrative bits of your digital history work.
 
@@ -79,7 +88,7 @@ Wordpress is probably the best option for a platform for writing the narrative b
 7. Once it's done, the installer will remind you of the URL to your site, and the URL to the blog's dashboard (where you go to write posts, make changes to the look and feel of the site). Open these in a new browser window, and bookmark them. To login to your blog, remember to go to the dashboard URL (eg. `http://your-domain.ca/wp-admin`), enter your blog administrator username and password.
 8. You can close the cPanel webpage now (log out first).
 
-#### Customising your blog
+##### Customising your blog
 
 If you look at the dashboard for your blog, you'll see a lot of options down the left side of your screen. If you want to change the look of your blog, click on 'Appearance' then click on 'Themes'. A number of themes are pre-installed. You can click on the different themes and select 'Preview' to see how your blog might look. When you find one you like, select 'activate'. Go to the other browser window where you have `your-domain.ca` open. Reload the page to see the changes take effect!
 

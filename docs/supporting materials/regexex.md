@@ -25,7 +25,7 @@ Data formatted like this could be fed into a network analysis program, for insta
 
 ## Getting started
 
-In the previous module, we learned how to automatically grab text from sites like [Canadiana](http://search.canadiana.ca/). In this particular exercise today, we'll quickly download the file using `curl` (it's like wget, though there are some [differences between the two commands](https://daniel.haxx.se/docs/curl-vs-wget.html). It's good to know both).
+In [Module 2, Exercise 4](/module-2/Exercises/#exercise-4-apis), we learned how to automatically grab text using by interacting with APIs. In this particular exercise today, we'll quickly download the file using `curl` (it's like wget, though there are some [differences between the two commands](https://daniel.haxx.se/docs/curl-vs-wget.html). It's good to know both).
 
 1. At the command line, type the following curl command:
 

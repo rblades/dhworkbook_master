@@ -23,7 +23,7 @@ Open Context publishes archaeological data on the web. Archaeology generates vas
 
 1. Check out [this example search on Open Context](https://opencontext.org/media-search/.json?prop=rel--oc-gen-cat-object||rel--oc-gen-cat-animal-bone&response=uri-meta&rows=10). Open that up, give it a play right now, and see what kinds of information exist. Try to craft a search that retrieves some interesting information.
 
-    Once you've crafted a search that retrieves something of interest, it's time to build a script that will retrieve that information for you. Remember the exercise that queried the Canadiana API? Below I have modified that script to grab 10 records from the 'animal bone' category on Open Context. You could use that as a basis for your own search.
+    Once you've crafted a search that retrieves something of interest, it's time to build a script that will retrieve that information for you. Below I have modified [a script from Ian Milligan's API example](https://ianmilligan.ca/api-example-sh/) to grab 10 records from the 'animal bone' category on Open Context. You could use that as a basis for your own search.
 
 2. In DH Box, create a new folder with `mkdir` for this exercise, then `cd` into it. 
 
