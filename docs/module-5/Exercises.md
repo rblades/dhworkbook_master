@@ -14,6 +14,191 @@ The exercises in this module cover:
 + Creating digital exhibits
 
 -----
+## Capstone Exercise
+
+By the end of the course, you have the opportunity to create a domain (website + complete access to the webserver that powers it, so that you can install other platforms/services) of your own. A typical setup will be something along the lines of:
+
+1. GitHub: `yourusername.github.io`.
+2. Reclaim Hosting: `your-domain-name.org`.
+
+On your blog/narrative, you may want an 'About' page where you can signal the kinds of history you're interested in, and the preferred way for people to get in touch with you. You do not have to use your real name. Remember the [real names policy](http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#real-names-policy).
+
+Let's get started.
+
+### Option 1: GitHub Pages with a Static Site Generator
+
+Static site generators are software packages that allow you to quickly build and easily update a website via the terminal. Most static site generators use human readable programming languages like `YAML`/`YML` (Yet Another Markdown Language) that contain the settings for your website. You create a basic text file (i.e. Markdown), run a build command in the terminal that will convert your text files into web pages, and push the pages to your server. 
+
+GitHub offers each user their own unique domain attached to their account - this service is called [GitHub Pages, or gh-pages](https://pages.github.com/). Each user domain resembles `yourusername.github.io`, where `yourusername` is your GitHub account username. If you went to `yourusername.github.io` right now, it will show a `404` / 'site not found' error. This is because you have not yet set-up your gh-pages website.
+
+Like the `master` branch of your GitHub repository, `gh-pages` is another branch option. Essentially, you create a GitHub respository, populate the gh-pages branch with web files, and your `yourusername.github.io` will become a functioning website.
+
+By deafault, GitHub Pages uses [Jekyll, a static site generator](https://jekyllrb.com/). However, Jekyll is not the only option. [Hugo](https://gohugo.io/) is another static site generator. This workbook was built using the [static site generator MKDocs](https://www.mkdocs.org/). While this exercise shows you how to use GitHub Pages powered by Jekyll to populate your GitHub domain, the instructions are generally similar for other static site generators. You make a few changes and run the website using a GitHub repository. 
+
+1. Login to your GitHub account.
+2. Click the button labelled `+` at the top left of the page next to your account.
+3. Select `New repository`.
+4. Under `Repository name *`, enter `yourusername.github.io` (ensure you change 'yourusername' to your GitHub username).
+5. Click the button labelled `Create repository`.
+6. Navigate to your DH Box account and open the terminal (you can also set this up on your own machine, in which case you open the Terminal (Mac) or Command Prompt (Windows) or GitHub desktop client).
+7. Type `$ git clone https://github.com/username/username.github.io` into the terminal (changing the URL to your GitHub repository path).
+8. Type `$ cd username.github.io` into the terminal (ensure you change 'username' to your GitHub username).
+9. Type `$ echo "Hello World" > index.html` into the terminal. This will pipe "Hello World" into the home file `index.html` of your new site.
+10. Type `$ git add --all` into the terminal.
+11. Type `$ git commit -m "Initial commit"` into the terminal. 
+12. Type `$ git push -u origin master` into the terminal.
+13. Navigate to your domain at `yourusername.github.io`. You will see the text "Hello World".
+
+#### Customize your website
+
+The instructions above showed you how to get you GitHub Pages domain up and running. GitHub provides further instruction on [customizing your Jekyll site in their documentation](https://help.github.com/en/articles/using-jekyll-as-a-static-site-generator-with-github-pages). GitHub Pages makes it easy to set-up a theme.
+
+1. Navigate to your GitHub Pages repository.
+2. Click the tab labelled `Settings`.
+3. Scroll down to the section labelled `GitHub Pages`.
+4. Click the button labelled `Change theme`.
+5. Choose a new theme from the provided options.
+6. Open the `_config.yml` file and and click the pen/pencil icon to edit the file.
+7. Your configuration file will show only the theme information. Add the following `YAML` configuration settings to you `_config.yml` file:
+    
+        github: [metadata]
+        encoding: UTF-8
+        kramdown:
+         input: GFM
+         hard_wrap: false
+        future: true
+        jailed: false
+        gfm_quirks: paragraph_end
+    
+
+8. Open the `index.html` file and and click the pen/pencil icon to edit the file.
+9. Change the name of the file to `index.md`.
+10. Remove the "Hello World" message and replace it with the following Markdown header:
+    
+    
+        ---
+        title: Home page
+        layout: default
+        ---
+
+        Here is my home page.
+        
+
+11. Add a commit message and click the green button labelled `Commit changes`.
+12. Navigate to your repository home page and create a new file called `2019-04-07-first-post.md` (change the `2019-04-07` to today's date).
+13. Copy and paste the following text into your new Markdown file:
+
+        ---
+        title: This is my title
+        layout: post
+        ---
+
+        Here is my page.
+
+14. Add a commit message and click the green button labelled `Commit changes`.
+15. Navigate to your `yourusername.github.io` domain. If the site has not updated yet, wait a minute and/or clear your browser's cache.
+
+### Going Further
+
+The instructions above show you how you can begin customizing you Jekyll website. You will probably want to change the theme and structure of the website. For instance, your blog posts should go in a folder called `_posts`. For more information, read [Barry Clark's article on customizing your Jekyll site](https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/). You will also want to read through the [Jekyll documentation](https://jekyllrb.com/docs/).
+
+Most static site generators use similar layouts, structures, and `YAML` configurations. While the documentation for each generator will differ, the general idea between all of them remains the same. 
+
+### Option 2: Jekyll Now
+
+Jekyll is a static site generator widely used to create a website quickly that you can run from your GitHub account. Jekyll takes static Markdown files and converts them to a functioning website. While Jekyll requires some editing via the terminal, [Jekyll Now](https://github.com/barryclark/jekyll-now) is a project from [Barry Clark](https://github.com/barryclark) that allows you to leverage the blogging power and simplicity of Jekyll without touching the terminal. 
+
+**NB** If you already have a gh-pages branch set up at `yourusername.github.io`, this may produce some unexpected results.  
+
+1. Login to your GitHub account.
+2. Navigate to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now). For further instruction, follow the [Jekyll Now Quick Start guide on GitHub](https://github.com/barryclark/jekyll-now#quick-start).
+3. Fork the Jekyll Now repository.
+4. In your fork of the respository, click `Settings`.
+5. Under `Repository name`, change the name from `jekyll-now` to `yourusername.github.io` (ensure you change 'yourusername' to your GitHub username). By setting the name to your unique GitHub domain (i.e. gh-pages), GitHub knows to make your gh-pages domain draw from these files.
+6. Click the button labelled `Rename`. Your site is now available at `yourusername.github.io`. **NB** If you navigate to your domain URL right away, it will not be there and will show a '404' error. **You first need to upload a post in the format `YYYY-MM-DD-some-text.md`, ensuring `YYYY-MM-DD` is always the prefix to your posts file name.**
+7. Navigate back to your forked repository page.
+8. Open the `_config.yml` file.
+9. Click the pen/pencil icon to edit the file.
+10. Change the relevant fields (i.e. `name`, `description`, `avatar`, `footer-links`, etc.). For `avatar`, navigate to your GitHub profile, right click your profile picture/avatar, and select `View image`. This will open your avatar in a new tab. Copy the URL for your avatar and paste it into the `_config.yml` `avatar` section.
+11. Write a commit message and click the green button labelled `Commit changes`. 
+12. Navigate to the `_posts` folder and open the `2014-3-3-Hello-World.md` file.
+13. Click the pen/pencil icon to edit the file.
+14. Change the file name from `2014-3-3-Hello-World.md` to something relevant, ensuring to change the prefix to today's date in the `YYYY-MM-DD` format. 
+15. Edit the file to describe your new site.
+16. Write a commit message and click the green button labelled `Commit changes`. 
+17. Navigate to `yourusername.github.io` (**remember**, ensure you change 'yourusername' to your GitHub username). You should now see your udpated site. If your site still shows a `404` error, try clearing your browser's cache and trying again. Also, ensure your post files use the proper naming convention with the ``YYYY-MM-DD`` date prefix. 
+18. To add new posts, navigate to the `_posts` folder and click the button labelled `Create new file`. Remember to use the proper naming convention with the ``YYYY-MM-DD`` date prefix.
+
+#### Going Further
+
+After following the instructions in the previous section, you now have a functioning website that runs entirely through GitHub. You can, however, further customize your site. Read through [Barry Clark's article on customizing your Jekyll site](https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/). Incorporate design and functionality in your website from the [exercises in Module 5]().
+
+### Option 3: Reclaim Hosting
+
+In the course space for cuLearn, I gave you a code to use to pay for a domain of your own. I have already purchased domain space for you from an academic web hosting service, [Reclaim Hosting](https://reclaimhosting.com/shared-hosting/). This space will last for one year, at which point you have the option of paying to renew it or letting it die. Previous students in this course have used their domain to help with their applications for jobs and graduate school.
+
+Because you have complete access and control over your domain, you can install other services as well. For instance, maybe you use Dropbox or Google Drive to sync your files across machines, or to function as a backup? You can install a service called 'OwnCloud' on your own domain that does the same thing, so that you have control over all your own materials.
+
+1. You will be asked for the name you want to have for your space. You need to be thinking of branding here. Think of a professional name that conveys something of your personality and approach to history. I for instance own the domain, 'Electric Archaeology', which I chose to convey that I'm interested in digital archaeology, but also, that I move fast and cover a lot of breaking develops in the field (Hey. It's my blog. I like the name). Please choose wisely. Some combination of your first and last name is often the best idea, since your own name is your own best calling card ('shawn graham' is such a generic name, that it was already long gone by the time I started doing digital history). Type in a name, select a top-level domain (ie. .com, .ca, .org, etc. I'll suggest .ca), and click on the 'check availability' button.
+2. If the pop-up says 'Congratulations, domain available!' then click on the continue button. (You may be offered free id protection, where Reclaim Hosting will hide your details is someone does a 'who-is' search on the domain name. If it does, then tick off the check box to confirm that you want this, and hit continue).
+3. On the next screen, (the billing screen) fill in all of the information. The balance should be $0. At the bottom left, it will also say that you’ve used a one-time promotional code. Hit the green button at the bottom to complete the purchase (which is not costing you anything).
+
+Congratulations! You now own your very own domain. **It might take a bit of time for your domain to appear live on the web**. During this time, you can log into your cPanel and install Wordpress and so on - see the next section below.
+
+Giving you a space of your own is my political act of protest against the centralization of learning inside learning management systems. Learning isn't 'managed', it's cultivated. Unlike cuLearn, I cannot monitor your activity inside your own domain. I can only see what you choose to make public. Unlike Facebook or Snapchat or Instagram, I am not trying to monetize your personality on the web.
+
+#### Wordpress for your blog
+
+Wordpress is probably the best option for a platform for writing the narrative bits of your digital history work.
+
+1. Click the 'Client area'. It will tell you that you have one active account (with Reclaim Hosting) and one active domain. When the time comes to renew your account or to close it down, this is where you do it. Note also that there is a link to 'Support', which will put you in touch with Reclaim Hosting's help desk. They are extremely fast and good at providing support; always treat any help request you make with them **as if** you were writing a formal email to me. Be polite and considerate, and thank them. The owners of the business often are the ones who provide the help! Without them, we couldn't do this class.
+2. Go to 'cPanel' - this is where you can install all sorts of different kinds of software on your account. Search for and select 'Web applications'
+3. Click on Wordpress. Then click on 'Install this application'.
+4. The next screen presents you with a number of options. Leave these set to their defaults. For 'location', leave this blank (you want to leave the directory option blank). That tells the installatron to put Wordpress at `your-domain.ca`. (When/if you install other pieces of software, you'd change this variable so that the new software doesn't overwrite this software!)
+5. Further down the page, under 'Settings', you need to change 'Administrator username', 'Administrator password', 'Website title', 'Website tagline'. **This is the username and password to actually do things with your blog, and the name of your blog itself**. Leave everything else alone.
+6. Click Install!
+7. Once it's done, the installer will remind you of the URL to your site, and the URL to the blog's dashboard (where you go to write posts, make changes to the look and feel of the site). Open these in a new browser window, and bookmark them. To login to your blog, remember to go to the dashboard URL (eg. `http://your-domain.ca/wp-admin`), enter your blog administrator username and password.
+8. You can close the cPanel webpage now (log out first).
+
+##### Customising your blog
+
+If you look at the dashboard for your blog, you'll see a lot of options down the left side of your screen. If you want to change the look of your blog, click on 'Appearance' then click on 'Themes'. A number of themes are pre-installed. You can click on the different themes and select 'Preview' to see how your blog might look. When you find one you like, select 'activate'. Go to the other browser window where you have `your-domain.ca` open. Reload the page to see the changes take effect!
+
+If you're the sort of person who likes to sketch ideas out on paper, Lauren Heywood of the [Disruptive Media Learning Lab](http://dmll.org.uk/) has designed a paper-based exercise to prototype ideas. Why not give it a try? [Print this PDF of Wordpress design (downloads in a new window)](http://coventry.domains/support/wp-content/uploads/staff-guide-to-plan-your-wordpress-site-with-paper.pdf) and follow the instructions.
+
+To write new content, know that there is a difference between a **Post** and a **Page**. A **page** is a new link on your site, while **posts** appear in chronological order on a page, with the most recent on top. Most themes show the most recent post by default, and pages appear in any menus on the site. **When you are logged into your blog** any post or page will have an 'Edit' button at the bottom that you can click. You'll then be presented with an editing box with the standard toolbar across the top (allowing you to change the font, insert images, change the alignment of the text and so on). At the top right will be a button to save or publish/update the post/page.
+
+Your blog will have a default 'about' page. Change that default text now to reflect something about who you are and why you are taking this course.
+
+To create new pages, you click on the 'Pages' link in your dashboard and select 'Add new'.
+
+To create new posts, you click on the 'Posts' link in  your dashboard and select 'Add new'.
+
+Explore the options for your blog; customize and make the space your own.
+
+**Password protected posts:** If for any reason you feel that you don't want a post to be viewable by the web-at-large, you can hide it behind a password. At the top right where the 'Publish' button hides, click on 'Visibility' and select 'Password protected'. Remember though: you'll have to share the password with me for grading purposes.
+
+![Visibility Options in Wordpress](https://codex.wordpress.org/images/7/70/visibility.jpg)
+
+For more information about controlling visibility of your posts and so on, [visit the Wordpress content visibility help page](https://codex.wordpress.org/Content_Visibility).
+
+#### Collecting your own annotations on your blog
+
+Hypothes.is has an **API** that allows you to do some neat things. 'API' stands for 'Application Programming Interface', which is just a fancy way of saying, 'you can write a program that interacts with this web service'. [Kris Shaffer](http://pushpullfork.com/), a professor at the University of Mary Washington, has written a **plugin** for Wordpress that allows you to automatically collect annotations you make across the web and to display them all on a single page on your blog. So, we'll go get that plugin and install it on your blog:
+
+Open [Kris Shaffer's Hypothes.is aggregator](https://github.com/kshaffer/hypothesis_aggregator) in a new browser window.
+
+1. Click 'Clone or Download' (the green button at the top right).
+2. In the pop-up, click 'Download ZIP'
+3. Go over to the dashboard for your blog (if you closed this, you can get there again by opening a new browser window and going to `your-domain.ca/wp-admin`).
+4. In the dashboard, click on Plugins >> Add New.
+5. Click 'Upload Plugin'. It will open a window asking you to find and select the zip file you downloaded. This is probably in your 'Downloads' folder. Select and click Ok.
+6. Once it’s uploaded and installed, click 'Activate'.
+7. In the dashboard, click on 'pages' then add a new page. Call it 'Web Notes' or 'Annotations' or something similar.
+8. Shaffer has created a 'shortcode' that tells Wordpress to go over to Hypothes.is and grab the latest information. So, in the text of your new page (in the editor window, make sure to click the 'text' button or else this won't work), enter the shortcode that will grab all of your public annotations: `[hypothesis user = 'kris.shaffer']` where you remove the `kris.shaffer` and put in your own Hypothes.is username.
+9. Hit the 'Publish' button. Wordpress will report that the page has been published and give you a link to it; click on this link to see your new always-updating list of annotations! Of course, if you haven't made any public annotations yet, nothing will display. Go annotate something, then come back and reload the page, but remember to annotate using [our HIST3814o group](https://hypothes.is/groups/886ipqWe/hist3814o).
+
+-----
 
 ## Exercise 1: Layout
 

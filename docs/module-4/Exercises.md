@@ -1,10 +1,10 @@
 # Module 4 Exercises
 
-There are **many** [different tools and approaches](http://dhresourcesforprojectbuilding.pbworks.com/w/page/69244314/Tutorials%20for%20DH%20Tools%20and%20Methods) you could use to visualize your data, both as a preliminary pass to spot the holes and also for more formal analysis. In which case, for this module, I would like you to select **two** of these exercises which seem most germane for your final project.
+There are **many** [different tools and approaches](http://dhresourcesforprojectbuilding.pbworks.com/w/page/69244314/Tutorials%20for%20DH%20Tools%20and%20Methods) you could use to visualize your data, both as a preliminary pass to spot the holes and also for more formal analysis. In which case, for this module, I would like you to select **two** of these exercises which seem most relevant to your capstone exercise.
 
 You are welcome to work through more of them, of course, but I want the exercises to move your own research forward. Some of these I wrote and some are adapted from [The Macroscope](http://themacroscope.org); others are adapted or used holus-bolus from scholars like [Miriam Posner](http://miriamposner.com/blog/), [Fred Gibbs](http://fredgibbs.net/), and [Heather Froehlich](http://hfroehli.ch/) (and I'm grateful that they shared their materials!). Finally, you are welcome to explore the lessons and tutorials at [The Programming Historian](http://programminghistorian.org/lessons/) if they seem appropriate to what you want to do for your project.
 
-**But what if I haven't any idea of what to do for the final project?** Then read through the various tutorials for inspiration. Find something that strikes you as interesting, and then talk to me about how you might employ the ideas or concepts with regard to the Canadian war diary data.
+**But what if I haven't any idea of what to do for the capstone exercise?** Then read through the various tutorials for inspiration. Find something that strikes you as interesting, and then talk to me about how you might employ the ideas or concepts with regard to the Canadian war diary data.
 
 ## Things to install?
 
@@ -14,18 +14,18 @@ Many of these involve having to install more software on your own machine. In th
 
 **NB It is always very important to record in your own notebooks what version of R you used for your analysis, what version of any R packages you installed and used, and so on because packages can go out of date.**
 
-In the table below I've gathered the exercises together under the headings of **Text**, **Networks**, **Maps**, and **Charts**. I've also added some entries that I am categorizing under **Art**. The first is a series of exercises on [the sonification of data](http://programminghistorian.org/lessons/sonification) and the second is a guide [to making Twitterbots](https://programminghistorian.github.io/ph-submissions/lessons/intro-to-twitterbots); the third is about glitching digital imagery. These approaches can provide surprising and novel insights into history, as they move from representing history digitally to **performing** it. Visit, for instance, [the final project in an undergraduate digital history class at the University of Saskatchewan by Daniel Ruten](https://danielruten.wordpress.com/2017/04/15/sonic-word-clouds-an-experiment-with-data-sonification-part-i-introduction/). Daniel translated simple word clouds of a First World War diary into a profound auditory performance. I would be very interested indeed to see if any final projects in HIST3814o gave sonification or Twitterbots or glitching a try.
+In the table below I've gathered the exercises together under the headings of **Text**, **Networks**, **Maps**, and **Charts**. I've also added some entries that I am categorizing under **Art**. The first is a series of exercises on [the sonification of data](http://programminghistorian.org/lessons/sonification) and the second is a guide [to making Twitterbots](https://programminghistorian.github.io/ph-submissions/lessons/intro-to-twitterbots); the third is about glitching digital imagery. These approaches can provide surprising and novel insights into history, as they move from representing history digitally to **performing** it. Visit, for instance, [the final project in an undergraduate digital history class at the University of Saskatchewan by Daniel Ruten](https://danielruten.wordpress.com/2017/04/15/sonic-word-clouds-an-experiment-with-data-sonification-part-i-introduction/). Daniel translated simple word clouds of a First World War diary into a profound auditory performance. I would be very interested indeed to see if any capstone exercises in HIST3814o gave sonification or Twitterbots or glitching a try.
 
 The exercises in this module are covered in the chart below:
 
 | Texts        | Networks         | Maps  | Charts | Art |
 | ------------- |:-------------:|:-----:|:--------:|--------:|
 | [Topic Modeling Tool](#exercise-2-topic-modeling-tool)  |[Network analysis in Gephi](#exercise-1-network-visualization) |[Simple mapping & georectifying](#exercise-8-simple-mapping-and-georectifying) |[Quick charts using RAW](#exercise-7-raw) |[Sonification](https://programminghistorian.org/lessons/sonification)|
-| [Topic Modeling in R](#exercise-3-topic-modeling-in-r)  |[Converting 2-mode to 1-mode](../supporting materials/multimode-networks.txt.md) |[QGIS (tutorials by Fred Gibbs)](#exercise-10-qgis) | |[Twitterbots](https://programminghistorian.github.io/ph-submissions/lessons/intro-to-twitterbots)|
-| [Text Analysis with OverviewProject](#exercise-4-text-analysis-with-overview)   |[Network Analysis in R](#exercise-9-network-analysis-in-r) |[Geoparsing with Python](../supporting materials/geoparsing-w-python.txt.md) | |[Glitching Photos](../supporting materials/glitch.md) |
-| [Corpus Linguistics with AntConc](#exercise-5-corpus-linguistics-with-antconc)  |[Network Analysis in Cytoscape](https://github.com/miriamposner/cytoscape_tutorials)|[Palladio with Posner](http://miriamposner.com/blog/getting-started-with-palladio/) | | |
-| [Text Analysis with Voyant](#exercise-6-text-analysis-with-voyant)    |[Choose your own adventure](../supporting materials/cyoa.txt.md)|[Leaflet.js Maps](../supporting materials/leaflet.txt.md) | | |
-| | | | | |
+| [Topic Modeling in R](#exercise-3-topic-modeling-in-r)  |[Network Analysis in R](#exercise-9-network-analysis-in-r) |[QGIS (tutorials by Fred Gibbs)](#exercise-10-qgis) | |[Twitterbots](https://programminghistorian.github.io/ph-submissions/lessons/intro-to-twitterbots)|
+| [Text Analysis with OverviewProject](#exercise-4-text-analysis-with-overview) |[Network Analysis in Cytoscape](https://github.com/miriamposner/cytoscape_tutorials) |[Geoparsing with Python](../supporting materials/geoparsing-w-python.txt.md) | |[Glitching Photos](../supporting materials/glitch.md) |
+| [Corpus Linguistics with AntConc](#exercise-5-corpus-linguistics-with-antconc)  |[Choose your own adventure](../supporting materials/cyoa.txt.md)|[Palladio with Posner](http://miriamposner.com/blog/getting-started-with-palladio/) | | |
+| [Text Analysis with Voyant](#exercise-6-text-analysis-with-voyant) |[Using igraph to visualize network data](../supporting materials/netviz.md)|[Leaflet.js Maps](../supporting materials/leaflet.txt.md) | | |
+| [Identifying Similar Images with TensorFlow](#exercise-11-identifying-similar-images-with-tensorflow)| | | 
 
 ----------------------
 
@@ -38,6 +38,12 @@ Recall that the index of the collected letters of the Republic of Texas was just
 For this exercise, do the following: 
 
 1. Transform your Texan Correspondence data into a network, which you will then visualize with the open source program **Gephi**. The detailed instructions are [in our supporting materials](../supporting materials/gephi.txt.md).
+
+### Going Further
+
+The data you get from topic modeling is in many ways just the first step to making it meaningful. Read through [Miram Posner's article, **Very basic strategies for interpreting results from the Topic Modeling Tool**](http://miriamposner.com/blog/very-basic-strategies-for-interpreting-results-from-the-topic-modeling-tool/). In this article, Posner explores the results of your data, what the different files mean, and how you can interpret that data.
+
+Posner also shows in another article [how you can visualize your results from the Topic Modeling Tool](http://miriamposner.com/classes/dh201w19/tutorials-guides/text-analysis/visualize-your-topic-model/). While visualization is just one method to interpret your data, it is a powerful way to begin to make some meaningful insights into the data.
 
 -----
 
@@ -332,5 +338,40 @@ For this exercise, do the following:
 
 2. Next, try georectifying a historical map and adding it to your GIS following Gibbs' other tutorial ['Using Historical maps with QGIS'](http://fredgibbs.net/tutorials/qgis/overlaying-historic-maps-with-qgis.html).
 
+-----
+
+## Exercise 11: Identifying Similar Images with TensorFlow
+
+This exercise uses uses a [jupyter notebook](https://jupyter.org/) to run the code. You can launch this jupyter notebook in an executable environment by clicking on the button below.
+
+[![Binder](https://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/shawngraham/bindr-test-Identifying-Similar-Images-with-TensorFlow/master)
+
+This exercise is based on Douglas Duhaime's tutorial [identifying similar images with tensorflow](http://douglasduhaime.com/posts/identifying-similar-images-with-tensorflow.html) which is very clearly laid out and explained. In this notebook, I've compressed the steps. The 'images' directory only has 25 images in it for demo purposes. In Duhaime's post, the images folder (that you grab with `wget` has about 2000 images in it).
+
+1. Launch the [jupyter notebook](http://mybinder.org/v2/gh/shawngraham/bindr-test-Identifying-Similar-Images-with-TensorFlow/master). This may take up to a minute to finish loading.
+2. Open the `find-similar-images.ipynb` file. You'll notice that the notebook is already pre-populated with commands.
+3. For each section, click the button labelled `|> Run`. This will either skip to the next paragraph if it is text/information or run the command if it is a command. Each time the run finishes, check the main notebook with the file listings. The notebook will update and create new files as different commands run.
+4. Click `|> Run` through each command/section.
+5. Open the `Affinity Propagation.ipynb` file and for each section, click the button labelled `|> Run`. Notice the clusters that are created.
+
+### Going Further
+
+Now that you understand the basics of the TensorFlow exercise, try running your own jupyter instance.
+
+1. Navigate to Dr. Graham's [TensorFlow GitHub respository](https://github.com/shawngraham/Identifying-Similar-Images-with-TensorFlow-notebooks).
+2. Fork the repository so you have your own version. 
+3. Drop more images into the image folder.
+5. Navigate to the [Binder website](https://mybinder.org/).
+6. Paste the URL of your forked GitHub repository into the section labelled `GitHub repository name or URL`.
+7. Click the button labelled `launch` to create your own instance of the jupyter notebook.
+8. When the Binder finishes building, click the text labelled `Copy the text below, then paste into your README to show a binder badge: launch|Binder    >`.
+9. Copy the Markdown link to your Binder instance.
+9. Navigate to your forked repository on GitHub.
+10. Open the `README.md` file and click the pen/pencil icon to edit the file.
+11. Use the button text you copied in step 8 to change the link for the button labelled `launch|Binder` from the link to Dr. Graham's Binder instance to your new Binder URL, otherwise clicking the button in your GitHub repository will just open Dr. Graham's original repository. 
+
+-----
+
 ## Going Further
 There are many tutorials at [The Programming Historian](http://programminghistorian.org/lessons/) that are appropriate here. Try some under the 'Data Manipulation' or 'Distant Reading' headings.
+

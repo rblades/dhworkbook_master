@@ -46,7 +46,6 @@ pages:
     - 'Geoparsing with Python': 'supporting materials/geoparsing-w-python.txt.md'
     - 'Glitch': 'supporting materials/glitch.md'
     - 'Social Network Analysis with Gephi': 'supporting materials/gephi.txt.md'
-    - 'Multimode Networks': 'supporting materials/multimode-networks.txt.md'
     - 'Graphing the Net': 'supporting materials/graphing-the-net.txt.md'
     - 'Topic Modeling, DH Box': 'supporting materials/topicmodel-r-dhbox.md'
     - 'Topic Modeling, Local': 'supporting materials/topicmodel-r-yourmachine.md'

@@ -43,74 +43,7 @@ A digital historian needs to have a digital workshop/lab/studio/performance spac
 + When you're working with academic databases such as JSTOR, then you'll also need a bibliography manager. We don't go into this aspect very much in this course (if you take other courses with me, you will) but you might want to check out [Zotero](http://zotero.org).
 + It can sometimes be useful to make little videos of your work to explain when something isn't working - [Screen-cast-o-matic](http://screencast-o-matic.com/) is free and does a good job.
 
-Now, the final part of your studio/lab/workshop is a domain (website + complete access to the webserver that powers it, so that you can install other platforms/services) of your own. A typical setup will be something along the lines of:
-
-1. `your-domain-name.org` for your narrative, annotations, and anything you build regarding your work.
-2. `github.com/your-name` for your scratch pad and code repository.
-
-On your blog/narrative, you'll have a page that collates all of your web annotations as well. You'll also have - typically - an 'about' page where you can signal the kinds of history you're interested in, and the preferred way for people to get in touch with you. You do not have to use your real name. Remember the [real names policy](http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#real-names-policy).
-
-Because you have complete access and control over your domain, you can install other services as well. For instance, maybe you use Dropbox or Google Drive to sync your files across machines, or to function as a backup? You can install a service called 'OwnCloud' on your own domain that does the same thing, so that you have control over all your own materials.
-
-So let's get started.
-
-### Option 1: Jekyll Now
-
-Jekyll is a static site generator widely used to create a website quickly that you can run from your GitHub account. Jekyll requires some editing via the command line. [Jekyll Now](https://github.com/barryclark/jekyll-now) is a project from [Barry Clark](https://github.com/barryclark) that allows you to leverage the blogging power and simplicity of Jekyll without touching the command line.
-
-1. Ensure you have a GitHub account
-2. Follow the [Jekyll Now Quick Start guide on GitHub](https://github.com/barryclark/jekyll-now#quick-start).
-3. Customize your website.
-4. Start with a simple post like "Hello world!".
-
-### Option 2: Reclaim Hosting
-
-In the course space for cuLearn, I gave you a code to use to pay for a domain of your own. I have already purchased domain space for you from an academic web hosting service, [Reclaim Hosting](https://reclaimhosting.com/shared-hosting/). This space will last for one year, at which point you have the option of paying to renew it or letting it die. Previous students in this course have used their domain to help with their applications for jobs and graduate school.
-
-1. You will be asked for the name you want to have for your space. You need to be thinking of branding here. Think of a professional name that conveys something of your personality and approach to history. I for instance own the domain, 'Electric Archaeology', which I chose to convey that I'm interested in digital archaeology, but also, that I move fast and cover a lot of breaking develops in the field (Hey. It's my blog. I like the name). Please choose wisely. Some combination of your first and last name is often the best idea, since your own name is your own best calling card ('shawn graham' is such a generic name, that it was already long gone by the time I started doing digital history). Type in a name, select a top-level domain (ie. .com, .ca, .org, etc. I'll suggest .ca), and click on the 'check availability' button.
-2. If the pop-up says 'Congratulations, domain available!' then click on the continue button. (You may be offered free id protection, where Reclaim Hosting will hide your details is someone does a 'who-is' search on the domain name. If it does, then tick off the check box to confirm that you want this, and hit continue).
-3. On the next screen, (the billing screen) fill in all of the information. The balance should be $0. At the bottom left, it will also say that you’ve used a one-time promotional code. Hit the green button at the bottom to complete the purchase (which is not costing you anything).
-
-Congratulations! You now own your very own domain. **It might take a bit of time for your domain to appear live on the web**. During this time, you can log into your cPanel and install Wordpress and so on - see the next section below.
-
-Giving you a space of your own is my political act of protest against the centralization of learning inside learning management systems. Learning isn't 'managed', it's cultivated. Unlike cuLearn, I cannot monitor your activity inside your own domain. I can only see what you choose to make public. Unlike Facebook or Snapchat or Instagram, I am not trying to monetize your personality on the web.
-
-#### Wordpress for your blog
-
-Wordpress is probably the best option for a platform for writing the narrative bits of your digital history work.
-
-1. Click the 'Client area'. It will tell you that you have one active account (with Reclaim Hosting) and one active domain. When the time comes to renew your account or to close it down, this is where you do it. Note also that there is a link to 'Support', which will put you in touch with Reclaim Hosting's help desk. They are extremely fast and good at providing support; always treat any help request you make with them **as if** you were writing a formal email to me. Be polite and considerate, and thank them. The owners of the business often are the ones who provide the help! Without them, we couldn't do this class.
-2. Go to 'cPanel' - this is where you can install all sorts of different kinds of software on your account. Search for and select 'Web applications'
-3. Click on Wordpress. Then click on 'Install this application'.
-4. The next screen presents you with a number of options. Leave these set to their defaults. For 'location', leave this blank (you want to leave the directory option blank). That tells the installatron to put Wordpress at `your-domain.ca`. (When/if you install other pieces of software, you'd change this variable so that the new software doesn't overwrite this software!)
-5. Further down the page, under 'Settings', you need to change 'Administrator username', 'Administrator password', 'Website title', 'Website tagline'. **This is the username and password to actually do things with your blog, and the name of your blog itself**. Leave everything else alone.
-6. Click Install!
-7. Once it's done, the installer will remind you of the URL to your site, and the URL to the blog's dashboard (where you go to write posts, make changes to the look and feel of the site). Open these in a new browser window, and bookmark them. To login to your blog, remember to go to the dashboard URL (eg. `http://your-domain.ca/wp-admin`), enter your blog administrator username and password.
-8. You can close the cPanel webpage now (log out first).
-
-##### Customising your blog
-
-If you look at the dashboard for your blog, you'll see a lot of options down the left side of your screen. If you want to change the look of your blog, click on 'Appearance' then click on 'Themes'. A number of themes are pre-installed. You can click on the different themes and select 'Preview' to see how your blog might look. When you find one you like, select 'activate'. Go to the other browser window where you have `your-domain.ca` open. Reload the page to see the changes take effect!
-
-If you're the sort of person who likes to sketch ideas out on paper, Lauren Heywood of the [Disruptive Media Learning Lab](http://dmll.org.uk/) has designed a paper-based exercise to prototype ideas. Why not give it a try? [Print this PDF of Wordpress design (downloads in a new window)](http://coventry.domains/support/wp-content/uploads/staff-guide-to-plan-your-wordpress-site-with-paper.pdf) and follow the instructions.
-
-To write new content, know that there is a difference between a **Post** and a **Page**. A **page** is a new link on your site, while **posts** appear in chronological order on a page, with the most recent on top. Most themes show the most recent post by default, and pages appear in any menus on the site. **When you are logged into your blog** any post or page will have an 'Edit' button at the bottom that you can click. You'll then be presented with an editing box with the standard toolbar across the top (allowing you to change the font, insert images, change the alignment of the text and so on). At the top right will be a button to save or publish/update the post/page.
-
-Your blog will have a default 'about' page. Change that default text now to reflect something about who you are and why you are taking this course.
-
-To create new pages, you click on the 'Pages' link in your dashboard and select 'Add new'.
-
-To create new posts, you click on the 'Posts' link in  your dashboard and select 'Add new'.
-
-Explore the options for your blog; customize and make the space your own.
-
-**Password protected posts:** If for any reason you feel that you don't want a post to be viewable by the web-at-large, you can hide it behind a password. At the top right where the 'Publish' button hides, click on 'Visibility' and select 'Password protected'. Remember though: you'll have to share the password with me for grading purposes.
-
-![Visibility Options in Wordpress](https://codex.wordpress.org/images/7/70/visibility.jpg)
-
-For more information about controlling visibility of your posts and so on, [visit the Wordpress content visibility help page](https://codex.wordpress.org/Content_Visibility).
-
-### Hypothes.is
+## Hypothes.is
 
 Hypothes.is is an overlay on the web that allows you to highlight or annotate any text you come across (including **inside PDFs**). All of your annotations can then be collected together. It is a very effective research tool.
 
@@ -127,39 +60,34 @@ Annotations are public by default. When you are making a new annotation you can 
 
 You can also 'tag' any annotation you make. If many people use the same set of tags, you can collect annotations by tag. This can make it easier to do group research projects, for instance.
 
-#### Important information about annotating
+### Important information about annotating
 
 **Please join our private HIST3814o annotation group. Remember to make all annotations to that group! Earlier iterations of this course used the ‘public’ group, and you can still see their annotations. However, we realized that it wasn’t fair to the people whose work we were annotating to have year after year of our annotations littering their page. Remember then: make your annotations in [our HIST3814o group](https://hypothes.is/groups/886ipqWe/hist3814o)**!
 
-#### Collecting your own annotations on your blog
+## GitHub
 
-Hypothes.is has an **API** that allows you to do some neat things. 'API' stands for 'Application Programming Interface', which is just a fancy way of saying, 'you can write a program that interacts with this web service'. [Kris Shaffer](http://pushpullfork.com/), a professor at the University of Mary Washington, has written a **plugin** for Wordpress that allows you to automatically collect annotations you make across the web and to display them all on a single page on your blog. So, we'll go get that plugin and install it on your blog:
+Finally, you need a GitHub account. We will go into more detail about how to use GitHub in the next module. For now, go to [GitHub.com](http://github.com) and sign up for a new account. Follow all the prompts, and make a note of the direct URL to your account (mine for instance is [http://github.com/shawngraham](http://github.com/shawngraham)). You'll learn how to use this space in [Module 1, Exercise 3](../module-1/Exercises/#exercise-3-setting-up-your-github-space).
 
-Open [Kris Shaffer's Hypothes.is aggregator](https://github.com/kshaffer/hypothesis_aggregator) in a new browser window.
+### Fail Log
 
-1. Click 'Clone or Download' (the green button at the top right).
-2. In the pop-up, click 'Download ZIP'
-3. Go over to the dashboard for your blog (if you closed this, you can get there again by opening a new browser window and going to `your-domain.ca/wp-admin`).
-4. In the dashboard, click on Plugins >> Add New.
-5. Click 'Upload Plugin'. It will open a window asking you to find and select the zip file you downloaded. This is probably in your 'Downloads' folder. Select and click Ok.
-6. Once it’s uploaded and installed, click 'Activate'.
-7. In the dashboard, click on 'pages' then add a new page. Call it 'Web Notes' or 'Annotations' or something similar.
-8. Shaffer has created a 'shortcode' that tells Wordpress to go over to Hypothes.is and grab the latest information. So, in the text of your new page (in the editor window, make sure to click the 'text' button or else this won't work), enter the shortcode that will grab all of your public annotations: `[hypothesis user = 'kris.shaffer']` where you remove the `kris.shaffer` and put in your own Hypothes.is username.
-9. Hit the 'Publish' button. Wordpress will report that the page has been published and give you a link to it; click on this link to see your new always-updating list of annotations! Of course, if you haven't made any public annotations yet, nothing will display. Go annotate something, then come back and reload the page, but remember to annotate using [our HIST3814o group](https://hypothes.is/groups/886ipqWe/hist3814o).
+Each week you will upload a fail log to you GitHub account. You will include a link to your 3 most important Hypothes.is annotations and reflect on how those 3 annotations were meaningful to your learning. In the first week you will also reflect on your worries for the course, any technical issues you encountered, etc.
 
-### GitHub
+This week, you will fork the fail log example ('fork' is a GitHub term meaning to make a personal copy of a repository). To begin, follow the instructions below:
 
-Finally, you need a GitHub account. We will go into more detail about how to use GitHub in the next module. For now, go to [GitHub.com](http://github.com) and sign up for a new account. Follow all the prompts, and make a note of the direct URL to your account (mine for instance is [http://github.com/shawngraham](http://github.com/shawngraham)). Put this link in your 'About' page on your blog. You'll learn how to use this space in [Module 1, Exercise 3](../module-1/Exercises/#exercise-3-setting-up-your-github-space).
+1. Open [GitHub](https://github.com/).
+2. Login to your GitHub account.
+3. Navigate to the [example fail log repository on GitHub](https://github.com/rblades/example_fail-log_craftingDH).
+4. Follow the [instructions for getting started with the example fail log](https://github.com/rblades/example_fail-log_craftingDH#example_fail-log_craftingdh).
 
-### Your digital history lab/studio/workshop
+## Your digital history lab/studio/workshop
 
 You now have a digital history lab equipped with all of the necessary ingredients for doing digital history. You have an open notebook for recording what you are up to (both your narrative and your annotations). In GitHub, you have a scratch pad for keeping track of the actual nuts-and-bolts of any digital work you do (and note that it is entirely possible to do digital history successfully without having to do anything that a Computer Scientist for instance would call coding). You have a domain that you control completely, and where you can install other platforms and services as seems necessary.
 
-### VPN & DH Box
+## VPN & DH Box
 
 To access our virtual computer, the DH Box, you will need to use Carleton's VPN service. Please visit [Carleton's VPN help page](https://carleton.ca/its/help-centre/page-type/vpn/) and follow the instructions for your particular computer. Once you've got it installed, you will need to connect to Carleton through the VPN with your MyCarletonOne credentials. Indeed, you should always connect via a VPN whenever you're using a public wifi point (like in coffee shops). The VPN acts like a private tunnel from your computer to Carleton's servers. To the rest of the internet, it will now look as if you actually are on campus. Once you're connected via the VPN, you can [access the DH Box through your browser](http://134.117.26.132:5000/). Bookmark the site; you'll use it in the exercises in Module 1.
 
-#### Using the DH Box
+### Using the DH Box
 
 1. Click the 'Sign up' button
 2. Fill in the form. Choose a username and password that you'll remember. You don't have to use a real email by the way, just something that looks email-like (this is handy if, like me, you end up creating multiple DH Boxes - it's a bad idea to have more than one DH Box with the **same** email address)
@@ -176,7 +104,7 @@ What is digital history anyway? How is it connected to so-called 'big data'? Rea
 
 **NB** Each week, I expect you to respond to at least someone else's annotation in a **substantive** way. No "I agree!" or "right on!" or that sort of thing. Make a **meaningful** contribution.
 
-Once you have read and annotated the works, **write a post on your blog that poses the question 'what is digital history for me anyway?'** . Explain why you're in this class, your level of comfort with digital tech, the kinds of history you're interested in, and what you hope to get out of this course. Your post should link to relevant annotations made by you or by your peers. (Every Hypothes.is annotation has a direct link visible when you click on the 'share' icon for an existing annotation).
+Once you have read and annotated the works, **update your fail log in your GitHub repository** . Explain why you're in this class, your level of comfort with digital tech, the kinds of history you're interested in, and what you hope to get out of this course. Your post should link to relevant annotations made by you or by your peers. (Every Hypothes.is annotation has a direct link visible when you click on the 'share' icon for an existing annotation).
 
 ### Readings
 

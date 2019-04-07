@@ -128,73 +128,128 @@ Going further - the [Programming Historian](https://programminghistorian.org/) h
 
 ## Exercise 5: Mining Twitter
 
-Ed Summers is part of a project called '[Documenting the Now](http://www.docnow.io/)' which is developing tools to collect and understand the historical materials being shared (and lost) on social media. One component of Documenting the Now is the Twitter Archiving Tool, '[Twarc](https://github.com/DocNow/twarc)'. In this exercise, you are going to use Twarc to create an archive of Tweets relevant to a current trending news topic.
+This exercise mines Twitter for tweets, photos, etc, connected to bad archaeology.
 
-1. First of all, you need to set up a Twitter account, if you haven't already got one. Do so, but make sure to minimize any personal information that is exposed. For instance, don't make your handle the same as your real name. 
+You will require the following on your machine:
 
-2. Turn off geolocation. Do not give your actual location in the profile. 
+1. Twitter account
+2. Python installed on your machine
 
-3. View the settings, and make sure all of the privacy settings are dialed down. For the time being, you **do** have to associate a cell phone number with your account. You can delete that once you've done the next step.
+However, we will use a virtual computer that already has Python and the `Twarc` (TWitter ARChiver) package already installed. (Mac users: you **do** have python already on your machine; Windows users, you don't. So, to make life easier, I built you all a virtual computer. Read on, this will make sense.)
 
-4. Go to the [Twitter apps page](https://apps.twitter.com/) and click on **new app**. 
+Twarc was created by Ed Summers, who is heading a project called [Documenting the Now](https://www.docnow.io/) to create the tools necessary to keep track of all the ways our media are disseminating (and distorting!) the truth. It's a rapid-response suite of tools to capture events as they happen.
 
-5. On the **new application** page, just give your app a name like **my-twarc** or similar. For website, use the [Crafting Digital History site URL](http://site.craftingdigitalhistory.ca/) (although for our purposes any website will do). You don’t need to fill in any of the rest of the fields. 
+What we're going to do is set up some credentials with Twitter that give you access to the underlying data of the tweets. Then, the Twarc packages has a bunch of functions built in that lets you search and archive tweets.
 
-6. Continue on to the next page (tick off the box saying you’ve read the developer code of behaviour). This next page shows you all the details about your new application.
+### Setting up your Twitter Credentials
 
-7. Click on the ‘Keys and Access Tokens’ tab. 
+**WARNING &mdash; Update as of October 12, 2018:** It seems that Twitter now requires some kind of developer authentication process now. So the instructions below might have extra steps. If that's the case, no problem &mdash; [email Dr Graham](mailto:ShawnGraham@cunet.carleton.ca) for his consumer secret/key.
 
-8. Copy the consumer key, the consumer secret to a text file.
+**READ THROUGH FIRST, THEN START &mdash; If you do not want to set up a Twitter account/developer app page, skip to [Part Two: Firing Up Your Virtual Computer](../Exercises/#part-two-firing-up-your-virtual-computer)**
 
-9. Click on the ‘create access tokens’ button at the bottom of the page. This generates an access token and an access secret. 
+1. First of all, you need to set up a Twitter account. If you do not have a [Twitter account](http://twitter.com), sign-up, but make sure to minimize any personal information that is exposed. For instance, do not make your handle the same as your real name.
 
-10. Copy those to your text file, save it. **Do not put this file in your repo or leave it online anywhere** 
-    
-    ![Image showing Twitter access tokens](http://i.imgur.com/mM4hZNN.png)
+    + Turn off geolocation. Do not give your actual location in the profile.
 
-11. We need to download an older version of Twarc to work with the DH Box. In your DH Box, at the command line, type the following:
+    + View the settings, and make sure all of the privacy settings are dialed down. For the time being, you do have to associate a cell phone number with your account. You can delete that once you've done the next step.
 
-        $ sudo pip install https://github.com/DocNow/twarc/archive/v1.2.0.tar.gz
+2. Go to the [Twitter apps page - https://apps.twitter.com/](https://apps.twitter.com/) and click on 'New App'.
 
-    Twarc is written in Python, which is already installed in DH Box. 'Pip' is a package manager for installing new Python modules and packages. 
+3. On the New Application page, just give your app a name like `my-twarc` or similar. For the portion labelled 'Website', use my Crafting Digital History site URL, `site.craftingdigitalhistory.ca` (although for our purposes any website will do). You don’t need to fill in any of the rest of the fields.
 
-12. Now type `$ twarc configure ` and give it the information it asks for (your consumer secret etc).
+4. Continue on to the next page (tick off the box saying you’ve read the developer code of behaviour). This next page shows you all the details about your new application.
 
-    You're now ready to search. For instance, `$ twarc search canada150 > search.json` will search Twitter for posts using the canada150 hashtag. 
+5. Click on the tab labelled `Keys and Access Tokens`.
 
-    **Wait! Don't run that command! (Force-stop the search by hitting ctrl+c.)** 
+6. Copy the 'Consumer Key (API Key)' (the consumer secret) to a text file.
 
-    If you search for `canada150` , there are, what, 36 million Canadians? How many tweets is that likely to be? Quite a lot &mdash; and the command will run quietly for days grabbing that information, writing it to file, and you'll be sitting looking at the screen wondering if anything is happening. 
+7. Click on the button labelled `Create Access Tokens` at the bottom of the page. This generates an access token and an access secret.
 
-    <br>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/K6boXV_AzMc?rel=0" title="Mining data from Twitter with the command line" frameborder="0" gesture="media" allowfullscreen></iframe>
-    <br>
+8. Copy those to your text file and save it. **Do not put this file in your repo or leave it online anywhere. Otherwise, a person can impersonate you!**
 
-13. Try something smaller and more contained for now: `$ twarc search hist3814o > search.json`. 
+![Image showing set-up for Twitter's Application settings](http://i.imgur.com/mM4hZNN.png)
 
-    **Note that Twitter only gives access to the last two weeks or so via search.** For grabbing the stream **as an event happens** you'd use the `twarc stream` command &mdash; see the Twarc documentation for more.
+### Part Two: Firing Up Your Virtual Computer
 
-    It might take some time for the search to happen. **You can always force-stop the search by hitting ctrl+c.** If you do that though there could be an error in the formatting of the file which will throw an error when you get to step 15. You can still open the JSON in a text editor though, but you will have to go to the end of the file and fix the formatting.
+1. **Right-click** the following Binder link and select `Open in new tab`: [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/o-date/social-media-work/master)
 
-    The data being collected is in JSON format. That is, a list of 'keys' and 'values'. This is a handy format for computers, and some data visualization platforms require data in this format. For our purposes we might want to transform the JSON into a CSV (comma separated) table &mdash; a spreadsheet.
+2. Wait. It is setting up your new virtual computer. When it's loaded up, it will resembled the following image:
+![Image showing the jupyter layout, saying not to click the Quit or logout buttons, that clicking the jupyter logo will refresh the page, and that you can click the dropdown labelled New and select the Terminal](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539304640402-48607.png)
 
-14. Type `$ sudo npm install json2csv --save -g`. This installs a command that can convert the JSON to CSV format. Full details about the command can be found on [json2csv's GitHub repository](https://github.com/zemirco/json2csv#command-line-interface).
+3. Click the 'New' button, and select 'Terminal'. You should see something resembling the following image:
+![Image showing the terminal in jupyter, saying to click the black area to make the window active](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539304810966-61987.png)
 
-15. Convert your `search.json` to CSV by typing `json2csv -i search.json -o out.csv`
+**WARNING. You have to interact with the virtual computer &mdash; type a command, click on something &mdash; within ten minutes or it shuts down and you lose everything**.
 
-16. Examine your data either in a text editor or in a spreadsheet.
+**Pro tip:** you can always type `$ pwd` into the terminal as a way of keeping the thing alive. This command Prints the Working Directory (ex. tells you what folder you're in).
 
-17. Use Twarc to create a file with a list of IDs. 
+4. Type `$ twarc configure` into the terminal.
 
-18. Lodge this list and your history and notes in your repository.
+![Image showing the terminal in jupyter, saying to type twarc configure, hit enter, and then enter the consumer key from the Twitter app settings](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539304902569-2152.png
+)
 
-    <br>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/I5zbYl-Lxf4?rel=0" title="Mining data from Twitter with the command line" frameborder="0" gesture="media" allowfullscreen></iframe>
-    <br>
+And in the next screenshot, read the annotations from top to bottom:
 
-**NB Twitter forbids the sharing of the full metadata of a collection of tweets. You may however share a list of tweet IDs. See the Twarc documentation for the instructions on how to do that.**
+![Image showing the terminal in jupyter, saying to enter the Consumer Key and Consumer secret and then to open the twitter API URL the terminal outputs](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539305146992-49673.png)
 
-### What can you do with this data?
+But where is this 'Displayed pin'? It's in the window in your browser where the 'Authenticate Twitter?' dialogue was displayed. Instead of the twitter page, the URL you gave way up in part one step 3 has now been loaded and the information you need is indicated with `oauth_token=`. You need the bit after the `=` sign.
+
+![Image showing a browser where the secret API URL from the previous image was pasted, permitting you to authorize the app](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539305692926-702.png)
+
+It will resemble something like `-bBafl42aabB...` etc., a long string of numbers and letters. Copy the entire string.
+
+Then paste it in:
+![Image showing the terminal in jupyter, saying that the app has been authorized and twarc is ready](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539305848359-8369.png)
+
+And you're ready to data mine twitter!
+
+### Part Three: Find some stuff
+
+On the [Twarc README page](https://github.com/DocNow/twarc) there are examples of how to use Twarc to search for information.
+
+If you typed in `$ twarc search electricarchaeo` and hit return, the terminal window would fill with tweet metadata and data; it'd take about one or two minutes to run as I'm pretty active on twitter (watch [a video of Twarc in action](https://screencast-o-matic.com/watch/cF6lVjY05K)). **But this is only the last week or so of information!** You can save this information to a file instead of your terminal window by typing the following command into the terminal:
+
+`$ twarc search electricarchaeo > electricarchaeo.jsonl`  (that's a lower case 'L' at the end of `.json`)
+
+If you then right-click on the 'jupyter' logo at the top of the screen and open the link in a new window, you'll be back at the File Explorer. One of the files listed will be the new `electricarchaeo.jsonl` file you made.
+
+![Image showing the full JSON file in jupyter of eletric archaeo's tweets](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539306896907-33928.png)
+
+So what can we do with this information? Quite a lot, but for now, let's make a basic word cloud of the text of the tweets.
+
+We're going to need some utilities that Ed Summer has written, some extra python programs that can work with this information. Navigate to the terminal window and type the command `$ git clone https://github.com/DocNow/twarc`.
+
+This tells the `git` program that's already installed to go to GitHub and get the source code for Twarc. One of the folders it is going to grab is called `utils` and that has the utility program for making a word cloud that we will use.
+
+We will now type in the location and name of the program we want to use, followed by the data to operate on, followed by the name of the output file we want to create. Type `$ twarc/utils/wordcloud.py electricarchaeo.jsonl > wordcloud.html` into the terminal.
+
+Notice that when you press enter, nothing seems to happen. Go back to the list of files (right-click the jupyter logo and select `Open in new tab`) and one of the files listed will be `wordcloud.html`. Click on that file.
+
+![Image showing the created word cloud from the JSON data](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539307355837-46159.png)
+
+(If you reload the page, the word-cloud will regenerate, different colours, positions)
+
+### Download the data you collected.
+
+Once this virtual computer shuts down, all of that data you collected will be lost. Click on the jupyter logo, select the files you want to keep, and hit download.
+
+![Image showing the jupyter binder, saying to check the box next to the jsonl file and click the button labelled download. Note the file may be large](http://www.screencast-o-matic.com/screenshots/u/e7i1/1539307991802-92070.png)
+
+Depending on your browser, you might get a warning, asking if you're sure you want to download. Click Yes/OK.
+
+### Other things you could do
+
+Descriptions of what the other utilities do can be found on the [Twarc GitHub repository](https://github.com/DocNow/twarc).
+
+Go, play! Once you've got that `jsonl` file, you could convert it to `csv` and then import it into a spreadsheet tool like Excel of Google Sheets. The [JSON to CSV website](https://json-csv.com/) can also do that conversion for you. **Warning:** there is a 1MB limit for using the JSON to CSV tool. If your data is too big, we'll find something else &mdash; perhaps a bit of code or a utility that we can use on the command line (ex. read [Gabriel Pires' Medium article on using Python to convert JSON to CSV](https://medium.com/@gabrielpires/how-to-convert-a-json-file-to-csv-python-script-a9ff0a3f906e)). 
+
+With a bit of effort, you can make a network graph of who responds to who. Or explore tweeting by gender. Or map tweets. Or... or... or.
+
+Probably the easiest thing you could do, once you've converted to `csv` (again, the [JSON to CSV website can do this](https://json-csv.com/)), is to copy the column of tweet text itself into a tool like [Voyant](http://voyant-tools.org). Why not give that a try? 
+
+What you do really depends on what kinds of questions you're hoping to answer. Now that you have access to the firehose of data that is Twitter, what kinds of things might you like to know? How do people talk about archaeology? How do they talk about Atlantis?
+
+#### What can you do with this data?
 
 1. Examine the Twarc repository, especially its utilities. You could extract the geolocated ones and map them. You could examine the difference between 'male' and 'female' tweeters (and how problematic might that be?). 
 
