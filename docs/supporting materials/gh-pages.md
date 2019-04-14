@@ -1,6 +1,6 @@
 # Creating a GitHub pages site with MkDocs
 
-In [Module 5](../module-5/Exercises/#exercise-2-typography), you learned how to set up and serve a basic webpage on GitHub's gh-pages. GitHub allows you to host a website on a personal URL with the syntax `https://myname.github.io`. Many developers will use a static site generator to create a simple website run on gh-pages. Some popular static site generators are [Jekyll](https://jekyllrb.com/), [Hugo](https://gohugo.io/), and [MkDocs](http://www.mkdocs.org/). In fact, this website is built with MkDocs.
+In [Module 5](../module-5/Exercises/typography), you learned how to set up and serve a basic webpage on GitHub's gh-pages. GitHub allows you to host a website on a personal URL with the syntax `https://myname.github.io`. Many developers will use a static site generator to create a simple website run on gh-pages. Some popular static site generators are [Jekyll](https://jekyllrb.com/), [Hugo](https://gohugo.io/), and [MkDocs](http://www.mkdocs.org/). In fact, this website is built with MkDocs.
 
 Static site generators are command line tools that use templates to build and create websites. Users define basic information in a yaml or toml filetype, write in markdown, and use a simple command to build it into a functioning static site. Due to the popularity of static site generators, most contain simple methods to link it to gh-pages. 
 

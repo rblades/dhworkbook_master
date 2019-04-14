@@ -1,31 +1,28 @@
-# Module 5 Exercises (OPTIONAL)
+# Capstone Exercise
 
-In this module, you will begin with an introduction to web design concepts and finish by creating your own online exhibit. While we will not explore every possibility here, I do not want to leave you thinking that all digital history work is necessarily text based. To that end, if you are looking for a challenge or for exposure to something rather different, I suggest you at least bookmark my [series of tutorials on augmented reality, games, and 3d models for history and archaeology](https://github.com/shawngraham/ar-archaeology/tree/master/workshop%20materials).
+For the Capstone Exercise, you have the opportunity to create a domain (website + complete access to the webserver that powers it, so that you can install other platforms/services) of your own. A typical setup will be something along the lines of:
+
+1. GitHub: `yourusername.github.io`.
+2. Reclaim Hosting: `your-domain-name.org` or `your-domain-name.ca` or `your-domain-name.com`.
+
+On your blog/narrative, you may want an 'About' page where you can signal the kinds of history you're interested in, and the preferred way for people to get in touch with you. You do not have to use your real name. Remember the [real names policy](http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#real-names-policy).
+
+This section begins with several options you may wish to pursue for the Capstone Exercise. Following these options are resources, tutorials, and tips/hints you can reference to support the Capstone Exercise you choose. Depending on how you decided to communicate findings, this section contains resources which introduce you to the following concepts:
+
++ Layout
++ Manipulating graphics
++ Design with colour and font
++ Creating digital exhibits
+
+I do not want to leave you thinking that all digital history work is necessarily text based. To that end, if you are looking for a challenge or for exposure to something rather different, I suggest you at least bookmark my [series of tutorials on augmented reality, games, and 3d models for history and archaeology](https://github.com/shawngraham/ar-archaeology/tree/master/workshop%20materials).
+
+Let's get started.
 
 ![Image showing Ukrainian Parliament fist fight three times: 1 the original; 2 the photo with the Fibonnaci Golden spiral overlayed; 3 the photo as a Renaissance painting](http://uploads.neatorama.com/images/posts/587/74/74587/1407463055-0.jpg)
 
 ['Accidental Renaissance: the photos that look like Italian paintings'](http://www.theguardian.com/artanddesign/2014/aug/06/accidental-renaissance-photojournalism-italian-painting-ukraine-frank-lampard).
 
-The exercises in this module cover:
-
-+ Design with colour and font
-+ Layout 
-+ Manipulating graphics
-+ Creating digital exhibits
-
------
-## Capstone Exercise
-
-By the end of the course, you have the opportunity to create a domain (website + complete access to the webserver that powers it, so that you can install other platforms/services) of your own. A typical setup will be something along the lines of:
-
-1. GitHub: `yourusername.github.io`.
-2. Reclaim Hosting: `your-domain-name.org`.
-
-On your blog/narrative, you may want an 'About' page where you can signal the kinds of history you're interested in, and the preferred way for people to get in touch with you. You do not have to use your real name. Remember the [real names policy](http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#real-names-policy).
-
-Let's get started.
-
-### Option 1: GitHub Pages with a Static Site Generator
+## Option 1: GitHub Pages with a Static Site Generator
 
 Static site generators are software packages that allow you to quickly build and easily update a website via the terminal. Most static site generators use human readable programming languages like `YAML`/`YML` (Yet Another Markdown Language) that contain the settings for your website. You create a basic text file (i.e. Markdown), run a build command in the terminal that will convert your text files into web pages, and push the pages to your server. 
 
@@ -33,7 +30,7 @@ GitHub offers each user their own unique domain attached to their account - this
 
 Like the `master` branch of your GitHub repository, `gh-pages` is another branch option. Essentially, you create a GitHub respository, populate the gh-pages branch with web files, and your `yourusername.github.io` will become a functioning website.
 
-By deafault, GitHub Pages uses [Jekyll, a static site generator](https://jekyllrb.com/). However, Jekyll is not the only option. [Hugo](https://gohugo.io/) is another static site generator. This workbook was built using the [static site generator MKDocs](https://www.mkdocs.org/). While this exercise shows you how to use GitHub Pages powered by Jekyll to populate your GitHub domain, the instructions are generally similar for other static site generators. You make a few changes and run the website using a GitHub repository. 
+By deafault, GitHub Pages uses [Jekyll, a static site generator](https://jekyllrb.com/). However, Jekyll is not the only option. [Hugo](https://gohugo.io/) is another static site generator. This workbook was built using the [static site generator MKDocs](https://www.mkdocs.org/). While this option shows you how to use GitHub Pages powered by Jekyll to populate your GitHub domain, the instructions are generally similar for other static site generators. You make a few changes and run the website using a GitHub repository. 
 
 1. Login to your GitHub account.
 2. Click the button labelled `+` at the top left of the page next to your account.
@@ -49,7 +46,7 @@ By deafault, GitHub Pages uses [Jekyll, a static site generator](https://jekyllr
 12. Type `$ git push -u origin master` into the terminal.
 13. Navigate to your domain at `yourusername.github.io`. You will see the text "Hello World".
 
-#### Customize your website
+### Customize your website
 
 The instructions above showed you how to get you GitHub Pages domain up and running. GitHub provides further instruction on [customizing your Jekyll site in their documentation](https://help.github.com/en/articles/using-jekyll-as-a-static-site-generator-with-github-pages). GitHub Pages makes it easy to set-up a theme.
 
@@ -104,7 +101,9 @@ The instructions above show you how you can begin customizing you Jekyll website
 
 Most static site generators use similar layouts, structures, and `YAML` configurations. While the documentation for each generator will differ, the general idea between all of them remains the same. 
 
-### Option 2: Jekyll Now
+You may also want to build a simple website through GitHub Pages using the MkDocs static site generator and DH Box. Navigate to the [static site generator exercise using GitHub Pages in the supporting materials](../supporting materials/gh-pages.md).
+
+## Option 2: Jekyll Now
 
 Jekyll is a static site generator widely used to create a website quickly that you can run from your GitHub account. Jekyll takes static Markdown files and converts them to a functioning website. While Jekyll requires some editing via the terminal, [Jekyll Now](https://github.com/barryclark/jekyll-now) is a project from [Barry Clark](https://github.com/barryclark) that allows you to leverage the blogging power and simplicity of Jekyll without touching the terminal. 
 
@@ -129,11 +128,11 @@ Jekyll is a static site generator widely used to create a website quickly that y
 17. Navigate to `yourusername.github.io` (**remember**, ensure you change 'yourusername' to your GitHub username). You should now see your udpated site. If your site still shows a `404` error, try clearing your browser's cache and trying again. Also, ensure your post files use the proper naming convention with the ``YYYY-MM-DD`` date prefix. 
 18. To add new posts, navigate to the `_posts` folder and click the button labelled `Create new file`. Remember to use the proper naming convention with the ``YYYY-MM-DD`` date prefix.
 
-#### Going Further
+### Going Further
 
-After following the instructions in the previous section, you now have a functioning website that runs entirely through GitHub. You can, however, further customize your site. Read through [Barry Clark's article on customizing your Jekyll site](https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/). Incorporate design and functionality in your website from the [exercises in Module 5]().
+After following the instructions in the previous section, you now have a functioning website that runs entirely through GitHub. You can, however, further customize your site. Read through [Barry Clark's article on customizing your Jekyll site](https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/). Incorporate design and functionality in your website from the resources on this page.
 
-### Option 3: Reclaim Hosting
+## Option 3: Reclaim Hosting
 
 In the course space for cuLearn, I gave you a code to use to pay for a domain of your own. I have already purchased domain space for you from an academic web hosting service, [Reclaim Hosting](https://reclaimhosting.com/shared-hosting/). This space will last for one year, at which point you have the option of paying to renew it or letting it die. Previous students in this course have used their domain to help with their applications for jobs and graduate school.
 
@@ -147,7 +146,7 @@ Congratulations! You now own your very own domain. **It might take a bit of time
 
 Giving you a space of your own is my political act of protest against the centralization of learning inside learning management systems. Learning isn't 'managed', it's cultivated. Unlike cuLearn, I cannot monitor your activity inside your own domain. I can only see what you choose to make public. Unlike Facebook or Snapchat or Instagram, I am not trying to monetize your personality on the web.
 
-#### Wordpress for your blog
+### Wordpress for your blog
 
 Wordpress is probably the best option for a platform for writing the narrative bits of your digital history work.
 
@@ -160,7 +159,7 @@ Wordpress is probably the best option for a platform for writing the narrative b
 7. Once it's done, the installer will remind you of the URL to your site, and the URL to the blog's dashboard (where you go to write posts, make changes to the look and feel of the site). Open these in a new browser window, and bookmark them. To login to your blog, remember to go to the dashboard URL (eg. `http://your-domain.ca/wp-admin`), enter your blog administrator username and password.
 8. You can close the cPanel webpage now (log out first).
 
-##### Customising your blog
+#### Customising your blog
 
 If you look at the dashboard for your blog, you'll see a lot of options down the left side of your screen. If you want to change the look of your blog, click on 'Appearance' then click on 'Themes'. A number of themes are pre-installed. You can click on the different themes and select 'Preview' to see how your blog might look. When you find one you like, select 'activate'. Go to the other browser window where you have `your-domain.ca` open. Reload the page to see the changes take effect!
 
@@ -182,7 +181,7 @@ Explore the options for your blog; customize and make the space your own.
 
 For more information about controlling visibility of your posts and so on, [visit the Wordpress content visibility help page](https://codex.wordpress.org/Content_Visibility).
 
-#### Collecting your own annotations on your blog
+### Collecting your own annotations on your blog
 
 Hypothes.is has an **API** that allows you to do some neat things. 'API' stands for 'Application Programming Interface', which is just a fancy way of saying, 'you can write a program that interacts with this web service'. [Kris Shaffer](http://pushpullfork.com/), a professor at the University of Mary Washington, has written a **plugin** for Wordpress that allows you to automatically collect annotations you make across the web and to display them all on a single page on your blog. So, we'll go get that plugin and install it on your blog:
 
@@ -200,7 +199,7 @@ Open [Kris Shaffer's Hypothes.is aggregator](https://github.com/kshaffer/hypothe
 
 -----
 
-## Exercise 1: Layout
+## Layout
 
 'Layout' can mean different things in different contexts. A general overview on issues in layout is covered by ['What makes a design great', Lynda.com (requires sign-up for free trial)](https://www.lynda.com/InDesign-tutorials/Introduction-Graphic-Design/633854-2.html) and ['Exploring principles of layout and composition' (requires sign-up for free trial)](https://www.lynda.com/Graphic-Design-tutorials/Exploring-principles-layout-composition/419419/534012-4.html). The [Slideshare on effective layouts](http://www.slideshare.net/kernlearningsolutions/what-is-an-effective-layout-3435438) gives you a sense of things to watch out for as well.
 
@@ -208,7 +207,7 @@ For academic posters in particular, consider [these poster design suggestions fr
 
 In essence, good layout makes your argument legible, intuitive, and reinforces the rhetorical points you are trying to make. You should take into account 'principles of universal design' &mdash; consider design issues with [PowerPoint](http://accessproject.colostate.edu/udl/modules/powerpoint/mod_ppt.php) and [websites](http://accessproject.colostate.edu/udl/modules/html/mod_html.php) (although some of the technical solutions proposed in those two documents are a bit out of date, the general principles hold!).
 
-In this exercise, you will design a new poster **or** modify an existing poster. You can use either Inkscape or PowerPoint.
+If you decided to communicate findings via a poster, following are some hints/tips for designing a poster or modifying an existing poster.
 
 ### Inkscape
 
@@ -232,20 +231,20 @@ There's a lot of information out there on making posters with PowerPoint.
 If you want to explore layout in the context of webpage creation, I would point you to the the roster of lessons at [Codeacademy](https://www.codecademy.com/catalog/subject/web-development). Same instructions: find an existing site that you will consider from the point of view of what works, what doesn't, and use that reflection to guide the construction of your own.
 _____
 
-## Exercise 2: Typography
+## Typography
 
 Typography plays an important role in visual communication. It can do everything from reduce eyestrain (do a search for 'easiest fonts to read on screen') to communicate power and authority. Is it any wonder that strong bold capitals come to be known as 'Roman'? But first: [are you a comic sans criminal?](http://www.comicsanscriminal.com/)
 
 **NB** Serif fonts are **sometimes** not as accessible as sans-serif fonts. Older screens and monitors can have a difficult time rendering serif fonts. Sans-serif fonts can be more readable across different screens. **However**, this does not mean you should throw away serif fonts &mdash; many serif fonts can be quite accessible and add to your design goals if used properly. For more information on accessible fonts, check out [WebAIM's article on the topic](https://webaim.org/techniques/fonts/).
 
-In this exercise,
+If you decided to communicate findings via a poster, website, or anything involving design, below are some hints/tips for the proper use of typography: 
 
 + I want you to read and understand the section on [font choices from the Owl at Purdue](https://owl.english.purdue.edu/owl/resource/705/01/).
 + Then, play some rounds of [Typeconnection](http://www.typeconnection.com/index.php). Pay attention to why &mdash; or why not &mdash; various pairings work.
-+ Then, I want to consider the document you will be preparing for me that accounts for your learning in this course &mdash; the document where you choose your best exercises from the modules and explain how your approach to history, data, the digital, etc, has changed over this course. What typographic pair would work best for you?
-+ Finally, you'll make a webpage that uses those fonts and explains why they work.
++ Then, I want you to consider what typographic pair would work best for the Capstone Exercise? 
++ Finally, the following tutorial shows how you can make a webpage that uses your paired fonts and explains why they work.
 
-The first part of this exercise then is to find a pair of fonts and to understand why they work best for you. 
+The first part of this section then is to find a pair of fonts and to understand why they work best for you. 
 
 1. Read the materials above, and once you're done with the [Typeconnection site](http://www.typeconnection.com/index.php), go to [Google Fonts](https://www.google.com/fonts) and search for a pair that are **suitable for your purpose**. 
 
@@ -255,7 +254,7 @@ The first part of this exercise then is to find a pair of fonts and to understan
 
 4. Do you see the embed code that Google provides, and the code to integrate the font into your CSS (stylesheet)? Leave this window open &mdash; we're going to use it in a moment.
 
-5. Make a new repository for this exercise. 
+5. Make a new repository on GitHub. 
 
 6. In your repository, click the button beside 'branch'. 
 
@@ -289,21 +288,21 @@ The first part of this exercise then is to find a pair of fonts and to understan
     <iframe width="560" height="315" src="https://www.youtube.com/embed/3O9gBpxh23A?rel=0" title="Updating your web page's fonts" frameborder="0" gesture="media" allowfullscreen></iframe>
     <br>
 
-**Hint** You could use this as the basics of your submission for assessment, for your exercises. Build a webpage, link to your evidence, and embed your images. For basic HTML, [W3schools has a really good guide to keep around](http://www.w3schools.com/html/default.asp).
+**Hint:** For basic HTML, [W3schools has a really good guide to keep around](http://www.w3schools.com/html/default.asp).
 
-### Going further with GitHub pages
+### Going further with GitHub Pages
 
-Now that you have learned the basics of creating a simple website using GitHub, you have the ability to go further. Using the DH Box, you can build a simple website through GitHub pages using the MkDocs static site generator. Navigate to the [static site generator exercise using GitHub pages in the supporting materials](../supporting materials/gh-pages.md).
+Now that you have learned the basics of creating a simple website using GitHub, you have the ability to go further. Using the DH Box, you can build a simple website through GitHub Pages using the MkDocs static site generator. Navigate to the [static site generator exercise using GitHub Pages in the supporting materials](../supporting materials/gh-pages.md).
 
 -----
 
-## Exercise 3: Colour
+## Colour
 
 There's a lot of bumpf out there on the 'pyschology of colour'. Google it to see what I mean ([Youth Designer has a good example](http://www.youthedesigner.com/graphic-design-resources/infographic-graphic-design-resources/infographic-a-color-guide-for-designers/)). A lot of what you see here isn't so much psychology as it is associations (and indeed, western associations, at that). Associations are important of course; you don't want to undermine your message by making some unfortunate connections.
 
-In this exercise, I want you to take the webpage you developed in the previous exercise, and make two versions of it: 
+If you decided to communicate findings via a website, below are some hints/tips for the proper use of colour: 
 
-> 1. One where the colours **support** the broader message of the page (a prototype for your exercises assessment piece, remember?).
+> 1. One where the colours **support** the broader message of the page.
 > 2. And the other where the colours **undermine** that broader message. 
 
 1. Explain, in both cases, how your colour choices enhance and/or detract.
@@ -329,11 +328,11 @@ Below is a graphic that presents how colours are perceived in different cultures
 
 -----
 
-## Exercise 4: Creating an online exhibit with Omeka
+## Creating an online exhibit with Omeka
 
 [Omeka](https://omeka.org/) is an open source Content Management System (CMS) for sharing digital collections and creating media-rich online exhibits. A CMS is a web program that manages web content including graphics, text, videos, and more. A CMS allows users to upload their content via a Graphical User Interface (GUI) and organizes it into appropriate folder structures. Traditional websites are programmed from the ground up &mdash; everything from structure, to styling, to creating folders and specifiying where multi-media content is located. 
 
-The main advantage of using a CMS is that it requires little to no actual, background-level programming. That being said, anyone can edit a CMS's source code files, add their own, or modify them to fit their needs. Most CMSs are built with [PHP](https://en.wikipedia.org/wiki/PHP), a web scripting language used to dynamically create content. However, most CMSs are also accompanied by massive native and third party plugin libraries that allow users to modify their website without touching any source code. Examples of CMSs include Wordpress, Drupal, Grav, Known, Joomla, and many more. 
+The main advantage of using a CMS is that it requires little to no actual background-level programming. That being said, anyone can edit a CMS's source code files, add their own, or modify them to fit their needs. Most CMSs are built with [PHP](https://en.wikipedia.org/wiki/PHP), a web scripting language used to dynamically create content. However, most CMSs are also accompanied by massive native and third party plugin libraries that allow users to modify their website without touching any source code. Examples of CMSs include Wordpress, Drupal, Grav, Known, Joomla, and many more. 
 
 Unlike many popular CMSs, Omeka is not a blogging platform. Omeka is used to create online exhibits. Today we are going to create a simple online exhibit. 
 
@@ -424,7 +423,7 @@ Our overall steps are as follows:
 
 ### Uploading content to Omeka
 
-For the purposes of this exercise, we will use the [Gatineau Valley Historical Society fire insurance maps](http://www.gvhs.ca/research/maps/maps-fire-insurance.html) used in [Module 4, Exercise 8](#exercise-8-simple-mapping-and-georectifying). You are also allowed to use any historical sources to create an exhibit. Maybe you want to choose historical newspapers that have been digitized from the Library and Archives or the war diary from [Module 2, Exercise 2](../module-2/Exercises/#exercise-2-wget). Just make sure to note where you got your sources and, preferably, that you can download them as images.
+For the purposes of this option, we will use the [Gatineau Valley Historical Society fire insurance maps](http://www.gvhs.ca/research/maps/maps-fire-insurance.html) used in [Module 4, Exercise 8](#exercise-8-simple-mapping-and-georectifying). You are also allowed to use any historical sources to create an exhibit. Maybe you want to choose historical newspapers that have been digitized from the Library and Archives or the war diary from [Module 2, Exercise 2](../module-2/Exercises/#exercise-2-wget). Just make sure to note where you got your sources and, preferably, that you can download them as images.
 
 1. On the left side, select Collections.
 
@@ -482,7 +481,7 @@ For the purposes of this exercise, we will use the [Gatineau Valley Historical S
 
 1. At the top of the admin page, click Appearance. The default theme is 'Thanks, Roy'. You can choose any theme you want. They are all different and each has different advantages and disadvantages for editing.
 
-2. For this exercise, we will use the 'Thanks, Roy' theme. 
+2. For this option, we will use the 'Thanks, Roy' theme. 
 
     **NB If you choose a different theme to modify, you may see different options. Proceed at your own intent.**
 
@@ -574,11 +573,11 @@ For the purposes of this exercise, we will use the [Gatineau Valley Historical S
 
 20. If you make any major mistakes and want to start from scratch, you can copy the original `style.css` [file from GitHub](https://raw.githubusercontent.com/omeka/theme-thanksroy/master/css/style.css), paste it into your file, and save the changes. This will revert it back to the original style.
 
-**NB** It is important to note that for our purposes, we edited the default `style.css` file directly. This was to introduce you to CSS and making changes to the source code. Typically, you'd want to add a new file called, for example, `custom.css` and specify the path to that file in our source code. That way you keep your own changes distinct from the default source code files. However, that would involve editing different PHP rules which is beyond the scope of this exercise. This is very important for making upgrades. If your theme ever upgrades, you will lose all your changes if you only edited the default `style.css`. This applies to any file type. Therefore, you may want to keep a copy of your changes somewhere handy, like on your desktop.
+**NB** It is important to note that for our purposes, we edited the default `style.css` file directly. This was to introduce you to CSS and making changes to the source code. Typically, you'd want to add a new file called, for example, `custom.css` and specify the path to that file in our source code. That way you keep your own changes distinct from the default source code files. However, that would involve editing different PHP rules which is beyond the scope of this option. This is very important for making upgrades. If your theme ever upgrades, you will lose all your changes if you only edited the default `style.css`. This applies to any file type. Therefore, you may want to keep a copy of your changes somewhere handy, like on your desktop.
 
 -----
 
-## More
+## More Resources
 
 Below are more resources, tutorials, and things to explore.
 
@@ -627,7 +626,7 @@ Maps can be created through a variety of services ([TileMill](https://tilemill-p
 
 #### Leaflet in the field: Pembroke Soundscapes Project
 
-View the [Pembroke Soundscapes Project](http://pembrokesoundscapes.ca/map) for an example of an academic historical project using Leaflet. This project uses an interactive map with sound clips to explore the industrial history of Pembroke, Ontario. 
+Visit the [Pembroke Soundscapes Project](http://pembrokesoundscapes.ca/map) for an example of an academic historical project using Leaflet. This project uses an interactive map with sound clips to explore the industrial history of Pembroke, Ontario. 
 
 ### Designing Maps with Processing and Illustrator
 

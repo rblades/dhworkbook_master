@@ -41,7 +41,7 @@ For more advanced usage of Open Refine, as an optional exercise you can also try
 
 **Remember to copy your notes and any other information/observations/thoughts to your GitHub repo.**
 
-## Capstone project
+## Capstone Exercise
 
 You can use what you've been learning here to do some clean-up on the Canadian war diary files (or a subset of them, of course, as suits your interests &mdash; you have explored them, haven't you?). Google for **sed patterns** and see if you can combine what you find with what you've learned in this module in order to clean up the text. For instance, a common error in OCR is to confuse the letter `i` with the letter `l` and the numeral `1`. Shawville becomes Shawvllle. You could use grep to see if that error is present, and then sed to correct it. The file names are long, and there are several hundred; you might give this kind of thing a try too:
 

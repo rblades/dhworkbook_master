@@ -31,7 +31,7 @@ pages:
     - 'Exercises': 'module-4/Exercises.md'
 - 5. Visualization:
     - 'Communicating your Findings': 'module-5/Humanities Visualization.md'
-    - 'Exercises (OPTIONAL)': 'module-5/Exercises.md'
+    - 'Capstone Exercise': 'module-5/Exercises.md'
 - 6. Final Thoughts: 'conclusion/Conclusion.md'
 - Appendices:
     - 'Text Encoding Initiative': 'supporting materials/tei.md'

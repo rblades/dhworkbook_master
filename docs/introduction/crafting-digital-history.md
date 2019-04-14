@@ -22,7 +22,7 @@ In [**Module 3**](../module-3/Wrangling%20Data/), we'll see that data/capta are 
 
 In [**Module 4**](../module-4/Seeing%20Patterns/), we talk about doing the analysis. I present finding, cleaning, and analyzing as if they were sequential steps, but in reality they are circular. Movement in one aspect often requires revisiting another one! This module explores how we do this, and what it means for us as historians.
 
-In [**Module 5**](../module-5/Humanities%20Visualization/), we begin at last to think about how we communicate all of this to our audiences. Look at how [one university lays out the expectations for digital history work](http://historyarthistory.gmu.edu/graduate/phd-history/digital-dissertation-guidelines) (and, do you see how this ties back to ideas about [paradata](http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#final-project)?). We will think about things like typography and layout. We'll look at ways of making our visualizations more compelling, more effective. We will also create an online digital exhibit using [Omeka](https://omeka.org/).
+In [**Module 5**](../module-5/Humanities%20Visualization/), we begin at last to think about how we communicate all of this to our audiences. Look at how [one university lays out the expectations for digital history work](http://historyarthistory.gmu.edu/graduate/phd-history/digital-dissertation-guidelines) (and, do you see how this ties back to ideas about [paradata](http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#final-project)?). We will think about things like typography and layout. We'll look at ways of making our visualizations more compelling, more effective. We will also learn how to create an online digital exhibit using [Omeka](https://omeka.org/).
 
 Finally, while there is no formal requirement for you to do this, it would be a great way of launching yourself as a digital historian to think about how you would formally reveal your project work in this class to the wider world: and then do it. There's a lot of noise on the internet, especially when it comes to history. How do you, as a digital historian, make the strongest possible signal?
 
@@ -81,7 +81,7 @@ This week, you will fork the fail log example ('fork' is a GitHub term meaning t
 
 ## Your digital history lab/studio/workshop
 
-You now have a digital history lab equipped with all of the necessary ingredients for doing digital history. You have an open notebook for recording what you are up to (both your narrative and your annotations). In GitHub, you have a scratch pad for keeping track of the actual nuts-and-bolts of any digital work you do (and note that it is entirely possible to do digital history successfully without having to do anything that a Computer Scientist for instance would call coding). You have a domain that you control completely, and where you can install other platforms and services as seems necessary.
+You now have a digital history lab equipped with all of the necessary ingredients for doing digital history. You have an open notebook for recording what you are up to (both your narrative and your annotations). In GitHub, you have a scratch pad \ fail logfor keeping track of the actual nuts-and-bolts of any digital work you do (and note that it is entirely possible to do digital history successfully without having to do anything that a Computer Scientist for instance would call coding). You have a domain that you control completely, and where you can install other platforms and services as seems necessary.
 
 ## VPN & DH Box
 

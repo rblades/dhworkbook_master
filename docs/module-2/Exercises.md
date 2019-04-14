@@ -25,6 +25,7 @@ Ask yourself: what are some of the key dangers? Reflect: how have you used digit
 -----
 
 ## Exercise 1: The Dream Case
+
 In the dream case, your data are not just images, but are actually sorted and structured into some kind of pre-existing database. There are choices made in the **creation** of the database, but a good database, a good project, will lay out for you their decision making, their corpora, and how they've dealt with ambiguity and so on. You search using a robust interface, and you get a well-formed spreadsheet of data in return. Two examples of 'dream case' data:
     
 > + [Epigraphic Database Heidelberg](http://edh-www.adw.uni-heidelberg.de/inschrift/suche)
@@ -100,7 +101,7 @@ For this exercise, do the following:
 
 1. The TEI exercise found [in our supporting materials](../supporting materials/tei.md).
 
-I will note that a perfectly fine final project for HIST3814 might be to use this exercise as a model to markup the war diary and suggest ways this material might be explored. Remember to make (and lodge in your repository) a file detailing the work you've done and any issues you've run into.
+I will note that a perfectly fine option for the Capstone Exercise for HIST3814 might be to use this exercise as a model to markup the war diary and suggest ways this material might be explored. Remember to make (and lodge in your repository) a file detailing the work you've done and any issues you've run into.
 
 -----
 

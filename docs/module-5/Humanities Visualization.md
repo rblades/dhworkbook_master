@@ -1,6 +1,6 @@
 # Humanities Visualization &mdash; June 11-19, 2018
 
-In this week, I want you to focus on making your final project. You do not need to read or annotate any pieces this week, nor to work through the exercises that are included in Module 5. They are there for you to dip into as you finish your project. YOU DO have to write a blog post explaining what you've been up to this week.
+In this week, I want you to focus on the Capstone Exericse. You do not need to read or annotate any pieces this week. YOU DO have to write a blog post explaining what you've been up to this week.
 
 ## Concepts
 
@@ -24,7 +24,7 @@ I also have a [number of pieces of my own archaeological work](https://electrica
 2. Talk to me and talk to each other in Slack. Feel free to collaborate, but keep a record of who does what and how much.
 3. If you missed completing a module, now might also be a good time to finish it (see [2.4 of the course manual](http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#submitting-evidence))
 4. Use the materials in this module to help make your project.
-5. Write a blog post describing what you've been up to THIS WEEK on your project (your successes, your failures, the help you may have found/received), and link to your 'faillog' (ie, the notes on your process that you upload to your GitHub. If you did any of the exercises, mention that).
+5. Write a blog post describing what you've been up to THIS WEEK on your project (your successes, your failures, the help you may have found/received), and link to your 'faillog' (ie. the notes on your process that you upload to your GitHub).
 
 ## Readings
 
